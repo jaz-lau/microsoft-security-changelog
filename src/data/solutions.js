@@ -2007,6 +2007,14 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "mesh Stack",
+    alias: "meshStack",
+    entries: [
+      { version: "3.0.1", date: "10-04-2026", text: "Updated publisherId in solution metadata to address best practice validation", contentTypes: [] },
+      { version: "3.0.0", date: "15-12-2025", text: "Initial release", contentTypes: [] },
+    ],
+  },
+  {
     name: "Microsoft 365",
     entries: [
       { version: "3.0.5", date: "04-02-2025", text: "Updated Analytic Rule MailItemsAccessedTimeSeries.yaml", contentTypes: ["Analytic Rule"] },
