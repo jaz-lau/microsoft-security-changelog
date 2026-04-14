@@ -24,25 +24,25 @@
 #
 # Placement: .github/workflows/update-solutions.yml
 # ─────────────────────────────────────────────────────────────────────────────
-
+ 
 name: Update solutions.js
-
+ 
 on:
   schedule:
     - cron: '0 6 * * *'   # daily at 06:00 UTC
   workflow_dispatch:        # allows manual trigger from the GitHub Actions UI
-
+ 
 jobs:
   update:
     runs-on: ubuntu-latest
-
+ 
     permissions:
       contents: write       # required to commit and push back to the repo
-
+ 
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
-
+ 
       - name: Check if Azure Sentinel Solutions folder changed
         id: check
         run: |
@@ -52,13 +52,13 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/Azure/Azure-Sentinel/commits?path=Solutions&per_page=1" \
             | python3 -c "import sys,json; data=json.load(sys.stdin); print(data[0]['sha'] if data else 'none')")
-
+ 
           # Read last known SHA (defaults to 'none' if the file does not exist yet)
           LAST=$(cat data/last-sentinel-commit.txt 2>/dev/null || echo "none")
-
+ 
           echo "Latest commit: $LATEST"
           echo "Last seen:     $LAST"
-
+ 
           if [ "$LATEST" != "$LAST" ] && [ "$LATEST" != "none" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "latest_sha=$LATEST" >> $GITHUB_OUTPUT
@@ -69,17 +69,17 @@ jobs:
             echo "latest_sha=$LATEST" >> $GITHUB_OUTPUT
             echo "No change detected — skipping update"
           fi
-
+ 
       - name: Set up Node
         if: steps.check.outputs.changed == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
+ 
       - name: Install dependencies
         if: steps.check.outputs.changed == 'true'
         run: npm ci
-
+ 
       - name: Generate solution names list
         if: steps.check.outputs.changed == 'true'
         run: |
@@ -98,18 +98,18 @@ jobs:
           print('\n'.join(names))
           " > /tmp/solution-names.txt
           echo "Found $(wc -l < /tmp/solution-names.txt) solutions"
-
+ 
       - name: Run fetch-solutions script
         if: steps.check.outputs.changed == 'true'
         run: node scripts/fetch-solutions.mjs /tmp/solution-names.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+ 
       # NOTE: After the fetch, review the Actions log for any solution names
       # flagged as auto-split without a NAME_OVERRIDES entry. Add overrides to
       # scripts/fetch-solutions.mjs if any brand names are displayed incorrectly.
       # See docs/updating-data.md section 1 for the full NAME_OVERRIDES workflow.
-
+ 
       - name: Log which solutions changed
         if: steps.check.outputs.changed == 'true'
         continue-on-error: true   # never block the commit if logging fails
@@ -119,7 +119,7 @@ jobs:
           python3 - << 'EOF'
           import subprocess, re, os
           from datetime import datetime, timezone
-
+ 
           # Diff the newly written solutions.js against the last committed version.
           # Lines starting with "+" are new content — scanning them for name: fields
           # tells us which solutions were added or had entries updated.
@@ -128,18 +128,18 @@ jobs:
               capture_output=True, text=True
           )
           diff = result.stdout
-
+ 
           if not diff:
               print("No diff — solutions.js unchanged after fetch")
               exit(0)
-
+ 
           changed = set()
           for line in diff.splitlines():
               if line.startswith("+") and "name:" in line:
                   match = re.search(r"name:\s*[\"'](.+?)[\"']", line)
                   if match:
                       changed.add(match.group(1))
-
+ 
           os.makedirs("logs", exist_ok=True)
           ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
           with open("logs/updates.log", "a") as f:
@@ -149,18 +149,19 @@ jobs:
                       f.write(f"[{ts}]   UPDATED: {name}\n")
               else:
                   f.write(f"[{ts}] solutions.js updated (could not extract names from diff)\n")
-
+ 
           for name in sorted(changed):
               print(f"  • {name}")
           EOF
-
+ 
       - name: Commit and push changes
         if: steps.check.outputs.changed == 'true'
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add src/data/solutions.js data/last-sentinel-commit.txt
-          git add --ignore-unmatch logs/updates.log
+          [ -f logs/updates.log ] && git add logs/updates.log || true
           git diff --staged --quiet || git commit -m "chore: solutions update $(date +%F)"
           git pull --rebase
           git push
+ 
