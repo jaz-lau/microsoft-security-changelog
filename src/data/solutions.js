@@ -24,7 +24,8 @@ export const RAW_SOLUTIONS = [
     name: "Abnormal Security",
     alias: "AbnormalSecurity",
     entries: [
-      { version: "3.0.0", date: "29-06-2023", text: "Renaming Azure Function to Azure Functions in Data Connector Description and Updated the python runtime version to 3.11", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "04-03-2026", text: "Added CCF Push connector with multi-table routing (9 tables), DeployPushConnectorButton, and OAuth 2.0 authentication. Legacy Azure Functions connector retained for backward compatibility.", contentTypes: [] },
+      { version: "2.0.1", date: "29-06-2023", text: "Renaming Azure Function to Azure Functions in Data Connector Description and Updated the python runtime version to 3.11", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -373,6 +374,7 @@ export const RAW_SOLUTIONS = [
     name: "Azure Security Benchmark",
     alias: "AzureSecurityBenchmark",
     entries: [
+      { version: "3.0.4", date: "13-04-2026", text: "Updated Azure Security Benchmark label and queries.", contentTypes: [] },
       { version: "3.0.3", date: "10-09-2025", text: "Removed the network map from the workbook.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "12-04-2024", text: "Updated Entity Mappings", contentTypes: [] },
       { version: "3.0.1", date: "24-01-2023", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
@@ -431,7 +433,8 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "BitSight",
+    name: "Bitsight",
+    alias: "BitSight",
     entries: [
       { version: "3.1.0", date: "31-03-2026", text: "Updated the python runtime version to 3.12. Added support for Log Ingestion API and updated parsers accordingly.", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "31-03-2026", text: "Reverted the solution id to fix the BitSight Solution publishing issue.", contentTypes: [] },
@@ -456,12 +459,12 @@ export const RAW_SOLUTIONS = [
   {
     name: "Blacklens",
     entries: [
+      { version: "3.0.1", date: "30-03-2026", text: "Bug fix.", contentTypes: [] },
       { version: "3.0.0", date: "16-02-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
-    name: "Blink Ops",
-    alias: "BlinkOps",
+    name: "BlinkOps",
     entries: [
       { version: "3.0.2", date: "06-08-2025", text: "Updated Playbooks with a minor version bump, improved webhook payload handling, and enhanced documentation and support metadata.", contentTypes: ["Playbook"] },
       { version: "3.0.1", date: "10-07-2025", text: "Addition of a new playbook", contentTypes: ["Playbook"] },
@@ -686,6 +689,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "30-07-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "18-08-2023", text: "Modified the Parser with correct watchlist alias", contentTypes: ["Parser"] },
       { version: "3.0.0", date: "14-07-2023", text: "Modified the Data Connector with improved onboarding instructions \\|v 1.0.1", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "Citrix Analytics CCF",
+    entries: [
+      { version: "3.0.0", date: "26-03-2026", text: "Initial release of the Citrix Analytics CCF connector.", contentTypes: [] },
     ],
   },
   {
@@ -938,7 +947,7 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Cybersecurity Maturity Model Certification (CMMC) 2.0",
+    name: "Cybersecurity Maturity Model Certification(CMMC)2.0",
     alias: "CybersecurityMaturityModelCertification(CMMC)2.0",
     entries: [
       { version: "3.1.1", date: "13-01-2026", text: "Updated non-functional links from Workbook.", contentTypes: ["Workbook"] },
@@ -1260,6 +1269,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ExtraHop",
     entries: [
+      { version: "3.0.2", date: "20-03-2026", text: "Add Log Ingestion API Support.", contentTypes: [] },
       { version: "3.0.1", date: "04-06-2025", text: "Updated Parser and Workbook to fix issue.", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.0", date: "19-03-2025", text: "Initial Solution Release.", contentTypes: [] },
     ],
@@ -1279,8 +1289,7 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Falcon Friday",
-    alias: "FalconFriday",
+    name: "FalconFriday",
     entries: [
       { version: "3.0.0", date: "24-06-2024", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID and Added missing AMA Data Connector reference in Analytic rules.", contentTypes: ["Analytic Rule","Data Connector"] },
     ],
@@ -1725,6 +1734,7 @@ export const RAW_SOLUTIONS = [
     name: "Imperva Cloud WAF",
     alias: "ImpervaCloudWAF",
     entries: [
+      { version: "3.1.1", date: "10-04-2026", text: "Add \"CsvEscapeMode\": \"NoEscape\" to prevent logs with embedded JSON from being dropped during ingestion", contentTypes: [] },
       { version: "3.1.0", date: "30-03-2026", text: "Promoted the Imperva Cloud WAF CCF connector to Public Preview", contentTypes: [] },
       { version: "3.0.2", date: "06-06-2025", text: "Migrated the Function app connector to CCF Data connector and updated Parser", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.1", date: "07-11-2024", text: "Added existing *Parser* into the solution", contentTypes: ["Parser"] },
@@ -1825,6 +1835,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Island",
     entries: [
+      { version: "3.2.0", date: "05-04-2026", text: "Reverted V1 connector names and descriptions to original. Updated V2 connector title, description, prerequisites, and configuration text. Removed placeholder URL from V2 connector.", contentTypes: [] },
       { version: "3.1.0", date: "16-02-2026", text: "Added Island V2 CCP Data Connector with DCR-based ingestion for user events, admin events, and system events. Marked V1 connectors as legacy.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "28-07-2023", text: "Added API Url field to Data Connectors so all regions can be supported", contentTypes: ["Data Connector"] },
     ],
@@ -2108,6 +2119,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.10", date: "12-04-2026", text: "Updated AccountCreatedandDeletedinShortTimeframe analytic rule to extend query period to 7 days, normalize UPN parsing, and use immutable UserId for improved detection accuracy and evasion resistance", contentTypes: ["Analytic Rule"] },
       { version: "3.3.9", date: "23-02-2026", text: "Updated Block-AADUser Incident trigger to fix the permissions for disable user block", contentTypes: [] },
       { version: "3.3.8", date: "06-02-2026", text: "Fixed Broken Links in Analytical Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.7", date: "20-01-2026", text: "Updated Revoke-AADSignInSessions Playbooks Instructions.", contentTypes: ["Playbook"] },
@@ -2402,7 +2414,7 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.10", date: "14-02-2026", text: "Updated links to remove review.learn.", contentTypes: [] },
       { version: "3.0.9", date: "06-02-2026", text: "Updated the relevant techniques in the hunting queries.", contentTypes: ["Hunting Query"] },
       { version: "3.0.8", date: "23-09-2025", text: "Removed duplicate and redundant query blocks that previously handled different eps ranges, reducing code complexity and improving maintainability.", contentTypes: [] },
-      { version: "3.0.7", date: "4-07-2025", text: "Summary rules added and updated requiredDataConnectors.", contentTypes: [] },
+      { version: "3.0.7", date: "04-07-2025", text: "Summary rules added and updated requiredDataConnectors.", contentTypes: [] },
       { version: "3.0.6", date: "15-04-2025", text: "Updated Analytic Rule NetworkPortSweepFromExternalNetwork.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.5", date: "12-12-2024", text: "Added IllumioSaaS solution in a domain solution list", contentTypes: [] },
       { version: "3.0.4", date: "03-06-2024", text: "Added missing AMA Data Connector reference in Analytical rule and Hunting Query.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
@@ -3436,10 +3448,11 @@ export const RAW_SOLUTIONS = [
   {
     name: "Tenable App",
     entries: [
-      { version: "3.1.2", date: "20-03-2026", text: "Corrected Tenable_IE_CL table references in Data Connector Configuration.", contentTypes: ["Data Connector"] },
-      { version: "3.1.2", date: "20-03-2026", text: "Update PyTenableUABuild value to 3.1.0 in template.", contentTypes: [] },
-      { version: "3.1.2", date: "20-03-2026", text: "Updating data connector UI page for multiple rsyslog configuration support in Tenable IE.", contentTypes: ["Data Connector"] },
-      { version: "3.1.2", date: "20-03-2026", text: "Updated schema for Vulnerabilities and WAS Vulnerabilities in Tenable VM.", contentTypes: [] },
+      { version: "3.1.2", date: "03-04-2026", text: "Updated checkpoint field in vuln data fetching. New field name: indexed_at", contentTypes: [] },
+      { version: "3.1.2", date: "03-04-2026", text: "Corrected Tenable_IE_CL table references in Data Connector Configuration.", contentTypes: ["Data Connector"] },
+      { version: "3.1.2", date: "03-04-2026", text: "Update PyTenableUABuild value to 3.1.0 in template.", contentTypes: [] },
+      { version: "3.1.2", date: "03-04-2026", text: "Updating data connector UI page for multiple rsyslog configuration support in Tenable IE.", contentTypes: ["Data Connector"] },
+      { version: "3.1.2", date: "03-04-2026", text: "Updated schema for Vulnerabilities and WAS Vulnerabilities in Tenable VM.", contentTypes: [] },
       { version: "3.1.1", date: "12-09-2025", text: "Added button for Azure Gov Cloud in the UI page of the data connector.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "19-06-2025", text: "Updated the python runtime version to 3.12. Updated pyTenable sdk version to 1.7.4. Added support for WAS Asset and WAS Vuln data ingestion. Removed Queue Trigger functions and updated with Durable Functions. Added support for Log Ingestion API and updated parsers and playbooks accordingly", contentTypes: ["Playbook","Parser"] },
       { version: "3.0.1", date: "05-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
@@ -3497,6 +3510,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
+      { version: "3.0.17", date: "02-04-2026", text: "Updated TI map Domain entity to SecurityAlert analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
       { version: "3.0.16", date: "25-03-2026", text: "Optimized TI map Domain entity to EmailUrlInfo analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
       { version: "3.0.15", date: "09-03-2026", text: "Update IPEntity_DuoSecurity Analytic Rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.14", date: "16-02-2026", text: "Added Analytic Rule for URL IOC", contentTypes: ["Analytic Rule"] },
