@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_MS_Learn__microsoft_docs_fetch",
+      "Bash(export PATH=\"/Users/jason/.volta/bin:$PATH\")",
+      "Bash(npm run:*)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/CiscoMeraki/SolutionMetadata.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/PingOne/SolutionMetadata.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/AWSAthena/SolutionMetadata.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/CiscoMeraki/Package/mainTemplate.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/CiscoMeraki/Package/createUiDefinition.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/PingOne/Package/createUiDefinition.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/AWSAthena/Package/createUiDefinition.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/ProofPointTap/Package/createUiDefinition.json\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/PaloAlto-PAN-OS/Package/createUiDefinition.json\")",
+      "WebSearch"
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'Fira Mono', monospace;
+
+  /* ─── Light theme tokens ──────────────────────────────────────────── */
+
+  /* Surfaces */
+  --bg:                #F1F5F9;  /* page background */
+  --bg-panel:          #ffffff;  /* cards, dropdowns, modals */
+  --bg-elevated:       #F8FAFC;  /* hover surface, section header */
+  --bg-alt:            #FAFAFA;  /* alt rows */
+  --bg-input:          #FAFBFC;  /* input bg / palette filter row */
+  --bg-info:           #F0F6FF;  /* info banner */
+  --bg-hover:          #F1F5F9;  /* row hover, palette selected */
+  --bg-overlay:        rgba(15, 23, 42, 0.5);  /* modal backdrop */
+
+  /* Text — all "muted" tokens collapse to #475569 (slate-600) which gives ≥7:1 on light bg.
+     Hierarchy is preserved through font-weight/size, not contrast. */
+  --text-strong:       #0F172A;  /* h1, primary content text (16:1) */
+  --text-default:      #374151;  /* body (10:1) */
+  --text-muted:        #475569;  /* secondary, link buttons (7:1) */
+  --text-faint:        #475569;  /* footer, captions (was #64748B) */
+  --text-placeholder:  #475569;  /* placeholder, unselected (was #64748B) */
+  --text-subtle:       #475569;  /* very subtle (was #94A3B8) */
+
+  /* Borders */
+  --border:            #E2E8F0;  /* default */
+  --border-subtle:     #F1F5F9;  /* very subtle */
+  --border-medium:     #CBD5E1;  /* medium */
+
+  /* Pill / tag background — visually distinct from bg, sized between bg and panel */
+  --bg-pill:           #E2E8F0;
+
+  /* Accents */
+  --accent-link:       #1D4ED8;  /* link blue (was #3B82F6 — failed AA on light bg) */
+  --accent-cyan:       #0369A1;  /* "(latest)" indicator (was #0EA5E9 — failed AA) */
+  --accent-blue:       #1E40AF;  /* palette toggle */
+  --accent-info:       #1E40AF;  /* info text on info bg */
+  --focus-ring:        #93C5FD;
+
+  /* Action note (WHAT IT MEANS TO YOU) — needs to be readable on bg-elevated */
+  --action-strong:     #B91C1C;  /* darker red (was #DC2626) */
+  --action-text:       #B91C1C;  /* (was #EF4444) */
+
+  /* Header */
+  --header-from:       #0C1A2E;
+  --header-to:         #0F2744;
+  --header-text:       #ffffff;
+  --header-text-muted: rgba(255, 255, 255, 0.7);
+  --header-text-faint: rgba(255, 255, 255, 0.55);
+  --header-divider:    rgba(255, 255, 255, 0.25);
+  --header-pill-bg:    rgba(255, 255, 255, 0.1);
+  --header-pill-bg-active: rgba(255, 255, 255, 0.15);
+  --header-pill-bg-hover:  rgba(255, 255, 255, 0.08);
+  --header-pill-border:    rgba(255, 255, 255, 0.15);
+  --header-kbd-bg:     rgba(255, 255, 255, 0.15);
+  --header-kbd-border: rgba(255, 255, 255, 0.2);
+
+  /* Severity (universal — same in both themes) */
+  --sev-critical:      #EF4444;
+  --sev-important:     #F59E0B;
+  --sev-minor:         #10B981;
+
+  /* Highlights */
+  --highlight-bg:      #FEF08A;  /* search highlight */
+  --highlight-pop:     rgba(254, 240, 138, 0.7);
+  --highlight-glow:    rgba(245, 158, 11, 0.22);
+
+  /* Shadows */
+  --shadow-sm:         0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-md:         0 8px 24px rgba(0, 0, 0, 0.18);
+  --shadow-lg:         0 20px 60px rgba(0, 0, 0, 0.25);
+  --shadow-pop:        0 10px 24px rgba(245, 158, 11, 0.22);
+
+  /* Glass (floating pill) */
+  --glass-bg:          linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 100%);
+  --glass-border:      rgba(255, 255, 255, 0.3);
+  --glass-text:        rgba(0, 0, 0, 0.7);  /* was 0.45 — failed AA at rest */
+  --glass-text-hover:  rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="dark"] {
+  /* ─── Dark theme tokens ───────────────────────────────────────────── */
+
+  /* Surfaces */
+  --bg:                #0B1120;
+  --bg-panel:          #1E293B;
+  --bg-elevated:       #273449;
+  --bg-alt:            #1A2333;
+  --bg-input:          #1E293B;
+  --bg-info:           #1E3A5F;
+  --bg-hover:          #334155;
+  --bg-overlay:        rgba(0, 0, 0, 0.65);
+
+  /* Text — all muted tokens collapse to #94A3B8 (slate-400) which gives ≥7:1 on dark bg. */
+  --text-strong:       #F1F5F9;
+  --text-default:      #CBD5E1;
+  --text-muted:        #94A3B8;
+  --text-faint:        #94A3B8;  /* (was #64748B) */
+  --text-placeholder:  #94A3B8;
+  --text-subtle:       #94A3B8;  /* (was #64748B) */
+
+  /* Pill / tag background — slightly elevated, gives ≥10:1 with strong text */
+  --bg-pill:           #273449;
+
+  /* Borders */
+  --border:            #334155;
+  --border-subtle:     #1E293B;
+  --border-medium:     #475569;
+
+  /* Accents */
+  --accent-link:       #60A5FA;
+  --accent-cyan:       #38BDF8;
+  --accent-blue:       #3B82F6;
+  --accent-info:       #93C5FD;
+  --focus-ring:        #60A5FA;
+
+  /* Action note — lighter red for dark bg */
+  --action-strong:     #FCA5A5;
+  --action-text:       #FCA5A5;
+
+  /* Header — already dark in light mode, keep similar in dark */
+  --header-from:       #060B17;
+  --header-to:         #0A1729;
+
+  /* Highlights — slightly tuned for dark bg */
+  --highlight-bg:      #FACC15;
+  --highlight-pop:     rgba(250, 204, 21, 0.35);
+  --highlight-glow:    rgba(245, 158, 11, 0.28);
+
+  /* Shadows — stronger on dark */
+  --shadow-sm:         0 2px 16px rgba(0, 0, 0, 0.4);
+  --shadow-md:         0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg:         0 20px 60px rgba(0, 0, 0, 0.6);
+
+  /* Glass — slate-tinted on dark */
+  --glass-bg:          linear-gradient(135deg, rgba(30,41,59,0.7) 0%, rgba(30,41,59,0.5) 50%, rgba(30,41,59,0.3) 100%);
+  --glass-border:      rgba(255, 255, 255, 0.12);
+  --glass-text:        rgba(255, 255, 255, 0.65);
+  --glass-text-hover:  rgba(255, 255, 255, 0.9);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-default);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-strong);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+}
