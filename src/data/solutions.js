@@ -204,6 +204,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Jira Audit",
     alias: "AtlassianJiraAudit",
     entries: [
+      { version: "3.0.6", date: "13-04-2026", text: "Deprecate Atlassian Jira Audit (using Azure Function)", contentTypes: [] },
       { version: "3.0.5", date: "18-03-2026", text: "Rename to Atlassian Jira Audit (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.0.4", date: "30-08-2024", text: "Updated parameters for CCP Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "14-08-2024", text: "Data Connector[Atlassian Jira Audit (using REST API)] Globally Available", contentTypes: ["Data Connector"] },
@@ -232,6 +233,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Auth0",
     entries: [
+      { version: "3.1.5", date: "13-04-2026", text: "Deprecate Auth0 Logs (using Azure Function)", contentTypes: [] },
       { version: "3.1.4", date: "30-03-2026", text: "Fix space in name, Rename to Auth0 Logs (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.3", date: "20-03-2026", text: "Rename to Auth0 Logs(via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.2", date: "10-02-2025", text: "Advancing CCP Data Connector from Public preview to Global Availability.", contentTypes: ["Data Connector"] },
@@ -485,6 +487,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Box",
     entries: [
+      { version: "3.1.4", date: "13-04-2026", text: "Deprecate Box Events (using Azure Function)", contentTypes: [] },
       { version: "3.1.3", date: "24-03-2026", text: "Rename to Box Events (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.2", date: "29-10-2025", text: "Updated KQL queries in Workbook to use EventEndTime instead of TimeGenerated for time-based filtering", contentTypes: ["Workbook"] },
       { version: "3.1.1", date: "10-02-2025", text: "Advancing CCP Data Connector from Public preview to Global Availability.", contentTypes: ["Data Connector"] },
@@ -819,6 +822,7 @@ export const RAW_SOLUTIONS = [
     name: "Contrast ADR",
     alias: "ContrastADR",
     entries: [
+      { version: "3.1.0", date: "27-03-2026", text: "Adding support for Contrast ADR CCF Connector and change in relevant components.", contentTypes: [] },
       { version: "3.0.1", date: "11-11-2025", text: "Updated Workbook and parsing logic in both supported Parsers to improve accuracy and compatibility.", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.0", date: "22-02-2025", text: "Initial Solution Release.", contentTypes: [] },
     ],
@@ -866,6 +870,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.3.3", date: "13-04-2026", text: "Deprecate CrowdStrike Falcon Data Replicator (CrowdStrike Managed AWS-S3) (using Azure Function)", contentTypes: [] },
       { version: "3.3.2", date: "16-03-2026", text: "Update *CrowdStrike API Data Connector* to GA with adding rate limits to inner steps for Alerts and Detections data types", contentTypes: ["Data Connector"] },
       { version: "3.3.1", date: "05-03-2026", text: "Update *CrowdStrike API Data Connector* to fix Alerts and Detections data types", contentTypes: ["Data Connector"] },
       { version: "3.3.0", date: "26-01-2026", text: "Refresh *CrowdStrike API Data Connector* with Cases data type and multiple improvements", contentTypes: ["Data Connector"] },
@@ -2127,6 +2132,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.11", date: "13-04-2026", text: "Added Watchlist ConditionalAccessBenignStatusCodes and updated BypassCondAccessRule analytic rule", contentTypes: ["Analytic Rule"] },
       { version: "3.3.10", date: "12-04-2026", text: "Updated AccountCreatedandDeletedinShortTimeframe analytic rule to extend query period to 7 days, normalize UPN parsing, and use immutable UserId for improved detection accuracy and evasion resistance", contentTypes: ["Analytic Rule"] },
       { version: "3.3.9", date: "23-02-2026", text: "Updated Block-AADUser Incident trigger to fix the permissions for disable user block", contentTypes: [] },
       { version: "3.3.8", date: "06-02-2026", text: "Fixed Broken Links in Analytical Rule.", contentTypes: ["Analytic Rule"] },
@@ -2492,6 +2498,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.1.6", date: "14-04-2026", text: "Deprecate Okta Single Sign-On (using Azure Function)", contentTypes: [] },
       { version: "3.1.5", date: "02-04-2026", text: "Rename CCF solution to Okta Single Sign-On (via Codeless Connector Framework).", contentTypes: [] },
       { version: "3.1.5", date: "02-04-2026", text: "Add SessionId variable and reference in template.", contentTypes: [] },
       { version: "3.1.4", date: "13-01-2026", text: "Updated non-functional link from MFA Fatigue (OKTA) Analytic rule", contentTypes: ["Analytic Rule"] },
@@ -3167,6 +3174,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.0.9", date: "14-04-2026", text: "Deprecate SentinelOne (using Azure Function)", contentTypes: [] },
       { version: "3.0.8", date: "24-03-2026", text: "Rename CCF solution to SentinelOne (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.0.7", date: "09-01-2026", text: "Updated broken URL and bumped the SentinelOne solution version", contentTypes: [] },
       { version: "3.0.6", date: "10-02-2025", text: "Advancing CCP Data Connector from Public preview to Global Availability.", contentTypes: ["Data Connector"] },
@@ -3304,6 +3312,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Sophos Endpoint Protection",
     entries: [
+      { version: "3.0.8", date: "14-04-2026", text: "Deprecate Sophos Endpoint Protection (using Azure Function)", contentTypes: [] },
       { version: "3.0.7", date: "24-03-2026", text: "Sophos Endpoint Protection (via Codeless Connector Platform)", contentTypes: [] },
       { version: "3.0.6", date: "23-10-2025", text: "Updated the solution to be compatible with tool changes for the connection name.", contentTypes: [] },
       { version: "3.0.5", date: "21-08-2024", text: "Data Connector [Sophos Endpoint Protection (using REST API)] Globally Available", contentTypes: ["Data Connector"] },
@@ -3757,6 +3766,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMware Carbon Black Cloud",
     entries: [
+      { version: "3.0.8", date: "24-03-2026", text: "Deprecate to VMware Carbon Black Cloud (using Azure Function)", contentTypes: [] },
       { version: "3.0.7", date: "24-03-2026", text: "Rename to VMware Carbon Black Cloud via AWS S3(via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.0.6", date: "28-01-2026", text: "Updated all VMware Carbon Black Cloud product page URLs to now point to the new Broadcom URL", contentTypes: [] },
       { version: "3.0.5", date: "22-01-2025", text: "Removed Custom Entity mappings from Analytic rules", contentTypes: ["Analytic Rule"] },
