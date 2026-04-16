@@ -461,6 +461,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Blacklens",
     entries: [
+      { version: "3.0.2", date: "13-04-2026", text: "Fix invalid secureData on ParseJson action.", contentTypes: [] },
       { version: "3.0.1", date: "30-03-2026", text: "Bug fix.", contentTypes: [] },
       { version: "3.0.0", date: "16-02-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
@@ -536,14 +537,18 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint Alerts",
     entries: [
-      { version: "3.0.1", date: "05-11-2025", text: "Update Data Connector", contentTypes: ["Data Connector"] },
+      { version: "3.1.0", date: "10-03-2026", text: "Update Data Connector, add bi-directional sync playbooks, analytic rule (ingestion anomaly), workbook (alert overview & sync health), and automation rules.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
     ],
   },
   {
     name: "Check Point Cyberint IOC",
     entries: [
-      { version: "3.0.2", date: "22-01-2026", text: "Check Point Cyberint IOC Data Connector Improvements.", contentTypes: ["Data Connector"] },
+      { version: "3.0.2", date: "03-04-2026", text: "Fixed table schema definition causing connector creation failure.", contentTypes: [] },
+      { version: "3.0.2", date: "03-04-2026", text: "Fixed apiEndpoint URL construction (removed duplicate https:// prefix).", contentTypes: [] },
+      { version: "3.0.2", date: "03-04-2026", text: "Added Customer Name configuration field.", contentTypes: [] },
+      { version: "3.0.2", date: "03-04-2026", text: "Improved connector UI with field descriptions, placeholders, and password masking for API Token.", contentTypes: [] },
+      { version: "3.0.2", date: "03-04-2026", text: "Updated connector description and prerequisites text.", contentTypes: [] },
       { version: "3.0.1", date: "12-09-2025", text: "Replaces the variable reference for graphQueriesTableName with the explicit table name 'iocsent_CL'", contentTypes: [] },
       { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
     ],
@@ -1080,6 +1085,7 @@ export const RAW_SOLUTIONS = [
     name: "D3Smart SOAR",
     alias: "D3SmartSOAR",
     entries: [
+      { version: "3.3.0", date: "13-04-2026", text: "Added analytics rule for High and Critical severity incident detection.", contentTypes: [] },
       { version: "3.2.0", date: "01-04-2026", text: "Changed to Solution Template plan type. Updated offer ID to azure-sentinel-solution-d3smartsoar.", contentTypes: [] },
       { version: "3.1.0", date: "26-03-2026", text: "Fixed pagination using CountBasedPaging with nested JSON path paging ($.CommandParams.PageIndex). Updated publisher ID to match Partner Center registration. Updated branding to Microsoft Sentinel.", contentTypes: [] },
       { version: "3.0.0", date: "27-02-2026", text: "Initial release of D3 Smart SOAR data connector. Polls incidents every 5 minutes into D3SOARIncidents_CL with IncidentRawData and EventRawData dynamic fields via PollFromSentinel parameter.", contentTypes: ["Data Connector"] },
