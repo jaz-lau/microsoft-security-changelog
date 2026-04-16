@@ -1,8 +1,24 @@
-node_modules/
-dist/
+# macOS
 .DS_Store
 **/.DS_Store
-logs/*.log
+
+# Node
+node_modules/
+dist/
+
+# Logs
+logs/
+
+# Environment
 .env
 .env.local
-.claude
+
+# Claude Code
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Docs
+docs
