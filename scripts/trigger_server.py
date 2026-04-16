@@ -3,7 +3,7 @@
 trigger_server.py
 
 Purpose:
-    Runs on your Mac as a lightweight HTTP server. Listens for trigger
+    Runs on your device as a lightweight HTTP server. Listens for trigger
     requests from the Synology NAS watcher container. When a valid trigger
     is received, runs agent_update.py to update the platform-*.js files,
     then runs npm build and git push.
@@ -34,10 +34,10 @@ Requirements:
     pip install flask ollama requests
 
 Configuration:
-    Set AGENT_SECRET environment variable — must match the value in your
-    NAS .env file. Defaults to 'changeme' if not set (change this!).
+    Set AGENT_SECRET environment variable — must match the value in
+    .env file. Defaults to 'changeme' if not set (change this!).
 
-Placement: scripts/trigger_server.py (runs on Mac)
+Placement: scripts/trigger_server.py (runs on device)
 """
 
 import os
