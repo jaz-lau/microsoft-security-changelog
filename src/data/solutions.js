@@ -1469,7 +1469,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "Global Secure Access",
     entries: [
-      { version: "3.0.2", date: "25-02-2026", text: "Modified the query period for the Analytic Rule: [GSA - Detect Abnormal Deny Rate for Source to Destination IP]", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.4", date: "15-04-2026", text: "Updated workbooks to support the new Entra traffic type; Fixed regex in GSA - TI URL Entity analytic rule for correct URL indicator matching", contentTypes: ["Analytic Rule","Workbook"] },
+      { version: "3.0.3", date: "25-02-2026", text: "Modified the query period for the Analytic Rule: [GSA - Detect Abnormal Deny Rate for Source to Destination IP]", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.2", date: "04-02-2026", text: "Added new Analytic Rules", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "16-09-2025", text: "Made an update to the logic of the Abnormal Port-to-Protocol Analytic Rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "01-08-2025", text: "Updates to the workbook to improve the clarity and consistency of titles for visualizations", contentTypes: ["Workbook"] },
     ],
