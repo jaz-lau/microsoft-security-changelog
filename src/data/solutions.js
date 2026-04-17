@@ -525,6 +525,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Censys",
     entries: [
+      { version: "3.0.0", date: "06-04-2026", text: "Added Support for Related Infrastructure Playbook and Workbook", contentTypes: ["Playbook","Workbook"] },
       { version: "3.0.0", date: "05-03-2026", text: "Initial Solution for Censys with Playbooks and Workbook", contentTypes: ["Playbook","Workbook"] },
     ],
   },
