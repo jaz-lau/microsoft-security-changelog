@@ -2748,6 +2748,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Proofpoint On demand(POD) Email Security",
     entries: [
+      { version: "3.1.4", date: "17-04-2026", text: "Update ProofpointPOD_PollingConfig.json to pass sinceTime parameter with firstWindowBackfillInMin configuration.", contentTypes: [] },
       { version: "3.1.3", date: "19-03-2026", text: "Update ProofpointPOD_PollingConfig.json to pass user-agent header with solution package version.", contentTypes: [] },
       { version: "3.1.2", date: "08-12-2025", text: "Update ProofpointPOD_PollingConfig.json to remove start and end time query params, it impacts time frames at server side and causes duplicate data ingestion.", contentTypes: [] },
       { version: "3.1.1", date: "03-11-2025", text: "Update support url in SolutionMetadata.json.", contentTypes: [] },
@@ -2851,6 +2852,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future",
     entries: [
+      { version: "3.2.19", date: "13-04-2026", text: "Added functionality to choose Sandbox region, changed to optional Enterprise Sandbox API token. Updated Indicator Import, moving evidence details from \"labels\" to \"external_references\".", contentTypes: [] },
       { version: "3.2.18", date: "03-02-2026", text: "To reduce noise in incident comments: updated RecordedFuture-IOC_Enrichment logic app with a RiskScoreThreshold parameter that defaults to 5. If an entity has a risk score lower than this threshold, we will not leave a comment on the incident.", contentTypes: [] },
       { version: "3.2.17", date: "12-08-2025", text: "Updated Indicator imports with deterministic STIX ID that should reduce the number duplicate IOCs. Updated RecordedFuture-Playbook-Alert-Importer to improve the description formatting. Updated documentation with typo fixes and clarifications.", contentTypes: ["Playbook"] },
       { version: "3.2.16", date: "08-05-2025", text: "Updated workbooks, analytic rules and hunting queries to new ThreatIntelIndicators schema. Removed deprecated analytic rules. Updated documentation to reflect changes.", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
