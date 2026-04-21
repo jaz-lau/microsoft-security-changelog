@@ -1210,10 +1210,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dynatrace",
     entries: [
-      { version: "3.0.2", date: "03-05-2024", text: "Repackaged for parser issue fix on reinstall", contentTypes: ["Parser"] },
-      { version: "3.0.1", date: "18-01-2024", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR,", contentTypes: [] },
+      { version: "3.0.2", date: "02-04-2026", text: "Added DCR based connectors.", contentTypes: [] },
+      { version: "3.0.1", date: "18-01-2024", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR, Updated user-agent strings used when calling Dynatrace REST API's, Added new Entity Mappings to Analytic Rules Aligned Playbook, Data Connector & Workbook version numbers with rest of solution.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.0.0", date: "16-10-2023", text: "Enabled new api paging mode on Data Connector to fix issues related to polling Dynatrace REST API's with a large number of results.", contentTypes: ["Data Connector"] },
-      { version: "2.0.0", date: "18-10-2022", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -3100,6 +3099,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP ETD Cloud",
     entries: [
+      { version: "3.0.4", date: "16-04-2026", text: "Added Users entity expansion to Alerts for email correlation", contentTypes: [] },
       { version: "3.0.3", date: "11-09-2025", text: "Investigations API Connector added", contentTypes: [] },
       { version: "3.0.2", date: "24-06-2025", text: "Data connector polling window reduced", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "31-03-2025", text: "SAP OData entity change from TriggeringEvents to new NormalizedTriggeringEvents", contentTypes: [] },
@@ -3671,6 +3671,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Upwind",
     entries: [
+      { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
       { version: "3.0.0", date: "10-03-2026", text: "Initial solution release.", contentTypes: [] },
     ],
   },
