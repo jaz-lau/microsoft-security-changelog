@@ -1280,7 +1280,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ExtraHop",
     entries: [
-      { version: "3.0.2", date: "20-03-2026", text: "Add Log Ingestion API Support.", contentTypes: [] },
+      { version: "3.0.2", date: "21-04-2026", text: "Add Log Ingestion API Support.", contentTypes: [] },
       { version: "3.0.1", date: "04-06-2025", text: "Updated Parser and Workbook to fix issue.", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.0", date: "19-03-2025", text: "Initial Solution Release.", contentTypes: [] },
     ],
@@ -2921,6 +2921,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future Identity",
     entries: [
+      { version: "3.1.3", date: "06-03-2026", text: "Deprecated RFI-Playbook-Alert-Importer-LAW-Sentinel in preparation for Microsoft Defender Portal. Added Analytic Rule that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.1.2", date: "29-04-2025", text: "Removed Get Risky User action from Playbooks due to Recorded Future can act as a authority on compromise.", contentTypes: ["Playbook"] },
       { version: "3.1.1", date: "02-04-2025", text: "Updated documentation, restructured solution and added correct paths for Playbooks.", contentTypes: ["Playbook"] },
       { version: "3.1.0", date: "10-02-2025", text: "Refactored solution to be based on Recorded Future Playbook Alerts, moved old solution to v3.0 folder.", contentTypes: ["Playbook"] },
@@ -2930,7 +2931,6 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.0", date: "15-04-2024", text: "Entra ID renaming of Playbooks and readme.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "15-04-2024", text: "Using solution format V3", contentTypes: [] },
       { version: "3.0.0", date: "15-04-2024", text: "Change prefix on all logic app installation names from RecordedFutureIdentity to RFI due to logic app name size limitation of 64 characters.", contentTypes: [] },
-      { version: "2.0.0", date: "14-09-2022", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -3766,6 +3766,15 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "02-06-2025", text: "Updated Playbook instructions for clarity", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "11-01-2024", text: "Updated solution to 3.0.0 to fix IP Enrichment - Virus Total report playbook", contentTypes: ["Playbook"] },
+    ],
+  },
+  {
+    name: "Visa Threat Intelligence (VTI)",
+    entries: [
+      { version: "3.0.3", date: "21-04-2026", text: "Updated createUiDefinition to include connector information", contentTypes: [] },
+      { version: "3.0.2", date: "21-04-2026", text: "Fixed issue with the zip file", contentTypes: [] },
+      { version: "3.0.1", date: "03-10-2026", text: "Fixed missing data connector information from mainTemplate file", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "16-12-2025", text: "Initial release with Data Connector, Workbook, and Analytic Rules for Visa Threat Intelligence", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
     ],
   },
   {
