@@ -438,6 +438,7 @@ export const RAW_SOLUTIONS = [
     name: "Bitsight",
     alias: "BitSight",
     entries: [
+      { version: "3.1.1", date: "22-04-2026", text: "Updated Solution Package with the fix of solutionId", contentTypes: [] },
       { version: "3.1.0", date: "31-03-2026", text: "Updated the python runtime version to 3.12. Added support for Log Ingestion API and updated parsers accordingly.", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "31-03-2026", text: "Reverted the solution id to fix the BitSight Solution publishing issue.", contentTypes: [] },
       { version: "3.0.2", date: "26-07-2024", text: "Update Analytic rules for missing TTP", contentTypes: ["Analytic Rule"] },
@@ -1051,6 +1052,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Cyjax",
+    entries: [
+      { version: "3.0.0", date: "02-03-2026", text: "Initial Solution for Cyjax Data Connector, playbooks and Workbook", contentTypes: ["Data Connector","Playbook","Workbook"] },
+    ],
+  },
+  {
     name: "Cynerio",
     entries: [
       { version: "3.0.0", date: "11-07-2023", text: "New analytic rules and workbook", contentTypes: ["Analytic Rule","Workbook"] },
@@ -1661,7 +1668,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Halcyon",
     entries: [
-      { version: "3.0.0", date: "12-09-2025", text: "Initial Solution release", contentTypes: [] },
+      { version: "3.1.0", date: "24-03-2026", text: "Update Connector to receive events with OCSF schemas", contentTypes: [] },
+      { version: "3.0.0", date: "09-12-2025", text: "Initial Solution release", contentTypes: [] },
     ],
   },
   {
@@ -3302,6 +3310,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "10-07-2025", text: "Updates to the playbook description, prerequisites, and post-deployment instructions, as well as adjustments to variable naming conventions for consistency .", contentTypes: ["Playbook"] },
       { version: "3.0.1", date: "24-07-2023", text: "Update Table markdown from \" : \" to \" - \" in SOCProcessFramework Workbook .", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "12-07-2023", text: "Correction of Logo in the solution.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "SOC Radar",
+    alias: "SOCRadar",
+    entries: [
+      { version: "3.0.0", date: "26-02-2026", text: "Initial release.", contentTypes: [] },
     ],
   },
   {
