@@ -1954,6 +1954,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Lookout",
     entries: [
+      { version: "3.0.3", date: "23-04-2026", text: "Version bump for certification resubmission. Fixed workspace-location parameter defaultValue to use [resourceGroup().location] ARM expression.", contentTypes: [] },
       { version: "3.0.2", date: "11-03-2026", text: "Updated lastPublishDate across solution metadata and package to 2026-03-11. Cleaned up stale v4.0.0 branches. Resubmission for certification after resolving link discrepancy flagged in Best Practice Test 300.4.1.1. Fixed product branding: updated \"Azure Sentinel\" to \"Microsoft Sentinel\" in workbook descriptions. Fixed DCR transform query error: undefined symbol detections corrected to smishing_alert.detections. Aligned data connector version from 1.0.0 to 3.0.2 for consistent version tracking across all solution components. Updated all template version references from 3.0.1 to 3.0.2 in package. Added Parsers and Notebooks steps to the install wizard (createUiDefinition.json) for improved discoverability during solution deployment.", contentTypes: ["Data Connector","Workbook","Parser"] },
       { version: "3.0.1", date: "18-12-2025", text: "Parser v3.1.0 with support for Streaming/Polling/REST API field structures. Enhanced workbooks and dashboards. Analytic Rules updated with MITRE ATT&CK mobile tactics. Added Jupyter Notebooks for threat hunting: Mobile Malware, Smishing, Device Compliance, and Audit/Insider Threat analysis.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
       { version: "3.0.0", date: "07-11-2025", text: "New CCF Connector added to Solution - *Lookout Mobile Threat Detection Connector*.", contentTypes: [] },
@@ -2826,7 +2827,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Qualys VM Knowledgebase",
     entries: [
-      { version: "4.0.0", date: "19-03-2026", text: "Added Codeless Connector to solution and updated parser to add fields and clean up typos.", contentTypes: ["Parser"] },
+      { version: "3.1.1", date: "23-04-2026", text: "Moved endpoint to target Qualys KB API v4.0", contentTypes: [] },
+      { version: "3.1.0", date: "19-03-2026", text: "Added Codeless Connector to solution and updated parser to add fields and clean up typos.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "03-05-2024", text: "Added Deploy to Azure Goverment button for Government portal in Dataconnector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "03-05-2024", text: "Fixed Metadata issue for ParserName and ParentId mismatch", contentTypes: [] },
       { version: "3.0.0", date: "12-10-2023", text: "Manual deployment instructions updated for Data Connector", contentTypes: ["Data Connector"] },
@@ -3694,6 +3696,13 @@ export const RAW_SOLUTIONS = [
     name: "Valence Security",
     entries: [
       { version: "3.0.0", date: "27-11-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Valimail Enforce",
+    alias: "ValimailEnforce",
+    entries: [
+      { version: "3.0.0", date: "22-04-2026", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
   {
