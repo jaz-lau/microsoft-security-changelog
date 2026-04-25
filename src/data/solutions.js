@@ -285,6 +285,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AWS ELB",
     entries: [
+      { version: "3.0.1", date: "23-04-2026", text: "Moved AWS ELB solution to GA (availability isPreview set to false).", contentTypes: [] },
       { version: "3.0.0", date: "20-03-2026", text: "Initial Solution Release - Public Preview. New CCF Data Connector for AWS Elastic Load Balancing. Includes ingestion of ALB access logs, NLB access logs, and NLB/GLB flow logs. Added 3 Parsers for AWSALBAccessLogs, AWSNLBAccessLogs, AWSELBFlowLogs.", contentTypes: ["Data Connector","Parser"] },
     ],
   },
