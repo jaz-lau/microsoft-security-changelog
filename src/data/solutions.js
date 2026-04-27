@@ -1955,6 +1955,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Lookout",
     entries: [
+      { version: "3.0.4", date: "24-04-2026", text: "Fixed APIKey bracket escaping in mainTemplate.json: changed [[parameters('applicationKey')]] to [[parameters('applicationKey')] to prevent ARM expression evaluation error (expected token 'EndOfData' and actual 'RightSquareBracket') when Sentinel instantiates the ResourcesDataConnector template.", contentTypes: [] },
       { version: "3.0.3", date: "23-04-2026", text: "Version bump for certification resubmission. Fixed workspace-location parameter defaultValue to use [resourceGroup().location] ARM expression.", contentTypes: [] },
       { version: "3.0.2", date: "11-03-2026", text: "Updated lastPublishDate across solution metadata and package to 2026-03-11. Cleaned up stale v4.0.0 branches. Resubmission for certification after resolving link discrepancy flagged in Best Practice Test 300.4.1.1. Fixed product branding: updated \"Azure Sentinel\" to \"Microsoft Sentinel\" in workbook descriptions. Fixed DCR transform query error: undefined symbol detections corrected to smishing_alert.detections. Aligned data connector version from 1.0.0 to 3.0.2 for consistent version tracking across all solution components. Updated all template version references from 3.0.1 to 3.0.2 in package. Added Parsers and Notebooks steps to the install wizard (createUiDefinition.json) for improved discoverability during solution deployment.", contentTypes: ["Data Connector","Workbook","Parser"] },
       { version: "3.0.1", date: "18-12-2025", text: "Parser v3.1.0 with support for Streaming/Polling/REST API field structures. Enhanced workbooks and dashboards. Analytic Rules updated with MITRE ATT&CK mobile tactics. Added Jupyter Notebooks for threat hunting: Mobile Malware, Smishing, Device Compliance, and Audit/Insider Threat analysis.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
@@ -3691,6 +3692,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
       { version: "3.0.0", date: "10-03-2026", text: "Initial solution release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Vaikora-Sentinel",
+    entries: [
+      { version: "3.0.0", date: "18-04-2026", text: "Initial Vaikora AI Agent Behavioral Signals CCF solution package with data connector, analytics rules and workbook.", contentTypes: ["Data Connector","Workbook"] },
     ],
   },
   {
