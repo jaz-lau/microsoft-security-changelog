@@ -1449,6 +1449,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.2.0", date: "24-04-2026", text: "Added GitHub Webhook V2 data connector (CLv2/Logs Ingestion API) public preview", contentTypes: ["Data Connector"] },
       { version: "3.1.4", date: "19-03-2026", text: "Fix NRT 2FA rule for new parser format.", contentTypes: ["Parser"] },
       { version: "3.1.3", date: "29-01-2026", text: "Promoted GitHub Enterprise Cloud Audit Log CCF connector from Public Preview to GA.", contentTypes: [] },
       { version: "3.1.2", date: "24-11-2025", text: "Added clarity to Github Enterprise Audit CCF connector definition to use API URL.", contentTypes: [] },
@@ -1653,6 +1654,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "26-08-2025", text: "Moving GoogleWorkspaceReports CCF Data Connector to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "14-07-2025", text: "Added new CCF Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "06-09-2024", text: "Updated the python runtime version to 3.11.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Gravity Zone",
+    alias: "GravityZone",
+    entries: [
+      { version: "3.0.0", date: "21-04-2026", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
   {
@@ -3021,6 +3029,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.1.0", date: "27-04-2026", text: "Updated CCP data connector with expanded DCR, table definitions, and polling configuration", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "23-01-2026", text: "Update the Salesforce data connector with instructions for the Salesforce Shield Event Monitoring license requirement", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "17-11-2025", text: "Resolved bug in CCF Data Connector related to column names", contentTypes: ["Data Connector"] },
       { version: "3.0.8", date: "04-11-2025", text: "Resolved bugs in Analytic rules related to TimestampDerived field.", contentTypes: ["Analytic Rule"] },
@@ -3213,6 +3222,7 @@ export const RAW_SOLUTIONS = [
     name: "Seraphic Security",
     alias: "SeraphicSecurity",
     entries: [
+      { version: "3.0.0", date: "09-04-2026", text: "Upgraded to v3 content schema: contentPackages pattern, polling v3.0 with health check and LinkHeader paging, IsConnectedQuery connectivity, API version 2023-02-01, fixed author email typo", contentTypes: [] },
       { version: "2.0.0", date: "17-11-2023", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
