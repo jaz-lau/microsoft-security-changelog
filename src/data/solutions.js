@@ -2525,6 +2525,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.1.7", date: "28-04-2026", text: "Update query with OktaSSO parser so that the OktaV2_CL table is considered.", contentTypes: ["Parser"] },
       { version: "3.1.6", date: "14-04-2026", text: "Deprecate Okta Single Sign-On (using Azure Function)", contentTypes: [] },
       { version: "3.1.5", date: "02-04-2026", text: "Rename CCF solution to Okta Single Sign-On (via Codeless Connector Framework).", contentTypes: [] },
       { version: "3.1.5", date: "02-04-2026", text: "Add SessionId variable and reference in template.", contentTypes: [] },
@@ -4042,6 +4043,7 @@ export const RAW_SOLUTIONS = [
     name: "Zoom Reports",
     alias: "ZoomReports",
     entries: [
+      { version: "3.0.8", date: "27-04-2026", text: "ZoomReports CCF Connector GA with updated parser", contentTypes: ["Parser"] },
       { version: "3.0.7", date: "18-03-2026", text: "Updated ZoomReports CCF to use a different table name and schema", contentTypes: [] },
       { version: "3.0.6", date: "13-03-2026", text: "Added ZoomReports CCF Connector Public Preview", contentTypes: [] },
       { version: "3.0.5", date: "29-08-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
