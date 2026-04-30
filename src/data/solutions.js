@@ -2838,6 +2838,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Qualys VM Knowledgebase",
     entries: [
+      { version: "3.1.2", date: "29-04-2026", text: "Moving Connector to GA", contentTypes: [] },
       { version: "3.1.1", date: "23-04-2026", text: "Moved endpoint to target Qualys KB API v4.0", contentTypes: [] },
       { version: "3.1.0", date: "19-03-2026", text: "Added Codeless Connector to solution and updated parser to add fields and clean up typos.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "03-05-2024", text: "Added Deploy to Azure Goverment button for Government portal in Dataconnector", contentTypes: ["Data Connector"] },
@@ -3379,6 +3380,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Spur",
+    entries: [
+      { version: "3.0.0", date: "25-04-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "SpyCloud Enterprise Protection",
     entries: [
       { version: "3.0.1", date: "18-07-2024", text: "Fixed Invalid Analytic Rule SpyCloudEnterpriseProtectionMalwareRule.yaml", contentTypes: ["Analytic Rule"] },
@@ -3706,9 +3713,23 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Vaikora-Crowd Strike-Threat Intelligence",
+    alias: "Vaikora-CrowdStrike-ThreatIntelligence",
+    entries: [
+      { version: "3.0.0", date: "28-04-2026", text: "Initial release. Vaikora AI to CrowdStrike IOC integration with automated severity mapping and deduplication.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Vaikora-Sentinel",
     entries: [
       { version: "3.0.0", date: "18-04-2026", text: "Initial Vaikora AI Agent Behavioral Signals CCF solution package with data connector, analytics rules and workbook.", contentTypes: ["Data Connector","Workbook"] },
+    ],
+  },
+  {
+    name: "Vaikora-Sentinel One-Threat Intelligence",
+    alias: "Vaikora-SentinelOne-ThreatIntelligence",
+    entries: [
+      { version: "3.0.0", date: "28-04-2026", text: "Initial release. Polls Vaikora AI Agent Security API every 6 hours for high-severity and anomaly actions, pushes IOCs to SentinelOne Threat Intelligence API. SHA256 IOC type from log_hash, risk score severity mapping (0-100 to SentinelOne 2-7), STAR rule auto-creation, Content Hub ready. Added top-level metadata block to standalone playbook, renamed logicAppName parameter to PlaybookName, set playbookVersion1 to \"1.0.0\" to match hidden-SentinelTemplateVersion tag, per Cyren-SentinelOne reference pattern.", contentTypes: ["Playbook"] },
     ],
   },
   {
@@ -3814,6 +3835,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Visa Threat Intelligence (VTI)",
     entries: [
+      { version: "3.0.4", date: "29-04-2026", text: "Fixed mainTemplate to use uri instead of concat for VTI URL variables", contentTypes: [] },
       { version: "3.0.3", date: "21-04-2026", text: "Updated createUiDefinition to include connector information", contentTypes: [] },
       { version: "3.0.2", date: "21-04-2026", text: "Fixed issue with the zip file", contentTypes: [] },
       { version: "3.0.1", date: "03-10-2026", text: "Fixed missing data connector information from mainTemplate file", contentTypes: ["Data Connector"] },
@@ -4043,6 +4065,7 @@ export const RAW_SOLUTIONS = [
     name: "Zoom Reports",
     alias: "ZoomReports",
     entries: [
+      { version: "3.0.9", date: "29-04-2026", text: "Update Cloud recording api polling interval to one day with one day delay to reduce duplication", contentTypes: [] },
       { version: "3.0.8", date: "27-04-2026", text: "ZoomReports CCF Connector GA with updated parser", contentTypes: ["Parser"] },
       { version: "3.0.7", date: "18-03-2026", text: "Updated ZoomReports CCF to use a different table name and schema", contentTypes: [] },
       { version: "3.0.6", date: "13-03-2026", text: "Added ZoomReports CCF Connector Public Preview", contentTypes: [] },
