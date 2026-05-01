@@ -758,6 +758,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cloudflare CCF",
     entries: [
+      { version: "3.0.2", date: "22-04-2026", text: "Fixed DCR transformKql for Type field and corrected invalid field data types", contentTypes: [] },
       { version: "3.0.1", date: "08-12-2025", text: "Fixed invalid GUIDs, updated analytic rules, aligned URL entity mappings with legacy Cloudflare solution", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "02-10-2025", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
     ],
@@ -1667,6 +1668,7 @@ export const RAW_SOLUTIONS = [
     name: "GreyNoise Threat Intelligence",
     alias: "GreyNoiseThreatIntelligence",
     entries: [
+      { version: "3.1.1", date: "09-04-2026", text: "Fix packaging issues, updated Data Connector status query and workbook templates to reflect the new ThreatIntelIndicators table", contentTypes: ["Data Connector","Workbook"] },
       { version: "3.1.0", date: "12-03-2026", text: "Updated to use GreyNoise Python SDK v3.0.3, updated Data Connector instructions, Fixed python module mismatches, bumped Az Functions Runtime", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "17-07-2025", text: "Updated to use GreyNoise Python SDK v3.0.1, use new Threat Intel API, updated requirements.txt, updated Data Connector instructions", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "30-05-2024", text: "Added missing AMA Data Connector reference in Analytic rules", contentTypes: ["Analytic Rule","Data Connector"] },
@@ -2159,6 +2161,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.12", date: "28-04-2026", text: "Renamed analytic rule from BruteForceCloudPC to BruteForceAgainstEntraAuthenticatedWindowsDevice and updated name and description in Analytic Rule to reflect detection scope across all Entra-authenticated Windows devices (including Entra-joined, hybrid-joined, and Windows 365 Cloud PCs), resolving ambiguity around Cloud PC specificity", contentTypes: ["Analytic Rule"] },
       { version: "3.3.11", date: "13-04-2026", text: "Added Watchlist ConditionalAccessBenignStatusCodes and updated BypassCondAccessRule analytic rule", contentTypes: ["Analytic Rule"] },
       { version: "3.3.10", date: "12-04-2026", text: "Updated AccountCreatedandDeletedinShortTimeframe analytic rule to extend query period to 7 days, normalize UPN parsing, and use immutable UserId for improved detection accuracy and evasion resistance", contentTypes: ["Analytic Rule"] },
       { version: "3.3.9", date: "23-02-2026", text: "Updated Block-AADUser Incident trigger to fix the permissions for disable user block", contentTypes: [] },
@@ -3708,6 +3711,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Upwind",
     entries: [
+      { version: "3.0.2", date: "28-04-2026", text: "Fixed Function App deployment: restructured zip package to flat layout and removed separate App Service Plan for correct code deployment.", contentTypes: [] },
       { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
       { version: "3.0.0", date: "10-03-2026", text: "Initial solution release.", contentTypes: [] },
     ],
