@@ -879,6 +879,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.3.4", date: "30-04-2026", text: "remove deprecated tag. CrowdStrike Falcon Data Replicator (CrowdStrike Managed AWS-S3) is not deprecated", contentTypes: [] },
       { version: "3.3.3", date: "13-04-2026", text: "Deprecate CrowdStrike Falcon Data Replicator (CrowdStrike Managed AWS-S3) (using Azure Function)", contentTypes: [] },
       { version: "3.3.2", date: "16-03-2026", text: "Update *CrowdStrike API Data Connector* to GA with adding rate limits to inner steps for Alerts and Detections data types", contentTypes: ["Data Connector"] },
       { version: "3.3.1", date: "05-03-2026", text: "Update *CrowdStrike API Data Connector* to fix Alerts and Detections data types", contentTypes: ["Data Connector"] },
@@ -4069,6 +4070,7 @@ export const RAW_SOLUTIONS = [
     name: "Zoom Reports",
     alias: "ZoomReports",
     entries: [
+      { version: "3.0.10", date: "29-04-2026", text: "Bump version to 3.0.10 for a new publishing, same connector content as the previous one", contentTypes: [] },
       { version: "3.0.9", date: "29-04-2026", text: "Update Cloud recording api polling interval to one day with one day delay to reduce duplication", contentTypes: [] },
       { version: "3.0.8", date: "27-04-2026", text: "ZoomReports CCF Connector GA with updated parser", contentTypes: ["Parser"] },
       { version: "3.0.7", date: "18-03-2026", text: "Updated ZoomReports CCF to use a different table name and schema", contentTypes: [] },
