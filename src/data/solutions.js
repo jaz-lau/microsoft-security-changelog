@@ -334,6 +334,7 @@ export const RAW_SOLUTIONS = [
     name: "Azure DevOps Auditing",
     alias: "AzureDevOpsAuditing",
     entries: [
+      { version: "3.0.9", date: "17-04-2026", text: "Updated Polling Config to fix parameter mismatch", contentTypes: [] },
       { version: "3.0.8", date: "26-01-2026", text: "Updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
       { version: "3.0.7", date: "22-01-2026", text: "Updated solution description by eliminating legacy streaming text", contentTypes: [] },
       { version: "3.0.6", date: "19-06-2025", text: "Updated Data Connector instructions to include a note about User permissions.", contentTypes: ["Data Connector"] },
