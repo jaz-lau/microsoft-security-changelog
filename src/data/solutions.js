@@ -24,6 +24,7 @@ export const RAW_SOLUTIONS = [
     name: "Abnormal Security",
     alias: "AbnormalSecurity",
     entries: [
+      { version: "3.0.1", date: "27-04-2026", text: "Updated CCF table schemas and DCR transformKql for full MLA column parity: renamed abx_body_* columns to abx_body_abx_body_*, added abx_body_abx_metadata_* columns across all 9 streams, fixed abx_metadata_timestamp type from datetime to string.", contentTypes: [] },
       { version: "3.0.0", date: "04-03-2026", text: "Added CCF Push connector with multi-table routing (9 tables), DeployPushConnectorButton, and OAuth 2.0 authentication. Legacy Azure Functions connector retained for backward compatibility.", contentTypes: [] },
       { version: "2.0.1", date: "29-06-2023", text: "Renaming Azure Function to Azure Functions in Data Connector Description and Updated the python runtime version to 3.11", contentTypes: ["Data Connector"] },
     ],
@@ -1908,6 +1909,7 @@ export const RAW_SOLUTIONS = [
     name: "Joe Sandbox",
     alias: "JoeSandbox",
     entries: [
+      { version: "3.0.1", date: "24-04-2026", text: "Fix Azure templates.", contentTypes: [] },
       { version: "3.0.0", date: "13-02-2026", text: "Initial Solution Release.", contentTypes: [] },
       { version: "3.0.0", date: "13-02-2026", text: "Removed Manual Deployment Steps.", contentTypes: [] },
     ],
@@ -2352,6 +2354,7 @@ export const RAW_SOLUTIONS = [
     name: "MISP to Sentinel",
     alias: "MISP2Sentinel",
     entries: [
+      { version: "3.1.0", date: "18-04-2026", text: "Support for the new Upload Indicators API", contentTypes: [] },
       { version: "3.0.0", date: "29-07-2023", text: "Data Connector Initial version of MISP2Sentinel with support for Upload Indicators API", contentTypes: ["Data Connector"] },
     ],
   },
@@ -3036,6 +3039,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.2.0", date: "01-05-2026", text: "Updated CCF Data Connector to include new V3 table that includes additional fields and support for multiple domains.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "27-04-2026", text: "Updated CCP data connector with expanded DCR, table definitions, and polling configuration", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "23-01-2026", text: "Update the Salesforce data connector with instructions for the Salesforce Shield Event Monitoring license requirement", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "17-11-2025", text: "Resolved bug in CCF Data Connector related to column names", contentTypes: ["Data Connector"] },
@@ -3580,6 +3584,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
+      { version: "3.0.18", date: "04-05-2026", text: "Export to TAXII connector proceeds to GA.", contentTypes: [] },
       { version: "3.0.17", date: "02-04-2026", text: "Updated TI map Domain entity to SecurityAlert analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
       { version: "3.0.16", date: "25-03-2026", text: "Optimized TI map Domain entity to EmailUrlInfo analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
       { version: "3.0.15", date: "09-03-2026", text: "Update IPEntity_DuoSecurity Analytic Rule", contentTypes: ["Analytic Rule"] },
@@ -3716,6 +3721,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "28-04-2026", text: "Fixed Function App deployment: restructured zip package to flat layout and removed separate App Service Plan for correct code deployment.", contentTypes: [] },
       { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
       { version: "3.0.0", date: "10-03-2026", text: "Initial solution release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Vaikora-Azure Security Center",
+    alias: "Vaikora-AzureSecurityCenter",
+    entries: [
+      { version: "3.0.0", date: "28-04-2026", text: "Initial release. Vaikora AI to Microsoft Defender for Cloud integration with security alert ingestion and three analytic rules for high-severity, anomaly, and feed outage detection.", contentTypes: ["Analytic Rule"] },
     ],
   },
   {
@@ -4039,6 +4051,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Zero Fox Alerts",
+    alias: "ZeroFoxAlerts",
+    entries: [
+      { version: "3.0.0", date: "01-04-2026", text: "Added Data Connectors for ZeroFox's Alerts.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Zero Networks",
     alias: "ZeroNetworks",
     entries: [
@@ -4056,6 +4075,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "11-09-2025", text: "Removed the network map from the workbook.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "09-11-2023", text: "Changes for rebranding from Azure Active Directory Identity Protection to Microsoft Entra ID Protection", contentTypes: [] },
+    ],
+  },
+  {
+    name: "ZeroFox Threat Intelligence",
+    entries: [
+      { version: "3.0.0", date: "01-04-2026", text: "Added Data Connectors for ZeroFox's Threat Intelligence.", contentTypes: ["Data Connector"] },
     ],
   },
   {
