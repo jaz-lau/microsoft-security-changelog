@@ -350,6 +350,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Firewall",
     entries: [
+      { version: "3.0.6", date: "06-05-2026", text: "Updated Analytical Rules and Hunting Queries to Quality improvements.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.5", date: "13-02-2026", text: "Updated Analytic Rule to cover missing TTPs. Extended detection for FQDN and Destination IP across multiple sources and added new Analytic Rule for improved TI destination coverage.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "12-02-2024", text: "Updated Analytical Rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "17-01-2024", text: "Updated Azure Firewall Data Connector to support resource specific logs.", contentTypes: ["Data Connector"] },
@@ -721,6 +722,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Claroty",
     entries: [
+      { version: "3.0.5", date: "05-05-2026", text: "Updated analytical rule and Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.4", date: "03-04-2026", text: "Fixed typo error in analytical rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "18-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "10-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
@@ -1222,6 +1224,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dynatrace",
     entries: [
+      { version: "3.0.3", date: "28-04-2026", text: "Fixed timestamp type mismatch in Parsers (DynatraceAttacks, DynatraceAuditLogs, DynatraceProblems, DynatraceSecurityProblems): V1 Unix epoch millisecond fields now converted to datetime, resolving duplicate typed columns in query results. Marked Add_DynatraceApplicationSecurityAttackSourceIpThreatIntelligence playbook as deprecated due to the deprecation of the Microsoft Graph Security tiIndicators API and its connector in Logic Apps.", contentTypes: ["Playbook","Parser"] },
       { version: "3.0.2", date: "02-04-2026", text: "Added DCR based connectors.", contentTypes: [] },
       { version: "3.0.1", date: "18-01-2024", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR, Updated user-agent strings used when calling Dynatrace REST API's, Added new Entity Mappings to Analytic Rules Aligned Playbook, Data Connector & Workbook version numbers with rest of solution.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.0.0", date: "16-10-2023", text: "Enabled new api paging mode on Data Connector to fix issues related to polling Dynatrace REST API's with a large number of results.", contentTypes: ["Data Connector"] },
@@ -1453,6 +1456,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.2.1", date: "04-05-2026", text: "Migrated Parsers and Workbooks to githubscanaudit CLv1 & CLv2 union alias", contentTypes: ["Workbook","Parser"] },
       { version: "3.2.0", date: "24-04-2026", text: "Added GitHub Webhook V2 data connector (CLv2/Logs Ingestion API) public preview", contentTypes: ["Data Connector"] },
       { version: "3.1.4", date: "19-03-2026", text: "Fix NRT 2FA rule for new parser format.", contentTypes: ["Parser"] },
       { version: "3.1.3", date: "29-01-2026", text: "Promoted GitHub Enterprise Cloud Audit Log CCF connector from Public Preview to GA.", contentTypes: [] },
@@ -3853,6 +3857,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Visa Threat Intelligence (VTI)",
     entries: [
+      { version: "3.0.5", date: "05-05-2026", text: "Updated description in createUiDefinition", contentTypes: [] },
       { version: "3.0.4", date: "29-04-2026", text: "Fixed mainTemplate to use uri instead of concat for VTI URL variables", contentTypes: [] },
       { version: "3.0.3", date: "21-04-2026", text: "Updated createUiDefinition to include connector information", contentTypes: [] },
       { version: "3.0.2", date: "21-04-2026", text: "Fixed issue with the zip file", contentTypes: [] },
