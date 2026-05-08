@@ -4089,6 +4089,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Zimperium Mobile Threat Defense",
+    entries: [
+      { version: "3.0.0", date: "28-04-2026", text: "Added data ingestion support using CCF (Codeless Connector Framework) Push connector.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Zinc Open Source",
     entries: [
       { version: "3.0.3", date: "30-05-2024", text: "Added missing AMA Data Connector reference in Analytic rules", contentTypes: ["Analytic Rule","Data Connector"] },
