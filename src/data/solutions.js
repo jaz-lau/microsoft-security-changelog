@@ -3395,7 +3395,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Spur",
     entries: [
-      { version: "3.0.0", date: "25-04-2026", text: "Initial Solution Release.", contentTypes: [] },
+      { version: "3.0.0", date: "11-05-2026", text: "Initial Solution Release.", contentTypes: [] },
+      { version: "3.0.0", date: "11-05-2026", text: "Logo Fixed.", contentTypes: [] },
     ],
   },
   {
