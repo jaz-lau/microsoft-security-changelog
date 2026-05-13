@@ -24,8 +24,8 @@ export const RAW_SOLUTIONS = [
     name: "Abnormal Security",
     alias: "AbnormalSecurity",
     entries: [
-      { version: "3.0.1", date: "27-04-2026", text: "Updated CCF table schemas and DCR transformKql for full MLA column parity: renamed abx_body_* columns to abx_body_abx_body_*, added abx_body_abx_metadata_* columns across all 9 streams, fixed abx_metadata_timestamp type from datetime to string.", contentTypes: [] },
-      { version: "3.0.0", date: "04-03-2026", text: "Added CCF Push connector with multi-table routing (9 tables), DeployPushConnectorButton, and OAuth 2.0 authentication. Legacy Azure Functions connector retained for backward compatibility.", contentTypes: [] },
+      { version: "3.0.0", date: "08-05-2026", text: "Added CCF Push connector with multi-table routing (9 tables), DeployPushConnectorButton, and OAuth 2.0 authentication. Legacy Azure Functions connector retained for backward compatibility.", contentTypes: [] },
+      { version: "3.0.0", date: "08-05-2026", text: "Full MLA column parity: renamed abx_body_* columns to abx_body_abx_body_*, added abx_body_abx_metadata_* columns across all 9 streams. Fixed DCR transforms with explicit tostring(abx_body) and tostring(abx_metadata) conversions. Fixed fallback stream to Custom-ABNORMAL_SECURITY_LOGS_CL. Added top-level workspace/tables resources in mainTemplate for direct ARM deployment.", contentTypes: [] },
       { version: "2.0.1", date: "29-06-2023", text: "Renaming Azure Function to Azure Functions in Data Connector Description and Updated the python runtime version to 3.11", contentTypes: ["Data Connector"] },
     ],
   },
@@ -371,6 +371,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Resource Graph",
     entries: [
+      { version: "3.0.3", date: "30-04-2026", text: "Added Preview tag for ARGRoleDefinitions table", contentTypes: [] },
       { version: "3.0.2", date: "01-04-2026", text: "Update all ARG Tables' name to align with those in Table management part", contentTypes: [] },
       { version: "3.0.1", date: "10-03-2026", text: "Add a new table ARG Role Definitions for ARG Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "20-06-2025", text: "Releasing a new ARG Data Connector Solution in Content Hub and Data Connector gallery.", contentTypes: ["Data Connector"] },
@@ -1341,7 +1342,15 @@ export const RAW_SOLUTIONS = [
   {
     name: "Flare",
     entries: [
-      { version: "3.0.0", date: "26-12-2025", text: "Added new CFF Data Connector for this solution", contentTypes: ["Data Connector"] },
+      { version: "3.1.0", date: "21-04-2026", text: "Updated Analytic Rules and Workbooks queries to be more accurate.", contentTypes: ["Analytic Rule","Workbook"] },
+      { version: "3.1.0", date: "21-04-2026", text: "Added three new Analytic Rules and removed one.", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.0", date: "15-12-2025", text: "New CFF connector that replaces deprecated Rest API connector.", contentTypes: [] },
+      { version: "3.0.0", date: "15-12-2025", text: "New Polling config for CFF connector.", contentTypes: [] },
+      { version: "3.0.0", date: "15-12-2025", text: "New DCR config for CFF connector.", contentTypes: [] },
+      { version: "3.0.0", date: "15-12-2025", text: "Added Table definition for FireworkV2_CL.", contentTypes: [] },
+      { version: "3.0.0", date: "15-12-2025", text: "Fixed Analytic Rules to handle missing columns using column_ifexists().", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.0", date: "15-12-2025", text: "Added ReleaseNotes.md file.", contentTypes: [] },
+      { version: "1.0.0", date: "21-10-2021", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -2212,6 +2221,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Assets",
     entries: [
+      { version: "3.0.3", date: "30-04-2026", text: "Added Preview tag for EntraDevices and EntraOrgContacts tables", contentTypes: [] },
       { version: "3.0.2", date: "04-03-2025", text: "Added Devices and Org Contacts", contentTypes: [] },
       { version: "3.0.1", date: "28-10-2025", text: "Fixed a typo in the data connector tile, correcting enta to Entra", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "11-09-2025", text: "Releasing a new Microsoft Entra ID Assets connector solution in Content Hub and Data Connector gallery.", contentTypes: ["Data Connector"] },
@@ -2220,6 +2230,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Protection",
     entries: [
+      { version: "3.0.4", date: "07-05-2026", text: "Updated the CorrelateIPC_Unfamiliar-Atypical Analytic Rule for better correlation accuracy and improved detection coverage.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "07-07-2025", text: "To enhance functionality, improve entity mappings, and update playbook configurations.", contentTypes: ["Playbook"] },
       { version: "3.0.2", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "18-01-2024", text: "Updated mapping in Analytic Rule for better correlation", contentTypes: ["Analytic Rule"] },
@@ -3043,6 +3054,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.3.0", date: "07-05-2026", text: "Add new Salesforce Audit logs CCF Data Connector to pull SetupAuditTrails and LoginHistory logs.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "01-05-2026", text: "Updated CCF Data Connector to include new V3 table that includes additional fields and support for multiple domains.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "27-04-2026", text: "Updated CCP data connector with expanded DCR, table definitions, and polling configuration", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "23-01-2026", text: "Update the Salesforce data connector with instructions for the Salesforce Shield Event Monitoring license requirement", contentTypes: ["Data Connector"] },
