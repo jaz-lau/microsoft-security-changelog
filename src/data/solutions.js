@@ -14,13 +14,6 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "A365 Observability",
-    entries: [
-      { version: "3.0.0", date: "01-04-2026", text: "Releasing a new A365 Observability connector solution.", contentTypes: [] },
-      { version: "3.0.0", date: "01-04-2026", text: "Remove security admin from A365 solution.", contentTypes: [] },
-    ],
-  },
-  {
     name: "Abnormal Security",
     alias: "AbnormalSecurity",
     entries: [
@@ -42,6 +35,14 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.0", date: "11-11-2025", text: "Initial Solution Release.", contentTypes: [] },
       { version: "3.0.0", date: "11-11-2025", text: "The publisherId has been Updated.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Agent 365",
+    entries: [
+      { version: "3.0.1", date: "13-05-2026", text: "Renamed solution and connector from A365 Observability to Agent 365.", contentTypes: [] },
+      { version: "3.0.0", date: "01-04-2026", text: "Releasing a new A365 Observability connector solution.", contentTypes: [] },
+      { version: "3.0.0", date: "01-04-2026", text: "Remove security admin from A365 solution.", contentTypes: [] },
     ],
   },
   {
@@ -1244,6 +1245,14 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Elastic Agent",
+    alias: "ElasticAgent",
+    entries: [
+      { version: "3.0.0", date: "11-05-2026", text: "Data Connector via Codeless Connector Framework added", contentTypes: ["Data Connector"] },
+      { version: "2.0.0", date: "14-06-2022", text: "Data Connector customs added", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Endace",
     entries: [
       { version: "3.0.0", date: "30-06-2025", text: "Initial Release", contentTypes: [] },
@@ -1982,6 +1991,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Lookout",
     entries: [
+      { version: "3.0.5", date: "07-05-2026", text: "Fixed all 5 workbook metadata description fields that contained raw PowerShell serialization artifacts (System.Object[]) instead of actual description text — a template generation script bug that produced malformed strings like @{workbookKey=...; dataTypesDependencies=System.Object[]...}.description.", contentTypes: ["Workbook"] },
       { version: "3.0.4", date: "24-04-2026", text: "Fixed APIKey bracket escaping in mainTemplate.json: changed [[parameters('applicationKey')]] to [[parameters('applicationKey')] to prevent ARM expression evaluation error (expected token 'EndOfData' and actual 'RightSquareBracket') when Sentinel instantiates the ResourcesDataConnector template.", contentTypes: [] },
       { version: "3.0.3", date: "23-04-2026", text: "Version bump for certification resubmission. Fixed workspace-location parameter defaultValue to use [resourceGroup().location] ARM expression.", contentTypes: [] },
       { version: "3.0.2", date: "11-03-2026", text: "Updated lastPublishDate across solution metadata and package to 2026-03-11. Cleaned up stale v4.0.0 branches. Resubmission for certification after resolving link discrepancy flagged in Best Practice Test 300.4.1.1. Fixed product branding: updated \"Azure Sentinel\" to \"Microsoft Sentinel\" in workbook descriptions. Fixed DCR transform query error: undefined symbol detections corrected to smishing_alert.detections. Aligned data connector version from 1.0.0 to 3.0.2 for consistent version tracking across all solution components. Updated all template version references from 3.0.1 to 3.0.2 in package. Added Parsers and Notebooks steps to the install wizard (createUiDefinition.json) for improved discoverability during solution deployment.", contentTypes: ["Data Connector","Workbook","Parser"] },
@@ -2848,6 +2858,7 @@ export const RAW_SOLUTIONS = [
     name: "Qualys VM",
     alias: "QualysVM",
     entries: [
+      { version: "3.0.8", date: "14-05-2026", text: "Bumping API version", contentTypes: [] },
       { version: "3.0.7", date: "18-11-2025", text: "Adding adjustable API partition limit & rate limit protection.", contentTypes: [] },
       { version: "3.0.6", date: "18-09-2025", text: "Updated Analytic rules, Parsers, and Workbooks in Sentinel solution content for CCF connector compatibility.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
       { version: "3.0.5", date: "29-07-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
@@ -2979,6 +2990,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Red Sift",
+    entries: [
+      { version: "3.0.0", date: "10-04-2026", text: "Initial release with CCF Data Connector and 5 Analytic Rules", contentTypes: ["Analytic Rule","Data Connector"] },
+    ],
+  },
+  {
     name: "ReversingLabs",
     entries: [
       { version: "3.0.2", date: "08-08-2025", text: "Updated Reversing Labs workbook with new ThreatIntelIndicators Table", contentTypes: ["Workbook"] },
@@ -3041,6 +3058,7 @@ export const RAW_SOLUTIONS = [
     name: "SailPoint IdentityNow",
     alias: "SailPointIdentityNow",
     entries: [
+      { version: "3.0.1", date: "11-05-2026", text: "Added CCF Data Connector support with one Parser for backward compatibility and new schema for SailPoint IdentityNow events; updated Analytic Rules to use the parser alias and new connector ID", contentTypes: ["Analytic Rule","Data Connector","Parser"] },
       { version: "3.0.0", date: "28-08-2024", text: "Data Connector instruction updated", contentTypes: ["Data Connector"] },
     ],
   },
