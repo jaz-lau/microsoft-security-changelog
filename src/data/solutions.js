@@ -3452,6 +3452,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Strider Shield",
+    entries: [
+      { version: "3.0.0", date: "28-04-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Styx Intelligence",
     entries: [
       { version: "3.0.0", date: "14-04-2025", text: "Initial Solution Release.", contentTypes: [] },
