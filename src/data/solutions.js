@@ -95,6 +95,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Amazon Web Services",
     entries: [
+      { version: "3.0.9", date: "18-05-2026", text: "Update AWS Hunting Queries and Workbooks for Quality", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.8", date: "13-01-2026", text: "Updated non-functional links from Analytic rules and Hunting query", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.7", date: "28-07-2025", text: "Fix ChangeToVPC Analytic Rule to ensure it excludes changes to API Gateway", contentTypes: ["Analytic Rule"] },
       { version: "3.0.6", date: "13-06-2025", text: "Updated Amazon Web Services S3 Data connector to include details for the default output format.", contentTypes: ["Data Connector"] },
@@ -1735,6 +1736,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "04-06-2024", text: "Updated Parser and Data connector", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.1", date: "23-04-2024", text: "Updated Solution version for Partner Center policy regulations", contentTypes: [] },
       { version: "3.0.0", date: "22-09-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Hybrid Attack - Cloud & Identity",
+    entries: [
+      { version: "3.0.0", date: "18-05-2026", text: "First Commit", contentTypes: [] },
     ],
   },
   {
