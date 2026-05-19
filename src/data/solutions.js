@@ -38,6 +38,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Agari",
+    entries: [
+      { version: "3.0.0", date: "14-05-2026", text: "Created a Data Connector for Agari CCF Container.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Agent 365",
     entries: [
       { version: "3.0.1", date: "13-05-2026", text: "Renamed solution and connector from A365 Observability to Agent 365.", contentTypes: [] },
@@ -1651,6 +1657,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Google Directory",
+    alias: "GoogleDirectory",
+    entries: [
+      { version: "3.0.0", date: "15-05-2026", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
     name: "Google Kubernetes Engine",
     entries: [
       { version: "3.0.2", date: "27-02-2026", text: "Update Google Kubernetes Engine CCF Data Connector with GA Public Documentation, updated GCP Grid to have Stream information.", contentTypes: ["Data Connector"] },
@@ -1766,6 +1779,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Illumio Insight",
     entries: [
+      { version: "3.3.3", date: "17-05-2026", text: "Description , Polling api and Table columns changes for CCF Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.3.2", date: "29-09-2025", text: "Dsecription , Instruction changes for CCF Data Connector , changing ps script to change desriptions in UiDefnition", contentTypes: ["Data Connector"] },
       { version: "3.3.1", date: "12-09-2025", text: "Adding iIlumio InsightsSummary CCF Data Connector to Illumio Insights Solution, changing URL of Illumio Resources to gw.console.illum.io", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "10-08-2025", text: "Corrected the links in the solution.", contentTypes: [] },
