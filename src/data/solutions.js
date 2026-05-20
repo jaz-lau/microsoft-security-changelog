@@ -1092,6 +1092,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Cyren-Crowd Strike-Threat Intelligence",
+    alias: "Cyren-CrowdStrike-ThreatIntelligence",
+    entries: [
+      { version: "3.0.0", date: "25-03-2026", text: "Initial release — Cyren CCF feed polling with NDJSON parsing, CrowdStrike Falcon Custom IOC push via /iocs/entities/indicators/v1 endpoint with OAuth2 Bearer token, PersistentToken pagination, 6-hour recurrence, cost safety parameters enforced. Hidden Sentinel tags applied for Content Hub visibility.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Cyren-Sentinel One-Threat Intelligence",
     alias: "Cyren-SentinelOne-ThreatIntelligence",
     entries: [
@@ -4097,6 +4104,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "XBOW",
     entries: [
+      { version: "3.0.1", date: "08-05-2026", text: "Updated XBOW API version to 2026-04-01. Populated AttackCredits and RecentEvents on assessment events.", contentTypes: [] },
       { version: "3.0.0", date: "17-03-2026", text: "Initial Solution Release. Added XBOW Function App Data Connector. Added Analytic Rules for Critical/High, Medium, Low findings, and Asset Discovery.", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.0", date: "17-03-2026", text: "Updated short link.", contentTypes: [] },
     ],
