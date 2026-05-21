@@ -2643,6 +2643,7 @@ export const RAW_SOLUTIONS = [
     name: "Open AI",
     alias: "OpenAI",
     entries: [
+      { version: "3.1.0", date: "15-05-2026", text: "Updated OpenAI CCF connector to ingest chat completions to ASimAgentEventLogs", contentTypes: [] },
       { version: "3.0.0", date: "13-03-2026", text: "Added OpenAI CCF connector to support ingesting audit log and chat completions", contentTypes: [] },
     ],
   },
