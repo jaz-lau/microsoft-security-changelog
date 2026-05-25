@@ -1099,6 +1099,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Cyren-Defender-Threat Intelligence",
+    alias: "Cyren-Defender-ThreatIntelligence",
+    entries: [
+      { version: "3.0.0", date: "28-04-2026", text: "Initial release. Logic App workflow with NDJSON payload parsing (payload.identifier, payload.detection), managed identity authentication for Sentinel createIndicator API, null identifier guard, confidence mapping from Cyren risk score.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Cyren-Sentinel One-Threat Intelligence",
     alias: "Cyren-SentinelOne-ThreatIntelligence",
     entries: [
@@ -1433,7 +1440,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Fortinet FortiGate Next-Generation Firewall connector for Microsoft Sentinel",
     entries: [
-      { version: "3.0.9", date: "02-09-2025", text: "Update Fortinetfortigate Playbook fix", contentTypes: ["Playbook"] },
+      { version: "3.0.9", date: "21-05-2026", text: "Updated Fortinetfortigate Playbook Function app to fix authlevel", contentTypes: ["Playbook"] },
       { version: "3.0.8", date: "26-02-2025", text: "Playbook functionApp code change", contentTypes: ["Playbook"] },
       { version: "3.0.7", date: "11-11-2024", text: "Removed Deprecated data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.6", date: "22-08-2024", text: "Deprecated data connectors", contentTypes: ["Data Connector"] },
