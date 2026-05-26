@@ -491,6 +491,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "BloodHound Enterprise",
     entries: [
+      { version: "3.2.2", date: "20-05-2026", text: "Updated Data Connector documentation, API credential instructions, and metric queries; updated Azure deployment URL, solution/connector IDs, and custom table definitions.", contentTypes: ["Data Connector"] },
+      { version: "3.2.2", date: "20-05-2026", text: "Updated BloodHound Enterprise solution logo (BHE_Logo.svg) to align with current branding.", contentTypes: [] },
       { version: "3.2.1", date: "13-01-2026", text: "Updated WEBSITE_RUN_FROM_PACKAGE to use Microsoft-managed aka.ms URL", contentTypes: [] },
       { version: "3.2.0", date: "15-09-2025", text: "Added two extra Workbooks (Finding Trends & Posture History). Upgraded Data Connector to Azure Function.", contentTypes: ["Data Connector","Workbook"] },
       { version: "3.1.2", date: "25-02-2025", text: "Bump version for portal deployment", contentTypes: [] },
