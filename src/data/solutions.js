@@ -1691,6 +1691,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Threat Intelligence",
     entries: [
+      { version: "3.2.3", date: "27-05-2026", text: "Added Custom Connector manual prerequisite for Playbooks.", contentTypes: ["Playbook"] },
       { version: "3.2.2", date: "02-12-2025", text: "- Included new Analytics Rules and Hunting Queries to improve detection capabilities and support proactive investigation.", contentTypes: ["Hunting Query"] },
       { version: "3.2.2", date: "02-12-2025", text: "- Filtering threat lists", contentTypes: [] },
       { version: "3.2.2", date: "02-12-2025", text: "- Migrating to Upload STIX Objects", contentTypes: [] },
