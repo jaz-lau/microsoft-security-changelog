@@ -451,6 +451,7 @@ export const RAW_SOLUTIONS = [
     name: "Bitsight",
     alias: "BitSight",
     entries: [
+      { version: "4.0.0", date: "25-05-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "22-04-2026", text: "Updated Solution Package with the fix of solutionId", contentTypes: [] },
       { version: "3.1.0", date: "31-03-2026", text: "Updated the python runtime version to 3.12. Added support for Log Ingestion API and updated parsers accordingly.", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "31-03-2026", text: "Reverted the solution id to fix the BitSight Solution publishing issue.", contentTypes: [] },
@@ -773,6 +774,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cloudflare CCF",
     entries: [
+      { version: "3.0.3", date: "11-05-2026", text: "Modified workbook file and fixed workbook metadata to reference Cloudflare parser and CCF connector; added deployment prerequisites note to connector description", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.2", date: "22-04-2026", text: "Fixed DCR transformKql for Type field and corrected invalid field data types", contentTypes: [] },
       { version: "3.0.1", date: "08-12-2025", text: "Fixed invalid GUIDs, updated analytic rules, aligned URL entity mappings with legacy Cloudflare solution", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "02-10-2025", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
@@ -1717,6 +1719,7 @@ export const RAW_SOLUTIONS = [
     name: "Gravity Zone",
     alias: "GravityZone",
     entries: [
+      { version: "3.0.1", date: "28-04-2026", text: "Added analytic rule template", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "21-04-2026", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -2936,7 +2939,7 @@ export const RAW_SOLUTIONS = [
     name: "Rapid7Insight VM",
     alias: "Rapid7InsightVM",
     entries: [
-      { version: "3.2.0", date: "05-03-2026", text: "Added new Rapid7InsightVM CCP data connector.", contentTypes: ["Data Connector"] },
+      { version: "3.2.0", date: "05-03-2026", text: "Added new Rapid7InsightVM CCP data connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "05-02-2026", text: "Update Az Func packages related to InsightVMCloudData Connector", contentTypes: [] },
       { version: "3.1.0", date: "03-02-2026", text: "Update Data Connector to use latest 4.x Azure Functions extension bundles", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "03-05-2024", text: "Fixed Metadata issue for ParserName and ParentId mismatch", contentTypes: [] },
@@ -3111,6 +3114,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.4.0", date: "26-05-2026", text: "Added new Real time event monitoring data connector with 19 event types", contentTypes: ["Data Connector"] },
       { version: "3.3.0", date: "07-05-2026", text: "Add new Salesforce Audit logs CCF Data Connector to pull SetupAuditTrails and LoginHistory logs.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "01-05-2026", text: "Updated CCF Data Connector to include new V3 table that includes additional fields and support for multiple domains.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "27-04-2026", text: "Updated CCP data connector with expanded DCR, table definitions, and polling configuration", contentTypes: ["Data Connector"] },
@@ -3430,6 +3434,7 @@ export const RAW_SOLUTIONS = [
     name: "Sonrai Security",
     alias: "SonraiSecurity",
     entries: [
+      { version: "3.0.1", date: "27-05-2023", text: "Sonrai CCF private preview", contentTypes: [] },
       { version: "3.0.0", date: "04-12-2023", text: "Added entity mapping to Analytic Rules", contentTypes: ["Analytic Rule"] },
     ],
   },
@@ -3990,6 +3995,14 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "09-08-2024", text: "Deprecating Data Connectors.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "27-05-2024", text: "Updated the Data Connector instructions.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "27-07-2023", text: "Corrected the links in the solution.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "VMware Workspace ONE",
+    entries: [
+      { version: "3.0.0", date: "18-05-2026", text: "First version of the VMware Workspace ONE CCF Connector.", contentTypes: [] },
+      { version: "3.0.0", date: "18-05-2026", text: "Added Workspace ONE device inventory ingestion support.", contentTypes: [] },
+      { version: "3.0.0", date: "18-05-2026", text: "Added installed application ingestion support using CCF pollers, DCR, and parsers.", contentTypes: ["Parser"] },
     ],
   },
   {
