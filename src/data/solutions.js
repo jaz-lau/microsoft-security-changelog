@@ -59,6 +59,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Airlock Digital",
+    alias: "AirlockDigital",
+    entries: [
+      { version: "3.0.0", date: "20-05-2026", text: "Created a Data Connector for Airlock Digital CCF Container with Server Activities, Execution Histories, and File Activity Summary data streams.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "AIShield AI Security Monitoring",
     entries: [
       { version: "3.0.1", date: "06-03-2025", text: "Added new Analytic Rules.", contentTypes: ["Analytic Rule"] },
@@ -101,6 +108,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Amazon Web Services",
     entries: [
+      { version: "3.0.10", date: "19-05-2026", text: "Added non-analytics tier queries to Amazon Web Services S3 Data Connector to support Basic/Auxiliary plan tables.", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "18-05-2026", text: "Update AWS Hunting Queries and Workbooks for Quality", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.8", date: "13-01-2026", text: "Updated non-functional links from Analytic rules and Hunting query", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.7", date: "28-07-2025", text: "Fix ChangeToVPC Analytic Rule to ensure it excludes changes to API Gateway", contentTypes: ["Analytic Rule"] },
@@ -301,6 +309,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AWS Security Hub",
     entries: [
+      { version: "3.0.3", date: "27-05-2026", text: "Adding new Workbook for AWS Security Hub Compliance", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "27-08-2025", text: "AWS Security Hub added Analytical Rule and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.1", date: "27-06-2025", text: "AWS Security Hub CCF Data Connector moving to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "14-05-2025", text: "New Data Connector, Pre Release", contentTypes: ["Data Connector"] },
@@ -389,6 +398,7 @@ export const RAW_SOLUTIONS = [
     name: "Azure Security Benchmark",
     alias: "AzureSecurityBenchmark",
     entries: [
+      { version: "3.0.5", date: "29-05-2026", text: "Updated Azure Security Benchmark workbook and Analytic Rules.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.4", date: "13-04-2026", text: "Updated Azure Security Benchmark label and queries.", contentTypes: [] },
       { version: "3.0.3", date: "10-09-2025", text: "Removed the network map from the workbook.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "12-04-2024", text: "Updated Entity Mappings", contentTypes: [] },
@@ -896,6 +906,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.3.6", date: "28-05-2026", text: "Added support of multiple domains to Crowdstrike API Data Connector", contentTypes: ["Data Connector"] },
+      { version: "3.3.5", date: "20-05-2026", text: "Updated Analytic Rules (v1.0.5): improved descriptions, added MITRE ATT&CK tactics, and optimized KQL queries. Updated Workbook to remove hardcoded resource IDs. Added non-analytics tier queries to *CrowdStrike Falcon Data Replicator (AWS S3)* Data Connector to support Basic/Auxiliary plan tables (Usage-based fallback, 14h window).", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
       { version: "3.3.4", date: "30-04-2026", text: "remove deprecated tag. CrowdStrike Falcon Data Replicator (CrowdStrike Managed AWS-S3) is not deprecated", contentTypes: [] },
       { version: "3.3.3", date: "13-04-2026", text: "Deprecate CrowdStrike Falcon Data Replicator (CrowdStrike Managed AWS-S3) (using Azure Function)", contentTypes: [] },
       { version: "3.3.2", date: "16-03-2026", text: "Update *CrowdStrike API Data Connector* to GA with adding rate limits to inner steps for Alerts and Detections data types", contentTypes: ["Data Connector"] },
@@ -2571,6 +2583,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "23-09-2025", text: "Updated the workbook with new links and fixed broken metrics.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "09-11-2023", text: "Changes for rebranding from Azure Active Directory Identity Protection to Microsoft Entra ID Protection", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Nord Stellar",
+    alias: "NordStellar",
+    entries: [
+      { version: "3.0.0", date: "27-05-2026", text: "Initial release of the NordStellar (Push) connector built on the Codeless Connector Framework. Adds a unified NordStellar_CL table, a Data Collection Rule with KQL transform, OAuth 2.0 client-credentials authentication, and support for all NordStellar event types across the Leaked Data, Dark Web Monitoring, Domain Squatting, and Attack Surface modules.", contentTypes: [] },
     ],
   },
   {
