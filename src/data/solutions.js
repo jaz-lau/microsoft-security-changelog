@@ -10,6 +10,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "42Crunch API Protection",
     entries: [
+      { version: "3.0.1", date: "25-05-2026", text: "Added CCF Push Data Connector (OAuth2/Entra ID via DCE/DCR) alongside legacy connector; added backward-compatible Parser (FortyTwoCrunchAPIProtection) supporting both apifirewall_log_1_CL and FortyTwoCrunchAPIProtectionV2_CL schemas. Updated all 11 Analytic Rules to use the parser alias and PascalCase column names, added Migration Guide with end-to-end validated ccf-forwarder sample deployment, and refreshed Workbook metadata.", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.0.0", date: "15-07-2024", text: "Missing Tactics and Techniques added", contentTypes: [] },
     ],
   },
