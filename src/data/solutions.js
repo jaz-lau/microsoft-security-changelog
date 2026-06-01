@@ -2697,6 +2697,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Oracle Cloud Infrastructure",
     entries: [
+      { version: "3.0.10", date: "26-05-2026", text: "Updated OCI connector UI to include IAM permissions guidance and removed the \"Important -\" label.", contentTypes: [] },
       { version: "3.0.9", date: "10-02-2026", text: "Add support for group Cursor", contentTypes: [] },
       { version: "3.0.8", date: "05-02-2026", text: "fix name in package 3.0.7", contentTypes: [] },
       { version: "3.0.7", date: "26-01-2026", text: "Improve Instructions part of the connector with more InfoMessage.", contentTypes: [] },
@@ -3369,6 +3370,7 @@ export const RAW_SOLUTIONS = [
     name: "Slack Audit",
     alias: "SlackAudit",
     entries: [
+      { version: "3.0.6", date: "29-05-2025", text: "Updated the Analytic Rules, Hunting Queries and Workbook", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
       { version: "3.0.5", date: "12-12-2025", text: "Updated the Parser yaml file.", contentTypes: ["Parser"] },
       { version: "3.0.4", date: "28-07-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "30-06-2025", text: "Moving CCF Data Connector to GA.", contentTypes: ["Data Connector"] },
