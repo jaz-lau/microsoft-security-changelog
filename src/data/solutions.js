@@ -47,6 +47,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Agent 365",
     entries: [
+      { version: "3.1.0", date: "21-05-2026", text: "Added the Microsoft Agent Identities Data Connector in Public Preview.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "13-05-2026", text: "Renamed solution and connector from A365 Observability to Agent 365.", contentTypes: [] },
       { version: "3.0.0", date: "01-04-2026", text: "Releasing a new A365 Observability connector solution.", contentTypes: [] },
       { version: "3.0.0", date: "01-04-2026", text: "Remove security admin from A365 solution.", contentTypes: [] },
