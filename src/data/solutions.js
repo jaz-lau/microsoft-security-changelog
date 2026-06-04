@@ -64,6 +64,7 @@ export const RAW_SOLUTIONS = [
     name: "Airlock Digital",
     alias: "AirlockDigital",
     entries: [
+      { version: "3.0.1", date: "02-06-2026", text: "Fixed: Removed empty ApiKeyIdentifier field for Partner Center certification compliance. Fixed UX description typo.", contentTypes: [] },
       { version: "3.0.0", date: "20-05-2026", text: "Created a Data Connector for Airlock Digital CCF Container with Server Activities, Execution Histories, and File Activity Summary data streams.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -463,7 +464,7 @@ export const RAW_SOLUTIONS = [
     name: "Bitsight",
     alias: "BitSight",
     entries: [
-      { version: "4.0.0", date: "25-05-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary.", contentTypes: ["Parser"] },
+      { version: "3.2.0", date: "25-05-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "22-04-2026", text: "Updated Solution Package with the fix of solutionId", contentTypes: [] },
       { version: "3.1.0", date: "31-03-2026", text: "Updated the python runtime version to 3.12. Added support for Log Ingestion API and updated parsers accordingly.", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "31-03-2026", text: "Reverted the solution id to fix the BitSight Solution publishing issue.", contentTypes: [] },
@@ -2493,6 +2494,19 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "18-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "02-08-2023", text: "Solution Id and Tier Updated", contentTypes: [] },
       { version: "3.0.0", date: "14-07-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "NC Protect Data Connector",
+    entries: [
+      { version: "3.0.0", date: "15-01-2026", text: "Added NRT Analytic Rule (DownloadRateHighRule) that creates Microsoft Sentinel security incidents when a user's document download rate exceeds a configurable threshold within a defined time window. Added four Automation Rules (High, Medium, Low, Informational) that dynamically set incident severity based on watchlist configuration. Added Watchlist (NCP File Download Monitoring / NCPFDM) for externally configurable detection thresholds (download count, time window, severity). Renamed solution from \"archTIS\" to \"NC Protect Data Connector\".", contentTypes: ["Analytic Rule","Data Connector"] },
+      { version: "2.0.2", date: "20-10-2021", text: "Updated Data Connector version", contentTypes: ["Data Connector"] },
+      { version: "2.0.1", date: "20-10-2021", text: "Updated Data Connector configuration", contentTypes: ["Data Connector"] },
+      { version: "2.0.0", date: "20-10-2021", text: "Updated Data Connector and Workbook", contentTypes: ["Data Connector","Workbook"] },
+      { version: "1.1.0", date: "20-10-2021", text: "Added Workbook for NC Protect user activity logs", contentTypes: ["Workbook"] },
+      { version: "1.0.2", date: "20-10-2021", text: "Updated Data Connector", contentTypes: ["Data Connector"] },
+      { version: "1.0.1", date: "20-10-2021", text: "Updated Data Connector", contentTypes: ["Data Connector"] },
+      { version: "1.0.0", date: "20-10-2021", text: "Initial solution release", contentTypes: [] },
     ],
   },
   {
