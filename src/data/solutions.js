@@ -464,7 +464,7 @@ export const RAW_SOLUTIONS = [
     name: "Bitsight",
     alias: "BitSight",
     entries: [
-      { version: "3.2.0", date: "25-05-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary.", contentTypes: ["Parser"] },
+      { version: "3.2.0", date: "04-06-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "22-04-2026", text: "Updated Solution Package with the fix of solutionId", contentTypes: [] },
       { version: "3.1.0", date: "31-03-2026", text: "Updated the python runtime version to 3.12. Added support for Log Ingestion API and updated parsers accordingly.", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "31-03-2026", text: "Reverted the solution id to fix the BitSight Solution publishing issue.", contentTypes: [] },
@@ -877,6 +877,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Corelight",
     entries: [
+      { version: "3.2.5", date: "04-06-2026", text: "Restructuring dashboards and adding asset classification tab in data explorer", contentTypes: [] },
       { version: "3.2.4", date: "19-03-2026", text: "Added 'Show Aggregation' filters in Corelight Data Explorer Workbook.", contentTypes: ["Workbook"] },
       { version: "3.2.3", date: "27-01-2026", text: "Added Corelight AWS VPC Flow dashboard.", contentTypes: [] },
       { version: "3.2.2", date: "01-12-2025", text: "Added Corelight Aggregation Parsers.", contentTypes: ["Parser"] },
@@ -990,8 +991,9 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk EPM",
     alias: "CyberArkEPM",
     entries: [
-      { version: "3.0.0", date: "27-07-2023", text: "Updated solution to fix deployment validations", contentTypes: [] },
+      { version: "3.1.0", date: "19-05-2026", text: "Update reporting mechanism to use DCR. Switch to Oauth login for EPM", contentTypes: [] },
       { version: "3.0.1", date: "28-04-2025", text: "Updated deployment instructions to use Python 3.10 version", contentTypes: [] },
+      { version: "3.0.0", date: "27-07-2023", text: "Updated solution to fix deployment validations", contentTypes: [] },
     ],
   },
   {
@@ -1382,6 +1384,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Filewall for Microsoft 365",
+    entries: [
+      { version: "3.0.0", date: "20-01-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
+    ],
+  },
+  {
     name: "FireEye Network Security",
     entries: [
       { version: "3.0.2", date: "21-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
@@ -1515,8 +1523,9 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
-      { version: "3.2.1", date: "04-05-2026", text: "Migrated Parsers and Workbooks to githubscanaudit CLv1 & CLv2 union alias", contentTypes: ["Workbook","Parser"] },
-      { version: "3.2.0", date: "24-04-2026", text: "Added GitHub Webhook V2 data connector (CLv2/Logs Ingestion API) public preview", contentTypes: ["Data Connector"] },
+      { version: "3.3.0", date: "04-06-2026", text: "Introducing a new Azure Storage CCF GitHub Audit Log Connector for Public Preview.", contentTypes: [] },
+      { version: "3.2.1", date: "04-05-2026", text: "Migrated Parsers and Workbooks to githubscanaudit CLv1 & CLv2 union alias.", contentTypes: ["Workbook","Parser"] },
+      { version: "3.2.0", date: "24-04-2026", text: "Added GitHub Webhook V2 data connector (CLv2/Logs Ingestion API) public preview.", contentTypes: ["Data Connector"] },
       { version: "3.1.4", date: "19-03-2026", text: "Fix NRT 2FA rule for new parser format.", contentTypes: ["Parser"] },
       { version: "3.1.3", date: "29-01-2026", text: "Promoted GitHub Enterprise Cloud Audit Log CCF connector from Public Preview to GA.", contentTypes: [] },
       { version: "3.1.2", date: "24-11-2025", text: "Added clarity to Github Enterprise Audit CCF connector definition to use API URL.", contentTypes: [] },
@@ -2824,6 +2833,7 @@ export const RAW_SOLUTIONS = [
     name: "Pathlock_T Dn R",
     alias: "Pathlock_TDnR",
     entries: [
+      { version: "3.0.1", date: "04-06-2026", text: "Added 77 Analytic Rules; updated Data Connector description and dataTypes; fixed MITRE tactic/technique mapping mismatches and replaced non-ASCII characters in Analytic Rules", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.0", date: "05-11-2025", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
