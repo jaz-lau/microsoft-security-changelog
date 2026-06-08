@@ -1208,7 +1208,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Digital Shadows",
     entries: [
-      { version: "3.0.0", date: "30-11-2023", text: "Added new Entity Mapping to Analytic Rules", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.0", date: "04-06-2026", text: "Updated EventReportUrl construction in both Analytic Rules", contentTypes: ["Analytic Rule"] },
     ],
   },
   {
@@ -3873,6 +3873,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Vaikora-Sentinel",
     entries: [
+      { version: "3.0.1", date: "28-05-2026", text: "Fixed data connector DCR stream and KQL transform mapping. Vaikora API response fields now populate the Vaikora_AgentSignals_CL table.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "18-04-2026", text: "Initial Vaikora AI Agent Behavioral Signals CCF solution package with data connector, analytics rules and workbook.", contentTypes: ["Data Connector","Workbook"] },
     ],
   },
