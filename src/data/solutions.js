@@ -47,7 +47,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Agent 365",
     entries: [
-      { version: "3.1.0", date: "21-05-2026", text: "Added the Microsoft Agent Identities Data Connector in Public Preview.", contentTypes: ["Data Connector"] },
+      { version: "3.1.1", date: "08-06-2026", text: "Restored the stable Agent 365 solution content ID to align installed packages with the Content Hub catalog.", contentTypes: [] },
+      { version: "3.1.0", date: "21-05-2026", text: "Added the Microsoft Agent Identities Data Connector in Public Preview. This version is not recommended due to an incorrect solution ID that prevents update detection in Content Hub; use version 3.1.1 or later.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "13-05-2026", text: "Renamed solution and connector from A365 Observability to Agent 365.", contentTypes: [] },
       { version: "3.0.0", date: "01-04-2026", text: "Releasing a new A365 Observability connector solution.", contentTypes: [] },
       { version: "3.0.0", date: "01-04-2026", text: "Remove security admin from A365 solution.", contentTypes: [] },
@@ -644,6 +645,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Meraki",
     alias: "CiscoMeraki",
     entries: [
+      { version: "3.0.6", date: "09-06-2026", text: "Fixed Parser regression where self-reference to the CiscoMeraki restored the correct meraki_CL table reference.", contentTypes: ["Parser"] },
       { version: "3.0.5", date: "22-01-2026", text: "Correct name shown on Data Types to match query used & Updated the Cisco Meraki Custom Connector Default Service End-point.", contentTypes: [] },
       { version: "3.0.4", date: "23-07-2025", text: "Workbook updated with new ThreatIntelIndicators table.", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "02012-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
@@ -1106,6 +1108,7 @@ export const RAW_SOLUTIONS = [
     name: "Cyren Threat Intelligence",
     alias: "CyrenThreatIntelligence",
     entries: [
+      { version: "3.0.5", date: "29-05-2026", text: "DCR transform fix: ip_s is now populated only for IP-type indicators (type == \"ip\"). Malware URL indicators previously stored their UUID identifier in ip_s; that column is now empty for URL rows, which keeps the malicious URL in url_s and prevents non-IP values from appearing in IP queries.", contentTypes: [] },
       { version: "3.0.4", date: "12-03-2026", text: "Optional tokens: Made both JWT tokens (IP Reputation and Malware URL) optional with conditional deployment. Customers can now install either feed or both based on their subscription — connectors are only deployed for tokens that are provided. Added helper text to UI indicating tokens are optional. Updated labels to \"(Optional)\" and placeholder to \"Leave empty if not purchased\".", contentTypes: [] },
       { version: "3.0.3", date: "13-02-2026", text: "Duplicate ingestion fix: Increased count from 100→1000 to fetch all indicators in a single page (Cyren IP Reputation feed contains ~800 indicators, Malware URLs ~200). Increased queryWindowInMin from 15→360 minutes (6 hours) since threat intelligence feeds are relatively static. These two changes eliminate the primary cause of duplicate data ingestion — repeated multi-page fetches of the same indicator set on short polling intervals. See PR #13603 for prior paging-type fix context.", contentTypes: [] },
       { version: "3.0.2", date: "11-02-2026", text: "Fixed CCF paging duplication bug: Changed from Offset paging to PersistentToken paging to prevent duplicate data ingestion when Cyren API startOffset exceeds initial offset. Added DCR transform filter for time-based deduplication.", contentTypes: [] },
@@ -3894,6 +3897,7 @@ export const RAW_SOLUTIONS = [
     name: "Valimail Enforce",
     alias: "ValimailEnforce",
     entries: [
+      { version: "3.0.1", date: "28-05-2026", text: "Fixed Data Connector publisher display name typo (Valimmail → Valimail) in the Sentinel UI.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "22-04-2026", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
