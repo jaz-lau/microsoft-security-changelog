@@ -2163,6 +2163,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Microsoft 365 Audit General and DLP",
+    entries: [
+      { version: "3.0.0", date: "20-04-2026", text: "Initial release with Microsoft 365 Audit.General and Audit.DLP data connectors using Codeless Connector Framework.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Microsoft Business Applications",
     entries: [
       { version: "3.2.3", date: "23-02-2026", text: "Updated Dataverse - Activity after failed logons hunting query to use valid Enterprise technique", contentTypes: ["Hunting Query"] },
@@ -2486,6 +2492,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mulesoft",
     entries: [
+      { version: "3.1.0", date: "04-06-2026", text: "Added MuleSoft CloudHub Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
       { version: "3.0.2", date: "09-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.1", date: "13-06-2024", text: "Updated Data Connector instructions to notify Cloudhub Application support.", contentTypes: ["Data Connector"] },
     ],
