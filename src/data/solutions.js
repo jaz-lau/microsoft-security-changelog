@@ -622,6 +622,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco ETD",
     entries: [
+      { version: "3.0.1", date: "19-05-2026", text: "Add Cisco ETD CCP Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "11-02-2024", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -864,6 +865,7 @@ export const RAW_SOLUTIONS = [
     name: "Contrast ADR",
     alias: "ContrastADR",
     entries: [
+      { version: "3.1.1", date: "06-05-2026", text: "Change in schema fields for CCF connector.", contentTypes: [] },
       { version: "3.1.0", date: "27-03-2026", text: "Adding support for Contrast ADR CCF Connector and change in relevant components.", contentTypes: [] },
       { version: "3.0.1", date: "11-11-2025", text: "Updated Workbook and parsing logic in both supported Parsers to improve accuracy and compatibility.", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.0", date: "22-02-2025", text: "Initial Solution Release.", contentTypes: [] },
@@ -1384,6 +1386,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "10-11-2023", text: "Fixed the app service plan", contentTypes: [] },
       { version: "3.0.1", date: "25-10-2023", text: "Fixed the runtime of the functionapp for the Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "17-08-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Field Effect MDR",
+    alias: "FieldEffectMDR",
+    entries: [
+      { version: "3.0.0", date: "16-04-2026", text: "Initial release of Field Effect MDR CCF connector.", contentTypes: [] },
     ],
   },
   {
@@ -2492,7 +2501,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mulesoft",
     entries: [
-      { version: "3.1.0", date: "04-06-2026", text: "Added MuleSoft CloudHub Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
+      { version: "3.1.0", date: "04-06-2026", text: "Added MuleSoft CloudHub Alerts CCF Connector & Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
       { version: "3.0.2", date: "09-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.1", date: "13-06-2024", text: "Updated Data Connector instructions to notify Cloudhub Application support.", contentTypes: ["Data Connector"] },
     ],
@@ -3248,6 +3257,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP BTP",
     entries: [
+      { version: "3.1.0", date: "08-06-2026", text: "Reworked BTP Cloud Integration artifact deployment rule to use audit.configuration events with richer artifact, actor, and tenant context", contentTypes: [] },
       { version: "3.0.12", date: "29-12-2025", text: "Updated grid view UI with new subaccount onboarding properties", contentTypes: [] },
       { version: "3.0.11", date: "29-12-2025", text: "Added queryWindowDelayInMin for SAP log delays and included the SAP CIS analytic rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.10", date: "03-10-2025", text: "Resolves data connector duplicate handle pagination errors", contentTypes: ["Data Connector"] },
@@ -3265,6 +3275,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP ETD Cloud",
     entries: [
+      { version: "3.0.5", date: "29-05-2026", text: "Added two telemetry-tampering analytic rules: overall SAP ETD feed silence (1h) and per-SAP-system (SID) silence (2h grace, 7d baseline), mapped to T1562 / Defense Evasion", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "16-04-2026", text: "Added Users entity expansion to Alerts for email correlation", contentTypes: [] },
       { version: "3.0.3", date: "11-09-2025", text: "Investigations API Connector added", contentTypes: [] },
       { version: "3.0.2", date: "24-06-2025", text: "Data connector polling window reduced", contentTypes: ["Data Connector"] },
@@ -3551,6 +3562,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "16-05-2025", text: "Optimized Parser for improved performance and parsing accuracy", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "16-12-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "12-08-2024", text: "Deprecating Data Connector", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "Stealth Talk",
+    alias: "StealthTalk",
+    entries: [
+      { version: "3.0.0", date: "13-05-2026", text: "Initial public release with the StealthTalk data connector, 4 analytic rules, 3 hunting queries, ASIM Authentication parsers, workbook, and Teams playbook.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook","Parser"] },
     ],
   },
   {
