@@ -80,6 +80,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Akamai Guardicore",
+    entries: [
+      { version: "3.0.0", date: "27-04-2026", text: "Initial release of the Akamai Guardicore solution as a Codeless Connector Framework (CCF/CCP) solution. Polls Agents, Assets, Applications, and Policy Rules from Guardicore Centra via DCR-based ingestion (no Azure Function App). Includes the Guardicore-ProcessIncidentEnrichment Microsoft Sentinel incident-creation playbook and the Guardicore-EnrichmentRunner recurrence-triggered companion playbook, both implemented natively in Logic Apps. They write to GuardicoreProcessedIncidents_CL and GuardicoreEnrichingConnections_CL via the Logs Ingestion API to a Data Collection Rule using system-assigned managed identity (no workspace shared key required). Two workbooks: Workload Protection Dashboard and Incident Analysis Dashboard.", contentTypes: ["Playbook","Workbook"] },
+    ],
+  },
+  {
     name: "Akamai Security Events",
     entries: [
       { version: "3.0.2", date: "12-11-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
@@ -313,6 +319,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AWS Security Hub",
     entries: [
+      { version: "3.0.4", date: "11-06-2026", text: "Updated content ID and version for the AWS Security Hub solution.", contentTypes: [] },
       { version: "3.0.3", date: "27-05-2026", text: "Adding new Workbook for AWS Security Hub Compliance", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "27-08-2025", text: "AWS Security Hub added Analytical Rule and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.1", date: "27-06-2025", text: "AWS Security Hub CCF Data Connector moving to GA", contentTypes: ["Data Connector"] },
@@ -414,7 +421,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure SQL Database solution for sentinel",
     entries: [
-      { version: "3.0.0", date: "25-10-2024", text: "Updated description of CreateUi and Analytic Rule", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.0", date: "11-06-2026", text: "Updated description of CreateUi", contentTypes: [] },
+      { version: "3.0.0", date: "11-06-2026", text: "updates Azure SQL Hunting Queries and Analytic Rule", contentTypes: ["Analytic Rule","Hunting Query"] },
     ],
   },
   {
@@ -1728,6 +1736,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Google Sec Ops",
+    alias: "GoogleSecOps",
+    entries: [
+      { version: "3.0.0", date: "04-05-2026", text: "Initial Solution for Google SecOps with Data Connector, Parser and Analytic Rules", contentTypes: ["Analytic Rule","Data Connector","Parser"] },
+    ],
+  },
+  {
     name: "Google Threat Intelligence",
     entries: [
       { version: "3.2.3", date: "27-05-2026", text: "Added Custom Connector manual prerequisite for Playbooks.", contentTypes: ["Playbook"] },
@@ -1869,6 +1884,7 @@ export const RAW_SOLUTIONS = [
     name: "Imperva Cloud WAF",
     alias: "ImpervaCloudWAF",
     entries: [
+      { version: "3.1.2", date: "10-06-2026", text: "Modify to use CommonEventFormatTransformer to fix data ingestion issues", contentTypes: [] },
       { version: "3.1.1", date: "10-04-2026", text: "Add \"CsvEscapeMode\": \"NoEscape\" to prevent logs with embedded JSON from being dropped during ingestion", contentTypes: [] },
       { version: "3.1.0", date: "30-03-2026", text: "Promoted the Imperva Cloud WAF CCF connector to Public Preview", contentTypes: [] },
       { version: "3.0.2", date: "06-06-2025", text: "Migrated the Function app connector to CCF Data connector and updated Parser", contentTypes: ["Data Connector","Parser"] },
@@ -3882,6 +3898,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "28-04-2026", text: "Fixed Function App deployment: restructured zip package to flat layout and removed separate App Service Plan for correct code deployment.", contentTypes: [] },
       { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
       { version: "3.0.0", date: "10-03-2026", text: "Initial solution release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Utimaco Enterprise Secure Key Manager",
+    entries: [
+      { version: "3.0.0", date: "11-06-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
