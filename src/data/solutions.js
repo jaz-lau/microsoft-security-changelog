@@ -3893,6 +3893,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "UniFi Site Manager (CCF)",
+    entries: [
+      { version: "3.0.0", date: "22-05-2026", text: "Initial Solution Release - UniFi Site Manager (CCF) with single-card multi-poller (sites, hosts, devices, ISP metrics), 22 analytic rules, 8 hunting queries, operations workbook and Unifi_SiteManager_* custom tables", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
+    ],
+  },
+  {
     name: "Upwind",
     entries: [
       { version: "3.0.2", date: "28-04-2026", text: "Fixed Function App deployment: restructured zip package to flat layout and removed separate App Service Plan for correct code deployment.", contentTypes: [] },
