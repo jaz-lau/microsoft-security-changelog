@@ -57,6 +57,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AI Analyst Darktrace",
     entries: [
+      { version: "3.0.2", date: "08-06-2026", text: "Fixed contact link and added contact email", contentTypes: [] },
       { version: "3.0.1", date: "11-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "18-09-2023", text: "Addition of new AI Analyst Darktrace AMA Data Connector", contentTypes: ["Data Connector"] },
     ],
@@ -1162,6 +1163,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.2.0", date: "01-04-2026", text: "Changed to Solution Template plan type. Updated offer ID to azure-sentinel-solution-d3smartsoar.", contentTypes: [] },
       { version: "3.1.0", date: "26-03-2026", text: "Fixed pagination using CountBasedPaging with nested JSON path paging ($.CommandParams.PageIndex). Updated publisher ID to match Partner Center registration. Updated branding to Microsoft Sentinel.", contentTypes: [] },
       { version: "3.0.0", date: "27-02-2026", text: "Initial release of D3 Smart SOAR data connector. Polls incidents every 5 minutes into D3SOARIncidents_CL with IncidentRawData and EventRawData dynamic fields via PollFromSentinel parameter.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "Darktrace",
+    entries: [
+      { version: "3.0.0", date: "06-03-2026", text: "Added new Darktrace ActiveAI Security Platform CCF data connector, DCR, custom tables, workbook, and two new analytic rules; relabeled legacy REST API connector, workbook, and analytic rules as (Legacy)", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
     ],
   },
   {
@@ -2810,7 +2817,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Palo Alto Cortex XDR CCP",
     entries: [
-      { version: "3.0.4", date: "14-10-2025", text: "Updating CCF Polling file to implement parameters", contentTypes: [] },
+      { version: "3.0.4", date: "12-06-2026", text: "Updating CCF Polling file to implement parameters", contentTypes: [] },
       { version: "3.0.3", date: "09-04-2025", text: "Updating CCF connector parameters", contentTypes: [] },
       { version: "3.0.2", date: "10-02-2025", text: "Advancing CCF Data Connector from Public preview to Global Availability.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "22-01-2025", text: "Added Preview tag to Data Connector", contentTypes: ["Data Connector"] },
@@ -2982,6 +2989,7 @@ export const RAW_SOLUTIONS = [
     name: "Qualys VM",
     alias: "QualysVM",
     entries: [
+      { version: "3.0.9", date: "29-05-2026", text: "Adding new query string parameter", contentTypes: [] },
       { version: "3.0.8", date: "14-05-2026", text: "Bumping API version", contentTypes: [] },
       { version: "3.0.7", date: "18-11-2025", text: "Adding adjustable API partition limit & rate limit protection.", contentTypes: [] },
       { version: "3.0.6", date: "18-09-2025", text: "Updated Analytic rules, Parsers, and Workbooks in Sentinel solution content for CCF connector compatibility.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
@@ -3761,6 +3769,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
+      { version: "3.0.19", date: "25-05-2026", text: "Removed Premium Microsoft Defender Threat Intelligence Data Connector from solution package due to deprecation as part of MDTI convergence.", contentTypes: ["Data Connector"] },
       { version: "3.0.18", date: "04-05-2026", text: "Export to TAXII connector proceeds to GA.", contentTypes: [] },
       { version: "3.0.17", date: "02-04-2026", text: "Updated TI map Domain entity to SecurityAlert analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
       { version: "3.0.16", date: "25-03-2026", text: "Optimized TI map Domain entity to EmailUrlInfo analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
