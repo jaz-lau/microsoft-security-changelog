@@ -3428,6 +3428,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Silverfort",
     entries: [
+      { version: "3.0.1", date: "02-06-2026", text: "Minor Doc Update", contentTypes: [] },
       { version: "3.0.0", date: "13-09-2024", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -4296,6 +4297,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Zimperium Mobile Threat Defense",
     entries: [
+      { version: "3.1.0", date: "11-06-2026", text: "Added new tables ZimperiumIncidentLog_CL and ZimperiumIncidentMitigationLog_CL and corresponding data collection rules to ingest incident logs.", contentTypes: [] },
       { version: "3.0.0", date: "28-04-2026", text: "Added data ingestion support using CCF (Codeless Connector Framework) Push connector.", contentTypes: [] },
     ],
   },
@@ -4312,6 +4314,7 @@ export const RAW_SOLUTIONS = [
     name: "Zoom Reports",
     alias: "ZoomReports",
     entries: [
+      { version: "3.0.11", date: "15-06-2026", text: "Deprecate Zoom Reports (using Azure Function)", contentTypes: [] },
       { version: "3.0.10", date: "29-04-2026", text: "Bump version to 3.0.10 for a new publishing, same connector content as the previous one", contentTypes: [] },
       { version: "3.0.9", date: "29-04-2026", text: "Update Cloud recording api polling interval to one day with one day delay to reduce duplication", contentTypes: [] },
       { version: "3.0.8", date: "27-04-2026", text: "ZoomReports CCF Connector GA with updated parser", contentTypes: ["Parser"] },
