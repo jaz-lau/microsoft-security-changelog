@@ -515,8 +515,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "BloodHound Enterprise",
     entries: [
-      { version: "3.2.2", date: "20-05-2026", text: "Updated Data Connector documentation, API credential instructions, and metric queries; updated Azure deployment URL, solution/connector IDs, and custom table definitions.", contentTypes: ["Data Connector"] },
-      { version: "3.2.2", date: "20-05-2026", text: "Updated BloodHound Enterprise solution logo (BHE_Logo.svg) to align with current branding.", contentTypes: [] },
+      { version: "3.2.2", date: "12-06-2026", text: "Updated Data Connector documentation, API credential instructions, and metric queries; updated Azure deployment URL, solution/connector IDs, and custom table definitions.", contentTypes: ["Data Connector"] },
+      { version: "3.2.2", date: "12-06-2026", text: "Updated BloodHound Enterprise solution logo (BHE_Logo.svg) to align with current branding.", contentTypes: [] },
+      { version: "3.2.2", date: "12-06-2026", text: "Enhanced Workbooks by adding a 30-day timeContext to parameter queries, replacing default values that caused queries to fail.", contentTypes: ["Workbook"] },
       { version: "3.2.1", date: "13-01-2026", text: "Updated WEBSITE_RUN_FROM_PACKAGE to use Microsoft-managed aka.ms URL", contentTypes: [] },
       { version: "3.2.0", date: "15-09-2025", text: "Added two extra Workbooks (Finding Trends & Posture History). Upgraded Data Connector to Azure Function.", contentTypes: ["Data Connector","Workbook"] },
       { version: "3.1.2", date: "25-02-2025", text: "Bump version for portal deployment", contentTypes: [] },
@@ -1293,6 +1294,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "02-04-2026", text: "Added DCR based connectors.", contentTypes: [] },
       { version: "3.0.1", date: "18-01-2024", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR, Updated user-agent strings used when calling Dynatrace REST API's, Added new Entity Mappings to Analytic Rules Aligned Playbook, Data Connector & Workbook version numbers with rest of solution.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.0.0", date: "16-10-2023", text: "Enabled new api paging mode on Data Connector to fix issues related to polling Dynatrace REST API's with a large number of results.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "e DC Rule",
+    alias: "eDCRule",
+    entries: [
+      { version: "3.0.0", date: "17-06-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -2524,7 +2532,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mulesoft",
     entries: [
-      { version: "3.1.0", date: "04-06-2026", text: "Added MuleSoft CloudHub Alerts CCF Connector & Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
+      { version: "3.1.0", date: "17-06-2026", text: "Added MuleSoft CloudHub Alerts CCF Connector & Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
+      { version: "3.1.0", date: "17-06-2026", text: "Updated Definition file by removing empty instructions.", contentTypes: [] },
       { version: "3.0.2", date: "09-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.1", date: "13-06-2024", text: "Updated Data Connector instructions to notify Cloudhub Application support.", contentTypes: ["Data Connector"] },
     ],
@@ -3386,6 +3395,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.0.10", date: "03-06-2026", text: "Updated CCP Data Connector to support multiple instances (multi-connection) for MSSP scenarios", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "14-04-2026", text: "Deprecate SentinelOne (using Azure Function)", contentTypes: [] },
       { version: "3.0.8", date: "24-03-2026", text: "Rename CCF solution to SentinelOne (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.0.7", date: "09-01-2026", text: "Updated broken URL and bumped the SentinelOne solution version", contentTypes: [] },
