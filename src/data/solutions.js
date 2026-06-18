@@ -527,6 +527,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "BlueVoyant Anthropic ClaudeCompliance",
+    entries: [
+      { version: "3.0.0", date: "15-06-2026", text: "Initial release of the BlueVoyant Anthropic Claude Compliance solution for Microsoft Sentinel, including a Codeless Connector Framework (CCF) data connector that ingests Claude Compliance API activity into the BV_ClaudeCompliance_ComplianceActivities_CL table.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Box",
     entries: [
       { version: "3.1.4", date: "13-04-2026", text: "Deprecate Box Events (using Azure Function)", contentTypes: [] },
@@ -985,6 +991,7 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk Audit",
     alias: "CyberArkAudit",
     entries: [
+      { version: "3.1.1", date: "16-04-2026", text: "Update Azure Function based connector to Python 3.12", contentTypes: [] },
       { version: "3.1.0", date: "13-03-2026", text: "New Data Connector based on CCF.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "13-03-2026", text: "added missing migration instructions and disclaimers.", contentTypes: [] },
       { version: "3.0.2", date: "16-10-2025", text: "Add Analytics Rules.", contentTypes: [] },
@@ -2282,6 +2289,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
+      { version: "3.0.15", date: "15-06-2026", text: "Refactor OAuth and device-code phishing hunting queries to construct login.microsoftonline.com and login.microsoftonline.us URLs via strcat() (resolves ARM-TTK 'DeploymentTemplate Must Not Contain Hardcoded Uri'); remove empty groupByAlertDetails/groupByCustomDetails arrays from PossibleWebpBufferOverflow analytic rule (resolves ARM-TTK 'Template Should Not Contain Blanks').", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.14", date: "09-02-2026", text: "Added new Hunting Query Punycode chars lookalike domains.yaml.", contentTypes: ["Hunting Query"] },
       { version: "3.0.13", date: "22-01-2026", text: "Updated Defender XDR solution with new Hunting Queries.", contentTypes: ["Hunting Query"] },
       { version: "3.0.12", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
@@ -3943,6 +3951,7 @@ export const RAW_SOLUTIONS = [
     name: "Vaikora-Crowd Strike-Threat Intelligence",
     alias: "Vaikora-CrowdStrike-ThreatIntelligence",
     entries: [
+      { version: "3.0.1", date: "28-05-2026", text: "Fixed Get_Vaikora_Actions URI to omit the agent_id query parameter when VaikoraAgentId is empty. Without the fix the request includes agent_id= and the Vaikora API rejects it with HTTP 422.", contentTypes: [] },
       { version: "3.0.0", date: "28-04-2026", text: "Initial release. Vaikora AI to CrowdStrike IOC integration with automated severity mapping and deduplication.", contentTypes: [] },
     ],
   },
