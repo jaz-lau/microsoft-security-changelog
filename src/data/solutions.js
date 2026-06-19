@@ -1525,6 +1525,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Fortinet FortiNDR Cloud",
     entries: [
+      { version: "3.1.0", date: "26-05-2026", text: "Updated to use LogIngestion instead of the deprecated HTTP Data Collector API", contentTypes: [] },
       { version: "3.0.3", date: "05-05-2025", text: "Use Flex Consumption plan to hold Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "30-09-2024", text: "Show mitre attack ids and link to detection rule page", contentTypes: [] },
       { version: "3.0.1", date: "31-05-2024", text: "Replace Metastream with FortiNDR Cloud API", contentTypes: [] },
@@ -1565,6 +1566,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.3.1", date: "17-06-2026", text: "Added SAS related instruction.", contentTypes: [] },
       { version: "3.3.0", date: "04-06-2026", text: "Introducing a new Azure Storage CCF GitHub Audit Log Connector for Public Preview.", contentTypes: [] },
       { version: "3.2.1", date: "04-05-2026", text: "Migrated Parsers and Workbooks to githubscanaudit CLv1 & CLv2 union alias.", contentTypes: ["Workbook","Parser"] },
       { version: "3.2.0", date: "24-04-2026", text: "Added GitHub Webhook V2 data connector (CLv2/Logs Ingestion API) public preview.", contentTypes: ["Data Connector"] },
@@ -3944,6 +3946,7 @@ export const RAW_SOLUTIONS = [
     name: "Vaikora-Azure Security Center",
     alias: "Vaikora-AzureSecurityCenter",
     entries: [
+      { version: "3.0.1", date: "28-05-2026", text: "Aligned the playbook and analytic rules with the Vaikora /actions API response shape. Poll_Vaikora_Actions now builds the query string inside the URI and omits the agent_id segment when VaikoraAgentId is empty (the API rejects an empty UUID with HTTP 422). Send_to_Log_Analytics body rewritten to action fields (action_id, agent_id, action_type, resource_type, resource_id, status, severity, policy_id, policy_decision, is_anomaly, anomaly_score, anomaly_reason, log_hash, timestamp) and Log-Type set to Vaikora_AgentSignals. is_anomaly wrapped with toLower(string(coalesce(...))) so JSON serializes as true/false instead of True/False. Parse_Response schema accepts nullable fields. Filter_High_Risk_Actions drops the threat_detected check (field does not exist on the API response). All three analytic rules rewritten to query Vaikora_AgentSignals_CL with action-field columns, with entityMappings mapping agent_id to Account.Name.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.0", date: "28-04-2026", text: "Initial release. Vaikora AI to Microsoft Defender for Cloud integration with security alert ingestion and three analytic rules for high-severity, anomaly, and feed outage detection.", contentTypes: ["Analytic Rule"] },
     ],
   },
@@ -3966,6 +3969,7 @@ export const RAW_SOLUTIONS = [
     name: "Vaikora-Sentinel One-Threat Intelligence",
     alias: "Vaikora-SentinelOne-ThreatIntelligence",
     entries: [
+      { version: "3.0.1", date: "28-05-2026", text: "Fixed Get_Vaikora_Actions URI to omit the agent_id query parameter when VaikoraAgentId is empty. Without the fix the request includes agent_id= and the Vaikora API rejects it with HTTP 422.", contentTypes: [] },
       { version: "3.0.0", date: "28-04-2026", text: "Initial release. Polls Vaikora AI Agent Security API every 6 hours for high-severity and anomaly actions, pushes IOCs to SentinelOne Threat Intelligence API. SHA256 IOC type from log_hash, risk score severity mapping (0-100 to SentinelOne 2-7), STAR rule auto-creation, Content Hub ready. Added top-level metadata block to standalone playbook, renamed logicAppName parameter to PlaybookName, set playbookVersion1 to \"1.0.0\" to match hidden-SentinelTemplateVersion tag, per Cyren-SentinelOne reference pattern.", contentTypes: ["Playbook"] },
     ],
   },
