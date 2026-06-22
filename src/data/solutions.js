@@ -2052,6 +2052,7 @@ export const RAW_SOLUTIONS = [
     name: "Joe Sandbox",
     alias: "JoeSandbox",
     entries: [
+      { version: "3.0.2", date: "10-06-2026", text: "Fix sample queries to poinnt to the right tables.", contentTypes: [] },
       { version: "3.0.1", date: "24-04-2026", text: "Fix Azure templates.", contentTypes: [] },
       { version: "3.0.0", date: "13-02-2026", text: "Initial Solution Release.", contentTypes: [] },
       { version: "3.0.0", date: "13-02-2026", text: "Removed Manual Deployment Steps.", contentTypes: [] },
@@ -2316,6 +2317,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.13", date: "22-06-2026", text: "Updated Description of AccountCreatedandDeletedinShortTimeframe Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.12", date: "28-04-2026", text: "Renamed analytic rule from BruteForceCloudPC to BruteForceAgainstEntraAuthenticatedWindowsDevice and updated name and description in Analytic Rule to reflect detection scope across all Entra-authenticated Windows devices (including Entra-joined, hybrid-joined, and Windows 365 Cloud PCs), resolving ambiguity around Cloud PC specificity", contentTypes: ["Analytic Rule"] },
       { version: "3.3.11", date: "13-04-2026", text: "Added Watchlist ConditionalAccessBenignStatusCodes and updated BypassCondAccessRule analytic rule", contentTypes: ["Analytic Rule"] },
       { version: "3.3.10", date: "12-04-2026", text: "Updated AccountCreatedandDeletedinShortTimeframe analytic rule to extend query period to 7 days, normalize UPN parsing, and use immutable UserId for improved detection accuracy and evasion resistance", contentTypes: ["Analytic Rule"] },
