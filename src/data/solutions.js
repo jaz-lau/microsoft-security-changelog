@@ -1817,6 +1817,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Halcyon",
     entries: [
+      { version: "3.2.0", date: "10-06-2026", text: "New connector, new event and alert tables with OCSF schema, and parsers", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "24-03-2026", text: "Update Connector to receive events with OCSF schemas", contentTypes: [] },
       { version: "3.0.0", date: "09-12-2025", text: "Initial Solution release", contentTypes: [] },
     ],
@@ -2295,7 +2296,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
-      { version: "3.0.15", date: "15-06-2026", text: "Refactor OAuth and device-code phishing hunting queries to construct login.microsoftonline.com and login.microsoftonline.us URLs via strcat() (resolves ARM-TTK 'DeploymentTemplate Must Not Contain Hardcoded Uri'); remove empty groupByAlertDetails/groupByCustomDetails arrays from PossibleWebpBufferOverflow analytic rule (resolves ARM-TTK 'Template Should Not Contain Blanks').", contentTypes: ["Analytic Rule","Hunting Query"] },
+      { version: "3.0.15", date: "22-06-2026", text: "Refactor OAuth and device-code phishing hunting queries to construct login.microsoftonline.com and login.microsoftonline.us URLs via strcat() (resolves ARM-TTK 'DeploymentTemplate Must Not Contain Hardcoded Uri'); remove empty groupByAlertDetails/groupByCustomDetails arrays from PossibleWebpBufferOverflow analytic rule (resolves ARM-TTK 'Template Should Not Contain Blanks'). Updated Microsoft Defender XDR to Product Name filter in Data Connector queries. Added new Hunting Queries Hunt for RMM tool execution following Teams messages, Hunt for alerts correlated with Teams messages and Identify acting user for reported phish. Also updated Hunting Query Punycode chars lookalike and corrected the incorrect mapping of dataTypes: EmailEvents with connectorId: OfficeATP across multiple Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
       { version: "3.0.14", date: "09-02-2026", text: "Added new Hunting Query Punycode chars lookalike domains.yaml.", contentTypes: ["Hunting Query"] },
       { version: "3.0.13", date: "22-01-2026", text: "Updated Defender XDR solution with new Hunting Queries.", contentTypes: ["Hunting Query"] },
       { version: "3.0.12", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
@@ -4046,8 +4047,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "Veeam",
     entries: [
+      { version: "3.1.0", date: "10-06-2026", text: "Added Veeam Data Connector (CCF) with support for VeeamMalwareEventsV2_CL, VeeamSecurityComplianceAnalyzerV2_CL, VeeamAuthorizationEventsV2_CL, VeeamOneTriggeredAlarmsV2_CL, VeeamCovewareFindingsV2_CL, and VeeamSessionsV2_CL. Added alias parsers parser_VeeamMalwareEventsV2AliasFunction, parser_VeeamSecurityComplianceAnalyzerV2AliasFunction, parser_VeeamAuthorizationEventsV2AliasFunction, parser_VeeamOneTriggeredAlarmsV2AliasFunction, parser_VeeamCovewareFindingsV2AliasFunction, and parser_VeeamSessionsV2AliasFunction.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.2", date: "15-10-2025", text: "Updated author to Veeam Software", contentTypes: [] },
-      { version: "3.0.1", date: "03-10-2025", text: "Updated Coveware security findings integration; Removed irrelevant mappings from all analytic rules; Updated Workbooks' drilldown capabilities", contentTypes: ["Analytic Rule","Workbook"] },
+      { version: "3.0.1", date: "03-10-2025", text: "Updated Coveware security findings integration; Removed irrelevant mappings from all analytic rules; Updated Workbooks drilldown capabilities", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.0", date: "26-08-2025", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
