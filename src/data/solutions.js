@@ -474,7 +474,7 @@ export const RAW_SOLUTIONS = [
     name: "Bitsight",
     alias: "BitSight",
     entries: [
-      { version: "3.2.0", date: "04-06-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary.", contentTypes: ["Parser"] },
+      { version: "3.2.0", date: "15-06-2026", text: "Replaced legacy Function App connector with two Codeless Connector Framework (CCF) connectors: BitSight Security Events (Alerts, Breaches, Findings) and BitSight Security Statistics (CompanyDetails, CompanyRatingDetails, DiligenceHistoricalStatistics, DiligenceStatistics, ObservationStatistics, IndustrialStatistics, VulnerabilitiesFindingsSummary, FindingsSummary). Added parsers for BitSightCompanyRatingDetails and BitSightVulnerabilitiesFindingsSummary. Updated Function App UI page for Log Ingestion API.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "22-04-2026", text: "Updated Solution Package with the fix of solutionId", contentTypes: [] },
       { version: "3.1.0", date: "31-03-2026", text: "Updated the python runtime version to 3.12. Added support for Log Ingestion API and updated parsers accordingly.", contentTypes: ["Parser"] },
       { version: "3.1.0", date: "31-03-2026", text: "Reverted the solution id to fix the BitSight Solution publishing issue.", contentTypes: [] },
@@ -2362,6 +2362,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Assets",
     entries: [
+      { version: "3.1.0", date: "22-06-2026", text: "Added EntraSponsors and EntraOwners tables", contentTypes: [] },
       { version: "3.0.3", date: "30-04-2026", text: "Added Preview tag for EntraDevices and EntraOrgContacts tables", contentTypes: [] },
       { version: "3.0.2", date: "04-03-2025", text: "Added Devices and Org Contacts", contentTypes: [] },
       { version: "3.0.1", date: "28-10-2025", text: "Fixed a typo in the data connector tile, correcting enta to Entra", contentTypes: ["Data Connector"] },
@@ -2897,6 +2898,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Panorays",
+    entries: [
+      { version: "3.0.0", date: "03-03-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Pathlock_T Dn R",
     alias: "Pathlock_TDnR",
     entries: [
@@ -3014,6 +3021,7 @@ export const RAW_SOLUTIONS = [
     name: "Qualys VM",
     alias: "QualysVM",
     entries: [
+      { version: "3.0.10", date: "22-06-2026", text: "Increased CCP Connector request timeout to 300s (platform max), reduced query window to 10 min, added a connectivity check using the /msp/about.php endpoint, and clarified Truncation Limit options to reduce timeouts on large environments.", contentTypes: [] },
       { version: "3.0.9", date: "29-05-2026", text: "Adding new query string parameter", contentTypes: [] },
       { version: "3.0.8", date: "14-05-2026", text: "Bumping API version", contentTypes: [] },
       { version: "3.0.7", date: "18-11-2025", text: "Adding adjustable API partition limit & rate limit protection.", contentTypes: [] },
@@ -3686,6 +3694,7 @@ export const RAW_SOLUTIONS = [
     name: "Tacit Red Defender Threat Intelligence",
     alias: "TacitRed-Defender-ThreatIntelligence",
     entries: [
+      { version: "3.0.2", date: "25-05-2026", text: "Fixed Content Hub InvalidTemplate deployment failure on hyphenated workspace names. Bound Application Insights to the selected Log Analytics workspace via WorkspaceResourceId so deployment does not require permission to create a managed resource group. Replaced hardcoded EndpointSuffix=core.windows.net with environment().suffixes.storage so the template works in sovereign clouds. Changed the location parameter default in Playbooks/TacitRedDefenderTI_FunctionApp/azuredeploy.json to [resourceGroup().location] so standalone deployments resolve a real region. Post-deployment guidance in README still requires manually assigning Storage Blob Data Owner to the Function App managed identity.", contentTypes: ["Playbook"] },
       { version: "3.0.1", date: "11-02-2026", text: "Fixed deployment failure: Restored functionCode.zip package removed in prior commit. Removed workspace-scoped roleAssignments from Function App template to resolve InvalidTemplate error during Content Hub deployment.", contentTypes: [] },
       { version: "3.0.0", date: "09-12-2025", text: "Initial release of TacitRed Defender Threat Intelligence solution with Azure Function and Logic App playbook for syncing TacitRed compromised credentials to Microsoft Defender Threat Intelligence.", contentTypes: ["Playbook"] },
     ],
@@ -3796,7 +3805,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
-      { version: "3.0.19", date: "25-05-2026", text: "Removed Premium Microsoft Defender Threat Intelligence Data Connector from solution package due to deprecation as part of MDTI convergence.", contentTypes: ["Data Connector"] },
+      { version: "3.0.19", date: "21-06-2026", text: "Standardized naming and corrected the incorrect mapping for dataTypes: EmailEvents and dataTypes: EmailUrlInfo with connectorId: Office365 and connectorId: AzureActiveDirectory across multiple Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.18", date: "04-05-2026", text: "Export to TAXII connector proceeds to GA.", contentTypes: [] },
       { version: "3.0.17", date: "02-04-2026", text: "Updated TI map Domain entity to SecurityAlert analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
       { version: "3.0.16", date: "25-03-2026", text: "Optimized TI map Domain entity to EmailUrlInfo analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
@@ -3873,6 +3882,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "12-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "25-10-2023", text: "Hunting Query column corrected", contentTypes: ["Hunting Query"] },
       { version: "3.0.0", date: "22-09-2023", text: "Addition of new Trend Micro Apex One AMA Data connector", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "Trend Micro Cloud App Security",
+    entries: [
+      { version: "3.0.0", date: "29-05-2026", text: "Added dual-schema parser support for CLv1 (TrendMicroCAS_CL) and CLv2 (TrendMicroCASV2_CL) data, introduced Codeless Connector Framework (CCF) Data Connector alongside the legacy Azure Function connector.", contentTypes: ["Data Connector","Parser"] },
+      { version: "2.0.0", date: "23-08-2023", text: "Initial release.", contentTypes: [] },
     ],
   },
   {
