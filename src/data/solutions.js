@@ -1860,6 +1860,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "iboss",
     entries: [
+      { version: "3.1.3", date: "24-06-2026", text: "Added Malware/C2 Analytics Rules and made minor bug fixes", contentTypes: [] },
       { version: "3.1.2", date: "07-01-2025", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "18-09-2024", text: "Updated AMA and legacy OMS connector to use new iboss field", contentTypes: [] },
       { version: "3.1.0", date: "05-09-2024", text: "Updated AMA connector with iboss specific instructions", contentTypes: [] },
@@ -2769,6 +2770,7 @@ export const RAW_SOLUTIONS = [
     name: "Open AI",
     alias: "OpenAI",
     entries: [
+      { version: "3.1.1", date: "23-06-2026", text: "Promote to GA", contentTypes: [] },
       { version: "3.1.0", date: "15-05-2026", text: "Updated OpenAI CCF connector to ingest chat completions to ASimAgentEventLogs", contentTypes: [] },
       { version: "3.0.0", date: "13-03-2026", text: "Added OpenAI CCF connector to support ingesting audit log and chat completions", contentTypes: [] },
     ],
