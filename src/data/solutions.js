@@ -1030,6 +1030,7 @@ export const RAW_SOLUTIONS = [
     name: "Cybersixgill Actionable Alerts",
     alias: "Cybersixgill-Actionable-Alerts",
     entries: [
+      { version: "3.1.0", date: "19-06-2026", text: "Added Codeless Connector Framework (CCF) data connector and a unified CyberSixgill_Alerts parser that combines the legacy Azure Function table (CyberSixgill_Alerts_CL) and the CCF table (CyberSixgillAlertsV2_CL); updated Hunting Query and Workbooks to use the parser", contentTypes: ["Hunting Query","Data Connector","Workbook","Parser"] },
       { version: "3.0.1", date: "02-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.0", date: "20-02-2024", text: "Replaced Hyperlinks with Shortlinks (aka.ms) in Data Connector", contentTypes: ["Data Connector"] },
     ],
@@ -1176,6 +1177,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Darktrace",
     entries: [
+      { version: "3.1.0", date: "17-06-2026", text: "Added modelBreaches and accountName to DarktraceIncidents_CL, accountName to DarktraceModelAlerts_CL. Updated analytic rules with Account entity mapping for SaaS/identity correlation.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "06-03-2026", text: "Added new Darktrace ActiveAI Security Platform CCF data connector, DCR, custom tables, workbook, and two new analytic rules; relabeled legacy REST API connector, workbook, and analytic rules as (Legacy)", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
     ],
   },
@@ -1832,9 +1834,10 @@ export const RAW_SOLUTIONS = [
     name: "Holm Security",
     alias: "HolmSecurity",
     entries: [
-      { version: "3.0.1", date: "05-10-2023", text: "Minor fixes", contentTypes: [] },
-      { version: "3.0.0", date: "28-09-2023", text: "Repackaged with V3", contentTypes: [] },
-      { version: "2.0.0", date: "17-02-2022", text: "Initial Solution Release", contentTypes: [] },
+      { version: "3.0.2", date: "30-03-2026", text: "Initial release of the Data Connector for Holm Security using CCF; ingests network and web assets from the Holm Security VMP API, supports pagination, daily polling, and configurable regional API base URLs.", contentTypes: ["Data Connector"] },
+      { version: "3.0.1", date: "05-10-2023", text: "Minor fixes.", contentTypes: [] },
+      { version: "3.0.0", date: "28-09-2023", text: "Repackaged with V3.", contentTypes: [] },
+      { version: "2.0.0", date: "17-02-2022", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -2626,6 +2629,7 @@ export const RAW_SOLUTIONS = [
     name: "Netskope Web Tx",
     alias: "NetskopeWebTx",
     entries: [
+      { version: "3.0.1", date: "16-06-2026", text: "Expanded NetskopeWebTransactions_CL schema with 51 additional Web Transaction fields (threat protection, endpoint posture, process, identity/authorization, remote geo, action) across the DCR, custom table, and parser. Added new workbook sections (Threat Protection, Endpoint Posture, Process Activity, Identity & Authentication, Action Analysis). Data connector version bumped to 2.0.0 and Microsoft Sentinel branding fix.", contentTypes: ["Data Connector","Workbook","Parser"] },
       { version: "3.0.0", date: "11-02-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
     ],
   },
@@ -3980,6 +3984,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "28-05-2026", text: "Fixed Get_Vaikora_Actions URI to omit the agent_id query parameter when VaikoraAgentId is empty. Without the fix the request includes agent_id= and the Vaikora API rejects it with HTTP 422.", contentTypes: [] },
       { version: "3.0.0", date: "28-04-2026", text: "Initial release. Vaikora AI to CrowdStrike IOC integration with automated severity mapping and deduplication.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Vaikora-O365",
+    entries: [
+      { version: "3.0.0", date: "13-05-2026", text: "Initial release. Vaikora for O365 quarantine solution pairing the customer-tenant Vaikora-O365 black-box Azure VM with Microsoft Sentinel. Ships one Sentinel-incident-triggered playbook (VaikoraO365ToQuarantine) and three analytic rules over the VaikoraO365_Quarantine_CL custom Log Analytics table: high-confidence phishing/suspected quarantine, abnormal quarantine rate spikes, and engine offline detection.", contentTypes: ["Analytic Rule","Playbook"] },
     ],
   },
   {
