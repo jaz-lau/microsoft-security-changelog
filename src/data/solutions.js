@@ -1857,7 +1857,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Hybrid Attack - Cloud & Identity",
     entries: [
-      { version: "3.0.0", date: "18-05-2026", text: "First Commit", contentTypes: [] },
+      { version: "3.0.0", date: "26-06-2026", text: "Private Preview Release", contentTypes: [] },
     ],
   },
   {
@@ -2366,6 +2366,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Assets",
     entries: [
+      { version: "3.3.0", date: "27-06-2026", text: "Added EntraEligibleMembers table", contentTypes: [] },
       { version: "3.1.0", date: "22-06-2026", text: "Added EntraSponsors and EntraOwners tables", contentTypes: [] },
       { version: "3.0.3", date: "30-04-2026", text: "Added Preview tag for EntraDevices and EntraOrgContacts tables", contentTypes: [] },
       { version: "3.0.2", date: "04-03-2025", text: "Added Devices and Org Contacts", contentTypes: [] },
