@@ -1177,6 +1177,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Darktrace",
     entries: [
+      { version: "3.1.1", date: "30-06-2026", text: "Fixed link to Darktrace set up guide", contentTypes: [] },
       { version: "3.1.0", date: "17-06-2026", text: "Added modelBreaches and accountName to DarktraceIncidents_CL, accountName to DarktraceModelAlerts_CL. Updated analytic rules with Account entity mapping for SaaS/identity correlation.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "06-03-2026", text: "Added new Darktrace ActiveAI Security Platform CCF data connector, DCR, custom tables, workbook, and two new analytic rules; relabeled legacy REST API connector, workbook, and analytic rules as (Legacy)", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
     ],
@@ -1789,6 +1790,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Workspace Reports",
     alias: "GoogleWorkspaceReports",
     entries: [
+      { version: "3.0.5", date: "29-06-2026", text: "Updated queryWindowDelayInMin for Google Workspace Connector", contentTypes: [] },
       { version: "3.0.4", date: "26-03-2026", text: "Updated Data Connector Configuration steps", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "21-01-2026", text: "Updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "26-08-2025", text: "Moving GoogleWorkspaceReports CCF Data Connector to GA.", contentTypes: ["Data Connector"] },
