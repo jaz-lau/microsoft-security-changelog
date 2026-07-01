@@ -18,6 +18,7 @@ export const RAW_SOLUTIONS = [
     name: "Abnormal Security",
     alias: "AbnormalSecurity",
     entries: [
+      { version: "3.1.0", date: "05-06-2026", text: "Added Microsoft Sentinel content for the CCF Push connector to meet MISA integration criteria: four scheduled Analytic Rules (high-risk email attack, account takeover, user-reported malicious email, vendor compromise) with entity mappings and MITRE ATT&CK techniques; four Hunting Queries; four Parsers normalizing the per-event-type tables to friendly column names; an Abnormal Security Overview Workbook; and an incident-comment Playbook.", contentTypes: ["Analytic Rule","Hunting Query","Playbook","Workbook","Parser"] },
       { version: "3.0.0", date: "08-05-2026", text: "Added CCF Push connector with multi-table routing (9 tables), DeployPushConnectorButton, and OAuth 2.0 authentication. Legacy Azure Functions connector retained for backward compatibility.", contentTypes: [] },
       { version: "3.0.0", date: "08-05-2026", text: "Full MLA column parity: renamed abx_body_* columns to abx_body_abx_body_*, added abx_body_abx_metadata_* columns across all 9 streams. Fixed DCR transforms with explicit tostring(abx_body) and tostring(abx_metadata) conversions. Fixed fallback stream to Custom-ABNORMAL_SECURITY_LOGS_CL. Added top-level workspace/tables resources in mainTemplate for direct ARM deployment.", contentTypes: [] },
       { version: "2.0.1", date: "29-06-2023", text: "Renaming Azure Function to Azure Functions in Data Connector Description and Updated the python runtime version to 3.11", contentTypes: ["Data Connector"] },
@@ -47,6 +48,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Agent 365",
     entries: [
+      { version: "3.1.2", date: "29-06-2026", text: "Bumped the Microsoft Agent Identities data connector version so Content Hub applies the latest connector content on solution update.", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "08-06-2026", text: "Restored the stable Agent 365 solution content ID to align installed packages with the Content Hub catalog.", contentTypes: [] },
       { version: "3.1.0", date: "21-05-2026", text: "Added the Microsoft Agent Identities Data Connector in Public Preview. This version is not recommended due to an incorrect solution ID that prevents update detection in Content Hub; use version 3.1.1 or later.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "13-05-2026", text: "Renamed solution and connector from A365 Observability to Agent 365.", contentTypes: [] },
@@ -78,6 +80,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.1", date: "06-03-2025", text: "Added new Parser Guardian.yaml", contentTypes: ["Parser"] },
       { version: "3.0.0", date: "15-01-2023", text: "Added Entity Mapping and remove alertactics Column Name to Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "15-01-2023", text: "Added new Analytic Rules and updated existing Analytic Rules and (AIShield) Parser.", contentTypes: ["Analytic Rule","Parser"] },
+    ],
+  },
+  {
+    name: "Akamai DDOS Protection",
+    entries: [
+      { version: "3.0.0", date: "24-06-2026", text: "Created a Data Connector for Akamai DDOS Protection CCF Container with the WAF security events data stream.", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -2120,6 +2128,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Lookout",
     entries: [
+      { version: "3.0.6", date: "25-06-2026", text: "Cursor timeout fix: Changed CCF pagingType from PersistentToken to NextPageToken. The persistent oid cursor expired server-side after ~24 hours causing the connector to silently stop ingesting. NextPageToken scopes the last_oid cursor to within-cycle pagination only; between cycles the CCF uses start_time time-window advancement, eliminating cross-cycle cursor staleness. DCR field path fixes: corrected threat.id → threat.guid, threat.action → threat.details.response, device.email_address → device.info.email, smishing_alert.id → smishing_alert.guid in DCR transformKql, LookoutEvents parser, and LookoutEvents.json workbook. Removed logResponseContent: true from PollingConfig.", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.5", date: "01-06-2026", text: "Streaming CCF data-loss fix: Lookout Mobile Risk API v2 returns the unique event identifier in the top-level oid field, not id. The DCR streamDeclarations did not declare oid, so the identifier was silently dropped on ingest, leaving LookoutMtdV2_CL.id empty for every record and breaking EventId-based correlation in analytic rules, hunting queries, and workbooks. Added oid to the DCR streamDeclarations and to the LookoutMtdV2_CL custom table schema, updated the DCR transformKql to populate id = coalesce(tostring(id), tostring(oid)), and updated the LookoutEvents parser EventId projection to the same coalesce so existing detections continue to work unchanged. Branding fix: Workbooks/WorkbooksMetadata.json — Azure Sentinel Solution → Microsoft Sentinel Solution for LookoutEventsV2. Analytic rules / workbooks: updated to use LookoutAPI connector with LookoutEvents data type. Streaming connector upgraded to RestApiPoller. Threat detection rule (LookoutThreatEventV2) now filters to ThreatStatus in (\"OPEN\", \"ACTIVE\") and ThreatAction == \"DETECTED\" to suppress alerts on already-remediated incidents. Packaging: regenerated with the supported V3 tool; package version aligned across all components.", contentTypes: ["Analytic Rule","Hunting Query","Workbook","Parser"] },
       { version: "3.0.4", date: "24-04-2026", text: "Fixed APIKey bracket escaping in mainTemplate.json: changed [[parameters('applicationKey')]] to [[parameters('applicationKey')] to prevent ARM expression evaluation error (expected token 'EndOfData' and actual 'RightSquareBracket') when Sentinel instantiates the ResourcesDataConnector template.", contentTypes: [] },
       { version: "3.0.3", date: "23-04-2026", text: "Version bump for certification resubmission. Fixed workspace-location parameter defaultValue to use [resourceGroup().location] ARM expression.", contentTypes: [] },
@@ -4262,6 +4271,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "With Secure Elements CCF",
+    alias: "WithSecureElementsCCF",
+    entries: [
+      { version: "3.0.0", date: "08-06-2026", text: "Initial release. WithSecure Elements data connector built on the Codeless Connector Framework (CCF) and the \"Top computers by infections\" workbook.", contentTypes: ["Data Connector","Workbook"] },
+    ],
+  },
+  {
     name: "WithSecure Elements via Connector",
     alias: "WithSecureElementsViaConnector",
     entries: [
@@ -4273,6 +4289,7 @@ export const RAW_SOLUTIONS = [
     name: "WithSecure Elements via Function",
     alias: "WithSecureElementsViaFunction",
     entries: [
+      { version: "3.0.3", date: "29-06-2026", text: "Deprecated. Please use the WithSecure Elements via Codeless Connector Framework (CCF) solution instead.", contentTypes: [] },
       { version: "3.0.2", date: "13-02-2026", text: "Add support of lacking event types. Migrate to Python 3.12.", contentTypes: [] },
       { version: "3.0.1", date: "28-03-2025", text: "Memory overflow fix - process events via batches", contentTypes: [] },
       { version: "3.0.1", date: "28-03-2025", text: "Fix wrong workspace name in sentinel connector installation instruction", contentTypes: [] },
