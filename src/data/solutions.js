@@ -725,6 +725,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.2.0", date: "01-07-2026", text: "Updated Cisco Umbrella CCF data connector as generally available (isPreview false).", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "22-05-2026", text: "Added new CCF (Codeless Connector) for Cisco Umbrella with 10 new tables (DNS, WebTraffic, CloudFirewall, AdminAudit, DLP, FileEvent, IPS, RemoteAccessVPN, ZeroTrustAccess, ZeroTrustAccessFlow) and updated parser to union new tables. (Public Preview)", contentTypes: ["Parser"] },
       { version: "3.0.10", date: "23-03-2026", text: "Added null-byte sanitization for corrupted state manager timestamps in Data Connector to prevent crashes on corrupted Azure File Share markers. Added null-byte stripping in date formatting to handle corrupted date fields from csv file.", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "13-03-2026", text: "Moved csv.field_size_limit to module level so all 12 CSV parsers are covered. Added csv.Error guardrail to prevent a single oversized row from stalling ingestion. Consolidated null-byte stripping into unpack_file() to prevent _csv.Error on embedded NUL characters across all parsers.", contentTypes: ["Parser"] },
@@ -3080,6 +3081,7 @@ export const RAW_SOLUTIONS = [
     name: "Rapid7Insight VM",
     alias: "Rapid7InsightVM",
     entries: [
+      { version: "3.3.0", date: "01-07-2026", text: "Updated Rapid7InsightVM CCP data connector definition generally available.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "05-03-2026", text: "Added new Rapid7InsightVM CCP data connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "05-02-2026", text: "Update Az Func packages related to InsightVMCloudData Connector", contentTypes: [] },
       { version: "3.1.0", date: "03-02-2026", text: "Update Data Connector to use latest 4.x Azure Functions extension bundles", contentTypes: ["Data Connector"] },
