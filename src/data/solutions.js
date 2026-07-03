@@ -537,6 +537,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "BlueVoyant Anthropic ClaudeCompliance",
     entries: [
+      { version: "3.0.1", date: "30-06-2026", text: "Added many Claude Compliance API activity-specific fields, needed for hunting and rules in Sentinel, to the table schema and DCR. The request_body column has been removed due to the possibility that it could contain sensitive data. The Claude Compliance connector has been updated to version 1.0.1.", contentTypes: [] },
       { version: "3.0.0", date: "15-06-2026", text: "Initial release of the BlueVoyant Anthropic Claude Compliance solution for Microsoft Sentinel, including a Codeless Connector Framework (CCF) data connector that ingests Claude Compliance API activity into the BV_ClaudeCompliance_ComplianceActivities_CL table.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -1373,6 +1374,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ESET Protect Platform",
     entries: [
+      { version: "3.3.0", date: "02-07-2026", text: "Created a new CCF Connector for all the products of ESET Protect Platform and updated the Parser to normalize data from both the legacy Azure Functions connector (IntegrationTable_CL) and the new CCF connector (IntegrationTableV2_CL)", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "25-04-2025", text: "Add the location parameter to ARM template and update the email address.", contentTypes: [] },
       { version: "3.1.0", date: "06-02-2025", text: "Updated Data Connector FunctionApp code to work with old param and new", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "04-11-2024", text: "Initial Solution Release", contentTypes: [] },
@@ -1578,6 +1580,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.4.0", date: "25-06-2026", text: "Added all api.request fields and created V3 table for AzStorage connector", contentTypes: [] },
       { version: "3.3.1", date: "17-06-2026", text: "Added SAS related instruction.", contentTypes: [] },
       { version: "3.3.0", date: "04-06-2026", text: "Introducing a new Azure Storage CCF GitHub Audit Log Connector for Public Preview.", contentTypes: [] },
       { version: "3.2.1", date: "04-05-2026", text: "Migrated Parsers and Workbooks to githubscanaudit CLv1 & CLv2 union alias.", contentTypes: ["Workbook","Parser"] },
@@ -2334,6 +2337,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.14", date: "30-06-2026", text: "Updated BruteForceAgainstanEntraAuthenticatedWindowsDevice Analytic rule to add an explicit \"sort by TimeGenerated asc\" before building \"make_list\" arrays.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.13", date: "22-06-2026", text: "Updated Description of AccountCreatedandDeletedinShortTimeframe Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.12", date: "28-04-2026", text: "Renamed analytic rule from BruteForceCloudPC to BruteForceAgainstEntraAuthenticatedWindowsDevice and updated name and description in Analytic Rule to reflect detection scope across all Entra-authenticated Windows devices (including Entra-joined, hybrid-joined, and Windows 365 Cloud PCs), resolving ambiguity around Cloud PC specificity", contentTypes: ["Analytic Rule"] },
       { version: "3.3.11", date: "13-04-2026", text: "Added Watchlist ConditionalAccessBenignStatusCodes and updated BypassCondAccessRule analytic rule", contentTypes: ["Analytic Rule"] },
@@ -2566,6 +2570,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mulesoft",
     entries: [
+      { version: "3.2.0", date: "02-07-2026", text: "Fixed Data Connectors Count issue on UI.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "17-06-2026", text: "Added MuleSoft CloudHub Alerts CCF Connector & Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
       { version: "3.1.0", date: "17-06-2026", text: "Updated Definition file by removing empty instructions.", contentTypes: [] },
       { version: "3.0.2", date: "09-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
@@ -3566,6 +3571,7 @@ export const RAW_SOLUTIONS = [
     name: "SOC Radar",
     alias: "SOCRadar",
     entries: [
+      { version: "3.0.1", date: "17-06-2026", text: "Version bump to align the published package with the catalog; no template or playbook logic changes.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "26-02-2026", text: "Initial release.", contentTypes: [] },
     ],
   },
