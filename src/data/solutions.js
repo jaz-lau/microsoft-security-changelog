@@ -2847,6 +2847,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Orca Security Alerts",
+    entries: [
+      { version: "3.0.0", date: "23-06-2026", text: "Added Orca Security Alerts data connector using Microsoft Entra ID authentication (Push CCF connector with DCR/DCE and the Azure Monitor Logs Ingestion API). Updated the connector logo. The legacy Shared Key based connector is retained for backward compatibility and both connectors ingest into the same OrcaAlerts_CL table.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "OSSEC",
     entries: [
       { version: "3.0.2", date: "21-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
@@ -3097,6 +3103,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future",
     entries: [
+      { version: "3.2.20", date: "04-05-2026", text: "Removed incident creation from affected playbooks, in preparation for Microsoft Defender migration. Added Analytic Rules that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.2.19", date: "13-04-2026", text: "Added functionality to choose Sandbox region, changed to optional Enterprise Sandbox API token. Updated Indicator Import, moving evidence details from \"labels\" to \"external_references\".", contentTypes: [] },
       { version: "3.2.18", date: "03-02-2026", text: "To reduce noise in incident comments: updated RecordedFuture-IOC_Enrichment logic app with a RiskScoreThreshold parameter that defaults to 5. If an entity has a risk score lower than this threshold, we will not leave a comment on the incident.", contentTypes: [] },
       { version: "3.2.17", date: "12-08-2025", text: "Updated Indicator imports with deterministic STIX ID that should reduce the number duplicate IOCs. Updated RecordedFuture-Playbook-Alert-Importer to improve the description formatting. Updated documentation with typo fixes and clarifications.", contentTypes: ["Playbook"] },
@@ -4307,6 +4314,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Wiz",
     entries: [
+      { version: "3.0.1", date: "26-06-2026", text: "Added a new push-based Connector (DCR + RBAC grant): Wiz pushes data to WizIssuesV3_CL, WizDetectionsV3_CL, and WizAuditLogsV3_CL (Issues, Detections, Audit Logs), with no Azure Function to host. Workbook updated to the new tables and columns. The legacy Azure Function connector remains available for existing deployments.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "15-07-2024", text: "Updated the queries on the Workbook and Connector to match with the new table names we offer", contentTypes: ["Workbook"] },
       { version: "2.0.0", date: "07-09-2023", text: "Updated Workbook query in Maintemplate", contentTypes: ["Workbook"] },
     ],
