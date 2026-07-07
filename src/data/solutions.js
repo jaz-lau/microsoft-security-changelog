@@ -2382,6 +2382,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Assets",
     entries: [
+      { version: "3.3.1", date: "01-07-2026", text: "Removed EntraEligibleMembers table (Preview)", contentTypes: [] },
       { version: "3.3.0", date: "27-06-2026", text: "Added EntraEligibleMembers table", contentTypes: [] },
       { version: "3.1.0", date: "22-06-2026", text: "Added EntraSponsors and EntraOwners tables", contentTypes: [] },
       { version: "3.0.3", date: "30-04-2026", text: "Added Preview tag for EntraDevices and EntraOrgContacts tables", contentTypes: [] },
@@ -3920,6 +3921,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trend Micro Cloud App Security",
     entries: [
+      { version: "3.1.0", date: "02-07-2026", text: "Updated Underlying Microsoft Technologies list in the solution description to include Codeless Connector Framework (CCF), Log Ingestion API, and Data Collection Rules (DCR) for the CCF data connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "29-05-2026", text: "Added dual-schema parser support for CLv1 (TrendMicroCAS_CL) and CLv2 (TrendMicroCASV2_CL) data, introduced Codeless Connector Framework (CCF) Data Connector alongside the legacy Azure Function connector.", contentTypes: ["Data Connector","Parser"] },
       { version: "2.0.0", date: "23-08-2023", text: "Initial release.", contentTypes: [] },
     ],
