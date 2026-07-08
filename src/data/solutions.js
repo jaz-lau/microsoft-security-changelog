@@ -173,6 +173,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Apache Log4j Vulnerability Detection",
     entries: [
+      { version: "3.0.9", date: "02-07-2026", text: "Updated AzureWAFmatching_log4j_vuln Analytical Rule to use columnifexists for the details_message_s column and to project the details_msg_s column", contentTypes: ["Analytic Rule"] },
       { version: "3.0.8", date: "25-08-2025", text: "Hardcoded the Watchlist description to resolve a deployment issue.", contentTypes: [] },
       { version: "3.0.7", date: "21-07-2025", text: "Removed 'BatchImportToSentinel' & Updated 'Log4jIndicatorProcessor' Playbook to handle new STIX action.", contentTypes: ["Playbook"] },
       { version: "3.0.6", date: "21-01-2025", text: "Fixed query in Analytical Rule UserAgentSearch_log4j.yaml.", contentTypes: ["Analytic Rule"] },
@@ -246,15 +247,6 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.3", date: "14-08-2024", text: "Data Connector[Atlassian Jira Audit (using REST API)] Globally Available", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "22-05-2024", text: "Added new CCP Data Connector to the Solution", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "16-04-2024", text: "Added Deploy to Azure Goverment button for Government portal in Dataconnector", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "06-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Attacker Tools Threat Protection Essentials",
-    entries: [
-      { version: "3.0.3", date: "06-06-2024", text: "Added missing AMA Data Connector reference in Analytic rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
-      { version: "3.0.2", date: "07-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
-      { version: "3.0.1", date: "23-01-2024", text: "Added subTechniques in Template", contentTypes: [] },
       { version: "3.0.0", date: "06-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
     ],
   },
@@ -349,18 +341,6 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Azure Activity",
-    entries: [
-      { version: "3.0.4", date: "25-02-2026", text: "Updated description_detailed for the Rare_Custom_Script_Extension Hunting Query", contentTypes: ["Hunting Query"] },
-      { version: "3.0.3", date: "19-02-2025", text: "Added new Workbook Azure Service Health to the Solution and added new Hunting query Machine_Learning_Creation.yaml.", contentTypes: ["Hunting Query","Workbook"] },
-      { version: "3.0.3", date: "19-02-2025", text: "Added new Analytic Rule Machine_Learning_Creation.yaml", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.2", date: "21-02-2024", text: "Modified Entity Mappings of Analytic Rules", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.1", date: "23-01-2024", text: "Added subTechniques in Template", contentTypes: [] },
-      { version: "3.0.0", date: "06-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
-      { version: "3.0.0", date: "06-11-2023", text: "Optimized the Analytic Rule query logic to achieve expected results", contentTypes: ["Analytic Rule"] },
-    ],
-  },
-  {
     name: "Azure Cloud NGFW by Palo Alto Networks",
     entries: [
       { version: "3.0.2", date: "09-01-2025", text: "Updated query of Analytic Rules and fixed failing queries of Workbooks", contentTypes: ["Analytic Rule","Workbook"] },
@@ -443,20 +423,6 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Barracuda CloudGen Firewall",
-    entries: [
-      { version: "3.0.2", date: "19-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
-      { version: "3.0.1", date: "18-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "12-10-2023", text: "The support information is revised/updated.", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Barracuda WAF",
-    entries: [
-      { version: "3.0.0", date: "09-07-2024", text: "Deprecating data connectors.", contentTypes: ["Data Connector"] },
-    ],
-  },
-  {
     name: "BeyondTrust PM Cloud",
     alias: "BeyondTrustPMCloud",
     entries: [
@@ -502,14 +468,6 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "23-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "18-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
-    ],
-  },
-  {
-    name: "Blacklens",
-    entries: [
-      { version: "3.0.2", date: "13-04-2026", text: "Fix invalid secureData on ParseJson action.", contentTypes: [] },
-      { version: "3.0.1", date: "30-03-2026", text: "Bug fix.", contentTypes: [] },
-      { version: "3.0.0", date: "16-02-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -563,29 +521,6 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Business Email Compromise - Financial Fraud",
-    entries: [
-      { version: "3.0.10", date: "10-11-2025", text: "Update in Analytical Rule alert description", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.9", date: "05-06-2024", text: "Analytical Rule description updated", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.8", date: "04-04-2024", text: "Updated Entity Mappings", contentTypes: [] },
-      { version: "3.0.7", date: "28-02-2024", text: "Removed usage of BlastRadius from Hunting Queries", contentTypes: ["Hunting Query"] },
-      { version: "3.0.6", date: "16-02-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.5", date: "08-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
-      { version: "3.0.4", date: "10-01-2024", text: "Updated Analytic Rule (AuthenticationMethodChangedforPrivilegedAccount.yaml)", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.3", date: "23-11-2023", text: "Updated description of Hunting query", contentTypes: ["Hunting Query"] },
-      { version: "3.0.2", date: "06-11-2023", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR", contentTypes: [] },
-      { version: "3.0.1", date: "03-11-2023", text: "Updated Analytic Rule datatype and descriptions for Hunting queries", contentTypes: ["Analytic Rule","Hunting Query"] },
-      { version: "3.0.0", date: "07-08-2023", text: "Initial Solution Release", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Censys",
-    entries: [
-      { version: "3.0.0", date: "06-04-2026", text: "Added Support for Related Infrastructure Playbook and Workbook", contentTypes: ["Playbook","Workbook"] },
-      { version: "3.0.0", date: "05-03-2026", text: "Initial Solution for Censys with Playbooks and Workbook", contentTypes: ["Playbook","Workbook"] },
-    ],
-  },
-  {
     name: "Check Point CloudGuard CNAPP",
     entries: [
       { version: "3.0.0", date: "18-11-2024", text: "Initial Solution release", contentTypes: [] },
@@ -599,49 +534,10 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Check Point Cyberint IOC",
-    entries: [
-      { version: "3.0.2", date: "03-04-2026", text: "Fixed table schema definition causing connector creation failure.", contentTypes: [] },
-      { version: "3.0.2", date: "03-04-2026", text: "Fixed apiEndpoint URL construction (removed duplicate https:// prefix).", contentTypes: [] },
-      { version: "3.0.2", date: "03-04-2026", text: "Added Customer Name configuration field.", contentTypes: [] },
-      { version: "3.0.2", date: "03-04-2026", text: "Improved connector UI with field descriptions, placeholders, and password masking for API Token.", contentTypes: [] },
-      { version: "3.0.2", date: "03-04-2026", text: "Updated connector description and prerequisites text.", contentTypes: [] },
-      { version: "3.0.1", date: "12-09-2025", text: "Replaces the variable reference for graphQueriesTableName with the explicit table name 'iocsent_CL'", contentTypes: [] },
-      { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
-    ],
-  },
-  {
     name: "Cisco ACI",
     entries: [
       { version: "3.0.1", date: "24-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
-    ],
-  },
-  {
-    name: "Cisco ASA",
-    alias: "CiscoASA",
-    entries: [
-      { version: "3.0.7", date: "01-09-2025", text: "Updates to the template_CiscoAsaAma.json file to reflect the general availability of the Cisco ASA/FTD via AMA connector", contentTypes: [] },
-      { version: "3.0.6", date: "10-07-2025", text: "Preview tag removed from Connector title", contentTypes: [] },
-      { version: "3.0.5", date: "25-04-2025", text: "Removed Legacy Data Connector", contentTypes: ["Data Connector"] },
-      { version: "3.0.4", date: "22-05-2024", text: "Updated connectivity criteria for Data Connector", contentTypes: ["Data Connector"] },
-      { version: "3.0.3", date: "14-03-2024", text: "Change the connectivity criteria to use the resource graph and not LA data", contentTypes: [] },
-      { version: "3.0.2", date: "07-03-2024", text: "New AMA based connector is now in public preview", contentTypes: [] },
-      { version: "3.0.1", date: "31-01-2023", text: "Added new Data Connector Cisco ASA/FTD via AMA (Preview) to the solution", contentTypes: ["Data Connector"] },
-    ],
-  },
-  {
-    name: "Cisco Duo Security",
-    alias: "CiscoDuoSecurity",
-    entries: [
-      { version: "3.1.1", date: "17-02-2026", text: "Bumped solution version to 3.1.1. Updated ARM template apiVersions to meet ARM-TTK \"< 2 years old\" requirements.", contentTypes: [] },
-      { version: "3.1.0", date: "03-02-2026", text: "Python runtime compatibility fix (breaking for connector deployments running on Python 3.11). Fixed solution installation via Azure portal by deriving deployment location from selected workspace (prevents empty location).", contentTypes: [] },
-      { version: "3.0.4", date: "26-09-2025", text: "Updated support Microsoft to Partner", contentTypes: [] },
-      { version: "3.0.3", date: "02-09-2025", text: "Added support for new log endpoints", contentTypes: [] },
-      { version: "3.0.2", date: "16-04-2024", text: "Added Deploy to Azure Goverment button for Government portal in Dataconnector", contentTypes: ["Data Connector"] },
-      { version: "3.0.2", date: "16-04-2024", text: "Fixed Parser issue for Parser name and ParentID mismatch", contentTypes: ["Parser"] },
-      { version: "3.0.1", date: "30-01-2024", text: "Updated solution to fix parser query", contentTypes: ["Parser"] },
-      { version: "3.0.0", date: "08-01-2024", text: "Updated solution to fix Api version of saved searches", contentTypes: [] },
     ],
   },
   {
@@ -656,15 +552,6 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "10-07-2024", text: "Deprecating data connectors.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "26-09-2023", text: "Addition of new Cisco Firepower EStreamer AMA Data Connector", contentTypes: ["Data Connector"] },
-    ],
-  },
-  {
-    name: "Cisco ISE",
-    entries: [
-      { version: "3.0.3", date: "20-05-2025", text: "Updated Parser to parse new fields", contentTypes: ["Parser"] },
-      { version: "3.0.2", date: "04-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
-      { version: "3.0.1", date: "23-07-2024", text: "Deprecated data connectors", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "11-07-2023", text: "Parser query optimization done", contentTypes: ["Parser"] },
     ],
   },
   {
@@ -693,14 +580,6 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "20-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "23-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "13-05-2024", text: "Changes for rebranding from Cisco Stealthwatch to Cisco Secure Cloud Analytics", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Cisco Secure Endpoint",
-    entries: [
-      { version: "3.0.2", date: "14-08-2025", text: "Cisco Secure Endpoint CCF Connector moving to GA.", contentTypes: [] },
-      { version: "3.0.1", date: "23-06-2025", text: "Adding a new CCF Data Connector - *Cisco Secure Endpoint* and updated the Parser to handle the newly introduced table.", contentTypes: ["Data Connector","Parser"] },
-      { version: "3.0.0", date: "28-08-2024", text: "Updated the python runtime version to 3.11.", contentTypes: [] },
     ],
   },
   {
@@ -743,27 +622,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Cisco WSA",
-    alias: "CiscoWSA",
-    entries: [
-      { version: "3.0.2", date: "19-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
-      { version: "3.0.1", date: "24-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "16-08-2023", text: "Optimize the Parser by replacing the legacy code that uses regex with a more efficient algorithm to reduce the time taken to parse data.", contentTypes: ["Parser"] },
-    ],
-  },
-  {
     name: "Citrix ADC",
     entries: [
       { version: "3.0.3", date: "09-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "30-07-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "18-08-2023", text: "Modified the Parser with correct watchlist alias", contentTypes: ["Parser"] },
       { version: "3.0.0", date: "14-07-2023", text: "Modified the Data Connector with improved onboarding instructions \\|v 1.0.1", contentTypes: ["Data Connector"] },
-    ],
-  },
-  {
-    name: "Citrix Analytics CCF",
-    entries: [
-      { version: "3.0.0", date: "26-03-2026", text: "Initial release of the Citrix Analytics CCF connector.", contentTypes: [] },
     ],
   },
   {
@@ -786,32 +650,9 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Claroty xDome",
-    entries: [
-      { version: "3.0.0", date: "16-04-2024", text: "Initial Solution Release", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Cloud Identity Threat Protection Essentials",
-    entries: [
-      { version: "3.0.3", date: "28-02-2024", text: "Removed usage of BlastRadius from Hunting Queries", contentTypes: ["Hunting Query"] },
-      { version: "3.0.2", date: "09-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
-      { version: "3.0.1", date: "16-01-2024", text: "Sub-techniques added for Analytical Rules", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.0", date: "07-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
-    ],
-  },
-  {
     name: "Cloud Service Threat Protection Essentials",
     entries: [
       { version: "3.0.0", date: "09-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Cloudflare",
-    entries: [
-      { version: "3.0.2", date: "05-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
-      { version: "3.0.1", date: "01-08-2023", text: "Updated logic in Data Connector to handle broken events.", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "24-07-2023", text: "Updated logic in Hunting Query (Cloudflare - Client errors,Cloudflare - Server errors)", contentTypes: ["Hunting Query"] },
     ],
   },
   {
@@ -821,13 +662,6 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "22-04-2026", text: "Fixed DCR transformKql for Type field and corrected invalid field data types", contentTypes: [] },
       { version: "3.0.1", date: "08-12-2025", text: "Fixed invalid GUIDs, updated analytic rules, aligned URL entity mappings with legacy Cloudflare solution", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "02-10-2025", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
-    ],
-  },
-  {
-    name: "Cofense Intelligence",
-    alias: "CofenseIntelligence",
-    entries: [
-      { version: "3.0.0", date: "10-12-2022", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
   {
@@ -980,14 +814,6 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "05-12-2024", text: "Update on existing Hunting Queries and new Analytic Rules", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.0", date: "21-10-2024", text: "Initial Solution Release", contentTypes: [] },
-    ],
-  },
-  {
-    name: "CTM360",
-    entries: [
-      { version: "3.0.2", date: "03-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
-      { version: "3.0.1", date: "09-02-2024", text: "Corrected Lookback duration format for all Analytical Rules", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.0", date: "14-12-2023", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
   {
@@ -1930,6 +1756,7 @@ export const RAW_SOLUTIONS = [
     name: "Imperva Cloud WAF",
     alias: "ImpervaCloudWAF",
     entries: [
+      { version: "3.1.3", date: "07-07-2026", text: "Promoted the Imperva Cloud WAF CCF Connector to General Availability", contentTypes: [] },
       { version: "3.1.2", date: "10-06-2026", text: "Modify to use CommonEventFormatTransformer to fix data ingestion issues", contentTypes: [] },
       { version: "3.1.1", date: "10-04-2026", text: "Add \"CsvEscapeMode\": \"NoEscape\" to prevent logs with embedded JSON from being dropped during ingestion", contentTypes: [] },
       { version: "3.1.0", date: "30-03-2026", text: "Promoted the Imperva Cloud WAF CCF connector to Public Preview", contentTypes: [] },
@@ -3489,6 +3316,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SIGNL4",
     entries: [
+      { version: "3.0.1", date: "24-07-2026", text: "Minor text changes.", contentTypes: [] },
       { version: "3.0.0", date: "02-06-2025", text: "This version introduces several updates to the SIGNL4 solution for Microsoft Sentinel, focusing on improving metadata, updating templates, and enhancing descriptions for better clarity and functionality.", contentTypes: [] },
     ],
   },
