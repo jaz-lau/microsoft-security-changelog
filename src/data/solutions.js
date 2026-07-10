@@ -252,6 +252,14 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Atlassian Organization Audit",
+    alias: "AtlassianOrganizationAudit",
+    entries: [
+      { version: "3.0.0", date: "06-07-2026", text: "First version of the Atlassian Organization Audit CCF Connector.", contentTypes: [] },
+      { version: "3.0.0", date: "06-07-2026", text: "Added Atlassian organization audit events ingestion support using CCF pollers, DCR, and parsers.", contentTypes: ["Parser"] },
+    ],
+  },
+  {
     name: "Attacker Tools Threat Protection Essentials",
     entries: [
       { version: "3.0.3", date: "06-06-2024", text: "Added missing AMA Data Connector reference in Analytic rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
@@ -610,6 +618,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "03-04-2026", text: "Updated connector description and prerequisites text.", contentTypes: [] },
       { version: "3.0.1", date: "12-09-2025", text: "Replaces the variable reference for graphQueriesTableName with the explicit table name 'iocsent_CL'", contentTypes: [] },
       { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Checkpoint Email Security",
+    entries: [
+      { version: "3.0.0", date: "08-07-2026", text: "Initial release. Added Data Connector for Check Point Email Security (via Codeless Connector Framework) ingesting Security Events, Anti-Phishing Exceptions, Spam Exceptions, and Audit Logs data streams.", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -1984,6 +1998,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Infoblox SOC Insights",
     entries: [
+      { version: "3.1.0", date: "07-09-2026", text: "Data Connector via Codeless Connector Framework added", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "28-06-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "03-05-2024", text: "Repackaged for parser issue fix on reinstall", contentTypes: ["Parser"] },
       { version: "3.0.0", date: "04-03-2024", text: "Initial Solution Release", contentTypes: [] },
@@ -2641,6 +2656,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Netskope Alert Events",
+    alias: "NetskopeAlertEvents",
+    entries: [
+      { version: "3.0.0", date: "17-06-2026", text: "Initial solution release. Netskope Alerts & Events CCF (Blob Storage) connector, custom table NetskopeAlertEvents_CL, parser, 1 workbook, and 3 analytic rules.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
+    ],
+  },
+  {
     name: "Netskope v2",
     alias: "Netskopev2",
     entries: [
@@ -2747,6 +2769,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.1.8", date: "10-07-2026", text: "Update Analytic rule and Hunting Queries for Okta SSO.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.1.7", date: "28-04-2026", text: "Update query with OktaSSO parser so that the OktaV2_CL table is considered.", contentTypes: ["Parser"] },
       { version: "3.1.6", date: "14-04-2026", text: "Deprecate Okta Single Sign-On (using Azure Function)", contentTypes: [] },
       { version: "3.1.5", date: "02-04-2026", text: "Rename CCF solution to Okta Single Sign-On (via Codeless Connector Framework).", contentTypes: [] },
@@ -3463,6 +3486,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.1.0", date: "01-07-2026", text: "Added new SentinelOne V2 (via Codeless Connector Framework) Data Connector (ingests alerts via the GraphQL API)", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "03-06-2026", text: "Updated CCP Data Connector to support multiple instances (multi-connection) for MSSP scenarios", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "14-04-2026", text: "Deprecate SentinelOne (using Azure Function)", contentTypes: [] },
       { version: "3.0.8", date: "24-03-2026", text: "Rename CCF solution to SentinelOne (via Codeless Connector Framework)", contentTypes: [] },
