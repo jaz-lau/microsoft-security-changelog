@@ -1525,6 +1525,7 @@ export const RAW_SOLUTIONS = [
     name: "Forescout Host Property Monitor",
     alias: "ForescoutHostPropertyMonitor",
     entries: [
+      { version: "3.1.0", date: "07-07-2026", text: "Retained the legacy Forescout Host Property Monitor data connector alongside the new Codeless Connector Framework (CCF) push connector so the solution now ships both connector versions. The CCF connector adds a Data Collection Rule with three custom streams and tables (ForescoutHostProperties_CL, ForescoutPolicyStatus_CL, ForescoutComplianceStatus_CL). Updated solution and playbook support contact to Microsoft.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.0.0", date: "18-02-2025", text: "Added new Workbook Forescout Host Property Monitor Workbook.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "18-02-2025", text: "Changes to Analytic Rules and Playbook corresponding to Customer table changes replaced HTTP Data Collector API with Log Ingestion API.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "2.0.1", date: "26-05-2022", text: "Updated Support details from Microsoft to Forescout.", contentTypes: [] },
@@ -2514,6 +2515,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "06-03-2025", text: "Solution Deprecated", contentTypes: [] },
       { version: "3.0.1", date: "05-12-2023", text: "Enhanced Dataconnector to use existing workspace and updated checkpoint mechanism", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-08-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Mimecast Events-CCF",
+    alias: "MimecastEvents-CCF",
+    entries: [
+      { version: "3.0.0", date: "06-07-2026", text: "Initial release: Mimecast Event Push CCF (Push) data connector, 7 parsers.", contentTypes: ["Data Connector","Parser"] },
     ],
   },
   {
