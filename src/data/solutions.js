@@ -554,6 +554,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Box",
     entries: [
+      { version: "3.1.5", date: "09-07-2026", text: "Updated Parser and CCF Data Connector DCR.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.1.4", date: "13-04-2026", text: "Deprecate Box Events (using Azure Function)", contentTypes: [] },
       { version: "3.1.3", date: "24-03-2026", text: "Rename to Box Events (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.2", date: "29-10-2025", text: "Updated KQL queries in Workbook to use EventEndTime instead of TimeGenerated for time-based filtering", contentTypes: ["Workbook"] },
@@ -2364,6 +2365,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.15", date: "10-07-2026", text: "Updated SigninAttemptsByIPviaDisabledAccounts Analytic Rule to include the additional \"ResultDescription\" value: \"The user account is disabled.\"", contentTypes: ["Analytic Rule"] },
       { version: "3.3.14", date: "30-06-2026", text: "Updated BruteForceAgainstanEntraAuthenticatedWindowsDevice Analytic rule to add an explicit \"sort by TimeGenerated asc\" before building \"make_list\" arrays.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.13", date: "22-06-2026", text: "Updated Description of AccountCreatedandDeletedinShortTimeframe Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.12", date: "28-04-2026", text: "Renamed analytic rule from BruteForceCloudPC to BruteForceAgainstEntraAuthenticatedWindowsDevice and updated name and description in Analytic Rule to reflect detection scope across all Entra-authenticated Windows devices (including Entra-joined, hybrid-joined, and Windows 365 Cloud PCs), resolving ambiguity around Cloud PC specificity", contentTypes: ["Analytic Rule"] },
