@@ -628,6 +628,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Checkpoint Harmony Email and Collaboration",
+    entries: [
+      { version: "3.0.0", date: "11-03-2026", text: "Initial Solution Release — includes Data Connector (CCP/Push), Analytic Rule, Hunting Queries (5), and Playbook (Quarantine)", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook"] },
+    ],
+  },
+  {
     name: "Cisco ACI",
     entries: [
       { version: "3.0.1", date: "24-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
@@ -1267,6 +1273,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Digital Shadows",
     entries: [
+      { version: "3.1.0", date: "24-06-2026", text: "Migrated ingestion from the retiring HTTP Data Collector API to the Logs Ingestion API. New table DigitalShadows_V2_CL with clean PascalCase columns; legacy DigitalShadows_CL data ages out per workspace retention. New required deployment parameter DcrWorkspaceResourceId (full resource ID of the Log Analytics workspace). Function Apps now authenticate via system-assigned managed identity (Monitoring Metrics Publisher on the DCR); legacy WorkspaceID/WorkspaceKey parameters removed. Both Function Apps upgraded to Python 3.11. Analytic rules updated to query DigitalShadows_V2_CL while keeping detection logic intact via KQL project-rename aliases.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "04-06-2026", text: "Updated EventReportUrl construction in both Analytic Rules", contentTypes: ["Analytic Rule"] },
     ],
   },
@@ -4205,6 +4212,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMware Carbon Black Cloud",
     entries: [
+      { version: "3.0.9", date: "12-07-2026", text: "Fixed type mismatch in Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.8", date: "24-03-2026", text: "Deprecate to VMware Carbon Black Cloud (using Azure Function)", contentTypes: [] },
       { version: "3.0.7", date: "24-03-2026", text: "Rename to VMware Carbon Black Cloud via AWS S3(via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.0.6", date: "28-01-2026", text: "Updated all VMware Carbon Black Cloud product page URLs to now point to the new Broadcom URL", contentTypes: [] },
