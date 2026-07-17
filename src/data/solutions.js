@@ -2,6 +2,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "1Password",
     entries: [
+      { version: "3.0.3", date: "06-07-2026", text: "Fixed CCP Data Connector to use cursor-based (PersistentToken) polling so late-synced item usage events (e.g. reveal, secure-copy) are no longer dropped.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "17-09-2024", text: "Added new CCP Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "27-06-2024", text: "Fixed typo error in Analytic Rule 1Password - Changes to SSO configuration.yaml. Fixed Logo link and typo in CreateUI.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "12-06-2024", text: "Initial Solution Release.", contentTypes: [] },
@@ -3950,7 +3951,7 @@ export const RAW_SOLUTIONS = [
     name: "Transmit Security",
     alias: "TransmitSecurity",
     entries: [
-      { version: "3.0.2", date: "20-11-2024", text: "Change Functions to support one endpoint at a time", contentTypes: [] },
+      { version: "3.0.2", date: "13-07-2026", text: "Update data connector from the deprecated Azure Function connector to CCF", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "03-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.0", date: "11-07-2024", text: "Initial Solution Release", contentTypes: [] },
     ],
