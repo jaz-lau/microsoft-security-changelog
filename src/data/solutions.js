@@ -11,6 +11,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "42Crunch API Protection",
     entries: [
+      { version: "3.0.2", date: "15-07-2026", text: "Update publisher and support information in SolutionMetadata.json", contentTypes: [] },
       { version: "3.0.1", date: "25-05-2026", text: "Added CCF Push Data Connector (OAuth2/Entra ID via DCE/DCR) alongside legacy connector; added backward-compatible Parser (FortyTwoCrunchAPIProtection) supporting both apifirewall_log_1_CL and FortyTwoCrunchAPIProtectionV2_CL schemas. Updated all 11 Analytic Rules to use the parser alias and PascalCase column names, added Migration Guide with end-to-end validated ccf-forwarder sample deployment, and refreshed Workbook metadata.", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.0.0", date: "15-07-2024", text: "Missing Tactics and Techniques added", contentTypes: [] },
     ],
@@ -1365,6 +1366,7 @@ export const RAW_SOLUTIONS = [
     name: "Elastic Agent",
     alias: "ElasticAgent",
     entries: [
+      { version: "3.0.1", date: "16-07-2026", text: "Promoted ElasticAgent CCF data connector from public preview to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "11-05-2026", text: "Data Connector via Codeless Connector Framework added", contentTypes: ["Data Connector"] },
       { version: "2.0.0", date: "14-06-2022", text: "Data Connector customs added", contentTypes: ["Data Connector"] },
     ],
@@ -3120,7 +3122,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Qualys VM Knowledgebase",
     entries: [
-      { version: "3.1.2", date: "29-04-2026", text: "Moving Connector to GA", contentTypes: [] },
+      { version: "3.1.3", date: "17-07-2026", text: "CCF connector - fix incomplete data ingestion.", contentTypes: [] },
+      { version: "3.1.2", date: "29-04-2026", text: "Moving Connector to GA.", contentTypes: [] },
       { version: "3.1.1", date: "23-04-2026", text: "Moved endpoint to target Qualys KB API v4.0", contentTypes: [] },
       { version: "3.1.0", date: "19-03-2026", text: "Added Codeless Connector to solution and updated parser to add fields and clean up typos.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "03-05-2024", text: "Added Deploy to Azure Goverment button for Government portal in Dataconnector", contentTypes: ["Data Connector"] },
