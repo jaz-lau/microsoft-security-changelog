@@ -2869,6 +2869,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Oracle Cloud Infrastructure",
     entries: [
+      { version: "3.1.0", date: "16-07-2026", text: "Ingestion-volume optimization (CCF Data Connector): DCR transform no longer stores the raw data/oracle dynamic payloads alongside flattened columns; removed HTTP request/response header noise, CloudEvents boilerplate, duplicated fields, credential-bearing headers and the stateChange.current.keyValue key blob. Table schema reduced 201 → 86 columns; all columns used by the Parser, Analytic Rules, Hunting Queries, and Workbook are preserved. Fixed SrcIpAddr mapping typo (ipAddres), data_request_id_s/data_request_path_s payload-level mapping, and hyphenated request-header access (X-Forwarded-For, X-Real-IP, oci-original-url). Parser updated to v1.1.0: continues to read both OCI_Logs_CL and OCI_LogsV2_CL, and now derives EventStartTime/EventEndTime for V2 flow-log rows at read time. Analytic Rules & Hunting Queries: added the CCF connector (OracleCloudInfraConnector) to requiredDataConnectors alongside the existing connector.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
       { version: "3.0.10", date: "26-05-2026", text: "Updated OCI connector UI to include IAM permissions guidance and removed the \"Important -\" label.", contentTypes: [] },
       { version: "3.0.9", date: "10-02-2026", text: "Add support for group Cursor", contentTypes: [] },
       { version: "3.0.8", date: "05-02-2026", text: "fix name in package 3.0.7", contentTypes: [] },
@@ -3296,7 +3297,7 @@ export const RAW_SOLUTIONS = [
     name: "Rubrik Security Cloud",
     alias: "RubrikSecurityCloud",
     entries: [
-      { version: "3.5.2", date: "19-02-2026", text: "Added RubrikSecurityCloud CCF (Codeless Connector Framework) Data Connector for ingesting Rubrik Protection Status data into Microsoft Sentinel. Enables backup compliance monitoring, ransomware recovery assessment, and incident correlation with protection status for Azure VMs.", contentTypes: ["Data Connector"] },
+      { version: "3.5.2", date: "16-07-2026", text: "Added RubrikSecurityCloud CCF (Codeless Connector Framework) Data Connector for ingesting Rubrik Protection Status data into Microsoft Sentinel. Enables backup compliance monitoring, ransomware recovery assessment, and incident correlation with protection status for Azure VMs. Update python package version to resolve vulnerability", contentTypes: ["Data Connector"] },
       { version: "3.5.1", date: "05-11-2025", text: "Updated API Host Name default value in playbooks and custom connector", contentTypes: ["Playbook"] },
       { version: "3.5.0", date: "25-07-2025", text: "Added RubrikTurboThreatHunt and RubrikAdvanceThreatHunt playbooks. RubrikThreatMonitoring and RubrikCriticalAnomaly Analytic Rules also added.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.4.0", date: "07-04-2025", text: "Added RubrikUpdateAnomalyStatusViaIncident and RubrikUpdateAnomalyStatus playbook. Enhanced RubrikAnomalyAnalysis playbook. Added User-Agent in every API call of each playbook. Removed policy creation resources from data connector Arm template.", contentTypes: ["Data Connector","Playbook"] },
