@@ -88,6 +88,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Akamai DDOS Protection",
     entries: [
+      { version: "3.0.1", date: "20-07-2026", text: "Promoted Akamai DDOS CCF data connector from public preview to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "24-06-2026", text: "Created a Data Connector for Akamai DDOS Protection CCF Container with the WAF security events data stream.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -281,6 +282,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Auth0",
     entries: [
+      { version: "3.2.0", date: "20-07-2026", text: "Auth0 Logs (via Codeless Connector Framework) Data Connector now supports collecting from multiple Auth0 hosts (multi-domain) and tags each record with the Auth0Domain column", contentTypes: ["Data Connector"] },
       { version: "3.1.5", date: "13-04-2026", text: "Deprecate Auth0 Logs (using Azure Function)", contentTypes: [] },
       { version: "3.1.4", date: "30-03-2026", text: "Fix space in name, Rename to Auth0 Logs (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.3", date: "20-03-2026", text: "Rename to Auth0 Logs(via Codeless Connector Framework)", contentTypes: [] },
@@ -1888,6 +1890,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.1", date: "05-10-2023", text: "Minor fixes.", contentTypes: [] },
       { version: "3.0.0", date: "28-09-2023", text: "Repackaged with V3.", contentTypes: [] },
       { version: "2.0.0", date: "17-02-2022", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Hubspot",
+    entries: [
+      { version: "3.0.0", date: "15-12-2025", text: "Initial release with CCF connector", contentTypes: [] },
     ],
   },
   {
@@ -3819,6 +3827,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Tailscale (CCF)",
+    entries: [
+      { version: "3.0.0", date: "19-05-2026", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
     name: "Team Cymru Scout",
     entries: [
       { version: "3.1.1", date: "25-09-2025", text: "Fixed bug in TeamCymruScoutEnrichIncident playbook.", contentTypes: ["Playbook"] },
@@ -4297,6 +4311,25 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "22-02-2024", text: "Tagged for dependent Solutions for deployment", contentTypes: [] },
       { version: "3.0.1", date: "25-10-2023", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR", contentTypes: [] },
       { version: "3.0.0", date: "12-07-2023", text: "Updated Hunting Queries descriptions to meet the 255 character limit.", contentTypes: ["Hunting Query"] },
+    ],
+  },
+  {
+    name: "Whisper",
+    entries: [
+      { version: "3.0.0", date: "13-07-2026", text: "Initial Solution Release.", contentTypes: [] },
+      { version: "3.0.0", date: "13-07-2026", text: "Data Connector Whisper Security custom-API connector for the Whisper graph API \\|v 1.0.0", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Custom tables WhisperThreatIntel_CL, WhisperInfraContext_CL, WhisperHistory_CL, WhisperASNReputation_CL with their data collection endpoints and rules \\|v 1.0.0", contentTypes: [] },
+      { version: "3.0.0", date: "13-07-2026", text: "Ingestion pipelines five scheduled Logic Apps that enrich indicators and watchlists into the custom tables \\|v 1.0.0", contentTypes: [] },
+      { version: "3.0.0", date: "13-07-2026", text: "Playbooks ten on-demand enrichment playbooks: ExplainIP, ExplainDomain, ExplainASN, ExplainNetwork, BatchEnrich, CheckAsnReputation, DiscoverCoHosted, GetInfraChain, GetBgpHistory, GetWhoisHistory \\|v 1.0.0", contentTypes: ["Playbook"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Analytic Rules eight scheduled detections covering C2 communication, Tor exit-node traffic, newly registered domains on threat ASNs, co-hosted malware clusters, ASN reputation degradation, BGP route anomalies, registrar change anomalies, and unauthorized SPF includes \\|v 1.0.0", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Hunting Queries six queries for attack-surface discovery, newly registered domain hunting, shared-infrastructure clustering, pivot analysis, domain-to-ASN migration, and BGP anomalies \\|v 1.0.0", contentTypes: ["Hunting Query"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Workbooks five workbooks: External Attack Surface Overview, Infrastructure Threat Landscape, ASN Reputation Monitoring, Domain Registration Anomaly, Incident Enrichment Audit \\|v 1.0.0", contentTypes: ["Workbook"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Deployment reliability Pinned nested Microsoft.Resources/deployments to apiVersion 2025-04-01 (V3-emitted 2025-07-01 is rejected by ARM at deploy time; older versions fail ARM-TTK recency). createUiDefinition outputs.location uses the standard [location()] (required by ARM-TTK \"Location Should Be In Outputs\"; the marketplace wizard populates it from the Basics blade). Accepts versioned Key Vault secret URIs (.../secrets//).", contentTypes: [] },
+      { version: "3.0.0", date: "13-07-2026", text: "Observability Auto-provisions diagnosticSettings (WorkflowRuntime + AllMetrics) on all 10 playbooks and 5 pipelines, routed to the workspace, so IncidentEnrichmentAudit populates without manual customer setup. Added a prerequisite banner in the workbook explaining the first-run latency until AzureDiagnostics receives Logic App records.", contentTypes: ["Playbook","Workbook"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Workbook fixes AsnReputationMonitoring — Top Degraded ASNs query rewritten with tuple destructuring of arg_min / arg_max. All 5 workbooks registered in WorkbooksMetadata.json (required for V3 packaging inclusion). IncidentEnrichmentAudit queries now use column_ifexists() for every AzureDiagnostics column so panels parse before the schema is populated.", contentTypes: ["Workbook"] },
+      { version: "3.0.0", date: "13-07-2026", text: "Certification hardening ARM-TTK sanitizer wraps contentProductId alongside other id fields to satisfy IDs Should Be Derived From ResourceIDs. keyVaultSecretUri parameter standardized to securestring. Added workspaceResourceId as a top-level template output so ARM-TTK's Variables Must Be Referenced rule sees it.", contentTypes: [] },
+      { version: "3.0.0", date: "13-07-2026", text: "Release pipeline release.yml sparse-checks-out Azure/Azure-Sentinel@master, runs createSolutionV3.ps1 -VersionMode catalog, then post-processor, then sanitizer, then version stamp (order is load-bearing). Frozen role_seed values in the pipeline table preserve guid()-derived role-assignment names across upgrades.", contentTypes: [] },
+      { version: "3.0.0", date: "13-07-2026", text: "Certification feedback fixes (13-07-2026) Logo SVG gradient converted from a CSS class to inline fill attributes (the Azure portal sanitizer strips blocks, which broke rendering). Publisher ID aligned with Partner Center: whisper-security.azure-sentinel-solution-whisper. Support links updated to https://whisper.security/contact.", contentTypes: [] },
     ],
   },
   {
