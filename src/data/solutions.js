@@ -3055,6 +3055,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "PRODAFT USTA - Account Takeover Prevention",
+    entries: [
+      { version: "3.0.0", date: "06-07-2026", text: "Initial Solution Release. Codeless (CCF) data connector for compromised-credential tickets with ingestion-time password redaction (only strength signals are stored). Two Analytic Rules (corporate credential compromised; compromised credential used in a successful Entra ID sign-in), one Hunting Query, an overview Workbook, a query-time dedup Parser, and an on-demand backfill Playbook (Logs Ingestion API via managed identity) for loading historical data.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook","Parser"] },
+    ],
+  },
+  {
     name: "Proofpoint On demand(POD) Email Security",
     entries: [
       { version: "3.1.4", date: "17-04-2026", text: "Update ProofpointPOD_PollingConfig.json to pass sinceTime parameter with firstWindowBackfillInMin configuration.", contentTypes: [] },
@@ -3911,6 +3917,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
+      { version: "3.0.20", date: "21-07-2026", text: "Updated the URLEntity AuditLogs analytic rule to 1.2.11 and refine its URL extraction and lowercase normalization so URL IoC matches in AuditLogs are more reliable.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.19", date: "21-06-2026", text: "Standardized naming and corrected the incorrect mapping for dataTypes: EmailEvents and dataTypes: EmailUrlInfo with connectorId: Office365 and connectorId: AzureActiveDirectory across multiple Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.18", date: "04-05-2026", text: "Export to TAXII connector proceeds to GA.", contentTypes: [] },
       { version: "3.0.17", date: "02-04-2026", text: "Updated TI map Domain entity to SecurityAlert analytic rule with deduplication and filters", contentTypes: ["Analytic Rule"] },
@@ -3993,6 +4000,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trend Micro Cloud App Security",
     entries: [
+      { version: "3.1.1", date: "17-07-2026", text: "Promoted CCF connector (TrendMicroCASConnector) to General Availability: set isPreview to false and removed Preview disclaimer from solution description.", contentTypes: [] },
       { version: "3.1.0", date: "02-07-2026", text: "Updated Underlying Microsoft Technologies list in the solution description to include Codeless Connector Framework (CCF), Log Ingestion API, and Data Collection Rules (DCR) for the CCF data connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "29-05-2026", text: "Added dual-schema parser support for CLv1 (TrendMicroCAS_CL) and CLv2 (TrendMicroCASV2_CL) data, introduced Codeless Connector Framework (CCF) Data Connector alongside the legacy Azure Function connector.", contentTypes: ["Data Connector","Parser"] },
       { version: "2.0.0", date: "23-08-2023", text: "Initial release.", contentTypes: [] },
