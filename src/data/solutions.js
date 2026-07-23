@@ -628,6 +628,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Checkpoint Email Security",
     entries: [
+      { version: "3.0.1", date: "21-07-2026", text: "Promote CCF Data Connector to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "08-07-2026", text: "Initial release. Added Data Connector for Check Point Email Security (via Codeless Connector Framework) ingesting Security Events, Anti-Phishing Exceptions, Spam Exceptions, and Audit Logs data streams.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -2429,6 +2430,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Assets",
     entries: [
+      { version: "3.4.0", date: "20-07-2026", text: "Re-added EntraEligibleMembers table (Preview) now that backend ingestion is deployed to all regions", contentTypes: [] },
       { version: "3.3.1", date: "01-07-2026", text: "Removed EntraEligibleMembers table (Preview)", contentTypes: [] },
       { version: "3.3.0", date: "27-06-2026", text: "Added EntraEligibleMembers table", contentTypes: [] },
       { version: "3.1.0", date: "22-06-2026", text: "Added EntraSponsors and EntraOwners tables", contentTypes: [] },
@@ -2673,7 +2675,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "NetApp Ransomware Resilience",
     entries: [
-      { version: "3.0.0", date: "16-12-2025", text: "Added Initial changes for Playbooks, Data Connectors and Analytics Rules.", contentTypes: ["Data Connector","Playbook"] },
+      { version: "3.1.0", date: "30-06-2026", text: "Added three new playbooks: Block User, Unblock User, and Volume Online for user access containment/recovery and volume restoration.", contentTypes: ["Playbook"] },
+      { version: "3.0.0", date: "16-12-2025", text: "Added initial changes for Playbooks, Data Connectors and Analytics Rules.", contentTypes: ["Data Connector","Playbook"] },
     ],
   },
   {
@@ -3340,6 +3343,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.4.1", date: "22-07-2026", text: "Added SecureConnectionStart column to Salesforce event log file CCP data connector table schema and DCR transform.", contentTypes: ["Data Connector"] },
       { version: "3.4.0", date: "26-05-2026", text: "Added new Real time event monitoring data connector with 19 event types", contentTypes: ["Data Connector"] },
       { version: "3.3.0", date: "07-05-2026", text: "Add new Salesforce Audit logs CCF Data Connector to pull SetupAuditTrails and LoginHistory logs.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "01-05-2026", text: "Updated CCF Data Connector to include new V3 table that includes additional fields and support for multiple domains.", contentTypes: ["Data Connector"] },
@@ -3446,7 +3450,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP LogServ",
     entries: [
-      { version: "3.0.5", date: "01-04-2026", text: "preview tag remove, UI update", contentTypes: [] },
+      { version: "3.0.5", date: "20-07-2026", text: "Routes SAP LogServ standard logs to Microsoft standard and ASIM tables, updates HANA detections to use Syslog, and improves connector coverage and fallback handling.", contentTypes: [] },
       { version: "3.0.4", date: "11-08-2025", text: "Connector UI updates", contentTypes: [] },
       { version: "3.0.3", date: "17-07-2025", text: "Observability Workbook added", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "25-06-2025", text: "Analytic Rules for HANA DB added", contentTypes: ["Analytic Rule"] },
@@ -4284,6 +4288,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMware Workspace ONE",
     entries: [
+      { version: "3.0.1", date: "21-07-2026", text: "Promoted VMware Workspace ONE CCF data connector from public preview to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "18-05-2026", text: "First version of the VMware Workspace ONE CCF Connector.", contentTypes: [] },
       { version: "3.0.0", date: "18-05-2026", text: "Added Workspace ONE device inventory ingestion support.", contentTypes: [] },
       { version: "3.0.0", date: "18-05-2026", text: "Added installed application ingestion support using CCF pollers, DCR, and parsers.", contentTypes: ["Parser"] },
