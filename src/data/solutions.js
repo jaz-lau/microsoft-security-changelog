@@ -2938,8 +2938,9 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Palo Alto Cortex XDR CCP",
+    name: "Palo Alto Cortex XDR",
     entries: [
+      { version: "3.0.5", date: "22-07-2026", text: "Adding parser & analytic rules from legacy Cortex XDR connector and removed 'CCP' from solution name", contentTypes: ["Analytic Rule","Parser"] },
       { version: "3.0.4", date: "12-06-2026", text: "Updating CCF Polling file to implement parameters", contentTypes: [] },
       { version: "3.0.3", date: "09-04-2025", text: "Updating CCF connector parameters", contentTypes: [] },
       { version: "3.0.2", date: "10-02-2025", text: "Advancing CCF Data Connector from Public preview to Global Availability.", contentTypes: ["Data Connector"] },
@@ -3343,6 +3344,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.5.0", date: "23-07-2026", text: "Marked Salesforce Audit Logs connector as GA and made poller resource names unique per connection.", contentTypes: [] },
+      { version: "3.4.2", date: "22-07-2026", text: "Updated SalesforceRTEM connector to use SELECT FIELDS(STANDARD) with corresponding DCR updates.", contentTypes: [] },
       { version: "3.4.1", date: "22-07-2026", text: "Added SecureConnectionStart column to Salesforce event log file CCP data connector table schema and DCR transform.", contentTypes: ["Data Connector"] },
       { version: "3.4.0", date: "26-05-2026", text: "Added new Real time event monitoring data connector with 19 event types", contentTypes: ["Data Connector"] },
       { version: "3.3.0", date: "07-05-2026", text: "Add new Salesforce Audit logs CCF Data Connector to pull SetupAuditTrails and LoginHistory logs.", contentTypes: ["Data Connector"] },
@@ -3421,6 +3424,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP BTP",
     entries: [
+      { version: "3.1.1", date: "22-07-2026", text: "New analytic rule: detect unaudited custom apps with login-only activity. Renamed analytic rules with SAP BTP prefix for improved discoverability.", contentTypes: ["Analytic Rule"] },
       { version: "3.1.0", date: "08-06-2026", text: "Reworked BTP Cloud Integration artifact deployment rule to use audit.configuration events with richer artifact, actor, and tenant context", contentTypes: [] },
       { version: "3.0.12", date: "29-12-2025", text: "Updated grid view UI with new subaccount onboarding properties", contentTypes: [] },
       { version: "3.0.11", date: "29-12-2025", text: "Added queryWindowDelayInMin for SAP log delays and included the SAP CIS analytic rules.", contentTypes: ["Analytic Rule"] },
