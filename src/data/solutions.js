@@ -796,6 +796,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Citrix DaaS",
+    entries: [
+      { version: "3.0.0", date: "23-07-2026", text: "Initial release of the Citrix DaaS solution with the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Citrix Web App Firewall",
     entries: [
       { version: "3.0.2", date: "29-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
@@ -970,6 +976,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.3.9", date: "24-07-2026", text: "Updated titles for both CrowdStrike Falcon Data Replicator connectors", contentTypes: [] },
+      { version: "3.3.8", date: "24-07-2026", text: "Updated CrowdStrike API Data Connector polling to use updated time instead of created time", contentTypes: ["Data Connector"] },
+      { version: "3.3.7", date: "13-07-2026", text: "Updated CrowdStrike API Data Connector UI labels", contentTypes: ["Data Connector"] },
       { version: "3.3.6", date: "28-05-2026", text: "Added support of multiple domains to Crowdstrike API Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.3.5", date: "20-05-2026", text: "Updated Analytic Rules (v1.0.5): improved descriptions, added MITRE ATT&CK tactics, and optimized KQL queries. Updated Workbook to remove hardcoded resource IDs. Added non-analytics tier queries to *CrowdStrike Falcon Data Replicator (AWS S3)* Data Connector to support Basic/Auxiliary plan tables (Usage-based fallback, 14h window).", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
       { version: "3.3.4", date: "30-04-2026", text: "remove deprecated tag. CrowdStrike Falcon Data Replicator (CrowdStrike Managed AWS-S3) is not deprecated", contentTypes: [] },
@@ -4008,6 +4017,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trend Micro Cloud App Security",
     entries: [
+      { version: "3.1.2", date: "23-07-2026", text: "Updated CCF Data Connector graph queries pattern.", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "17-07-2026", text: "Promoted CCF connector (TrendMicroCASConnector) to General Availability: set isPreview to false and removed Preview disclaimer from solution description.", contentTypes: [] },
       { version: "3.1.0", date: "02-07-2026", text: "Updated Underlying Microsoft Technologies list in the solution description to include Codeless Connector Framework (CCF), Log Ingestion API, and Data Collection Rules (DCR) for the CCF data connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "29-05-2026", text: "Added dual-schema parser support for CLv1 (TrendMicroCAS_CL) and CLv2 (TrendMicroCASV2_CL) data, introduced Codeless Connector Framework (CCF) Data Connector alongside the legacy Azure Function connector.", contentTypes: ["Data Connector","Parser"] },
