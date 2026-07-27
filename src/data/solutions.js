@@ -401,6 +401,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Firewall",
     entries: [
+      { version: "3.0.7", date: "07-10-2026", text: "Fixed false positives in Abnormal Port to Protocol and SeveralDenyActionsRegistered rules when using AZFWNetworkRule table", contentTypes: [] },
       { version: "3.0.6", date: "06-05-2026", text: "Updated Analytical Rules and Hunting Queries to Quality improvements.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.5", date: "13-02-2026", text: "Updated Analytic Rule to cover missing TTPs. Extended detection for FQDN and Destination IP across multiple sources and added new Analytic Rule for improved TI destination coverage.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "12-02-2024", text: "Updated Analytical Rule", contentTypes: ["Analytic Rule"] },
@@ -609,6 +610,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint Alerts",
     entries: [
+      { version: "3.1.2", date: "02-06-2026", text: "Updated support contact information and documentation links.", contentTypes: [] },
       { version: "3.1.0", date: "10-03-2026", text: "Update Data Connector, add bi-directional sync playbooks, analytic rule (ingestion anomaly), workbook (alert overview & sync health), and automation rules.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
     ],
@@ -616,6 +618,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint IOC",
     entries: [
+      { version: "3.0.4", date: "02-06-2026", text: "Updated support contact information and documentation links.", contentTypes: [] },
       { version: "3.0.2", date: "03-04-2026", text: "Fixed table schema definition causing connector creation failure.", contentTypes: [] },
       { version: "3.0.2", date: "03-04-2026", text: "Fixed apiEndpoint URL construction (removed duplicate https:// prefix).", contentTypes: [] },
       { version: "3.0.2", date: "03-04-2026", text: "Added Customer Name configuration field.", contentTypes: [] },
@@ -623,6 +626,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "03-04-2026", text: "Updated connector description and prerequisites text.", contentTypes: [] },
       { version: "3.0.1", date: "12-09-2025", text: "Replaces the variable reference for graphQueriesTableName with the explicit table name 'iocsent_CL'", contentTypes: [] },
       { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Check Point EM ThreatCloud Intelligence Feed",
+    entries: [
+      { version: "3.0.0", date: "02-06-2026", text: "Initial Solution release.", contentTypes: [] },
     ],
   },
   {
@@ -1996,7 +2005,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Infoblox",
     entries: [
-      { version: "3.0.2", date: "19-06-2025", text: "Added flags for Asset, Indicator, Event and Comment in InfobloxSOCGetInsightDetails playbook. Updated Workbook, Parser and Analytic rule.", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
+      { version: "3.0.2", date: "16-07-2026", text: "Added flags for Asset, Indicator, Event and Comment in InfobloxSOCGetInsightDetails playbook. Updated Workbook, Parser and Analytic rule.", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
+      { version: "3.0.2", date: "16-07-2026", text: "Migrataed checkpoint from file share to azure tables.", contentTypes: [] },
       { version: "3.0.1", date: "07-11-2024", text: "Bug fix in Infoblox_Workbook Workbook", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "15-07-2024", text: "Initial Solution Release", contentTypes: [] },
     ],
@@ -3639,6 +3649,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SOC Handbook",
     entries: [
+      { version: "3.0.7", date: "21-07-2026", text: "Fixed bugs in *AnalyticsEfficiency* Workbook (typo fixes, added MITRE ATT&CK tactics, removed hardcoded timeContext overrides), rebranded 'Azure Sentinel' to 'Microsoft Sentinel' across *SentinelCentral*, *AzureSentinelSecurityAlerts*, and *AnalyticsEfficiency* Workbooks, fixed layout issues in *IntsightsIOCWorkbook*, and updated *MITREAttack* Workbook tactic mappings.", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "13-01-2026", text: "Updated *IncidentOverview* Workbook to correct the incident render issue by using ProviderIncidentId with IncidentNumber", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "24-09-2025", text: "Updated *SecurityOperationsEfficiency* to fix Mean time to triage", contentTypes: [] },
       { version: "3.0.4", date: "22-04-2025", text: "Updated *Azure to Sentinel Cost* - Workbook.", contentTypes: ["Workbook"] },
@@ -4166,6 +4177,7 @@ export const RAW_SOLUTIONS = [
     name: "Varonis SaaS",
     alias: "VaronisSaaS",
     entries: [
+      { version: "3.1.0", date: "21-04-2026", text: "Add CCF Push data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "25-11-2025", text: "Add Informational severity level support", contentTypes: [] },
       { version: "3.0.2", date: "12-09-2025", text: "Save last alert ingest time", contentTypes: [] },
       { version: "3.0.1", date: "02-12-2025", text: "Bug fixes", contentTypes: [] },
