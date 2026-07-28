@@ -71,6 +71,7 @@ export const RAW_SOLUTIONS = [
     name: "Airlock Digital",
     alias: "AirlockDigital",
     entries: [
+      { version: "3.1.0", date: "23-07-2026", text: "Added multi-instance support: multiple simultaneous Airlock Digital server connections via a grid and context-pane UX with a multi-select data type dropdown and per-connection friendly name. Added a ConnectorName column to all data tables to identify the originating connection. Fixed log ingestion: increased data connector poller timeout to 120s and corrected the pagination token path to slice notation for Server Activities and Execution Histories to resolve fetch timeouts and out-of-range paging errors. Removed deprecated graphQueriesTableName property (hardcoded table names in queries).", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "02-06-2026", text: "Fixed: Removed empty ApiKeyIdentifier field for Partner Center certification compliance. Fixed UX description typo.", contentTypes: [] },
       { version: "3.0.0", date: "20-05-2026", text: "Created a Data Connector for Airlock Digital CCF Container with Server Activities, Execution Histories, and File Activity Summary data streams.", contentTypes: ["Data Connector"] },
     ],
