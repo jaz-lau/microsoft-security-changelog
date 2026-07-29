@@ -2,8 +2,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "1Password",
     entries: [
+      { version: "3.0.4", date: "23-07-2026", text: "Updated CCP Data Connector to use 1Password Events API v2 endpoints (signinattempts, auditevents, itemusages) and added v2 fields (account_uuid, actor_type, actor_account_uuid, user_type, user_account_uuid) to the OnePasswordEventLogs_CL table.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "06-07-2026", text: "Fixed CCP Data Connector to use cursor-based (PersistentToken) polling so late-synced item usage events (e.g. reveal, secure-copy) are no longer dropped.", contentTypes: ["Data Connector"] },
-      { version: "3.0.2", date: "17-09-2024", text: "Added new CCP Data Connector.", contentTypes: ["Data Connector"] },
+      { version: "3.0.2", date: "21-10-2024", text: "Added new CCP Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "27-06-2024", text: "Fixed typo error in Analytic Rule 1Password - Changes to SSO configuration.yaml. Fixed Logo link and typo in CreateUI.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "12-06-2024", text: "Initial Solution Release.", contentTypes: [] },
     ],
@@ -11,6 +12,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "42Crunch API Protection",
     entries: [
+      { version: "3.0.3", date: "27-07-2026", text: "Promoted the connector to GA Renamed CCF Push Data Connector files (ConnectorDefinition, DCR, PollerConfig) in the 42Crunch_CCF folder to follow the standard CCF naming convention. Added Parser alias function (FortyTwoCrunchAPIProtectionV2) for the V2 table.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.2", date: "15-07-2026", text: "Update publisher and support information in SolutionMetadata.json", contentTypes: [] },
       { version: "3.0.1", date: "25-05-2026", text: "Added CCF Push Data Connector (OAuth2/Entra ID via DCE/DCR) alongside legacy connector; added backward-compatible Parser (FortyTwoCrunchAPIProtection) supporting both apifirewall_log_1_CL and FortyTwoCrunchAPIProtectionV2_CL schemas. Updated all 11 Analytic Rules to use the parser alias and PascalCase column names, added Migration Guide with end-to-end validated ccf-forwarder sample deployment, and refreshed Workbook metadata.", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.0.0", date: "15-07-2024", text: "Missing Tactics and Techniques added", contentTypes: [] },
@@ -765,6 +767,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.2.1", date: "27-07-2026", text: "Updated Parser to set EventType for dnslogs, proxylogs, cloudfirewalllogs.", contentTypes: ["Parser"] },
       { version: "3.2.0", date: "01-07-2026", text: "Updated Cisco Umbrella CCF data connector as generally available (isPreview false).", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "22-05-2026", text: "Added new CCF (Codeless Connector) for Cisco Umbrella with 10 new tables (DNS, WebTraffic, CloudFirewall, AdminAudit, DLP, FileEvent, IPS, RemoteAccessVPN, ZeroTrustAccess, ZeroTrustAccessFlow) and updated parser to union new tables. (Public Preview)", contentTypes: ["Parser"] },
       { version: "3.0.10", date: "23-03-2026", text: "Added null-byte sanitization for corrupted state manager timestamps in Data Connector to prevent crashes on corrupted Azure File Share markers. Added null-byte stripping in date formatting to handle corrupted date fields from csv file.", contentTypes: ["Data Connector"] },
@@ -916,6 +919,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Commvault Security IQ",
     entries: [
+      { version: "3.0.5", date: "27-07-2026", text: "Added Commvault Security IQ (via Codeless Connector Framework) data connector, introduced CommvaultAlertsCCF_CL custom table and Data Collection Rule (DCR), updated analytics rule to detect client anomalies using AnomalyType, enhanced connector UI with sample queries and configuration guidance, and updated solution documentation for CCF-based deployment.", contentTypes: ["Data Connector"] },
       { version: "3.0.4", date: "05-03-2025", text: "Migrate to new data ingestion model via DCR & DCE setup", contentTypes: [] },
       { version: "3.0.3", date: "12-09-2025", text: "Enhanced Data connector with configurable event collection and streamlined deployment", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "28-03-2024", text: "Update Playbook - Bug fix in disabling data aging", contentTypes: ["Playbook"] },
@@ -1690,6 +1694,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Cloud Platform Audit Logs",
     entries: [
+      { version: "3.0.3", date: "28-07-2026", text: "Added a new workbook for Google Cloud Platform Audit Logs.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "19-01-2026", text: "Added new GCP security Analytic Rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.1", date: "28-04-2025", text: "Updated Data Connector definition file and fixed overlapping collector issue.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "15-01-2024", text: "Created CCP Package", contentTypes: [] },
@@ -3081,6 +3086,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "PRODAFT USTA - Account Takeover Prevention",
     entries: [
+      { version: "3.0.1", date: "27-07-2026", text: "Updated the backfill Playbook to self-provision its Data Collection Endpoint (DCE) and Data Collection Rule (DCR) and to grant its managed identity the *Monitoring Metrics Publisher* role on the DCR. Removes the manual ingestion-endpoint URI and DCR immutable-ID setup previously required to run the backfill.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "06-07-2026", text: "Initial Solution Release. Codeless (CCF) data connector for compromised-credential tickets with ingestion-time password redaction (only strength signals are stored). Two Analytic Rules (corporate credential compromised; compromised credential used in a successful Entra ID sign-in), one Hunting Query, an overview Workbook, a query-time dedup Parser, and an on-demand backfill Playbook (Logs Ingestion API via managed identity) for loading historical data.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook","Parser"] },
     ],
   },
