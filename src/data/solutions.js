@@ -73,6 +73,7 @@ export const RAW_SOLUTIONS = [
     name: "Airlock Digital",
     alias: "AirlockDigital",
     entries: [
+      { version: "3.1.1", date: "28-07-2026", text: "Promoted the Airlock Digital data connector from public preview to general availability (GA).", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "23-07-2026", text: "Added multi-instance support: multiple simultaneous Airlock Digital server connections via a grid and context-pane UX with a multi-select data type dropdown and per-connection friendly name. Added a ConnectorName column to all data tables to identify the originating connection. Fixed log ingestion: increased data connector poller timeout to 120s and corrected the pagination token path to slice notation for Server Activities and Execution Histories to resolve fetch timeouts and out-of-range paging errors. Removed deprecated graphQueriesTableName property (hardcoded table names in queries).", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "02-06-2026", text: "Fixed: Removed empty ApiKeyIdentifier field for Partner Center certification compliance. Fixed UX description typo.", contentTypes: [] },
       { version: "3.0.0", date: "20-05-2026", text: "Created a Data Connector for Airlock Digital CCF Container with Server Activities, Execution Histories, and File Activity Summary data streams.", contentTypes: ["Data Connector"] },
@@ -173,6 +174,7 @@ export const RAW_SOLUTIONS = [
     name: "Apache HTTP Server",
     alias: "ApacheHTTPServer",
     entries: [
+      { version: "3.0.2", date: "23-07-2026", text: "Fixed Parser (ApacheHTTPServer) to correctly parse negative timezone offsets and honor the offset when setting EventStartTime", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "05-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "13-08-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
     ],
@@ -488,6 +490,7 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.0", date: "13-01-2026", text: "First version of a BigID DSPM CCF Connector.", contentTypes: [] },
       { version: "3.0.0", date: "13-01-2026", text: "BigID DSPM CCF Connector now using JWT user token authentication", contentTypes: [] },
       { version: "3.0.0", date: "13-01-2026", text: "BigID DSPM Asset expansion and mapping", contentTypes: [] },
+      { version: "3.0.1", date: "28-06-2026", text: "Catalog query adjusted to fix an issue where CCF doesn't poll any catalog object in specific environments", contentTypes: [] },
     ],
   },
   {
@@ -3952,6 +3955,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
+      { version: "3.0.21", date: "29-07-2026", text: "Removed the Premium Microsoft Defender Threat Intelligence Data Connector from the Threat Intelligence (NEW) Solution.", contentTypes: ["Data Connector"] },
       { version: "3.0.20", date: "21-07-2026", text: "Updated the URLEntity AuditLogs analytic rule to 1.2.11 and refine its URL extraction and lowercase normalization so URL IoC matches in AuditLogs are more reliable.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.19", date: "21-06-2026", text: "Standardized naming and corrected the incorrect mapping for dataTypes: EmailEvents and dataTypes: EmailUrlInfo with connectorId: Office365 and connectorId: AzureActiveDirectory across multiple Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.18", date: "04-05-2026", text: "Export to TAXII connector proceeds to GA.", contentTypes: [] },
