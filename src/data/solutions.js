@@ -2317,6 +2317,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Microsoft Active Directory Tier Model",
+    entries: [
+      { version: "3.0.0", date: "14-07-2026", text: "Initial solution release", contentTypes: [] },
+    ],
+  },
+  {
     name: "Microsoft Business Applications",
     entries: [
       { version: "3.2.3", date: "23-02-2026", text: "Updated Dataverse - Activity after failed logons hunting query to use valid Enterprise technique", contentTypes: ["Hunting Query"] },
@@ -2355,6 +2361,7 @@ export const RAW_SOLUTIONS = [
     name: "Microsoft Defender for Endpoint",
     alias: "MicrosoftDefenderForEndpoint",
     entries: [
+      { version: "3.0.7", date: "29-07-2026", text: "Updated the AquaBlizzardAVHits analytic rule by correcting the HostName entity mapping from 'Name' to 'Host' and splitting the long KQL line for readability, removed redundant legacy extend statements from the MDE_Process-IOCs and MDE_Usage hunting queries. Fixed the Deploy to Azure Gov button URLs across playbook READMEs by changing the badge from deploytoazuregovbutton to deploytoazuregovernbutton.", contentTypes: ["Analytic Rule","Hunting Query","Playbook"] },
       { version: "3.0.6", date: "24-09-2025", text: "Updated MDE Playbooks Instructions to use Microsoft Graph SDK", contentTypes: ["Playbook"] },
       { version: "3.0.5", date: "06-08-2025", text: "Updated MDE Playbooks with newer logic", contentTypes: ["Playbook"] },
       { version: "3.0.4", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
@@ -2828,6 +2835,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.1.9", date: "30-07-2026", text: "Update KQL queries of Okta Analytics rules", contentTypes: [] },
+      { version: "3.1.9", date: "30-07-2026", text: "Updated Azure Gov button image link.", contentTypes: [] },
       { version: "3.1.8", date: "10-07-2026", text: "Update Analytic rule and Hunting Queries for Okta SSO.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.1.7", date: "28-04-2026", text: "Update query with OktaSSO parser so that the OktaV2_CL table is considered.", contentTypes: ["Parser"] },
       { version: "3.1.6", date: "14-04-2026", text: "Deprecate Okta Single Sign-On (using Azure Function)", contentTypes: [] },
