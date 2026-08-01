@@ -1645,6 +1645,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.5.0", date: "30-07-2026", text: "Promoted the GitHub Azure Storage Audit Logs data connector to GA, add multi-stream support, and updated its generated configuration with advanced Event Grid filters.", contentTypes: ["Data Connector"] },
       { version: "3.4.0", date: "25-06-2026", text: "Added all api.request fields and created V3 table for AzStorage connector", contentTypes: [] },
       { version: "3.3.1", date: "17-06-2026", text: "Added SAS related instruction.", contentTypes: [] },
       { version: "3.3.0", date: "04-06-2026", text: "Introducing a new Azure Storage CCF GitHub Audit Log Connector for Public Preview.", contentTypes: [] },
