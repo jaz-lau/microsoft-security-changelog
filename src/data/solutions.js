@@ -2375,7 +2375,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender For Identity",
     entries: [
-      { version: "3.0.0", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "08-03-2026", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "08-03-2026", text: "Fixed Broken Release Notes URL Reference.", contentTypes: [] },
     ],
   },
   {
@@ -3101,6 +3102,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "27-07-2026", text: "Updated the backfill Playbook to self-provision its Data Collection Endpoint (DCE) and Data Collection Rule (DCR) and to grant its managed identity the *Monitoring Metrics Publisher* role on the DCR. Removes the manual ingestion-endpoint URI and DCR immutable-ID setup previously required to run the backfill.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "06-07-2026", text: "Initial Solution Release. Codeless (CCF) data connector for compromised-credential tickets with ingestion-time password redaction (only strength signals are stored). Two Analytic Rules (corporate credential compromised; compromised credential used in a successful Entra ID sign-in), one Hunting Query, an overview Workbook, a query-time dedup Parser, and an on-demand backfill Playbook (Logs Ingestion API via managed identity) for loading historical data.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook","Parser"] },
+    ],
+  },
+  {
+    name: "PRODAFT USTA - Payment Card Fraud Intelligence",
+    entries: [
+      { version: "3.0.0", date: "08-07-2026", text: "Initial Solution Release. Codeless (CCF) data connector for compromised payment-card tickets with ingestion-time PAN redaction (only BIN, last 4 digits, brand, and length are stored). Two Analytic Rules (payment card exposed; non-expired payment card exposed), one Hunting Query, an overview Workbook, a query-time dedup Parser, and an on-demand backfill Playbook (Logs Ingestion API via managed identity) for loading historical data.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook","Parser"] },
     ],
   },
   {
@@ -4198,6 +4205,7 @@ export const RAW_SOLUTIONS = [
     name: "Varonis SaaS",
     alias: "VaronisSaaS",
     entries: [
+      { version: "3.1.1", date: "29-07-2026", text: "Mark Azure Function data connector as Deprecated", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "21-04-2026", text: "Add CCF Push data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "25-11-2025", text: "Add Informational severity level support", contentTypes: [] },
       { version: "3.0.2", date: "12-09-2025", text: "Save last alert ingest time", contentTypes: [] },
