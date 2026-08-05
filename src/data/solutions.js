@@ -770,6 +770,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.2.2", date: "04-08-2026", text: "Fixed broken Deploy to Azure Gov button link in Data Connectors and Playbooks.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.2.1", date: "27-07-2026", text: "Updated Parser to set EventType for dnslogs, proxylogs, cloudfirewalllogs.", contentTypes: ["Parser"] },
       { version: "3.2.0", date: "01-07-2026", text: "Updated Cisco Umbrella CCF data connector as generally available (isPreview false).", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "22-05-2026", text: "Added new CCF (Codeless Connector) for Cisco Umbrella with 10 new tables (DNS, WebTraffic, CloudFirewall, AdminAudit, DLP, FileEvent, IPS, RemoteAccessVPN, ZeroTrustAccess, ZeroTrustAccessFlow) and updated parser to union new tables. (Public Preview)", contentTypes: ["Parser"] },
@@ -922,6 +923,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Commvault Security IQ",
     entries: [
+      { version: "3.0.6", date: "04-08-2026", text: "Updated the CCF connector and solution documentation.", contentTypes: [] },
       { version: "3.0.5", date: "27-07-2026", text: "Added Commvault Security IQ (via Codeless Connector Framework) data connector, introduced CommvaultAlertsCCF_CL custom table and Data Collection Rule (DCR), updated analytics rule to detect client anomalies using AnomalyType, enhanced connector UI with sample queries and configuration guidance, and updated solution documentation for CCF-based deployment.", contentTypes: ["Data Connector"] },
       { version: "3.0.4", date: "05-03-2025", text: "Migrate to new data ingestion model via DCR & DCE setup", contentTypes: [] },
       { version: "3.0.3", date: "12-09-2025", text: "Enhanced Data connector with configurable event collection and streamlined deployment", contentTypes: ["Data Connector"] },
@@ -3599,6 +3601,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Service Now CMDB",
+    alias: "ServiceNowCMDB",
+    entries: [
+      { version: "3.0.0", date: "03-08-2026", text: "Created a Data Connector for ServiceNow CMDB CCF Container with Asset Management, Configuration Items, Computer CIs, Server CIs, and CI Relationships data streams.", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "ServiceNow TISC",
     entries: [
       { version: "3.0.0", date: "15-01-2025", text: "Initial Solution Release", contentTypes: [] },
@@ -4298,6 +4307,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMware Carbon Black Cloud",
     entries: [
+      { version: "3.0.10", date: "03-08-2026", text: "Fixed broken Deploy to Azure Gov button link in Data Connector and Playbooks", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.0.9", date: "12-07-2026", text: "Fixed type mismatch in Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.8", date: "24-03-2026", text: "Deprecate to VMware Carbon Black Cloud (using Azure Function)", contentTypes: [] },
       { version: "3.0.7", date: "24-03-2026", text: "Rename to VMware Carbon Black Cloud via AWS S3(via Codeless Connector Framework)", contentTypes: [] },
