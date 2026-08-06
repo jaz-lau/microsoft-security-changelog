@@ -270,6 +270,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Attacker Tools Threat Protection Essentials",
     entries: [
+      { version: "3.0.4", date: "20-07-2026", text: "Added Analytic Rule PowerShell Encoded Command Execution", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "06-06-2024", text: "Added missing AMA Data Connector reference in Analytic rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
       { version: "3.0.2", date: "07-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
       { version: "3.0.1", date: "23-01-2024", text: "Added subTechniques in Template", contentTypes: [] },
@@ -370,7 +371,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Activity",
     entries: [
-      { version: "3.0.4", date: "25-02-2026", text: "Updated description_detailed for the Rare_Custom_Script_Extension Hunting Query", contentTypes: ["Hunting Query"] },
+      { version: "3.0.4", date: "25-02-2026", text: "Updated description_detailed for the Rare_Custom_Script_Extension Hunting Query.", contentTypes: ["Hunting Query"] },
       { version: "3.0.3", date: "19-02-2025", text: "Added new Workbook Azure Service Health to the Solution and added new Hunting query Machine_Learning_Creation.yaml.", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.3", date: "19-02-2025", text: "Added new Analytic Rule Machine_Learning_Creation.yaml", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "21-02-2024", text: "Modified Entity Mappings of Analytic Rules", contentTypes: ["Analytic Rule"] },
@@ -1411,7 +1412,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Endpoint Threat Protection Essentials",
     entries: [
-      { version: "3.0.5", date: "18-11-2024", text: "Removed the broken URL in Analytic Rule and Hunting query", contentTypes: ["Analytic Rule","Hunting Query"] },
+      { version: "3.0.6", date: "20-07-2026", text: "Added Analytic Rule CertUtil Used for File Download.", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.5", date: "18-11-2024", text: "Removed the broken URL in Analytic Rule and Hunting Query", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.4", date: "10-06-2024", text: "Added entityMappings and added missing AMA DC reference in Analytical Rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.3", date: "11-03-2024", text: "Added few Hunting Queries to detect Endpoint Threats", contentTypes: ["Hunting Query"] },
       { version: "3.0.2", date: "21-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
@@ -3039,7 +3041,11 @@ export const RAW_SOLUTIONS = [
   {
     name: "Panorays",
     entries: [
-      { version: "3.0.0", date: "03-03-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
+      { version: "3.0.0", date: "05-08-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
+      { version: "3.0.0", date: "05-08-2026", text: "Fixed offer name mismatch between Partner Center and SolutionMetadata.json.", contentTypes: [] },
+      { version: "3.0.0", date: "05-08-2026", text: "Fixed dcrConfig parameter reference chain in mainTemplate.json.", contentTypes: [] },
+      { version: "3.0.0", date: "05-08-2026", text: "Updated connector definition and poller config per Microsoft Support guidance.", contentTypes: [] },
+      { version: "3.0.0", date: "05-08-2026", text: "Converted required field from string to boolean in connector validations.", contentTypes: [] },
     ],
   },
   {
@@ -3102,6 +3108,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "PRODAFT USTA - Account Takeover Prevention",
     entries: [
+      { version: "3.0.2", date: "03-08-2026", text: "Updated the backfill Playbook (v1.2) to create the PRODAFTUstaCompromisedCredentials_CL table when it does not exist yet, so the backfill can run before the Data Connector has ingested its first record; adds a TableRetentionDays parameter. Also builds the Data Connector paging nextPageUrl with the ARM uri() function instead of concat() so the template passes the ARM-TTK *URIs Should Be Properly Constructed* validation, and tolerates a trailing slash on the USTA base URL.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.0.1", date: "27-07-2026", text: "Updated the backfill Playbook to self-provision its Data Collection Endpoint (DCE) and Data Collection Rule (DCR) and to grant its managed identity the *Monitoring Metrics Publisher* role on the DCR. Removes the manual ingestion-endpoint URI and DCR immutable-ID setup previously required to run the backfill.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "06-07-2026", text: "Initial Solution Release. Codeless (CCF) data connector for compromised-credential tickets with ingestion-time password redaction (only strength signals are stored). Two Analytic Rules (corporate credential compromised; compromised credential used in a successful Entra ID sign-in), one Hunting Query, an overview Workbook, a query-time dedup Parser, and an on-demand backfill Playbook (Logs Ingestion API via managed identity) for loading historical data.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook","Parser"] },
     ],
@@ -4428,6 +4435,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Windows Security Events",
     entries: [
+      { version: "3.0.13", date: "20-07-2026", text: "Added Analytic Rule WMI Spawning Suspicious Child Process", contentTypes: ["Analytic Rule"] },
       { version: "3.0.12", date: "18-02-2026", text: "Removed external blog reference text from \"Remote Scheduled Task Creation or Update using ATSVC Named Pipe\" and \" Scheduled Task Creation or Update from User Writable Directory\" hunting query description", contentTypes: ["Hunting Query"] },
       { version: "3.0.11", date: "28-01-2026", text: "Updated Analytic Rule to fix the link from the description & Update Analytic Rule NonDCActiveDirectoryReplication - to reduce false positive results", contentTypes: ["Analytic Rule"] },
       { version: "3.0.10", date: "12-01-2026", text: "Update Analytic Rule NonDCActiveDirectoryReplication - fix swapped fields", contentTypes: ["Analytic Rule"] },
