@@ -456,6 +456,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Azure Storage",
+    entries: [
+      { version: "3.0.0", date: "31-07-2026", text: "Updated Solution to version 3.0.0 by migrating from TemplateSpec to contentTemplates/contentPackages", contentTypes: [] },
+    ],
+  },
+  {
     name: "Azure Web Application Firewall (WAF)",
     entries: [
       { version: "3.0.2", date: "06-02-2025", text: "Extracting transactionId_g and hostname_s from the AdditionalFields column using parse_json and Removing the now unavailable details_message_s and details_data_s fields from Analytic Rules App Gateway WAF - SQLi Detection and App Gateway WAF - XSS Detection.", contentTypes: ["Analytic Rule"] },
@@ -1325,6 +1331,12 @@ export const RAW_SOLUTIONS = [
     name: "DomainTools",
     entries: [
       { version: "3.0.0", date: "29-01-2024", text: "App insights to LA change in data connector and repackage", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "DomainTools CCF",
+    entries: [
+      { version: "3.0.0", date: "10-11-2025", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
     ],
   },
   {
