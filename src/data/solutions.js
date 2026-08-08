@@ -608,6 +608,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Cayosoft Guardian",
+    entries: [
+      { version: "3.0.0", date: "15-07-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Censys",
     entries: [
       { version: "3.0.0", date: "06-04-2026", text: "Added Support for Related Infrastructure Playbook and Workbook", contentTypes: ["Playbook","Workbook"] },
@@ -1261,6 +1267,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.0", date: "11-03-2026", text: "Updated connector files to use template variables; updated documentation link; version bump to 3.0.0", contentTypes: [] },
       { version: "3.0.0", date: "11-03-2026", text: "Fix naming inconsistencies in DataBahn solution files.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Datadog",
+    entries: [
+      { version: "3.0.0", date: "06-08-2026", text: "Initial Solution Release. Added the Datadog Audit Logs CCF Data Connector.", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -2919,12 +2931,6 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
-    name: "Open Systems",
-    entries: [
-      { version: "3.0.0", date: "12-05-2025", text: "Initial Solution release.", contentTypes: [] },
-    ],
-  },
-  {
     name: "Open VPN",
     alias: "OpenVPN",
     entries: [
@@ -3689,6 +3695,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Snowflake",
     entries: [
+      { version: "3.1.0", date: "04-08-2026", text: "Updated CCF Data Connector to fix pagination and migrate to V2 tables", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "03-02-2026", text: "Updated the analytic rule query.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.8", date: "22-12-2025", text: "Added a 120‑minute ingestion delay for the Snowflake connector and updated the parser KQL to surface accurate start/end timestamps.", contentTypes: ["Parser"] },
       { version: "3.0.7", date: "10-12-2025", text: "Resolved bug in CCF Data Connector related to Output stream for Snowflake tables.", contentTypes: ["Data Connector"] },
