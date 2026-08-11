@@ -2449,6 +2449,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.16", date: "06-08-2026", text: "Removed locale-dependent ResultDescription filtering from the Attempts to sign in to disabled accounts Analytic Rule while retaining ResultType 50057 matching.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.15", date: "10-07-2026", text: "Updated SigninAttemptsByIPviaDisabledAccounts Analytic Rule to include the additional \"ResultDescription\" value: \"The user account is disabled.\"", contentTypes: ["Analytic Rule"] },
       { version: "3.3.14", date: "30-06-2026", text: "Updated BruteForceAgainstanEntraAuthenticatedWindowsDevice Analytic rule to add an explicit \"sort by TimeGenerated asc\" before building \"make_list\" arrays.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.13", date: "22-06-2026", text: "Updated Description of AccountCreatedandDeletedinShortTimeframe Analytic Rule.", contentTypes: ["Analytic Rule"] },
@@ -3335,6 +3336,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Red Canary",
+    entries: [
+      { version: "3.0.0", date: "29-05-2026", text: "Added Red Canary Threat Detection (via Codeless Connector Framework) Data Connector and refreshed the Red Canary Threat Detection Analytic Rule.", contentTypes: ["Analytic Rule","Data Connector"] },
+      { version: "1.0.0", date: "04-03-2022", text: "Initial release with Red Canary Data Connector and Red Canary Threat Detection Analytic Rule.", contentTypes: ["Analytic Rule","Data Connector"] },
+    ],
+  },
+  {
     name: "Red Sift",
     entries: [
       { version: "3.0.0", date: "10-04-2026", text: "Initial release with CCF Data Connector and 5 Analytic Rules", contentTypes: ["Analytic Rule","Data Connector"] },
@@ -3603,6 +3611,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.1.1", date: "10-08-2026", text: "Advanced SentinelOne V2 (via Codeless Connector Framework) Data Connector from Public Preview to Global Availability and added the AlertDescription field to the alerts stream", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "01-07-2026", text: "Added new SentinelOne V2 (via Codeless Connector Framework) Data Connector (ingests alerts via the GraphQL API)", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "03-06-2026", text: "Updated CCP Data Connector to support multiple instances (multi-connection) for MSSP scenarios", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "14-04-2026", text: "Deprecate SentinelOne (using Azure Function)", contentTypes: [] },
@@ -3939,6 +3948,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Teams",
     entries: [
+      { version: "3.0.2", date: "07-08-2026", text: "Repackage solution for type in workbook, maintemplate, createUIDefinition, playbook old schema version.", contentTypes: ["Playbook","Workbook"] },
+      { version: "3.0.1", date: "10-04-2025", text: "Not permitted to use SNOW or SN as abbreviation for ServiceNow.", contentTypes: [] },
       { version: "3.0.0", date: "19-07-2023", text: "Updated Workbook template to remove unused variables.", contentTypes: ["Workbook"] },
     ],
   },
@@ -4448,6 +4459,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Windows Forwarded Events",
     entries: [
+      { version: "3.0.1", date: "10-08-2026", text: "Added the missing Analytical Rule and cleaned up empty properties.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "10-04-2024", text: "Updated entity mappings of Analytical Rule", contentTypes: ["Analytic Rule"] },
     ],
   },
