@@ -572,6 +572,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Box",
     entries: [
+      { version: "3.1.6", date: "11-08-2026", text: "Added top-level action_by ingestion and exposed recorded_at through the parser.", contentTypes: ["Parser"] },
       { version: "3.1.5", date: "09-07-2026", text: "Updated Parser and CCF Data Connector DCR.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.1.4", date: "13-04-2026", text: "Deprecate Box Events (using Azure Function)", contentTypes: [] },
       { version: "3.1.3", date: "24-03-2026", text: "Rename to Box Events (via Codeless Connector Framework)", contentTypes: [] },
@@ -2043,8 +2044,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "Infoblox",
     entries: [
-      { version: "3.0.2", date: "16-07-2026", text: "Added flags for Asset, Indicator, Event and Comment in InfobloxSOCGetInsightDetails playbook. Updated Workbook, Parser and Analytic rule.", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
-      { version: "3.0.2", date: "16-07-2026", text: "Migrataed checkpoint from file share to azure tables.", contentTypes: [] },
+      { version: "3.1.0", date: "17-07-2026", text: "Updated playbooks, parsers, workbooks and analytic rule from SOC insight v1 to Infoblox for IQ for Threat Defense (SOC insight v2).", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
+      { version: "3.0.2", date: "19-06-2025", text: "Added flags for Asset, Indicator, Event and Comment in InfobloxSOCGetInsightDetails playbook. Updated Workbook, Parser and Analytic rule.", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
+      { version: "3.0.2", date: "19-06-2025", text: "Migrated checkpoint from file share to azure tables.", contentTypes: [] },
       { version: "3.0.1", date: "07-11-2024", text: "Bug fix in Infoblox_Workbook Workbook", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "15-07-2024", text: "Initial Solution Release", contentTypes: [] },
     ],
@@ -3060,11 +3062,12 @@ export const RAW_SOLUTIONS = [
   {
     name: "Panorays",
     entries: [
-      { version: "3.0.0", date: "05-08-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
-      { version: "3.0.0", date: "05-08-2026", text: "Fixed offer name mismatch between Partner Center and SolutionMetadata.json.", contentTypes: [] },
-      { version: "3.0.0", date: "05-08-2026", text: "Fixed dcrConfig parameter reference chain in mainTemplate.json.", contentTypes: [] },
-      { version: "3.0.0", date: "05-08-2026", text: "Updated connector definition and poller config per Microsoft Support guidance.", contentTypes: [] },
-      { version: "3.0.0", date: "05-08-2026", text: "Converted required field from string to boolean in connector validations.", contentTypes: [] },
+      { version: "3.0.1", date: "05-08-2026", text: "Fixed offer name mismatch between Partner Center and SolutionMetadata.json.", contentTypes: [] },
+      { version: "3.0.1", date: "05-08-2026", text: "Fixed dcrConfig parameter reference chain in mainTemplate.json.", contentTypes: [] },
+      { version: "3.0.1", date: "05-08-2026", text: "Updated connector definition and poller config per Microsoft Support guidance.", contentTypes: [] },
+      { version: "3.0.1", date: "05-08-2026", text: "Converted required field from string to boolean in connector validations.", contentTypes: [] },
+      { version: "3.0.1", date: "05-08-2026", text: "Bumped package version to 3.0.1 per Partner Center versioning requirement.", contentTypes: [] },
+      { version: "3.0.0", date: "03-03-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
     ],
   },
   {
@@ -4086,6 +4089,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trellix",
     entries: [
+      { version: "3.0.2", date: "08-07-2026", text: "Remove unsupported template attributes from table definition", contentTypes: [] },
       { version: "3.0.1", date: "03-04-2026", text: "Move Trellix solution to GA, remove preview state.", contentTypes: [] },
       { version: "3.0.0", date: "26-02-2026", text: "Introduce the Trellix solution with a CCF Data Connector and parser", contentTypes: ["Data Connector","Parser"] },
     ],
@@ -4131,6 +4135,12 @@ export const RAW_SOLUTIONS = [
     name: "Trend Micro Vision One",
     entries: [
       { version: "3.0.1", date: "30-01-2025", text: "Updated hyperlink in Data Connector", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "TrendAI Vision One(CCF)",
+    entries: [
+      { version: "3.0.0", date: "05-08-2026", text: "Initial release of TrendAI Vision One solution via Codeless Connector Framework (CCF). Includes Workbench Alerts and OAT Detections connectors with DCR-based ingestion-time transformations, dropdown selectors for API domain and third-party exclusion, TMV1-Filter pass-through support, KQL parsers, an analytic rule with MITRE ATT&CK mappings, and a workbook dashboard. Fixed ARM template bracket escaping, added token rotation warning, optimized workbook queries, and removed the null alertRuleTemplateName field.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
     ],
   },
   {
