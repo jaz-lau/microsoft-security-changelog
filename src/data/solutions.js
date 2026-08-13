@@ -128,6 +128,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Alibaba Cloud Networking",
     entries: [
+      { version: "3.0.2", date: "12-08-2026", text: "CCF data connector going to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "05-04-2026", text: "Fix added all data types to graph queries (line charts on the UX)", contentTypes: [] },
       { version: "3.0.0", date: "16-03-2026", text: "Added Public Preview Alibaba Cloud Networking CCF connector. to support ApiGW, VPC and firewall data", contentTypes: [] },
     ],
@@ -1372,6 +1373,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Dragon Copilot",
+    alias: "DragonCopilot",
+    entries: [
+      { version: "3.0.0", date: "30-07-2026", text: "Releasing a new Microsoft Dragon Copilot solution in Content Hub with a Data Connector that ingests Dragon Copilot audit and activity logs into the standard DragonCopilot table", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
     name: "Dragos",
     entries: [
       { version: "3.0.0", date: "10-01-2025", text: "Initial solution release.", contentTypes: [] },
@@ -2429,6 +2437,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
+      { version: "3.0.16", date: "12-08-2026", text: "Updated KQL projection ordering in the Unusual Volume of file deletion by users analytic rules and hunting queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.15", date: "22-06-2026", text: "Refactor OAuth and device-code phishing hunting queries to construct login.microsoftonline.com and login.microsoftonline.us URLs via strcat() (resolves ARM-TTK 'DeploymentTemplate Must Not Contain Hardcoded Uri'); remove empty groupByAlertDetails/groupByCustomDetails arrays from PossibleWebpBufferOverflow analytic rule (resolves ARM-TTK 'Template Should Not Contain Blanks'). Updated Microsoft Defender XDR to Product Name filter in Data Connector queries. Added new Hunting Queries Hunt for RMM tool execution following Teams messages, Hunt for alerts correlated with Teams messages and Identify acting user for reported phish. Also updated Hunting Query Punycode chars lookalike and corrected the incorrect mapping of dataTypes: EmailEvents with connectorId: OfficeATP across multiple Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
       { version: "3.0.14", date: "09-02-2026", text: "Added new Hunting Query Punycode chars lookalike domains.yaml.", contentTypes: ["Hunting Query"] },
       { version: "3.0.13", date: "22-01-2026", text: "Updated Defender XDR solution with new Hunting Queries.", contentTypes: ["Hunting Query"] },
