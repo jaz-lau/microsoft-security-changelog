@@ -264,6 +264,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Organization Audit",
     alias: "AtlassianOrganizationAudit",
     entries: [
+      { version: "3.0.1", date: "12-08-2026", text: "Updated DCR transformKql to derive TimeGenerated from the event time with fallback to now(), and reduced poller timeout to 30 seconds.", contentTypes: [] },
       { version: "3.0.0", date: "06-07-2026", text: "First version of the Atlassian Organization Audit CCF Connector.", contentTypes: [] },
       { version: "3.0.0", date: "06-07-2026", text: "Added Atlassian organization audit events ingestion support using CCF pollers, DCR, and parsers.", contentTypes: ["Parser"] },
     ],
@@ -3437,6 +3438,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.5.1", date: "13-08-2026", text: "Updated Salesforce RTEM connector to include the API URL in ingested events and promote the connector to GA", contentTypes: [] },
       { version: "3.5.0", date: "23-07-2026", text: "Marked Salesforce Audit Logs connector as GA and made poller resource names unique per connection.", contentTypes: [] },
       { version: "3.4.2", date: "22-07-2026", text: "Updated SalesforceRTEM connector to use SELECT FIELDS(STANDARD) with corresponding DCR updates.", contentTypes: [] },
       { version: "3.4.1", date: "22-07-2026", text: "Added SecureConnectionStart column to Salesforce event log file CCP data connector table schema and DCR transform.", contentTypes: ["Data Connector"] },
@@ -3469,49 +3471,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP",
     entries: [
-      { version: "2.0.74", date: "28-06-2023", text: "SAP Audit Control Workbook", contentTypes: ["Workbook"] },
-      { version: "2.0.76", date: "18-09-2023", text: "SAP Audit Control Workbook", contentTypes: ["Workbook"] },
-      { version: "2.0.76", date: "18-09-2023", text: "Reflect alerts in addition to incidents", contentTypes: [] },
-      { version: "2.0.76", date: "18-09-2023", text: "Added visualizations for better monitoring", contentTypes: [] },
-      { version: "2.0.76", date: "18-09-2023", text: "Focus on SAP alerts by default", contentTypes: [] },
-      { version: "2.0.76", date: "18-09-2023", text: "Exclude users using wildcards- The SAPUsersGetVIP function now supports excluding users using wildcards. For examples, can exclude all firefighters using FF*.", contentTypes: [] },
-      { version: "2.0.76", date: "18-09-2023", text: "The “SAP - Security Audit Log Configuration Change” logic was modified so it will not alert on dummy changes that surface after system restart", contentTypes: [] },
-      { version: "3.0.1", date: "01-01-2024", text: "Content migrated to a content hub V3 protocol- to overcome the error of “Creating the resource of type Microsoft.Resources/templateSpecs would exceed the quota of ‘800’ resources of type Microsoft.Resources/templateSpecs per resource group”", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "Updated and improved logic for these alert rules:", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAP - Execution of an Obsolete or an Insecure Function Module", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAP - Multiple Password Changes", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAP - Assignment of a sensitive role", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAP - Sensitive User's Password Change and Log in", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAP - Login from unexpected network", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAP - Sensitive privileged user makes a change in another user", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "Updated parsers:", contentTypes: ["Parser"] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAPChangeDocsLog- support for blank workspaces, added SystemGuid", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAPJAVAFilesLogs- switch to SAPControl file-based logs", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAPSpoolLog, SAPSpoolOutputLog- handle different SpoolRequestNumber formats in different SAP releases", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAPTableDataLog- handle SidGuid, UpdatedOn fields", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAPUsersAssignments- inffer user master data changes in near realtime", contentTypes: [] },
-      { version: "3.0.3", date: "02-02-2024", text: "SAPUsersGetPrivileged- allow SAP AS JAVA systems support", contentTypes: [] },
-      { version: "3.1.0", date: "06-03-2024", text: "New JAVA AS alert rules", contentTypes: [] },
-      { version: "3.1.0", date: "06-03-2024", text: "SAP - (Preview) AS JAVA - Sensitive Privileged User Signed In", contentTypes: [] },
-      { version: "3.1.0", date: "06-03-2024", text: "SAP - (Preview) AS JAVA - Sign-In from Unexpected Network", contentTypes: [] },
-      { version: "3.1.0", date: "06-03-2024", text: "SAP - (Preview) AS JAVA - User Creates and Uses New User", contentTypes: [] },
-      { version: "3.1.0", date: "06-03-2024", text: "SAP - Execution of an Obsolete or an Insecure Function Module- improved logic", contentTypes: [] },
-      { version: "3.1.4", date: "15-04-2024", text: "Bug fixes", contentTypes: [] },
-      { version: "3.1.5", date: "25-04-2024", text: "Fixes SAPCONTROL_CL error when using cross workspace feature", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "Improved and simplified logic for 4 alert rules:", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "SAP Data has Changed During Debugging Activity", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "SAP Execution of Sensitive Function Module", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "SAP Function module tested", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "SAP Multiple Logons by IP.", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "Fixed bugs in parsers:", contentTypes: ["Parser"] },
-      { version: "3.1.7", date: "16-06-2024", text: "SAPCRLog, SAPGetSystemParameter.", contentTypes: [] },
-      { version: "3.1.7", date: "16-06-2024", text: "Added additionalData column to \"SAP - Systems\" watchlist", contentTypes: [] },
-      { version: "3.1.13", date: "11-07-2024", text: "Handle the \"Unknown function\" error on queries using multiple parsers.", contentTypes: ["Parser"] },
-      { version: "3.1.13", date: "11-07-2024", text: "Disable incident creation for low severity data collection health alerts.", contentTypes: [] },
-      { version: "3.1.13", date: "11-07-2024", text: "Excluded SAPJAVAFilesLogs from being queried in SAPSystems and SAPUsers* parsers by default.", contentTypes: ["Parser"] },
-      { version: "3.1.13", date: "11-07-2024", text: "Updated \"Audit Controls\" workbook to support solution versions 3.X.", contentTypes: ["Workbook"] },
-      { version: "3.1.13", date: "11-07-2024", text: "Updated workbooks to default to local workspace even when workspace is a fresh one.", contentTypes: ["Workbook"] },
-      { version: "3.2.02", date: "12-02-2024", text: "Added two new detections: SAP - (Preview) Dormant users detected, SAP - (Preview) Developer key assigned in a production system (Preview). Switched SAPAuditLog to be based on standard table ABAPAuditLog. Added support for SAP version 7.31 through 7.4 to reflect dialog users IP address using TableDataLog (DBTABLOG). Enable table logging for SAP table USR41 to enable this feature", contentTypes: [] },
+      { version: "3.5.10", date: "30-06-2026", text: "Removal of Agent-based connector from solution. Zip file link redirected to SAP Business Accelerator Hub (moved from editable to configure-only release).", contentTypes: [] },
     ],
   },
   {
@@ -3585,6 +3545,19 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "SecurityScorecard Cybersecurity Ratings",
+    entries: [
+      { version: "3.0.0", date: "07-08-2026", text: "Migrated the Ratings, Factor, and Issue Data Connectors to the Codeless Connector Framework (CCF), removing the need for an Azure Function App deployment.", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "07-08-2026", text: "Added multi-instance support: each connector uses a DataConnectorsGrid and ContextPane, so one independently-managed connection can be created per SecurityScorecard portfolio, scoped server-side by Portfolio ID.", contentTypes: [] },
+      { version: "3.0.0", date: "07-08-2026", text: "Added an optional own-company \"My Scorecard\" domain to ingest your own organization's scores alongside portfolio companies.", contentTypes: [] },
+      { version: "3.0.0", date: "07-08-2026", text: "Ingest real dated score, factor, and issue history, enriched with company industry.", contentTypes: [] },
+      { version: "3.0.0", date: "07-08-2026", text: "Marked the legacy Python Function App Data Connectors as deprecated. They are retained in the solution, not removed, so existing deployments continue to work.", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "07-08-2026", text: "Added Parsers that unify legacy (*_CL) and CCF (*History_CL) data for backward compatibility.", contentTypes: ["Parser"] },
+      { version: "3.0.0", date: "07-08-2026", text: "Updated the Workbook to query through the new parsers.", contentTypes: ["Workbook","Parser"] },
+      { version: "2.0.0", date: "01-10-2022", text: "Solution release with three Azure Function App data connectors (Ratings, Factor, Issue) and the SecurityScorecard workbook.", contentTypes: ["Data Connector","Workbook"] },
+    ],
+  },
+  {
     name: "Semperis Directory Services Protector",
     entries: [
       { version: "3.0.2", date: "23-04-2025", text: "Updated Analytical Rule and Parser", contentTypes: ["Analytic Rule","Parser"] },
@@ -3610,6 +3583,7 @@ export const RAW_SOLUTIONS = [
     name: "Sentinel SOAR Essentials",
     alias: "SentinelSOARessentials",
     entries: [
+      { version: "3.0.8", date: "05-03-2026", text: "Enhanced the *Incident-Trigger-Entity-Analyzer* Playbook with intelligent user identifier detection (objectGuid, aadUserId, UPN, and Name+UPNSuffix) for reliable user resolution, and added handling to skip and comment on incidents when no valid user identifier is present.", contentTypes: ["Playbook"] },
       { version: "3.0.7", date: "13-01-2026", text: "Removed the redundant *IncidentOverview* workbook from SentinelSOAREssentianls", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "24-12-2025", text: "Added new playbooks for the incident alerting.", contentTypes: ["Playbook"] },
       { version: "3.0.5", date: "11-12-2025", text: "Updated the lookback value to 7 days across all three Logic Apps and Renamed the Logic App title to \"URL Trigger Entity Analyzer\".", contentTypes: [] },
@@ -3823,6 +3797,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "18-07-2024", text: "Fixed Invalid Analytic Rule SpyCloudEnterpriseProtectionMalwareRule.yaml", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "12-09-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "SpyCloud Enterprise Protection CCF",
+    entries: [
+      { version: "3.0.0", date: "09-06-2026", text: "Initial CCF-based release. SpyCloud Watchlist and Breach Catalog CCF data connector (Compass daily feed included), two built-in analytic rules (AR_Breached_Users_20, AR_malware_25), two KQL parsers (get_Spycloud_enriched_data, get_spycloud_compass_data), MDE Automation playbook, and Conditional Access playbook.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Parser"] },
     ],
   },
   {
@@ -4190,6 +4170,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Upwind",
     entries: [
+      { version: "3.0.3", date: "28-07-2026", text: "Expanded ingestion from 1 to 6 Upwind API endpoints, fixed asset ingestion and deployment issues, enabled cross-resource-group Log Analytics support, and resolved custom-table schema conflicts by renaming reserved columns.", contentTypes: [] },
       { version: "3.0.2", date: "28-04-2026", text: "Fixed Function App deployment: restructured zip package to flat layout and removed separate App Service Plan for correct code deployment.", contentTypes: [] },
       { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
       { version: "3.0.0", date: "10-03-2026", text: "Initial solution release.", contentTypes: [] },
@@ -4308,7 +4289,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Veeam",
     entries: [
-      { version: "3.1.0", date: "10-06-2026", text: "Added Veeam Data Connector (CCF) with support for VeeamMalwareEventsV2_CL, VeeamSecurityComplianceAnalyzerV2_CL, VeeamAuthorizationEventsV2_CL, VeeamOneTriggeredAlarmsV2_CL, VeeamCovewareFindingsV2_CL, and VeeamSessionsV2_CL. Added alias parsers parser_VeeamMalwareEventsV2AliasFunction, parser_VeeamSecurityComplianceAnalyzerV2AliasFunction, parser_VeeamAuthorizationEventsV2AliasFunction, parser_VeeamOneTriggeredAlarmsV2AliasFunction, parser_VeeamCovewareFindingsV2AliasFunction, and parser_VeeamSessionsV2AliasFunction.", contentTypes: ["Data Connector","Parser"] },
+      { version: "3.1.1", date: "31-07-2026", text: "Removed CCF public-preview content (reverted PR #14462); added NuGet packageSourceMapping to the Azure Functions build to prevent dependency-confusion", contentTypes: [] },
+      { version: "3.1.0", date: "10-06-2026", text: "Added Veeam Data Connector (CCF) with support for VeeamMalwareEventsV2_CL, VeeamSecurityComplianceAnalyzerV2_CL, VeeamAuthorizationEventsV2_CL, VeeamOneTriggeredAlarmsV2_CL, VeeamCovewareFindingsV2_CL, and VeeamSessionsV2_CL. Added alias parsers parser_VeeamMalwareEventsV2AliasFunction, parser_VeeamSecurityComplianceAnalyzerV2AliasFunction, parser_VeeamAuthorizationEventsV2AliasFunction, parser_VeeamOneTriggeredAlarmsV2AliasFunction, parser_VeeamCovewareFindingsV2AliasFunction, and parser_VeeamSessionsV2AliasFunction. Reverted in 3.1.1.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.2", date: "15-10-2025", text: "Updated author to Veeam Software", contentTypes: [] },
       { version: "3.0.1", date: "03-10-2025", text: "Updated Coveware security findings integration; Removed irrelevant mappings from all analytic rules; Updated Workbooks drilldown capabilities", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.0", date: "26-08-2025", text: "Initial Solution Release", contentTypes: [] },
