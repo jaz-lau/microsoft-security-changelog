@@ -264,6 +264,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Organization Audit",
     alias: "AtlassianOrganizationAudit",
     entries: [
+      { version: "3.0.2", date: "13-08-2026", text: "Promoted the Atlassian Organization Audit data connector to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "12-08-2026", text: "Updated DCR transformKql to derive TimeGenerated from the event time with fallback to now(), and reduced poller timeout to 30 seconds.", contentTypes: [] },
       { version: "3.0.0", date: "06-07-2026", text: "First version of the Atlassian Organization Audit CCF Connector.", contentTypes: [] },
       { version: "3.0.0", date: "06-07-2026", text: "Added Atlassian organization audit events ingestion support using CCF pollers, DCR, and parsers.", contentTypes: ["Parser"] },
@@ -786,6 +787,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.3.0", date: "14-08-2026", text: "Updated CCF Data Connector for Cisco Cloud Security log schema version 16: enabled Gzip decompression for all log streams, added DestinationSgtOriginId and FwBlockReason columns to CiscoUmbrellaCloudFirewall, added IsolationProfileId column to CiscoUmbrellaWebTraffic, and added connector instruction notes for optional headers and Cisco-managed/customer-managed Amazon S3 buckets.", contentTypes: ["Data Connector"] },
       { version: "3.2.2", date: "04-08-2026", text: "Fixed broken Deploy to Azure Gov button link in Data Connectors and Playbooks.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.2.1", date: "27-07-2026", text: "Updated Parser to set EventType for dnslogs, proxylogs, cloudfirewalllogs.", contentTypes: ["Parser"] },
       { version: "3.2.0", date: "01-07-2026", text: "Updated Cisco Umbrella CCF data connector as generally available (isPreview false).", contentTypes: ["Data Connector"] },
@@ -1011,6 +1013,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.4.0", date: "13-08-2026", text: "Updated Crowdstrike API connector by adding V2 tables and a new parser", contentTypes: ["Parser"] },
       { version: "3.3.9", date: "24-07-2026", text: "Updated titles for both CrowdStrike Falcon Data Replicator connectors", contentTypes: [] },
       { version: "3.3.8", date: "24-07-2026", text: "Updated CrowdStrike API Data Connector polling to use updated time instead of created time", contentTypes: ["Data Connector"] },
       { version: "3.3.7", date: "13-07-2026", text: "Updated CrowdStrike API Data Connector UI labels", contentTypes: ["Data Connector"] },
@@ -1275,6 +1278,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Datadog",
     entries: [
+      { version: "3.1.0", date: "12-08-2026", text: "Replaced the audit-only Datadog CCF Data Connector with the combined Datadog connector for audit events, indexed logs, and security signals.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "06-08-2026", text: "Initial Solution Release. Added the Datadog Audit Logs CCF Data Connector.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -1957,6 +1961,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.1", date: "05-10-2023", text: "Minor fixes.", contentTypes: [] },
       { version: "3.0.0", date: "28-09-2023", text: "Repackaged with V3.", contentTypes: [] },
       { version: "2.0.0", date: "17-02-2022", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Honey Labs",
+    alias: "HoneyLabs",
+    entries: [
+      { version: "3.0.0", date: "14-08-2026", text: "Initial Solution Release. Includes the HoneyLabs Threat Intelligence workbook \\|v 1.0.0, four Analytic Rules matching HoneyLabs indicators against sign-in, CEF and normalised network logs \\|v 1.0.0, four Hunting Queries \\|v 1.0.0, and the HoneyLabs-EnrichIncident-IP playbook \\|v 1.0. Indicators are ingested with Microsoft Sentinel's built-in Threat Intelligence - TAXII data connector, so the solution does not ship a data connector of its own. Setup values are in the solution README and in the workbook.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook"] },
     ],
   },
   {
@@ -3336,6 +3347,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future Identity",
     entries: [
+      { version: "3.2.0", date: "21-07-2026", text: "Breaking change: updated data imports to use DCE/DCR instead of deprecated Data Collector API. See readme.md for migration instructions.", contentTypes: [] },
       { version: "3.1.3", date: "06-03-2026", text: "Deprecated RFI-Playbook-Alert-Importer-LAW-Sentinel in preparation for Microsoft Defender Portal. Added Analytic Rule that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.1.2", date: "29-04-2025", text: "Removed Get Risky User action from Playbooks due to Recorded Future can act as a authority on compromise.", contentTypes: ["Playbook"] },
       { version: "3.1.1", date: "02-04-2025", text: "Updated documentation, restructured solution and added correct paths for Playbooks.", contentTypes: ["Playbook"] },
