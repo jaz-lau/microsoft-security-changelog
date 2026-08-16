@@ -1911,6 +1911,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Workspace Reports",
     alias: "GoogleWorkspaceReports",
     entries: [
+      { version: "3.0.6", date: "29-07-2026", text: "Fixed Data Connector bug where product_bucket and scope_name fields in token authorize events only preserved the last scope_data entry. Added DCR transformKql to reconstruct all product buckets from the correctly ingested scope array.", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "29-06-2026", text: "Updated queryWindowDelayInMin for Google Workspace Connector", contentTypes: [] },
       { version: "3.0.4", date: "26-03-2026", text: "Updated Data Connector Configuration steps", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "21-01-2026", text: "Updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
