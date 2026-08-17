@@ -833,6 +833,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Citrix DaaS",
     entries: [
+      { version: "3.0.1", date: "14-08-2026", text: "Updated authentication configuration for the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-07-2026", text: "Initial release of the Citrix DaaS solution with the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
     ],
   },
