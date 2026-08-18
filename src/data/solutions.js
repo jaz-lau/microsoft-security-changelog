@@ -1078,6 +1078,7 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk Audit",
     alias: "CyberArkAudit",
     entries: [
+      { version: "3.2.0", date: "06-07-2026", text: "Rebrand to Idira and remove deprecated Azure Functions Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "16-04-2026", text: "Update Azure Function based connector to Python 3.12", contentTypes: [] },
       { version: "3.1.0", date: "13-03-2026", text: "New Data Connector based on CCF.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "13-03-2026", text: "added missing migration instructions and disclaimers.", contentTypes: [] },
