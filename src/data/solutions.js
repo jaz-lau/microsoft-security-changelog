@@ -136,6 +136,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Amazon Web Services",
     entries: [
+      { version: "3.0.11", date: "11-08-2026", text: "Fixed the AWS WAF Data Connector last-data-received query by removing an invalid test filter.", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "19-05-2026", text: "Added non-analytics tier queries to Amazon Web Services S3 Data Connector to support Basic/Auxiliary plan tables.", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "18-05-2026", text: "Update AWS Hunting Queries and Workbooks for Quality", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.8", date: "13-01-2026", text: "Updated non-functional links from Analytic rules and Hunting query", contentTypes: ["Analytic Rule","Hunting Query"] },
@@ -654,6 +655,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point EM ThreatCloud Intelligence Feed",
     entries: [
+      { version: "3.0.1", date: "05-08-2026", text: "Shortened solution/offer ID to meet Partner Center Offer ID limits (50 chars, no dots).", contentTypes: [] },
       { version: "3.0.0", date: "02-06-2026", text: "Initial Solution release.", contentTypes: [] },
     ],
   },
@@ -694,6 +696,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Duo Security",
     alias: "CiscoDuoSecurity",
     entries: [
+      { version: "3.1.2", date: "12-08-2026", text: "Added CCF data connectors for Cisco Duo authentication, activity, and telephony logs. Updated analytics, hunting queries, and the workbook to use the CCF tables. Excluded the deprecated Azure Functions connector from the generated solution package.", contentTypes: ["Hunting Query","Data Connector","Workbook"] },
       { version: "3.1.1", date: "17-02-2026", text: "Bumped solution version to 3.1.1. Updated ARM template apiVersions to meet ARM-TTK \"< 2 years old\" requirements.", contentTypes: [] },
       { version: "3.1.0", date: "03-02-2026", text: "Python runtime compatibility fix (breaking for connector deployments running on Python 3.11). Fixed solution installation via Azure portal by deriving deployment location from selected workspace (prevents empty location).", contentTypes: [] },
       { version: "3.0.4", date: "26-09-2025", text: "Updated support Microsoft to Partner", contentTypes: [] },
@@ -742,6 +745,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco Meraki Events via REST API",
     entries: [
+      { version: "3.1.1", date: "10-08-2026", text: "Standardized all CCF Connector data types to use checkpointed t0/t1 time windowing (UnixTimestamp), aligning the newer Organizations, Organization Networks, Network Clients, and Air Marshal Events data types with the existing ASIM log endpoints to prevent duplicate ingestion.", contentTypes: [] },
       { version: "3.1.0", date: "06-07-2026", text: "Added four new data types to the CCP Connector: Organizations, Organization Networks, Network Clients, and Wireless Air Marshal Events.", contentTypes: [] },
       { version: "3.0.2", date: "10-01-2025", text: "Transitioned the CCP Connector to General Availability (GA).", contentTypes: [] },
       { version: "3.0.1", date: "30-09-2024", text: "Cisco Meraki via REST API configuration Changes pagination fix", contentTypes: [] },
@@ -1344,8 +1348,7 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.4", date: "02-07-2025", text: "Updated new ThreatIntelIndicators table references using parser.", contentTypes: ["Parser"] },
       { version: "3.0.3", date: "28-11-2024", text: "Update Analytic Rule MultipleErrorsReportedForSameDNSQueryStaticThresholdBased.yaml to fix bug.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "29-07-2024", text: "Update Hunting Queries to fix TTP.", contentTypes: ["Hunting Query"] },
-      { version: "3.0.1", date: "31-01-2023", text: "Updated the solution to fix Analytic Rules deployment issue.", contentTypes: ["Analytic Rule"] },
-      { version: "3.0.2", date: "12-03-2024", text: "Added new Analytic rule and repackaged solution.", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.1", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue.", contentTypes: ["Analytic Rule"] },
     ],
   },
   {
@@ -3004,6 +3007,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Orca Security Alerts",
     entries: [
+      { version: "3.0.1", date: "11-08-2026", text: "Extended the OrcaAlerts_CL table schema and DCR stream declaration of the Microsoft Entra ID based data connector with additional Orca alert fields (account, asset, rule and tag attributes, including custom_tags). Existing columns are unchanged.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-06-2026", text: "Added Orca Security Alerts data connector using Microsoft Entra ID authentication (Push CCF connector with DCR/DCE and the Azure Monitor Logs Ingestion API). Updated the connector logo. The legacy Shared Key based connector is retained for backward compatibility and both connectors ingest into the same OrcaAlerts_CL table.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -3453,6 +3457,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.6.0", date: "18-08-2026", text: "Added Salesforce Audit Logs parser and table definitions, and updated Salesforce connector configurations.", contentTypes: ["Parser"] },
       { version: "3.5.1", date: "13-08-2026", text: "Updated Salesforce RTEM connector to include the API URL in ingested events and promote the connector to GA", contentTypes: [] },
       { version: "3.5.0", date: "23-07-2026", text: "Marked Salesforce Audit Logs connector as GA and made poller resource names unique per connection.", contentTypes: [] },
       { version: "3.4.2", date: "22-07-2026", text: "Updated SalesforceRTEM connector to use SELECT FIELDS(STANDARD) with corresponding DCR updates.", contentTypes: [] },
@@ -4292,6 +4297,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Vectra XDR",
     entries: [
+      { version: "3.3.1", date: "17-06-2026", text: "Added Playbooks, Workbooks, Anlaytic rules, Migrated function app based data connector to CCF based data connector", contentTypes: ["Data Connector","Playbook","Workbook"] },
       { version: "3.3.0", date: "29-10-2025", text: "Added Playbooks, Vectra API version update and Log ingestion API support", contentTypes: ["Playbook"] },
       { version: "3.2.0", date: "01-08-2024", text: "Added Playbooks, Analytic rules and updated Data Connector and Workbook", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.1.1", date: "03-04-2024", text: "Repackaged for parser issue fix on reinstall", contentTypes: ["Parser"] },
