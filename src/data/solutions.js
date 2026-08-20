@@ -884,6 +884,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cloudflare",
     entries: [
+      { version: "3.0.3", date: "13-08-2026", text: "Added source storage subscription and resource group details to the data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "05-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.1", date: "01-08-2023", text: "Updated logic in Data Connector to handle broken events.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "24-07-2023", text: "Updated logic in Hunting Query (Cloudflare - Client errors,Cloudflare - Server errors)", contentTypes: ["Hunting Query"] },
@@ -892,6 +893,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cloudflare CCF",
     entries: [
+      { version: "3.0.4", date: "17-08-2026", text: "Added source storage subscription and resource group details to the data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "11-05-2026", text: "Modified workbook file and fixed workbook metadata to reference Cloudflare parser and CCF connector; added deployment prerequisites note to connector description", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.2", date: "22-04-2026", text: "Fixed DCR transformKql for Type field and corrected invalid field data types", contentTypes: [] },
       { version: "3.0.1", date: "08-12-2025", text: "Fixed invalid GUIDs, updated analytic rules, aligned URL entity mappings with legacy Cloudflare solution", contentTypes: ["Analytic Rule"] },
@@ -1107,6 +1109,12 @@ export const RAW_SOLUTIONS = [
       { version: "3.1.0", date: "19-05-2026", text: "Update reporting mechanism to use DCR. Switch to Oauth login for EPM", contentTypes: [] },
       { version: "3.0.1", date: "28-04-2025", text: "Updated deployment instructions to use Python 3.10 version", contentTypes: [] },
       { version: "3.0.0", date: "27-07-2023", text: "Updated solution to fix deployment validations", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Cybereinforce",
+    entries: [
+      { version: "3.0.0", date: "14-08-2026", text: "Corrected solution package structure (content package registration), registered custom table schema for KQL validation, added MITRE ATT&CK tactics and techniques to the 11 attack-detection rules (the remaining 7 rules are operational/capacity alerts - license expiry, device/rule quota, enrollment on-hold - with no corresponding adversary technique, so left unmapped by design), added workbook preview images and logo.", contentTypes: ["Workbook"] },
     ],
   },
   {
@@ -1692,6 +1700,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.5.1", date: "13-08-2026", text: "Added source storage subscription and resource group details to the Azure Storage data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.5.0", date: "30-07-2026", text: "Promoted the GitHub Azure Storage Audit Logs data connector to GA, add multi-stream support, and updated its generated configuration with advanced Event Grid filters.", contentTypes: ["Data Connector"] },
       { version: "3.4.0", date: "25-06-2026", text: "Added all api.request fields and created V3 table for AzStorage connector", contentTypes: [] },
       { version: "3.3.1", date: "17-06-2026", text: "Added SAS related instruction.", contentTypes: [] },
@@ -2722,6 +2731,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mulesoft",
     entries: [
+      { version: "3.2.1", date: "17-08-2026", text: "Promoted MuleSoft CloudHub Alerts CCF connector from Public Preview to GA.", contentTypes: [] },
       { version: "3.2.0", date: "02-07-2026", text: "Fixed Data Connectors Count issue on UI.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "17-06-2026", text: "Added MuleSoft CloudHub Alerts CCF Connector & Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
       { version: "3.1.0", date: "17-06-2026", text: "Updated Definition file by removing empty instructions.", contentTypes: [] },
@@ -2785,6 +2795,7 @@ export const RAW_SOLUTIONS = [
     name: "Netskope Alert Events",
     alias: "NetskopeAlertEvents",
     entries: [
+      { version: "3.0.1", date: "13-08-2026", text: "Added source storage subscription and resource group details to the data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "17-06-2026", text: "Initial solution release. Netskope Alerts & Events CCF (Blob Storage) connector, custom table NetskopeAlertEvents_CL, parser, 1 workbook, and 3 analytic rules.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
     ],
   },
@@ -2807,6 +2818,7 @@ export const RAW_SOLUTIONS = [
     name: "Netskope Web Tx",
     alias: "NetskopeWebTx",
     entries: [
+      { version: "3.0.2", date: "13-08-2026", text: "Added source storage subscription and resource group details to the data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "16-06-2026", text: "Expanded NetskopeWebTransactions_CL schema with 51 additional Web Transaction fields (threat protection, endpoint posture, process, identity/authorization, remote geo, action) across the DCR, custom table, and parser. Added new workbook sections (Threat Protection, Endpoint Posture, Process Activity, Identity & Authentication, Action Analysis). Data connector version bumped to 2.0.0 and Microsoft Sentinel branding fix.", contentTypes: ["Data Connector","Workbook","Parser"] },
       { version: "3.0.0", date: "11-02-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
     ],
@@ -3283,6 +3295,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future",
     entries: [
+      { version: "3.2.21", date: "16-08-2026", text: "Hardened Enterprise Sandbox API key handling and protected sensitive Logic Apps action data.", contentTypes: [] },
       { version: "3.2.20", date: "04-05-2026", text: "Removed incident creation from affected playbooks, in preparation for Microsoft Defender migration. Added Analytic Rules that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.2.19", date: "13-04-2026", text: "Added functionality to choose Sandbox region, changed to optional Enterprise Sandbox API token. Updated Indicator Import, moving evidence details from \"labels\" to \"external_references\".", contentTypes: [] },
       { version: "3.2.18", date: "03-02-2026", text: "To reduce noise in incident comments: updated RecordedFuture-IOC_Enrichment logic app with a RiskScoreThreshold parameter that defaults to 5. If an entity has a risk score lower than this threshold, we will not leave a comment on the incident.", contentTypes: [] },
@@ -3803,6 +3816,12 @@ export const RAW_SOLUTIONS = [
     name: "SOX IT Compliance",
     entries: [
       { version: "3.0.0", date: "11-12-2025", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Speculus Threat Intelligence",
+    entries: [
+      { version: "3.0.0", date: "28-07-2026", text: "Initial release: CCF TAXII 2.1 poller data connector, Speculus_Indicators_CL custom table + DCR, 3 analytics rules, and pb-speculus-incident-enrichment playbook (on-demand IP entity lookup against the Speculus REST API, posted as an incident comment)", contentTypes: ["Data Connector","Playbook"] },
     ],
   },
   {
@@ -4547,6 +4566,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Wiz",
     entries: [
+      { version: "3.0.2", date: "18-08-2026", text: "Updated the Connector STEP 1 instructions to use a tenant-specific Application (client) ID, so setup works for any Wiz tenant. Clarified that the command output is the service principal object ID.", contentTypes: [] },
       { version: "3.0.1", date: "26-06-2026", text: "Added a new push-based Connector (DCR + RBAC grant): Wiz pushes data to WizIssuesV3_CL, WizDetectionsV3_CL, and WizAuditLogsV3_CL (Issues, Detections, Audit Logs), with no Azure Function to host. Workbook updated to the new tables and columns. The legacy Azure Function connector remains available for existing deployments.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "15-07-2024", text: "Updated the queries on the Workbook and Connector to match with the new table names we offer", contentTypes: ["Workbook"] },
       { version: "2.0.0", date: "07-09-2023", text: "Updated Workbook query in Maintemplate", contentTypes: ["Workbook"] },
@@ -4555,6 +4575,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Workday",
     entries: [
+      { version: "3.1.0", date: "18-08-2026", text: "Added support for a configurable page size for the Workday data connector and aliases and grid management.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "23-12-2025", text: "Updated page size for the Workday Data connector and configure the query window + updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "02-04-2025", text: "Updated Data Connector guidelines.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "10-01-2025", text: "Transitioned the CCP Connector to General Availability (GA).", contentTypes: [] },
