@@ -73,6 +73,10 @@ export const RAW_SOLUTIONS = [
     name: "Airlock Digital",
     alias: "AirlockDigital",
     entries: [
+      { version: "3.2.0", date: "05-08-2026", text: "Solution now published by Airlock Digital.", contentTypes: [] },
+      { version: "3.2.0", date: "05-08-2026", text: "Updated Data Connector *Airlock Digital (Poll)*.", contentTypes: ["Data Connector"] },
+      { version: "3.2.0", date: "05-08-2026", text: "Added new Data Connectors *Airlock Digital (Push)* and *Airlock Digital (Poll - SaaS)*.", contentTypes: ["Data Connector"] },
+      { version: "3.2.0", date: "05-08-2026", text: "Added new Parsers and Workbook.", contentTypes: ["Workbook","Parser"] },
       { version: "3.1.1", date: "28-07-2026", text: "Promoted the Airlock Digital data connector from public preview to general availability (GA).", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "23-07-2026", text: "Added multi-instance support: multiple simultaneous Airlock Digital server connections via a grid and context-pane UX with a multi-select data type dropdown and per-connection friendly name. Added a ConnectorName column to all data tables to identify the originating connection. Fixed log ingestion: increased data connector poller timeout to 120s and corrected the pagination token path to slice notation for Server Activities and Execution Histories to resolve fetch timeouts and out-of-range paging errors. Removed deprecated graphQueriesTableName property (hardcoded table names in queries).", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "02-06-2026", text: "Fixed: Removed empty ApiKeyIdentifier field for Partner Center certification compliance. Fixed UX description typo.", contentTypes: [] },
@@ -1463,6 +1467,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Endpoint Threat Protection Essentials",
     entries: [
+      { version: "3.0.7", date: "18-08-2026", text: "Updated version and mapping of connectorId to dataTypes for multiple Analytic Rules and Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.6", date: "20-07-2026", text: "Added Analytic Rule CertUtil Used for File Download.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.5", date: "18-11-2024", text: "Removed the broken URL in Analytic Rule and Hunting Query", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.4", date: "10-06-2024", text: "Added entityMappings and added missing AMA DC reference in Analytical Rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
