@@ -971,6 +971,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Contra Force",
+    alias: "ContraForce",
+    entries: [
+      { version: "3.0.0", date: "07-08-2026", text: "Initial solution release: ContraForce Events CCF data connector and three Analytic rules (privileged access change, machine credential activity, destructive workspace action).", contentTypes: ["Analytic Rule","Data Connector"] },
+    ],
+  },
+  {
     name: "Contrast ADR",
     alias: "ContrastADR",
     entries: [
@@ -2988,7 +2995,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Oracle Cloud Infrastructure",
     entries: [
-      { version: "3.1.0", date: "16-07-2026", text: "Ingestion-volume optimization (CCF Data Connector): DCR transform no longer stores the raw data/oracle dynamic payloads alongside flattened columns; removed HTTP request/response header noise, CloudEvents boilerplate, duplicated fields, credential-bearing headers and the stateChange.current.keyValue key blob. Table schema reduced 201 → 86 columns; all columns used by the Parser, Analytic Rules, Hunting Queries, and Workbook are preserved. Fixed SrcIpAddr mapping typo (ipAddres), data_request_id_s/data_request_path_s payload-level mapping, and hyphenated request-header access (X-Forwarded-For, X-Real-IP, oci-original-url). Parser updated to v1.1.0: continues to read both OCI_Logs_CL and OCI_LogsV2_CL, and now derives EventStartTime/EventEndTime for V2 flow-log rows at read time. Analytic Rules & Hunting Queries: added the CCF connector (OracleCloudInfraConnector) to requiredDataConnectors alongside the existing connector.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
+      { version: "3.0.11", date: "21-08-2026", text: "Prevent identity credential ingestion.", contentTypes: [] },
       { version: "3.0.10", date: "26-05-2026", text: "Updated OCI connector UI to include IAM permissions guidance and removed the \"Important -\" label.", contentTypes: [] },
       { version: "3.0.9", date: "10-02-2026", text: "Add support for group Cursor", contentTypes: [] },
       { version: "3.0.8", date: "05-02-2026", text: "fix name in package 3.0.7", contentTypes: [] },
