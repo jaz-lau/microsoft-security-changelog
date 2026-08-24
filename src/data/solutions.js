@@ -638,6 +638,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint Alerts",
     entries: [
+      { version: "3.1.3", date: "21-08-2026", text: "Fixed ARM template expression escaping in nested content templates (stray ] in dcrConfig and playbook expressions) that caused data connector Connect deployment to fail with a template language expression parse error.", contentTypes: ["Data Connector","Playbook"] },
+      { version: "3.1.3", date: "21-08-2026", text: "Fixed alerts polling request body to send strict JSON (double-quoted): the Argos API now rejects single-quoted bodies with 422 Unprocessable Entity.", contentTypes: [] },
+      { version: "3.1.3", date: "21-08-2026", text: "Fixed connection template parameter defaults: placeholder values (e.g. \"severity\") leaked into the API request body when optional connector fields were left empty, failing the connectivity check with 422 (invalid severity enum). Optional filters now default to empty and are omitted from the request.", contentTypes: [] },
       { version: "3.1.2", date: "02-06-2026", text: "Updated support contact information and documentation links.", contentTypes: [] },
       { version: "3.1.0", date: "10-03-2026", text: "Update Data Connector, add bi-directional sync playbooks, analytic rule (ingestion anomaly), workbook (alert overview & sync health), and automation rules.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
       { version: "3.0.0", date: "17-06-2025", text: "Initial Solution release.", contentTypes: [] },
@@ -646,6 +649,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint IOC",
     entries: [
+      { version: "3.0.5", date: "21-08-2026", text: "Fixed ARM template expression escaping in the data connector polling config (stray ]) that caused the Connect deployment to fail with a template language expression parse error.", contentTypes: ["Data Connector"] },
+      { version: "3.0.5", date: "21-08-2026", text: "Fixed feed polling request body to send strict JSON (double-quoted): the Argos API now rejects single-quoted bodies with 422 Unprocessable Entity.", contentTypes: [] },
       { version: "3.0.4", date: "02-06-2026", text: "Updated support contact information and documentation links.", contentTypes: [] },
       { version: "3.0.2", date: "03-04-2026", text: "Fixed table schema definition causing connector creation failure.", contentTypes: [] },
       { version: "3.0.2", date: "03-04-2026", text: "Fixed apiEndpoint URL construction (removed duplicate https:// prefix).", contentTypes: [] },
