@@ -1436,6 +1436,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dynatrace",
     entries: [
+      { version: "3.0.4", date: "30-06-2026", text: "Added V3 data connectors (DynatraceRuntimeVulnerabilitiesV3, DynatraceAttacksV3, DynatraceAuditLogsV3, DynatraceProblemsV3) using the Dynatrace Grail DQL Storage Query API with platform token authentication. Updated parsers (v3.0.0) to union V1, V2, and V3 sources. Added STIX 2.1 threat intelligence playbook (replaces deprecated tiIndicators playbook). Fixed TimeGenerated in DynatraceRuntimeVulnerabilitiesV3 DCR to use source event timestamp. Fixed AttackIdentifier casing in playbooks. Marked V1 connectors as deprecated.", contentTypes: ["Data Connector","Playbook","Parser"] },
       { version: "3.0.3", date: "28-04-2026", text: "Fixed timestamp type mismatch in Parsers (DynatraceAttacks, DynatraceAuditLogs, DynatraceProblems, DynatraceSecurityProblems): V1 Unix epoch millisecond fields now converted to datetime, resolving duplicate typed columns in query results. Marked Add_DynatraceApplicationSecurityAttackSourceIpThreatIntelligence playbook as deprecated due to the deprecation of the Microsoft Graph Security tiIndicators API and its connector in Logic Apps.", contentTypes: ["Playbook","Parser"] },
       { version: "3.0.2", date: "02-04-2026", text: "Added DCR based connectors.", contentTypes: [] },
       { version: "3.0.1", date: "18-01-2024", text: "Changes for rebranding from Microsoft 365 Defender to Microsoft Defender XDR, Updated user-agent strings used when calling Dynatrace REST API's, Added new Entity Mappings to Analytic Rules Aligned Playbook, Data Connector & Workbook version numbers with rest of solution.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
@@ -3647,6 +3648,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.1.2", date: "17-08-2026", text: "Fix V2 parser type mismatch and fallback.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "10-08-2026", text: "Advanced SentinelOne V2 (via Codeless Connector Framework) Data Connector from Public Preview to Global Availability and added the AlertDescription field to the alerts stream", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "01-07-2026", text: "Added new SentinelOne V2 (via Codeless Connector Framework) Data Connector (ingests alerts via the GraphQL API)", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "03-06-2026", text: "Updated CCP Data Connector to support multiple instances (multi-connection) for MSSP scenarios", contentTypes: ["Data Connector"] },
@@ -4307,6 +4309,7 @@ export const RAW_SOLUTIONS = [
     name: "Varonis SaaS",
     alias: "VaronisSaaS",
     entries: [
+      { version: "3.2.0", date: "20-08-2026", text: "CCF Push data connector now ingests into the dedicated VaronisAlertsV2_CL table to avoid schema conflicts with the legacy Azure Function connector's table", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "29-07-2026", text: "Mark Azure Function data connector as Deprecated", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "21-04-2026", text: "Add CCF Push data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "25-11-2025", text: "Add Informational severity level support", contentTypes: [] },
