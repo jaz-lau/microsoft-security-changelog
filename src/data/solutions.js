@@ -2,6 +2,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "1Password",
     entries: [
+      { version: "3.0.5", date: "06-08-2026", text: "Reverted CCP Data Connector polling to time-window based (NextPageToken) requests to stop the duplicate ingestion introduced in 3.0.3, where each event was re-ingested on every poll for approximately one hour.", contentTypes: ["Data Connector"] },
       { version: "3.0.4", date: "23-07-2026", text: "Updated CCP Data Connector to use 1Password Events API v2 endpoints (signinattempts, auditevents, itemusages) and added v2 fields (account_uuid, actor_type, actor_account_uuid, user_type, user_account_uuid) to the OnePasswordEventLogs_CL table.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "06-07-2026", text: "Fixed CCP Data Connector to use cursor-based (PersistentToken) polling so late-synced item usage events (e.g. reveal, secure-copy) are no longer dropped.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "21-10-2024", text: "Added new CCP Data Connector.", contentTypes: ["Data Connector"] },
@@ -754,6 +755,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco Meraki Events via REST API",
     entries: [
+      { version: "3.1.1", date: "24-08-2026", text: "Updated the polling interval and t0/t1 time window configuration of the CCF Connector data types to fix duplicate ingestion.", contentTypes: [] },
       { version: "3.1.1", date: "10-08-2026", text: "Standardized all CCF Connector data types to use checkpointed t0/t1 time windowing (UnixTimestamp), aligning the newer Organizations, Organization Networks, Network Clients, and Air Marshal Events data types with the existing ASIM log endpoints to prevent duplicate ingestion.", contentTypes: [] },
       { version: "3.1.0", date: "06-07-2026", text: "Added four new data types to the CCP Connector: Organizations, Organization Networks, Network Clients, and Wireless Air Marshal Events.", contentTypes: [] },
       { version: "3.0.2", date: "10-01-2025", text: "Transitioned the CCP Connector to General Availability (GA).", contentTypes: [] },
@@ -1036,6 +1038,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.4.1", date: "25-08-2026", text: "Fixed the broken Deploy to Azure Gov badge image across Data Connector and Playbook docs", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.4.0", date: "13-08-2026", text: "Updated Crowdstrike API connector by adding V2 tables and a new parser", contentTypes: ["Parser"] },
       { version: "3.3.9", date: "24-07-2026", text: "Updated titles for both CrowdStrike Falcon Data Replicator connectors", contentTypes: [] },
       { version: "3.3.8", date: "24-07-2026", text: "Updated CrowdStrike API Data Connector polling to use updated time instead of created time", contentTypes: ["Data Connector"] },
@@ -1925,6 +1928,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Threat Intelligence",
     entries: [
+      { version: "3.3.0", date: "23-07-2026", text: "- Added Data Connector *GTI Vulnerabilities* (Codeless Connector Framework, Log Ingestion API).", contentTypes: ["Data Connector"] },
+      { version: "3.3.0", date: "23-07-2026", text: "- Added Parser *GTIVulnerabilities*, Analytics Rules, Playbooks and Workbook *Google Threat Intelligence*.", contentTypes: ["Playbook","Workbook","Parser"] },
       { version: "3.2.3", date: "04-06-2026", text: "- Added Data Connector *GTI Relevance System Alerts* (Azure Function App, Log Ingestion API).", contentTypes: ["Data Connector"] },
       { version: "3.2.3", date: "04-06-2026", text: "- Added Parser *GTIRelevanceSystemAlerts*.", contentTypes: ["Parser"] },
       { version: "3.2.3", date: "04-06-2026", text: "- Added Analytics Rules: GTI High Relevance Alerts, GTI High & Critical Priority Alerts, GTI Data Leak Alerts, GTI Initial Access Broker Alerts, GTI Insider Threat Alerts, GTI Relevance System Alerts Incident by Alert ID.", contentTypes: [] },
@@ -2896,6 +2901,7 @@ export const RAW_SOLUTIONS = [
     name: "Nord Stellar",
     alias: "NordStellar",
     entries: [
+      { version: "3.0.1", date: "19-08-2026", text: "Set TimeGenerated to ingestion time so historical events are not dropped; original event timestamp preserved in new EventTime column. Fixed AssetType/AssetValue mapping for CONSUMER_CREDENTIAL events.", contentTypes: [] },
       { version: "3.0.0", date: "27-05-2026", text: "Initial release of the NordStellar (Push) connector built on the Codeless Connector Framework. Adds a unified NordStellar_CL table, a Data Collection Rule with KQL transform, OAuth 2.0 client-credentials authentication, and support for all NordStellar event types across the Leaked Data, Dark Web Monitoring, Domain Squatting, and Attack Surface modules.", contentTypes: [] },
     ],
   },
