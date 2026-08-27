@@ -693,6 +693,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco ASA",
     alias: "CiscoASA",
     entries: [
+      { version: "3.0.8", date: "22-08-2026", text: "Added new detection rule for Possible Data Exfilteration", contentTypes: [] },
       { version: "3.0.7", date: "01-09-2025", text: "Updates to the template_CiscoAsaAma.json file to reflect the general availability of the Cisco ASA/FTD via AMA connector", contentTypes: [] },
       { version: "3.0.6", date: "10-07-2025", text: "Preview tag removed from Connector title", contentTypes: [] },
       { version: "3.0.5", date: "25-04-2025", text: "Removed Legacy Data Connector", contentTypes: ["Data Connector"] },
@@ -755,8 +756,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco Meraki Events via REST API",
     entries: [
+      { version: "3.1.1", date: "24-08-2026", text: "Standardized all CCF Connector data types to use checkpointed t0/t1 time windowing (UnixTimestamp), aligning the newer Organizations, Organization Networks, Network Clients, and Air Marshal Events data types with the existing ASIM log endpoints to prevent duplicate ingestion.", contentTypes: [] },
       { version: "3.1.1", date: "24-08-2026", text: "Updated the polling interval and t0/t1 time window configuration of the CCF Connector data types to fix duplicate ingestion.", contentTypes: [] },
-      { version: "3.1.1", date: "10-08-2026", text: "Standardized all CCF Connector data types to use checkpointed t0/t1 time windowing (UnixTimestamp), aligning the newer Organizations, Organization Networks, Network Clients, and Air Marshal Events data types with the existing ASIM log endpoints to prevent duplicate ingestion.", contentTypes: [] },
       { version: "3.1.0", date: "06-07-2026", text: "Added four new data types to the CCP Connector: Organizations, Organization Networks, Network Clients, and Wireless Air Marshal Events.", contentTypes: [] },
       { version: "3.0.2", date: "10-01-2025", text: "Transitioned the CCP Connector to General Availability (GA).", contentTypes: [] },
       { version: "3.0.1", date: "30-09-2024", text: "Cisco Meraki via REST API configuration Changes pagination fix", contentTypes: [] },
@@ -802,6 +803,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.3.1", date: "26-08-2026", text: "Fixed Cisco Umbrella CCF connection resource naming to include the S3 bucket, region, and prefix, preventing connections for different account prefixes from overwriting each other.", contentTypes: [] },
       { version: "3.3.0", date: "14-08-2026", text: "Updated CCF Data Connector for Cisco Cloud Security log schema version 16: enabled Gzip decompression for all log streams, added DestinationSgtOriginId and FwBlockReason columns to CiscoUmbrellaCloudFirewall, added IsolationProfileId column to CiscoUmbrellaWebTraffic, and added connector instruction notes for optional headers and Cisco-managed/customer-managed Amazon S3 buckets.", contentTypes: ["Data Connector"] },
       { version: "3.2.2", date: "04-08-2026", text: "Fixed broken Deploy to Azure Gov button link in Data Connectors and Playbooks.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.2.1", date: "27-07-2026", text: "Updated Parser to set EventType for dnslogs, proxylogs, cloudfirewalllogs.", contentTypes: ["Parser"] },
@@ -1004,6 +1006,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Corelight",
     entries: [
+      { version: "3.3.0", date: "18-08-2026", text: "Updated Data Connector page for DCE/DCR based ingestion, added new Parsers, and updated Workbooks and Analytic Rules queries for the new table schema and field names", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.2.5", date: "04-06-2026", text: "Restructuring dashboards and adding asset classification tab in data explorer", contentTypes: [] },
       { version: "3.2.4", date: "19-03-2026", text: "Added 'Show Aggregation' filters in Corelight Data Explorer Workbook.", contentTypes: ["Workbook"] },
       { version: "3.2.3", date: "27-01-2026", text: "Added Corelight AWS VPC Flow dashboard.", contentTypes: [] },
@@ -2487,6 +2490,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
+      { version: "3.0.17", date: "12-08-2026", text: "Updated Analytic Rule AnomalousVoulmeOfFileDeletion.yaml to add AzureActiveDirectory connector with SigninLogs data type. Fixed deploy button URLs in Playbook AttackSimulatorTrainingNonReporters readme to include the correct 'master' branch path.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.16", date: "12-08-2026", text: "Updated KQL projection ordering in the Unusual Volume of file deletion by users analytic rules and hunting queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.15", date: "22-06-2026", text: "Refactor OAuth and device-code phishing hunting queries to construct login.microsoftonline.com and login.microsoftonline.us URLs via strcat() (resolves ARM-TTK 'DeploymentTemplate Must Not Contain Hardcoded Uri'); remove empty groupByAlertDetails/groupByCustomDetails arrays from PossibleWebpBufferOverflow analytic rule (resolves ARM-TTK 'Template Should Not Contain Blanks'). Updated Microsoft Defender XDR to Product Name filter in Data Connector queries. Added new Hunting Queries Hunt for RMM tool execution following Teams messages, Hunt for alerts correlated with Teams messages and Identify acting user for reported phish. Also updated Hunting Query Punycode chars lookalike and corrected the incorrect mapping of dataTypes: EmailEvents with connectorId: OfficeATP across multiple Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
       { version: "3.0.14", date: "09-02-2026", text: "Added new Hunting Query Punycode chars lookalike domains.yaml.", contentTypes: ["Hunting Query"] },
@@ -3494,6 +3498,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.6.1", date: "26-08-2026", text: "Corrected the Salesforce Service Cloud parser metadata version", contentTypes: ["Parser"] },
       { version: "3.6.0", date: "18-08-2026", text: "Added Salesforce Audit Logs parser and table definitions, and updated Salesforce connector configurations.", contentTypes: ["Parser"] },
       { version: "3.5.1", date: "13-08-2026", text: "Updated Salesforce RTEM connector to include the API URL in ingested events and promote the connector to GA", contentTypes: [] },
       { version: "3.5.0", date: "23-07-2026", text: "Marked Salesforce Audit Logs connector as GA and made poller resource names unique per connection.", contentTypes: [] },
