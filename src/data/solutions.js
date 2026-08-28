@@ -1344,6 +1344,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Datazag",
+    entries: [
+      { version: "3.0.0", date: "27-08-2026", text: "Initial Datazag Threat Intelligence solution release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Delinea Secret Server",
     entries: [
       { version: "3.0.1", date: "11-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
@@ -2157,6 +2163,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "Intel471",
     entries: [
+      { version: "3.0.1", date: "28-08-2026", text: "Added 25 Hunting Queries.", contentTypes: ["Hunting Query"] },
+      { version: "3.0.1", date: "28-08-2026", text: "Updated Playbook 'Intel 471 Malware Intelligence to Sentinel' to v3.0: Key Vault secret names can now be supplied at deployment, and Blob storage now authenticates with the logic app's managed identity - grant it the Storage Blob Data Contributor role or every run fails.", contentTypes: ["Playbook"] },
+      { version: "3.0.1", date: "28-08-2026", text: "Updated Playbook 'Intel 471 Malware Intelligence to Graph Security' to v1.1: deprecated in favour of 'Intel 471 Malware Intelligence to Sentinel'.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "02-12-2025", text: "Added Playbook 'Intel 471 Malware Intelligence to Graph Security' using new upload indicators API to Intel 471 Solution.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "02-12-2025", text: "Added the Verity471 backend in the Intel471 solution for ingesting malware indicators.", contentTypes: [] },
     ],
@@ -3897,6 +3906,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Strato Secure",
+    alias: "StratoSecure",
+    entries: [
+      { version: "3.0.0", date: "01-06-2026", text: "Initial release. 6 analytic rules (SAST/SCA/API/Compliance correlation), 3 workbooks (Executive, SOC, API Inventory), 7 playbooks (Jira, ADO, Teams, Assign, Exception, Close, Escalate), 8 watchlists, 5 custom DCR tables. Compliance evidence for PCI-DSS 4.0, CNBV Art.115Bis4, SBP Acuerdo 011-2018. PR quality gates for GitHub and Azure DevOps. BYO Azure OpenAI support.", contentTypes: ["Analytic Rule","Playbook","Workbook"] },
+    ],
+  },
+  {
     name: "Strider Shield",
     entries: [
       { version: "3.0.0", date: "28-04-2026", text: "Initial Solution Release.", contentTypes: [] },
@@ -3941,6 +3957,7 @@ export const RAW_SOLUTIONS = [
     name: "Synqly Integration Connector",
     alias: "SynqlyIntegrationConnector",
     entries: [
+      { version: "3.0.1", date: "26-08-2026", text: "Added support for AgentEvent, AlertEvent, and Asset schemas, expanding the connector to 13 ASIM schema types, and added an optional Synqly Alert Event analytics rule template.", contentTypes: [] },
       { version: "3.0.0", date: "20-02-2026", text: "Initial Solution release supporting ingestion of 10 ASIM event types directly to built-in ASIM tables.", contentTypes: [] },
     ],
   },
@@ -4234,6 +4251,12 @@ export const RAW_SOLUTIONS = [
     name: "UniFi Site Manager (CCF)",
     entries: [
       { version: "3.0.0", date: "22-05-2026", text: "Initial Solution Release - UniFi Site Manager (CCF) with single-card multi-poller (sites, hosts, devices, ISP metrics), 22 analytic rules, 8 hunting queries, operations workbook and Unifi_SiteManager_* custom tables", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
+    ],
+  },
+  {
+    name: "Uniqkey",
+    entries: [
+      { version: "3.0.0", date: "25-08-2026", text: "Initial release of the Uniqkey solution with a CCF data connector for Uniqkey security events", contentTypes: ["Data Connector"] },
     ],
   },
   {
