@@ -97,6 +97,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Akamai DDOS Protection",
     entries: [
+      { version: "3.0.2", date: "27-08-2026", text: "Updated the AkamaiSIEMEvent parser to decode rule and HTTP header values while preserving events with empty rule fields and retaining encoded source values in Raw-suffixed columns.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "20-07-2026", text: "Promoted Akamai DDOS CCF data connector from public preview to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "24-06-2026", text: "Created a Data Connector for Akamai DDOS Protection CCF Container with the WAF security events data stream.", contentTypes: ["Data Connector"] },
     ],
@@ -756,6 +757,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco Meraki Events via REST API",
     entries: [
+      { version: "3.2.0", date: "28-08-2026", text: "Promoted the updated Cisco Meraki CCF REST API data connector introduced in version 3.1.0 to General Availability (GA).", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "24-08-2026", text: "Standardized all CCF Connector data types to use checkpointed t0/t1 time windowing (UnixTimestamp), aligning the newer Organizations, Organization Networks, Network Clients, and Air Marshal Events data types with the existing ASIM log endpoints to prevent duplicate ingestion.", contentTypes: [] },
       { version: "3.1.1", date: "24-08-2026", text: "Updated the polling interval and t0/t1 time window configuration of the CCF Connector data types to fix duplicate ingestion.", contentTypes: [] },
       { version: "3.1.0", date: "06-07-2026", text: "Added four new data types to the CCP Connector: Organizations, Organization Networks, Network Clients, and Wireless Air Marshal Events.", contentTypes: [] },
