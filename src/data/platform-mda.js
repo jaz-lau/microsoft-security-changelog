@@ -1,5 +1,71 @@
 export const PLATFORM_UPDATES = [
   {
+    month: "Aug 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Cloud Apps",
+        icon: "☁️",
+        updates: [
+          {
+            severity: "important", status: "ga",
+            summary: "Unified RBAC enabled by default for new Defender for Cloud Apps customers",
+            detail: "From August 2026, Microsoft Defender unified role-based access control is automatically enabled for new Defender for Cloud Apps customers, with no manual workload activation required.",
+            whyItMatters: "New tenants get centralised role management across Defender workloads from day one rather than configuring Cloud Apps permissions separately. Teams standing up a new tenant should plan their role model in unified RBAC from the outset, as the legacy per-workload permission path is no longer the starting point.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Jun 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Cloud Apps",
+        icon: "☁️",
+        updates: [
+          {
+            severity: "critical", status: "change",
+            summary: "File policies retire 6 January 2027 — migrate to Microsoft Purview",
+            detail: "File-based data protection is moving from Defender for Cloud Apps to Microsoft Purview. Existing file policies must be recreated as Microsoft Purview DLP or auto-labeling policies before the retirement date.",
+            whyItMatters: "Any file policy still in place after the cut-off stops enforcing, so data protection coverage silently lapses unless it has been rebuilt in Purview first. Migration is not like-for-like — Microsoft documents parity gaps and a governance action mapping — so teams need time to test equivalent Purview policies rather than porting them at the deadline.",
+            actionNote: "Review existing file policies and recreate them in Microsoft Purview before 6 January 2027.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Salesforce connector adds Real-Time Event Monitoring ingestion and OAuth app governance (Preview)",
+            detail: [
+              "Real-time event monitoring: when a Salesforce administrator enables data storage for the relevant events in Salesforce Event Manager, the connector ingests Salesforce Real-Time Event Monitoring data within minutes, improving detection coverage for OAuth abuse, session hijacking, credential stuffing and anomalous API activity.",
+              "Highly privileged and Unused app insights: the OAuth apps tab in the Application inventory now surfaces Highly privileged apps and Unused apps for Salesforce, and these feed the Highly privileged and Unused statistics on the Non-human identities tab of the Identity inventory.",
+              "Permissions visibility: the Permissions list on the App governance page now covers Salesforce Connected Apps and External Client Apps (ECAs), so the rights granted to each Salesforce OAuth app can be reviewed.",
+            ],
+            whyItMatters: [
+              "Salesforce attacks increasingly abuse OAuth tokens, connected apps and sessions to bypass MFA entirely, and these events are invisible in sign-in logs. Near real-time ingestion shortens the detection window from the connector's previous polling cadence to minutes — but only where the administrator has turned Real-Time Event Monitoring on in Salesforce.",
+              "Over-privileged and dormant connected apps are the standing risk in a mature Salesforce tenant. Surfacing them alongside non-human identity statistics lets teams prune the OAuth estate using the same workflow they already use for Entra ID app governance.",
+              "Reviewing granted permissions is the prerequisite for judging whether a connected app's access is proportionate. Without it, an ECA compromise is discovered only after the data movement, not before.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "May 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Cloud Apps",
+        icon: "☁️",
+        updates: [
+          {
+            severity: "minor", status: "preview",
+            summary: "Informational alerts for unsanctioned app access can now be disabled (Preview)",
+            detail: "A new 'Generate alert for blocked app access' toggle in the Microsoft Defender for Endpoint settings suppresses the informational alerts raised when users access unsanctioned apps, while leaving blocking enforcement active.",
+            whyItMatters: "Blocked-app alerts are high-volume and low-signal in tenants with broad app-blocking policies, and they crowd out actionable detections in the queue. Suppressing them removes the noise without weakening enforcement — though teams that use these alerts to measure shadow IT should keep them on.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     month: "Mar 2026",
     products: [
       {

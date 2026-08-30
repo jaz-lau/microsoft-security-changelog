@@ -1,5 +1,75 @@
 export const PLATFORM_UPDATES = [
   {
+    month: "Jul 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Office 365",
+        icon: "📧",
+        updates: [
+          {
+            severity: "important", status: "ga",
+            summary: "Prompt injection protection detects injection attacks hidden in inbound email",
+            detail: "Microsoft Defender for Office 365 now detects prompt injection attacks concealed in inbound email.",
+            whyItMatters: "As mail flows into AI assistants that summarise and act on inboxes, hidden instructions in message bodies become an execution path rather than inert text. Filtering at the mail gateway blocks the attack before any downstream agent reads it, which is the only layer that sees the message ahead of every consumer of it.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Unified RBAC is the default permission model for new Defender for Office 365 Plan 2 organisations",
+            detail: "From July 2026, new Microsoft Defender for Office 365 Plan 2 organisations use the Microsoft Defender unified role-based access control model by default (MC1246006).",
+            whyItMatters: "New tenants get one role model spanning Defender workloads instead of Exchange Online role groups layered under Defender permissions. Existing organisations are unaffected, so teams running both old and new tenants should expect their permission designs to diverge.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Microsoft Defender for Office 365 Plan 1 now included in Microsoft 365 E3",
+            detail: "Microsoft 365 E3 now includes Microsoft Defender for Office 365 Plan 1.",
+            whyItMatters: "E3 tenants gain Safe Attachments, Safe Links and anti-phishing policies without a separate add-on, so protections previously left unconfigured on cost grounds are now available by default. Worth auditing which E3 tenants are still running Exchange Online Protection alone.",
+          },
+          {
+            severity: "minor", status: "ga",
+            summary: "Default 'Mark as and notify' email templates are now localised",
+            detail: "Where automatic notifications use the default template, users receive notification emails in their preferred language based on their Outlook language settings. Custom notification templates configured by admins are unaffected.",
+            whyItMatters: "Reporting feedback that arrives in a language the user reads is more likely to be acted on, which matters for the admin review loop on user-reported messages. Teams using custom templates keep the previous behaviour and would need to localise them separately.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Apr 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Office 365",
+        icon: "📧",
+        updates: [
+          {
+            severity: "important", status: "ga",
+            summary: "New granular RBAC permission for email content associated with alerts",
+            detail: "A new Unified RBAC permission — 'Email & collaboration content: Emails associated with alerts (read)' — allows analysts to preview or download email messages associated with specific security alerts.",
+            whyItMatters: "Previously, letting an analyst read a phishing message during triage meant granting broad access to mailbox content. This scopes the read to messages already tied to an alert, so tier-1 investigation no longer requires standing access to the wider mail estate.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Removing internal users from Teams chats is now generally available",
+            detail: "The ability to remove internal users from Teams chats in the Teams message entity panel has reached general availability.",
+            whyItMatters: "Containment of a compromised account inside an active chat previously meant disabling the account or waiting on the Teams admin. Doing it from the message entity panel keeps the response in the analyst's existing workflow.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Security Copilot email summary available on the Email entity page",
+            detail: "With a Microsoft Security Copilot subscription, an AI summary of email entity data can be generated directly from the Email entity page using the Copilot action.",
+            whyItMatters: "Condenses headers, authentication results, URLs and detonation verdicts into a readable summary, cutting the time to a triage decision on a reported message. Requires a separate Security Copilot subscription, so it does not change the baseline analyst experience.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Bulk email below the BCL threshold can be delivered to the Promotions folder (Preview)",
+            detail: "Anti-spam policies can be configured to deliver bulk mail below the bulk complaint level threshold to the Promotions folder in supported versions of Outlook.",
+            whyItMatters: "Moves marketing mail out of the inbox without quarantining it, which reduces user-reported false positives compared with raising the BCL threshold. Note that mail in Promotions is still delivered — teams should not treat this as a blocking control, and users who do not check the folder may miss legitimate senders.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     month: "Mar 2026",
     products: [
       {

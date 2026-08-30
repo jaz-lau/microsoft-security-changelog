@@ -1,5 +1,121 @@
 export const PLATFORM_UPDATES = [
   {
+    month: "Aug 2026",
+    products: [
+      {
+        product: "Microsoft Sentinel",
+        icon: "🔭",
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "UEBA behaviors and anomaly detection expand to Fortinet, Check Point, Zscaler and AWS GuardDuty (Preview)",
+            detail: [
+              "Fortinet FortiGate behaviors: the UEBA behaviors layer now supports FortiGate firewall events from the CommonSecurityLog table, with more than 40 new behaviors covering administrative activity such as rapid system reconfigurations, configuration backups, certificate changes and security service disruptions — mapped to MITRE ATT&CK techniques including T1685, T1070, T1078 and T1602.002.",
+              "Check Point, Fortinet and Zscaler anomalies: ten new anomaly rules over firewall, VPN and web proxy events in CommonSecurityLog compare each user and device against its own history and organisation-wide activity, identifying anomalous and failed VPN sign-ins, unusual access to high-risk web categories, bursts of security detections on a potentially compromised device, and suspicious administrative changes. Events are enriched with source IP geolocation, ISP and threat intelligence context, and mapped to T1078, T1133, T1110, T1071, T1562 and T1567.",
+              "AWS GuardDuty: anomaly detection now supports identity-linked GuardDuty findings from the AWSGuardDuty table, mapped to T1078, T1078.004, T1110, T1087.004 and T1567.002.",
+            ],
+            whyItMatters: [
+              "Firewall administrative activity is a common blind spot — appliance config changes rarely reach the SIEM as behavioural signal, so an attacker weakening rules ahead of exfiltration looks like routine admin work. Behaviour baselining on FortiGate events makes that visible without writing bespoke detections.",
+              "VPN and proxy logs are usually kept for forensics rather than detection because raw volume defeats static thresholds. Per-entity baselining turns them into a detection surface, and the geolocation and threat intelligence enrichment removes an enrichment step analysts would otherwise do by hand.",
+              "GuardDuty findings arrive already triaged by AWS, but they are scoped to the AWS account. Linking them to identities lets a cloud finding join the same user timeline as on-premises and Entra ID activity, which is where cross-plane attack paths become apparent.",
+            ],
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Contextual anomaly insights added directly to UEBA behavior records (Preview)",
+            detail: "Microsoft Sentinel now attaches anomaly insights to UEBA behavior records, surfacing first-seen activity, unusually high behaviour volumes, uncommon values and threat intelligence matches without manual correlation of raw events.",
+            whyItMatters: "A behaviour record on its own says what happened but not whether it is unusual, so analysts previously ran follow-up queries to establish a baseline before judging it. Carrying that context inline shortens triage and reduces the chance a first-seen action is dismissed as routine.",
+          },
+          {
+            severity: "minor", status: "unspecified",
+            summary: "SAP solution releases: agentless 1.1.12, BTP 3.1.1, LogServ 3.0.5",
+            detail: [
+              "SAP agentless solution version 1.1.12 adds audit log performance enhancements and the force-sal-filesystem parameter.",
+              "SAP BTP solution version 3.1.1 adds an analytic rule for unaudited custom apps with login-only activity, and renames analytic rules with the SAP BTP prefix.",
+              "SAP LogServ solution version 3.0.5 lets customers using RISE with SAP activate existing ASIM-based security content for standard SAP LogServ logs; HANA detections now use Syslog instead of the custom log, with updated connector coverage and fallback handling.",
+            ],
+            whyItMatters: [
+              "Audit log performance is the usual constraint on SAP ingestion at scale, so this mainly affects teams whose collection was lagging behind production volume.",
+              "Custom BTP apps with login-only activity and no auditing are a standing gap — they are reachable but produce no evidence trail. The rule prefix rename will break any saved queries or workbooks that filter analytic rules by name.",
+              "RISE with SAP customers previously could not reuse ASIM-based content against LogServ logs, which meant maintaining a parallel detection set. The HANA switch from custom log to Syslog changes the source table, so existing HANA detections need re-checking after upgrade.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Jul 2026",
+    products: [
+      {
+        product: "Microsoft Sentinel",
+        icon: "🔭",
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "Custom detection rules can be managed as code in Microsoft Sentinel Repositories (Preview)",
+            detail: "Custom detection rules can now be managed as code in a GitHub or Azure DevOps repository using the Microsoft Security BICEP extension, then synced to Microsoft Sentinel through the Repositories feature or deployed directly with the BICEP CLI.",
+            whyItMatters: "Brings custom detections under the same review, versioning and promotion path as analytics rules, so changes are traceable and a broken rule can be rolled back rather than hand-repaired in the portal. Teams already running detection-as-code no longer need a separate process for the custom detection set.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Jun 2026",
+    products: [
+      {
+        product: "Microsoft Sentinel",
+        icon: "🔭",
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "Behavior results can be linked to incidents from advanced hunting (Preview)",
+            detail: "Behavior-based query results from the BehaviorInfo table can be linked to new or existing incidents in advanced hunting. The wizard automatically populates alert metadata and entities from the selected behavior record.",
+            whyItMatters: "UEBA behaviours previously lived apart from the incident record, so supporting evidence found during hunting had to be pasted into comments and lost its entity links. Linking them directly keeps the entity graph intact and makes the behaviour available to downstream automation.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Graph tools added to the Microsoft Sentinel MCP server (Preview)",
+            detail: "The graph tool collection in the Microsoft Sentinel Model Context Protocol server provides graph-based exploration of relationships across identities, devices, threats and signals, to assess coverage, dependencies and configuration gaps.",
+            whyItMatters: "Exposes the Sentinel graph to AI agents through MCP rather than only to analysts in the portal, so coverage and dependency questions can be asked in natural language. Worth reviewing what the MCP server is permitted to read before connecting agents, since graph access spans identity and device data.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "May 2026",
+    products: [
+      {
+        product: "Microsoft Sentinel",
+        icon: "🔭",
+        updates: [
+          {
+            severity: "important", status: "ga",
+            summary: "AI playbook generation in Microsoft Sentinel is now generally available",
+            detail: "The SOAR playbook generator creates Python-based automation workflows, coauthored through a conversational experience with Cline, an AI coding agent.",
+            whyItMatters: "Playbook authoring has been the bottleneck in SOAR adoption for teams without automation engineers. Generated playbooks still need review before they run against production — an automation that isolates a device is only as safe as the logic behind it.",
+          },
+          {
+            severity: "important", status: "unspecified",
+            summary: "UEBA enhancements: consolidated settings, Okta V2 support, five new GCP anomaly detections",
+            detail: [
+              "UEBA Settings and Behaviors Settings are consolidated into a single view, reached from a new UEBA tab on the Microsoft Sentinel settings page.",
+              "UEBA Okta anomalies now support the OktaV2_CL table alongside the existing Okta_CL table, extending the Anomalous Activity and Anomalous MFA Failures detections to the newer Okta connector format. No new anomaly types are introduced.",
+              "Five new GCP Audit Logs anomaly detections identify unusual login behaviour, privileged actions, resource deployments, secret and KMS key access, and infrastructure usage patterns.",
+            ],
+            whyItMatters: [
+              "Split settings pages were a common cause of UEBA being half-enabled — entity analytics on, behaviours off. One view makes the actual configuration state visible.",
+              "Tenants that migrated to the newer Okta connector silently lost these two detections because the data landed in a different table. This closes that gap without changing detection logic.",
+              "GCP audit activity has had thinner UEBA coverage than Azure or AWS. Secret and KMS key access in particular is a high-value signal, since it typically precedes access to whatever the key protects.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     month: "Apr 2026",
     products: [
       {
@@ -54,6 +170,13 @@ export const PLATFORM_UPDATES = [
             summary: "Row-level access using Microsoft Sentinel scoping (row-level RBAC)",
             detail: "Microsoft Sentinel now supports scoping (row-level RBAC) to control access to specific subsets of Sentinel data without requiring workspace separation. Administrators can define logical scopes, tag data at ingestion time, and assign users or groups to scopes using Unified RBAC.",
             whyItMatters: "Enables multiple teams to work securely within a shared Sentinel environment — removing the need for costly multi-workspace architectures just to enforce data isolation between teams or tenants.",
+          },
+          {
+            severity: "critical", status: "change",
+            summary: "Account Name now consistently the UPN prefix for analytics rule alerts — automation update was required by 1 July 2026",
+            detail: "Microsoft Sentinel is changing how the account entity's Account Name value is populated for analytics rule alerts where the full UPN is mapped into Account Name, improving consistency for downstream automation rules and Logic Apps playbooks. The change may affect automation logic that filters on or compares the AccountName property (AccountName in Logic Apps), particularly where it expects the full UPN.",
+            whyItMatters: "Automation comparing AccountName against a full UPN silently stops matching once the value becomes the prefix alone — so an automation rule that suppresses, assigns or escalates incidents quietly does nothing. The stated deadline has passed, making this worth verifying rather than planning for.",
+            actionNote: "The 1 July 2026 deadline has passed — verify automation rules and Logic Apps playbooks comparing AccountName still match.",
           },
         ],
       },

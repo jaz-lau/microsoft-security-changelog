@@ -1,5 +1,212 @@
 export const PLATFORM_UPDATES = [
   {
+    month: "Aug 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Endpoint",
+        icon: "💻",
+        releases: [
+          { platform: "macOS",   build: "Build 101.26062.0012", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#macos--august-2026--101260620012" },
+          { platform: "macOS",   build: "Build 101.26062.0011", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#macos--august-2026--101260620011" },
+          { platform: "Linux",   build: "Build 101.26062.0007", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#linux--aug-2026--101260620007" },
+          { platform: "Android", build: "Build 1.0.9212.0102", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--aug-2026--platform-1092120102" },
+          { platform: "Android", build: "Build 1.0.9129.0101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--aug-2026--platform-1091290101" },
+          { platform: "iOS",     build: "Build 1.1.80120102", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--aug-2026--platform-version-1180120102" },
+          { platform: "iOS",     build: "Build 1.1.79210103", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--aug-2026--platform-version-1179210103" },
+        ],
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "Antivirus audit mode for Linux (Preview)",
+            detail: "Provides real-time malware detection and alerting without automatically quarantining files or terminating processes, so detection efficacy and performance can be evaluated on sensitive workloads before enforcement is enabled. Available in Defender for Endpoint on Linux version 101.26062.0007 or later.",
+            whyItMatters: "Linux servers running production workloads are exactly where teams hesitate to turn on blocking antivirus, because a false positive that quarantines a binary is an outage. Audit mode gives evidence of what enforcement would have done before accepting that risk.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Offboarding API support for Linux",
+            detail: "Offboarding of Linux servers from Microsoft Defender for Endpoint can be automated through the Offboard machine API. Available in Defender for Endpoint on Linux version 101.26062.0007 or later.",
+            whyItMatters: "Ephemeral Linux workloads accumulate as stale devices in the portal when offboarding stays manual, inflating device counts and cluttering the inventory that exposure scoring depends on. API offboarding lets decommissioning become part of the same automation that builds the host.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Vulnerability assessment extends to Microsoft Store applications (Preview)",
+            detail: "Vulnerabilities can now be monitored on devices running Microsoft Store applications, including Microsoft Teams, Mozilla Firefox, WhatsApp, Slack, Dropbox, DuckDuckGo, Dell Command, HP Smart, HP Support Assistant, Dell SupportAssist for Home PCs and NVIDIA Control Panel. The Software evidence area on the software page shows the file path for the vulnerable application along with a suggested query returning the app, version and file location.",
+            whyItMatters: "Store-delivered applications update through a channel outside normal patch management, so they have been a genuine gap in vulnerability coverage on managed Windows devices — and the list includes widely deployed communication tools. Software evidence matters because Store app file paths are non-obvious, and remediation stalls without them.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Jul 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Endpoint",
+        icon: "💻",
+        releases: [
+          { platform: "Windows", build: "Platform 4.18.26070.9 / Engine 1.1.26070.7", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#windows-antivirus--july-2026--platform-418260709--engine-11260707" },
+          { platform: "macOS",   build: "Build 101.26062.0009", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#macos--july-2026--101260620009" },
+          { platform: "macOS",   build: "Build 101.26052.0016", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#macos--july-2026--101260520016" },
+          { platform: "Linux",   build: "Build 101.26052.0012", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#linux--july-2026--101260520012" },
+          { platform: "Android", build: "Build 1.0.9107.0101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--july-2026--platform-1091070101" },
+          { platform: "iOS",     build: "Build 1.1.79080103", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--july-2026--platform-version-1179080103" },
+          { platform: "iOS",     build: "Build 1.1.78290102", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--july-2026--platform-version-1178290102" },
+        ],
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "AI agent runtime protection adds Codex CLI, GitHub Copilot app and network inspection for Claw agents (Preview)",
+            detail: [
+              "Vendor-supported agent event interfaces now work with the standard platform and engine update channels, so Beta channel configuration is no longer required. Agent-native event inspection now supports Codex CLI and the GitHub Copilot app.",
+              "Network inspection is now supported for agents that do not expose vendor-supported event interfaces, including OpenClaw and similar Node.js-based Claw agents.",
+            ],
+            whyItMatters: [
+              "Requiring the Beta update channel effectively barred production deployment, so this is the change that makes agent runtime protection usable on managed fleets. Codex CLI and the GitHub Copilot app are among the most widely installed developer agents.",
+              "Coverage that depends on vendor cooperation always leaves gaps, and the agents outside it are often the least governed. Network inspection is a coarser signal than agent-native events, but it removes the blind spot for agents that will never expose an interface.",
+            ],
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Defender Deployment Tool for Linux combines install, onboard, upgrade and uninstall in one workflow",
+            detail: "The Defender Deployment Tool for Linux combines installation, onboarding, upgrades and uninstallation into a single workflow, automating prerequisite validation, supporting custom installation paths, enabling deployment of specific Defender versions from preferred update channels, and working in environments using local repositories. Deployment progress is visible through Device Timeline integration with step-by-step installation, upgrade and onboarding status, advanced hunting queries for fleet-wide monitoring, and error reporting covering deployment stage, status, exit code and failure reason. Available from Defender for Endpoint on Linux version 101.26042.0011 and later.",
+            whyItMatters: "Linux onboarding failures have been notoriously hard to diagnose — a host either appears in the portal or it does not, with little indication why. Exposing deployment state in Device Timeline and advanced hunting turns fleet-wide onboarding coverage into something that can be measured rather than assumed.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Jun 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Endpoint",
+        icon: "💻",
+        releases: [
+          { platform: "Windows", build: "Platform 4.18.26060.3008 / Engine 1.1.26060.3008", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#windows-antivirus--june-2026--platform-418260603008--engine-11260603008" },
+          { platform: "macOS",   build: "Build 101.26042.0020", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#macos--june-2026--101260420020" },
+          { platform: "Linux",   build: "Build 101.26042.0011", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#linux--june-2026--101260420011" },
+          { platform: "Android", build: "Build 1.0.9029.0101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--june-2026--platform-1090290101" },
+          { platform: "Android", build: "Build 1.0.9014.0101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--june-2026--platform-1090140101" },
+          { platform: "Android", build: "Build 1.0.9003.0101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--june-2026--platform-1090030101" },
+          { platform: "iOS",     build: "Build 1.1.78020101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--june-2026--platform-version-1178020101" },
+          { platform: "iOS",     build: "Build 1.1.77280101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--june-2026--platform-version-1177280101" },
+        ],
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "Local AI agent discovery reaches Windows and macOS, with support for nine further agents (Preview)",
+            detail: [
+              "Microsoft Defender for Endpoint automatically discovers supported local AI agents on onboarded Windows devices — coding agents and IDE extensions, desktop AI assistants, local AI runtimes and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map and advanced hunting.",
+              "Discovery now also supports macOS endpoints, and adds Junie CLI, Kiro CLI, Warp, Hermes Agent, Goose Desktop, Perplexity Desktop, Kiro IDE, Devin Desktop (formerly Windsurf) and QClaw.",
+            ],
+            whyItMatters: [
+              "Locally installed AI tooling is adopted without a procurement path and reads source code, credentials and local files. Inventory is the prerequisite for any policy decision about it, and surfacing agents in advanced hunting means the question can be answered at fleet scale rather than by survey.",
+              "macOS support matters disproportionately here because developer workstations skew heavily to macOS, and that is where coding agents concentrate.",
+            ],
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Local AI agent runtime protection on Windows endpoints (Preview)",
+            detail: "Runtime protection for supported local AI agents on Windows endpoints inspects the agent loop — user prompts, tool calls and tool responses — and can block risky activity before it executes, to stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender for incident correlation and investigation.",
+            whyItMatters: "A coding agent induced by a poisoned repository file to exfiltrate secrets produces process activity that looks like the developer's own work, so conventional EDR cannot separate it from legitimate use. Inspecting the agent loop puts the control at the layer where the decision is made.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Enhanced exposure score in Defender Vulnerability Management is now generally available",
+            detail: "The new exposure score model incorporates exploit prediction data (EPSS) and asset context factors such as internet-facing status and criticality, improving risk prioritisation and recommendation impact accuracy.",
+            whyItMatters: "CVSS alone ranks by theoretical severity, which is why remediation queues fill with high-scoring vulnerabilities that are never exploited. Weighting by exploit likelihood and whether the asset is actually reachable changes the order of work materially — expect scores and recommendation rankings to shift when this takes effect.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Enhanced Defender deployment tool for Windows adds package keys, expiry and central management",
+            detail: [
+              "The onboarding package is bundled directly into the tool's executable.",
+              "A key generated during deployment package creation is required to run the tool.",
+              "An expiry date can be configured for the package to reduce the risk of unauthorised use.",
+              "Packages can be downloaded as either an .exe or a .zip file, and a new Deployment packages page in the Defender portal gives centralised visibility into all downloaded packages and their status.",
+            ],
+            whyItMatters: [
+              "A single executable removes the mismatch between tool and onboarding package that causes silent onboarding failures.",
+              "Onboarding packages contain tenant-identifying material and have historically been treated casually — left on shares long after deployment. Requiring a key limits what a leaked package alone can do.",
+              "Expiry closes the long tail of old packages circulating indefinitely, which is the practical exposure rather than any single leak.",
+              "Central visibility answers which packages exist and whether any should be revoked — a question most teams previously could not answer at all.",
+            ],
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Selective Response Actions is now generally available",
+            detail: "Selective Response Actions allows high-impact security operations on devices to be tailored during onboarding, giving precise control over how response actions are applied to Tier-0 systems and other high-value assets.",
+            whyItMatters: "Automatic containment on a domain controller or core database server is the scenario that makes teams disable automation entirely. Scoping which actions may run on which assets lets aggressive response stay enabled everywhere else instead of being turned off across the estate.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "New Secure Score recommendation: reduce unnecessary inbound internet exposure",
+            detail: "Microsoft Secure Score includes a 'Reduce unnecessary inbound internet exposure on internet-facing devices' recommendation, identifying devices accessible from the public internet that may represent unnecessary attack surface. It provides centralised visibility into internet-facing devices, so exposure can be validated as expected or prioritised for remediation.",
+            whyItMatters: "Internet-facing devices are the entry point for credential brute-forcing, exploitation of unpatched services and hands-on-keyboard intrusion, and unintended exposure usually comes from a firewall or cloud network rule nobody remembers making. Centralised visibility is what turns this from a periodic external scan into a tracked posture metric.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "May 2026",
+    products: [
+      {
+        product: "Microsoft Defender for Endpoint",
+        icon: "💻",
+        releases: [
+          { platform: "Windows", build: "Platform 4.18.26050.15 / Engine 1.1.26050.11", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#windows-antivirus--may-2026--platform-4182605015--engine-112605011" },
+          { platform: "Android", build: "Build 1.0.8913.0101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--may-2026--platform-1089130101" },
+          { platform: "iOS",     build: "Build 1.1.77130101", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--may-2026--platform-version-1177130101" },
+        ],
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "Automatic device isolation as part of automatic attack disruption (Preview)",
+            detail: "Microsoft Defender for Endpoint can automatically isolate compromised devices as part of automatic attack disruption. Isolation blocks most network traffic while keeping the device connected to security services. The action is time-limited, scoped to the incident, and can be released by security operators at any time.",
+            whyItMatters: "Trades operational risk for containment speed during the window when lateral movement happens, which is the right trade on a workstation and a difficult one on a server. The time limit and operator release are the safeguards — pair this with Selective Response Actions to keep Tier-0 assets out of scope.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1",
+            detail: "The Defender endpoint security solution for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is generally available, providing advanced protection capabilities and improved functionality compared with other solutions for these devices. It is deployed using the Defender deployment tool.",
+            whyItMatters: "These systems are long out of support and usually persist because they run something that cannot be migrated — which also makes them the weakest point in the estate. Modern EDR coverage does not make them safe, but it does mean an intrusion there is visible rather than silent.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Custom data collection is now generally available, with the per-rule event limit raised to 75,000",
+            detail: "Custom data collection allows telemetry collection to be expanded and customised beyond default configurations, with rule-based filtering for specific events from endpoint devices. The maximum event limit per rule has increased from 25,000 to 75,000 events per device within a 24-hour rolling window.",
+            whyItMatters: "Detection engineering is limited by what the sensor actually collects, and the previous cap was reached quickly on noisy event types — silently truncating exactly the data a rule depended on. Tripling the ceiling makes custom collection viable for high-volume sources, though it also raises ingestion cost.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Scheduled antivirus scans on Linux (Preview)",
+            detail: "Scheduled antivirus scans can be configured on Microsoft Defender for Endpoint on Linux, supporting hourly quick scans, interval-based quick scans and weekly full scans, with options for low-priority execution, idle-time scheduling and randomised start times. Configuration is available through managed JSON, the Microsoft Defender portal or the mdatp CLI.",
+            whyItMatters: "Scheduled scanning on Linux previously meant cron jobs calling mdatp, maintained outside the security platform and easily lost. Randomised start times and low-priority execution are the details that make fleet-wide scanning survivable on shared virtualisation hosts.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Enhanced exposure score in Defender Vulnerability Management (Preview)",
+            detail: "The new exposure score model in Defender Vulnerability Management entered preview, incorporating exploit prediction data (EPSS) and asset context factors such as internet-facing status and criticality to improve risk prioritisation and recommendation impact accuracy.",
+            whyItMatters: "Worth trialling before the general availability rollout in June 2026, since the change reorders remediation priorities and any exposure-score reporting thresholds will need rebaselining.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Selective Response Actions (Preview)",
+            detail: "Selective Response Actions entered preview, allowing high-impact security operations on devices to be tailored during onboarding with precise control over how response actions apply to Tier-0 systems and other high-value assets.",
+            whyItMatters: "Reached general availability in June 2026. Teams that had disabled automatic response on critical assets should revisit that decision, since the blanket approach is no longer the only option.",
+          },
+          {
+            severity: "minor", status: "ga",
+            summary: "Offline security intelligence update settings for Linux configurable from the Defender and Intune portals",
+            detail: "Offline security intelligence update settings for Linux can now be configured directly from the Defender and Intune portals.",
+            whyItMatters: "Air-gapped and egress-restricted Linux estates previously configured this only through local files, so definition currency drifted without central visibility. Portal configuration brings those hosts under the same management path as the rest of the fleet.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     month: "Apr 2026",
     products: [
       {
@@ -10,7 +217,21 @@ export const PLATFORM_UPDATES = [
           { platform: "macOS", build: "Build 101.26022.0018", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#macos--april-2026--101260220018" },
           { platform: "Android", build: "Build 1.0.8805.0103", url: "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--april-2026--platform-1088050103" },
         ],
-        updates: [],
+        updates: [
+          {
+            severity: "critical", status: "preview",
+            summary: "New Secure Score recommendation: update devices to Secure Boot 2023 certificates before the June 2026 expiration",
+            detail: "Microsoft Secure Score includes an 'Ensure devices are updated to Secure Boot 2023 certificates and boot manager' recommendation, identifying devices that have not yet transitioned to the new Secure Boot 2023 certificates required ahead of the June 2026 expiration. Devices remaining on older Secure Boot certificates may become unable to receive new security protections for the early boot process as the certificates approach expiration.",
+            whyItMatters: "Early boot is where bootkits establish persistence beneath the operating system, and a device that can no longer receive boot-process protections stays vulnerable regardless of how current the rest of its patching is. The remediation touches firmware-level trust, so it needs testing and staged rollout rather than a push — which is why the recommendation landed two months ahead of the deadline.",
+            actionNote: "Transition devices to Secure Boot 2023 certificates and boot manager — the certificates expired in June 2026.",
+          },
+          {
+            severity: "minor", status: "preview",
+            summary: "Action status for attack disruption visible in the incident Activities tab (Preview)",
+            detail: "The current status of automatic attack disruption and predictive shielding actions related to a specific incident can be viewed in the Activities tab of the incident page, covering the Contain user, GPO hardening and Safeboot hardening response actions.",
+            whyItMatters: "Automated response previously left analysts unsure whether an action had actually applied, prompting duplicate manual containment. Showing status inline with the incident answers that without leaving the investigation.",
+          },
+        ],
       },
     ],
   },
@@ -77,6 +298,34 @@ export const PLATFORM_UPDATES = [
             summary: "Vulnerable components page renamed to Software components; Device Vulnerabilities report streamlined",
             detail: ["The Vulnerable components page is renamed to Software components.", "The Device vulnerabilities report is also streamlined: the Windows 10/11 version-over-time chart is removed, filters simplified to Device group only, and history limited to the last 30 days."],
             whyItMatters: "The rename reflects broader visibility into all software components — not just vulnerable ones — identified in your organisation. The report simplification reduces noise and focuses on actionable, recent data." },
+          {
+            severity: "important", status: "preview",
+            summary: "Library management for live response (Preview)",
+            detail: "Files and scripts used during live response sessions can be viewed and managed in the Microsoft Defender portal, giving a centralised view of all uploaded files and their properties, with upload, view and delete available outside the live response session.",
+            whyItMatters: "The live response library accumulates investigation scripts uploaded under time pressure, and previously could only be managed from inside a session. Being able to audit and prune it outside a session matters because those scripts run with high privilege on endpoints.",
+          },
+          {
+            severity: "minor", status: "ga",
+            summary: "Vulnerable devices report simplified — filters and history reduced",
+            detail: [
+              "The 'Vulnerable devices by Windows 10/11 version over time' section has been removed.",
+              "The report's filters now include only the Device group filter.",
+              "The report's history is limited to the last 30 days.",
+              "These changes are visible to government cloud customers but not yet in air-gapped environments; that visibility is expected in the coming months.",
+            ],
+            whyItMatters: [
+              "Teams tracking OS-version vulnerability trends lose that view and will need to rebuild it from advanced hunting.",
+              "Fewer filters makes the report faster but less able to answer targeted questions, so saved workflows depending on the removed filters need reworking.",
+              "The 30-day history cap is the most consequential change — any reporting comparing quarter on quarter can no longer be produced from this report and needs its own data retention.",
+              "Air-gapped environments continue on the previous behaviour for now, so organisations running both will see the two diverge.",
+            ],
+          },
+          {
+            severity: "minor", status: "ga",
+            summary: "What's new and release notes documentation restructured",
+            detail: "The what's new page is renamed 'New features in Microsoft Defender for Endpoint' and now includes both features and links to the latest release notes. The Release notes page consolidates release details for all supported operating systems, including Windows Antivirus, grouped by platform and date. All previous release notes pages redirect to the consolidated page.",
+            whyItMatters: "Per-OS release notes pages meant tracking builds across several sources. Consolidation is convenient, but any bookmark or automation pointing at the old per-OS pages now resolves through a redirect — worth updating anything that scrapes them.",
+          },
         ],
       },
     ],

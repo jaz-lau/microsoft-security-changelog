@@ -1,5 +1,151 @@
 export const PLATFORM_UPDATES = [
   {
+    month: "Jul 2026",
+    products: [
+      {
+        product: "Microsoft Defender XDR",
+        icon: "🛡️",
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "AI agent posture risk assessment in Microsoft Defender (Preview)",
+            detail: "Microsoft Defender assesses posture risk for AI agents, covering both enterprise agents and local agents discovered on endpoint devices. Risk levels derive from active risk indicators including configuration, access, runtime activity, endpoint and user context, and active alerts.",
+            whyItMatters: "Agent sprawl outpaces the ability to review each one by hand, and an over-permissioned agent is a standing privilege escalation path that no existing posture tool scores. Ranking agents by risk gives teams a defensible order to work through rather than treating every agent as equivalent.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Threat detection for Microsoft Agent 365 agents (Preview)",
+            detail: "Microsoft Defender analyses runtime signals from agent interactions, tool usage and execution patterns to raise alerts in Microsoft Defender XDR. Detection uses observability data from Microsoft Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot Agent Builder, and agents integrated through the Microsoft Agent 365 SDK. Alerts can be investigated through incidents and advanced hunting.",
+            whyItMatters: "Agent activity has been effectively unmonitored — a compromised or manipulated agent acts with its own identity and permissions, leaving little trace in device or sign-in telemetry. Surfacing it as ordinary XDR alerts means agent compromise joins the existing incident queue instead of needing a separate review process.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Real-time protection for Microsoft Agent 365 tooling servers is now generally available",
+            detail: "Microsoft Defender evaluates tool invocations and responses against security policies, and can allow or block interactions with Work IQ MCP and customer MCP tools onboarded to Agent 365.",
+            whyItMatters: "Moves agent security from after-the-fact alerting to inline enforcement at the point a tool is called, which is the only place a prompt injection can be stopped before it acts. Blocking policy needs testing against legitimate agent workflows first, since a false positive here breaks the agent rather than merely alerting.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Domain investigation page is now generally available",
+            detail: "The Domain investigation page supports investigation of an Active Directory domain, showing domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies and trust relationships.",
+            whyItMatters: "Consolidates the domain-level context an analyst previously gathered from AD tooling and separate consoles during an identity incident. Trust relationships and service account breakdown are the details that most often determine blast radius, and having them alongside active recommendations links the investigation to the hardening work that would prevent a repeat.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "Jun 2026",
+    products: [
+      {
+        product: "Microsoft Defender XDR",
+        icon: "🛡️",
+        updates: [
+          {
+            severity: "critical", status: "change",
+            summary: "AgentsInfo table replaces AIAgentsInfo in advanced hunting — update queries (Preview)",
+            detail: "The AgentsInfo table in advanced hunting is available in preview. AIAgentsInfo is transitioning to this new table, which provides a unified schema supporting agent inventory and governance for all agent types, including Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot, third-party and endpoint-discovered agents. Microsoft Agent 365 customers should use AgentsInfo today; AIAgentsInfo remained accessible until 1 July 2026.",
+            whyItMatters: "Any saved query, detection rule, workbook or automation still referencing AIAgentsInfo breaks silently once the old table is withdrawn — a custom detection that returns no rows looks identical to one finding nothing wrong. Teams that have not migrated should audit their agent-related content now.",
+            actionNote: "Update queries and custom detections from AIAgentsInfo to AgentsInfo — the stated access deadline for AIAgentsInfo was 1 July 2026.",
+          },
+          {
+            severity: "important", status: "change",
+            summary: "Phishing and Security Alert Triage Agents move to least-privilege email permission",
+            detail: "The Phishing Triage Agent and Security Alert Triage Agent now use the narrower 'Email & collaboration content: Emails associated with alerts (read)' permission instead of the broader 'Email & Collaboration content: All Emails (read)' permission, restricting agent access to email content associated with alerts.",
+            whyItMatters: "An autonomous agent holding read access to the entire mail estate is a large standing exposure for a task that only ever needs the messages behind an alert. Narrowing it reduces what a compromised or manipulated agent can reach, and is worth mirroring in any custom agents built against the same permission.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Threat Intelligence Insights tab added to IP, domain, URL and file entity pages (Preview)",
+            detail: "Entity pages for IP addresses, domains, URLs and files now include a Threat Intelligence Insights tab surfacing Microsoft Threat Intelligence enrichment — reputation scores, attributed threat reports, infrastructure relationships and sandbox analysis — directly in the investigation workflow.",
+            whyItMatters: "Removes the context switch to a separate threat intelligence portal during triage, which is where analysts most often stop short and accept an inconclusive verdict. Infrastructure relationships in particular turn a single indicator into a view of the wider campaign.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Local AI agent discovery on Windows endpoints (Preview)",
+            detail: "Microsoft Defender automatically discovers supported local AI agents running on onboarded Windows devices, including coding agents and IDE extensions, desktop AI assistants, local AI runtimes and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map and advanced hunting.",
+            whyItMatters: "Locally installed AI tooling is the clearest current example of shadow IT — developers adopt coding agents and desktop assistants without a procurement path, and these agents read source code and credentials. Inventory is the prerequisite for any policy decision about them.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Local AI agent runtime protection on Windows endpoints (Preview)",
+            detail: "Runtime protection for supported local AI agents on Windows endpoints inspects the agent loop — user prompts, tool calls and tool responses — and can block risky activity before it executes, to stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender.",
+            whyItMatters: "A local coding agent that reads a poisoned repository file can be induced to exfiltrate secrets or run commands, and endpoint EDR sees only the resulting process activity, not the instruction that caused it. Inspecting the agent loop puts a control at the layer where the decision is actually made.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Four advanced hunting schema tables now generally available",
+            detail: [
+              "DisruptionAndResponseEvents contains information about automatic attack disruption events in Microsoft Defender XDR.",
+              "CloudAuditEvents contains cloud audit events for the cloud platforms protected by Microsoft Defender for Cloud.",
+              "CloudDnsEvents contains DNS activity events from cloud infrastructure environments.",
+              "CloudProcessEvents contains process events in multicloud hosted environments.",
+            ],
+            whyItMatters: [
+              "Attack disruption acts autonomously, so having its actions queryable is what makes the feature auditable — teams can confirm what was disrupted, when, and whether it was correct.",
+              "Cloud audit events in the same schema as endpoint and identity telemetry allow a single query to follow an actor from a workstation into the cloud control plane.",
+              "Cloud DNS is a durable signal for command-and-control and exfiltration in environments where egress is otherwise hard to observe.",
+              "Process events from multicloud workloads close the gap where server-side activity was visible in Defender for Cloud but not joinable in advanced hunting. GA status means these tables are now safe to build custom detections on.",
+            ],
+          },
+          {
+            severity: "minor", status: "preview",
+            summary: "Human identities card added to the Identity Security dashboard (Preview)",
+            detail: "The Identity Security dashboard includes a new Human identities card showing human identities by source — Entra ID, SaaS and on-premises.",
+            whyItMatters: "Gives a single answer to where identities actually live, which is usually harder to establish than it sounds in organisations with unmerged directories after acquisitions or migrations.",
+          },
+          {
+            severity: "minor", status: "preview",
+            summary: "Observed-only filtering for SaaS identities on the Coverage and maturity page (Preview)",
+            detail: "The 'Review and improve coverage' side panel for SaaS Identities now includes an Observed column and a 'Show Only Observed Applications' toggle. By default the panel shows only SaaS applications detected in the environment; turning the toggle off reveals other supported applications available to onboard.",
+            whyItMatters: "Defaulting to detected applications keeps the coverage list grounded in what the organisation actually runs, rather than presenting the full catalogue as outstanding work. The toggle still exposes the wider list when planning expansion.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    month: "May 2026",
+    products: [
+      {
+        product: "Microsoft Defender XDR",
+        icon: "🛡️",
+        updates: [
+          {
+            severity: "important", status: "preview",
+            summary: "Automatic attack disruption can now isolate compromised devices from the network (Preview)",
+            detail: "Where high-confidence incident analysis indicates a device is being used as an active foothold, automatic attack disruption can isolate it from the network. Isolation blocks attacker communication and lateral movement while keeping the device connected to security services. The action is time-limited, scoped to devices involved in the incident, and can be released by security operators at any time.",
+            whyItMatters: "Device isolation is among the most disruptive response actions available, and handing it to automation trades operational risk against containment speed during the window when lateral movement happens. The time limit and operator release are the safeguards — teams should confirm which devices are in scope before relying on it, since an isolated server is an outage.",
+          },
+          {
+            severity: "important", status: "preview",
+            summary: "Defender Chat — open prompt chat assistant built into Microsoft Defender (Preview)",
+            detail: "Defender Chat is an open prompt chat assistant built into Microsoft Defender that helps analysts investigate threats, explore incidents and answer security questions in plain language, without navigating multiple screens or writing complex queries.",
+            whyItMatters: "Lowers the KQL barrier that keeps junior analysts dependent on senior staff for investigation queries. Answers still need verification against the underlying data before they drive a containment decision.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Defender Experts for Servers now available as a standalone offering",
+            detail: "Microsoft Defender Experts for Servers and Microsoft Defender Experts Hunting - Servers are now offered as standalone services for customers wanting managed extended detection and response and threat hunting for on-premises and multicloud servers protected by Microsoft Defender for Cloud. Both were previously add-ons to Microsoft Defender Experts MDR and Microsoft Defender Experts Hunting respectively.",
+            whyItMatters: "Organisations whose server estate is the gap in their coverage can now buy managed detection for it without committing to the full MDR service across endpoints. Relevant to teams with in-house endpoint capability but no out-of-hours cover for server workloads.",
+          },
+          {
+            severity: "important", status: "unspecified",
+            summary: "Hunting graph adds identity-focused predefined scenarios",
+            detail: "The hunting graph in advanced hunting includes new identity-focused predefined scenarios covering attack paths, privilege escalation routes and credential access risks across on-premises and cloud environments — including Kerberoast and AS-REP roast paths, domain compromise routes, OAuth application risks, and guest user access to cloud resources.",
+            whyItMatters: "These are the paths attackers actually take through a hybrid directory, and each previously required an analyst who knew both the technique and the query to write. Prebuilt scenarios make proactive identity hunting available to teams without a dedicated identity specialist.",
+          },
+          {
+            severity: "minor", status: "unspecified",
+            summary: "Take action wizard extends to top-level domains and attachment hashes",
+            detail: "In advanced hunting, the Take action wizard now allows or blocks top-level domains and email attachment file hashes based on query results.",
+            whyItMatters: "Closes the loop between hunting and enforcement, so a hunt that finds a malicious pattern can act on it without exporting indicators into a separate blocking workflow. Blocking an entire top-level domain is broad — worth confirming legitimate traffic before applying it.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     month: "Apr 2026",
     products: [
       {
@@ -11,6 +157,18 @@ export const PLATFORM_UPDATES = [
             summary: "Defender Experts now appears as a distinct entry in the Defender portal navigation",
             detail: "Microsoft Defender Experts for XDR customers can now see Defender Experts as a distinct entry in the Microsoft Defender portal navigation menu. This adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service.",
             whyItMatters: "Promoting Defender Experts to a top-level nav entry makes it easier for SOC teams using the managed XDR service to find expert-driven investigations, recommendations, and notifications without hunting through portal menus.",
+          },
+          {
+            severity: "important", status: "ga",
+            summary: "Built-in alert tuning rules are now generally available",
+            detail: "Built-in alert tuning rules suppress alerts from common benign activity in Defender for Endpoint and Defender for Office 365, without affecting Automated Investigation and Response investigations or email notifications.",
+            whyItMatters: "Known-benign alerts are the bulk of queue volume in most tenants, and teams previously wrote their own suppression rules with the risk of over-suppressing. That AIR investigations still run means the underlying activity is not ignored — only the analyst-facing alert is suppressed.",
+          },
+          {
+            severity: "minor", status: "preview",
+            summary: "AIAgentsInfo table adds columns covering all agent types (Preview)",
+            detail: "The AIAgentsInfo table in advanced hunting includes additional columns providing deeper visibility into AI agents operating in the Microsoft 365 environment, expanding coverage beyond Copilot Studio to all agent types including Microsoft Foundry, third-party marketplace and custom line-of-business agents.",
+            whyItMatters: "Coverage limited to Copilot Studio meant the agent inventory was partial in exactly the environments with the most custom agents. Note this table was superseded by AgentsInfo in June 2026, so new queries should target the replacement.",
           },
         ],
       },
