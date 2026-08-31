@@ -852,6 +852,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Citrix DaaS",
     entries: [
+      { version: "3.1.0", date: "28-08-2026", text: "Promoted the Citrix DaaS Audit & Sessions CCF Data Connector to general availability.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "14-08-2026", text: "Updated authentication configuration for the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-07-2026", text: "Initial release of the Citrix DaaS solution with the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
     ],
@@ -2113,6 +2114,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Infoblox",
     entries: [
+      { version: "3.1.1", date: "26-08-2026", text: "Protected Infoblox API keys using secure workflow parameters and secured HTTP action inputs and outputs.", contentTypes: [] },
       { version: "3.1.0", date: "17-07-2026", text: "Updated playbooks, parsers, workbooks and analytic rule from SOC insight v1 to Infoblox for IQ for Threat Defense (SOC insight v2).", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
       { version: "3.0.2", date: "19-06-2025", text: "Added flags for Asset, Indicator, Event and Comment in InfobloxSOCGetInsightDetails playbook. Updated Workbook, Parser and Analytic rule.", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
       { version: "3.0.2", date: "19-06-2025", text: "Migrated checkpoint from file share to azure tables.", contentTypes: [] },
