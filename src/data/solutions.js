@@ -619,6 +619,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Cato Networks",
+    alias: "CatoNetworks",
+    entries: [
+      { version: "3.0.0", date: "18-08-2026", text: "Initial CCF Push connector for Cato events.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Cayosoft Guardian",
     entries: [
       { version: "3.0.0", date: "15-07-2026", text: "Initial Solution Release.", contentTypes: [] },
@@ -2169,9 +2176,7 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "28-08-2026", text: "Added 25 Hunting Queries.", contentTypes: ["Hunting Query"] },
       { version: "3.0.1", date: "28-08-2026", text: "Updated Playbook 'Intel 471 Malware Intelligence to Sentinel' to v3.0: Key Vault secret names can now be supplied at deployment, and Blob storage now authenticates with the logic app's managed identity - grant it the Storage Blob Data Contributor role or every run fails.", contentTypes: ["Playbook"] },
-      { version: "3.0.1", date: "28-08-2026", text: "Updated Playbook 'Intel 471 Malware Intelligence to Graph Security' to v1.1: deprecated in favour of 'Intel 471 Malware Intelligence to Sentinel'.", contentTypes: ["Playbook"] },
-      { version: "3.0.0", date: "02-12-2025", text: "Added Playbook 'Intel 471 Malware Intelligence to Graph Security' using new upload indicators API to Intel 471 Solution.", contentTypes: ["Playbook"] },
-      { version: "3.0.0", date: "02-12-2025", text: "Added the Verity471 backend in the Intel471 solution for ingesting malware indicators.", contentTypes: [] },
+      { version: "3.0.0", date: "02-12-2025", text: "Added the Verity 471 backend alongside Titan, and switched indicator ingestion to the Threat Intelligence Upload Indicators API.", contentTypes: [] },
     ],
   },
   {
@@ -2908,6 +2913,7 @@ export const RAW_SOLUTIONS = [
     name: "NIST SP 800-53",
     alias: "NISTSP80053",
     entries: [
+      { version: "3.0.4", date: "31-08-2026", text: "Fixed gov deploy to azure button and repackage", contentTypes: [] },
       { version: "3.0.3", date: "19-01-2026", text: "EOP rebrand (updated minor link and link title changes)", contentTypes: [] },
       { version: "3.0.2", date: "23-09-2025", text: "Updated the workbook with new links and fixed broken metrics.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
@@ -4068,6 +4074,13 @@ export const RAW_SOLUTIONS = [
     name: "Theom",
     entries: [
       { version: "3.0.0", date: "04-12-2023", text: "Updated all Analytical Rule with entity mappings", contentTypes: ["Analytic Rule"] },
+    ],
+  },
+  {
+    name: "Thinkst Canary",
+    alias: "ThinkstCanary",
+    entries: [
+      { version: "3.0.0", date: "18-08-2026", text: "Initial CCF connector and analytic rule for ingesting and detecting Thinkst Canary and Canarytoken incidents.", contentTypes: ["Analytic Rule"] },
     ],
   },
   {
