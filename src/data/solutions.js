@@ -2121,6 +2121,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Infoblox",
     entries: [
+      { version: "3.1.2", date: "01-09-2026", text: "Migrated Dossier data ingestion in InfobloxCloudDataConnector to the Log Ingestion API (DCE/DCR) and updated the Data Connector UI page.", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "26-08-2026", text: "Protected Infoblox API keys using secure workflow parameters and secured HTTP action inputs and outputs.", contentTypes: [] },
       { version: "3.1.0", date: "17-07-2026", text: "Updated playbooks, parsers, workbooks and analytic rule from SOC insight v1 to Infoblox for IQ for Threat Defense (SOC insight v2).", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
       { version: "3.0.2", date: "19-06-2025", text: "Added flags for Asset, Indicator, Event and Comment in InfobloxSOCGetInsightDetails playbook. Updated Workbook, Parser and Analytic rule.", contentTypes: ["Analytic Rule","Playbook","Workbook","Parser"] },
@@ -3678,6 +3679,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.1.3", date: "25-08-2026", text: "Fixed the SentinelOne parser to restore ActivityType and CCF records while preserving SentinelOne V2 alerts", contentTypes: ["Parser"] },
       { version: "3.1.2", date: "17-08-2026", text: "Fix V2 parser type mismatch and fallback.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "10-08-2026", text: "Advanced SentinelOne V2 (via Codeless Connector Framework) Data Connector from Public Preview to Global Availability and added the AlertDescription field to the alerts stream", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "01-07-2026", text: "Added new SentinelOne V2 (via Codeless Connector Framework) Data Connector (ingests alerts via the GraphQL API)", contentTypes: ["Data Connector"] },
