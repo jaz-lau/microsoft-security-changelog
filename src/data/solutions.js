@@ -142,6 +142,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Amazon Web Services",
     entries: [
+      { version: "3.0.12", date: "26-08-2026", text: "Updated Analytic Rules AWS_LogTampering.yaml (successful log-tampering, High) and AWS_ClearStopChangeTrailLogs.yaml (failed log-tampering attempts, Low) with expanded event coverage and tiered severity; removed duplicate Analytic Rule AWS_ConfigServiceResourceDeletion.yaml; refreshed the Data Connectors section in the solution UI (createUiDefinition)", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.11", date: "11-08-2026", text: "Fixed the AWS WAF Data Connector last-data-received query by removing an invalid test filter.", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "19-05-2026", text: "Added non-analytics tier queries to Amazon Web Services S3 Data Connector to support Basic/Auxiliary plan tables.", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "18-05-2026", text: "Update AWS Hunting Queries and Workbooks for Quality", contentTypes: ["Hunting Query","Workbook"] },
@@ -971,6 +972,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Commvault Security IQ",
     entries: [
+      { version: "3.0.7", date: "27-08-2026", text: "Fixed the CCF poller's Unix timestamp formatting for the fromTime and toTime query parameters.", contentTypes: [] },
       { version: "3.0.6", date: "04-08-2026", text: "Updated the CCF connector and solution documentation.", contentTypes: [] },
       { version: "3.0.5", date: "27-07-2026", text: "Added Commvault Security IQ (via Codeless Connector Framework) data connector, introduced CommvaultAlertsCCF_CL custom table and Data Collection Rule (DCR), updated analytics rule to detect client anomalies using AnomalyType, enhanced connector UI with sample queries and configuration guidance, and updated solution documentation for CCF-based deployment.", contentTypes: ["Data Connector"] },
       { version: "3.0.4", date: "05-03-2025", text: "Migrate to new data ingestion model via DCR & DCE setup", contentTypes: [] },
@@ -1406,7 +1408,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "DomainTools CCF",
     entries: [
-      { version: "3.0.0", date: "10-11-2025", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
+      { version: "3.0.0", date: "02-09-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
+      { version: "3.0.0", date: "02-09-2026", text: "Updated publisherId to address an issue identified during Microsoft Marketplace submission.", contentTypes: [] },
     ],
   },
   {
@@ -1475,6 +1478,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Egress Defend",
     entries: [
+      { version: "3.1.0", date: "01-09-2026", text: "Added a new Data Connector using the Logs Ingestion API (CCF RestApiPoller with DCR/DCE), replacing the retiring HTTP Data Collector API. Added a new Parser DefendAuditData_v4. Updated Analytic Rules, Workbook and Hunting Query to read from DefendAuditData_v4. The original connector, table and parser are unchanged, so existing installations keep working until the new connector is enabled.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
       { version: "3.0.0", date: "02-08-2023", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
@@ -1577,6 +1581,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Feedly",
     entries: [
+      { version: "3.0.5", date: "28-08-2026", text: "Ingest Feedly IoCs into native ThreatIntelIndicators (SourceSystem=Feedly)", contentTypes: [] },
       { version: "3.0.4", date: "16-02-2026", text: "Migrate to CCF connector", contentTypes: [] },
       { version: "3.0.3", date: "28-11-2023", text: "Added missing python packages to the Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "10-11-2023", text: "Fixed the app service plan", contentTypes: [] },
@@ -3431,7 +3436,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Red Canary",
     entries: [
-      { version: "3.0.0", date: "29-05-2026", text: "Added Red Canary Threat Detection (via Codeless Connector Framework) Data Connector and refreshed the Red Canary Threat Detection Analytic Rule.", contentTypes: ["Analytic Rule","Data Connector"] },
+      { version: "3.0.0", date: "02-09-2026", text: "Added Red Canary Threat Detection (via Codeless Connector Framework) Data Connector and refreshed the Red Canary Threat Detection Analytic Rule.", contentTypes: ["Analytic Rule","Data Connector"] },
+      { version: "3.0.0", date: "02-09-2026", text: "Update Red Canary publisher ID for certification.", contentTypes: [] },
       { version: "1.0.0", date: "04-03-2022", text: "Initial release with Red Canary Data Connector and Red Canary Threat Detection Analytic Rule.", contentTypes: ["Analytic Rule","Data Connector"] },
     ],
   },
@@ -3518,6 +3524,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.7.0", date: "01-09-2026", text: "Added the Salesforce Marketing Cloud CCF connector with audit and security event ingestion, custom tables, DCR transformations, and parser aliases.", contentTypes: ["Parser"] },
       { version: "3.6.1", date: "26-08-2026", text: "Corrected the Salesforce Service Cloud parser metadata version", contentTypes: ["Parser"] },
       { version: "3.6.0", date: "18-08-2026", text: "Added Salesforce Audit Logs parser and table definitions, and updated Salesforce connector configurations.", contentTypes: ["Parser"] },
       { version: "3.5.1", date: "13-08-2026", text: "Updated Salesforce RTEM connector to include the API URL in ingested events and promote the connector to GA", contentTypes: [] },
