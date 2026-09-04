@@ -1393,6 +1393,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "DNS Essentials",
     entries: [
+      { version: "3.0.5", date: "02-09-2026", text: "Added a DNS summarization playbook that uses the Azure Monitor Logs Ingestion API and creates two new V1 summary tables: DNS_Summarized_Logs_ipV1_CL and DNS_Summarized_Logs_sourceInfoV1_CL, avoiding conflicts with existing tables", contentTypes: ["Playbook"] },
       { version: "3.0.4", date: "02-07-2025", text: "Updated new ThreatIntelIndicators table references using parser.", contentTypes: ["Parser"] },
       { version: "3.0.3", date: "28-11-2024", text: "Update Analytic Rule MultipleErrorsReportedForSameDNSQueryStaticThresholdBased.yaml to fix bug.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "29-07-2024", text: "Update Hunting Queries to fix TTP.", contentTypes: ["Hunting Query"] },
@@ -2514,6 +2515,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
+      { version: "3.0.18", date: "03-09-2026", text: "Added 57 new Hunting Queries for Microsoft Defender for Office 365 email and collaboration protection. Updated the Workbook Microsoft Defender for Office 365 Detections and Insights to version 4.0.0, adding Microsoft Teams collaboration and file malware coverage, and additional Advanced Hunting data types.", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.17", date: "12-08-2026", text: "Updated Analytic Rule AnomalousVoulmeOfFileDeletion.yaml to add AzureActiveDirectory connector with SigninLogs data type. Fixed deploy button URLs in Playbook AttackSimulatorTrainingNonReporters readme to include the correct 'master' branch path.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.16", date: "12-08-2026", text: "Updated KQL projection ordering in the Unusual Volume of file deletion by users analytic rules and hunting queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.15", date: "22-06-2026", text: "Refactor OAuth and device-code phishing hunting queries to construct login.microsoftonline.com and login.microsoftonline.us URLs via strcat() (resolves ARM-TTK 'DeploymentTemplate Must Not Contain Hardcoded Uri'); remove empty groupByAlertDetails/groupByCustomDetails arrays from PossibleWebpBufferOverflow analytic rule (resolves ARM-TTK 'Template Should Not Contain Blanks'). Updated Microsoft Defender XDR to Product Name filter in Data Connector queries. Added new Hunting Queries Hunt for RMM tool execution following Teams messages, Hunt for alerts correlated with Teams messages and Identify acting user for reported phish. Also updated Hunting Query Punycode chars lookalike and corrected the incorrect mapping of dataTypes: EmailEvents with connectorId: OfficeATP across multiple Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
@@ -2877,6 +2879,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Network Session Essentials",
     entries: [
+      { version: "3.0.12", date: "02-09-2026", text: "Added Summarize Data for Network Session Essentials using log ingestion API Playbook", contentTypes: ["Playbook"] },
       { version: "3.0.11", date: "24-03-2026", text: "Bump solution version and Updated links to remove review.learn.", contentTypes: [] },
       { version: "3.0.10", date: "14-02-2026", text: "Updated links to remove review.learn.", contentTypes: [] },
       { version: "3.0.9", date: "06-02-2026", text: "Updated the relevant techniques in the hunting queries.", contentTypes: ["Hunting Query"] },
@@ -3658,6 +3661,7 @@ export const RAW_SOLUTIONS = [
     name: "Semperis Lightning",
     alias: "SemperisLightning",
     entries: [
+      { version: "3.1.0", date: "01-09-2026", text: "Added a Codeless Connector Framework (CCF) data connector alongside the existing Function App connector, letting customers use either or both to ingest Semperis Lightning data.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-03-2026", text: "Initial Solution Release. Added Semperis Lightning Connector", contentTypes: [] },
     ],
   },
@@ -4533,6 +4537,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Web Session Essentials",
     entries: [
+      { version: "3.0.4", date: "02-09-2026", text: "Added Summarize Web Session Data using Log Ingestion API Playbook", contentTypes: ["Playbook"] },
       { version: "3.0.3", date: "06-06-2024", text: "Updated Entity Mapping Analytic Rule CommandInURL.yaml", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "02-01-2024", text: "Tagged for dependent Solutions for deployment", contentTypes: [] },
