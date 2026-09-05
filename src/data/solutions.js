@@ -47,6 +47,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Agari",
     entries: [
+      { version: "3.0.1", date: "20-08-2026", text: "Promoted CCF Data Connector to GA. Changed DCR Name. Removed unused endpoint.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "14-05-2026", text: "Created a Data Connector for Agari CCF Container.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -1436,6 +1437,7 @@ export const RAW_SOLUTIONS = [
     name: "Dragon Copilot",
     alias: "DragonCopilot",
     entries: [
+      { version: "3.0.1", date: "04-09-2026", text: "Promoted the Dragon Copilot Data Connector to General Availability by removing the Preview designation", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "30-07-2026", text: "Releasing a new Microsoft Dragon Copilot solution in Content Hub with a Data Connector that ingests Dragon Copilot audit and activity logs into the standard DragonCopilot table", contentTypes: ["Data Connector"] },
     ],
   },
@@ -1973,6 +1975,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Workspace Reports",
     alias: "GoogleWorkspaceReports",
     entries: [
+      { version: "3.1.0", date: "04-09-2026", text: "Added Gmail activity log ingestion and updated the parser to support the standard GoogleWorkspaceReports table while retaining legacy custom tables", contentTypes: ["Parser"] },
       { version: "3.0.6", date: "29-07-2026", text: "Fixed Data Connector bug where product_bucket and scope_name fields in token authorize events only preserved the last scope_data entry. Added DCR transformKql to reconstruct all product buckets from the correctly ingested scope array.", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "29-06-2026", text: "Updated queryWindowDelayInMin for Google Workspace Connector", contentTypes: [] },
       { version: "3.0.4", date: "26-03-2026", text: "Updated Data Connector Configuration steps", contentTypes: ["Data Connector"] },
@@ -4444,6 +4447,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VirusTotal",
     entries: [
+      { version: "3.0.2", date: "04-09-2026", text: "Added playbooks for using the log ingestion API to send data.", contentTypes: ["Playbook"] },
       { version: "3.0.1", date: "02-06-2025", text: "Updated Playbook instructions for clarity", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "11-01-2024", text: "Updated solution to 3.0.0 to fix IP Enrichment - Virus Total report playbook", contentTypes: ["Playbook"] },
     ],
