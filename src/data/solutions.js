@@ -1119,6 +1119,7 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk Audit",
     alias: "CyberArkAudit",
     entries: [
+      { version: "3.2.1", date: "02-09-2026", text: "Security Patch: Remove logResponseContent attribute from Polling Config", contentTypes: [] },
       { version: "3.2.0", date: "06-07-2026", text: "Rebrand to Idira and remove deprecated Azure Functions Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "16-04-2026", text: "Update Azure Function based connector to Python 3.12", contentTypes: [] },
       { version: "3.1.0", date: "13-03-2026", text: "New Data Connector based on CCF.", contentTypes: ["Data Connector"] },
@@ -3507,6 +3508,7 @@ export const RAW_SOLUTIONS = [
     name: "Rubrik Security Cloud",
     alias: "RubrikSecurityCloud",
     entries: [
+      { version: "3.5.3", date: "03-09-2026", text: "Added RubrikCCFConnector to ingest Anomaly, Ransomware, ThreatHunt and other events data along with audit logs via webhook.", contentTypes: [] },
       { version: "3.5.2", date: "16-07-2026", text: "Added RubrikSecurityCloud CCF (Codeless Connector Framework) Data Connector for ingesting Rubrik Protection Status data into Microsoft Sentinel. Enables backup compliance monitoring, ransomware recovery assessment, and incident correlation with protection status for Azure VMs. Update python package version to resolve vulnerability", contentTypes: ["Data Connector"] },
       { version: "3.5.1", date: "05-11-2025", text: "Updated API Host Name default value in playbooks and custom connector", contentTypes: ["Playbook"] },
       { version: "3.5.0", date: "25-07-2025", text: "Added RubrikTurboThreatHunt and RubrikAdvanceThreatHunt playbooks. RubrikThreatMonitoring and RubrikCriticalAnomaly Analytic Rules also added.", contentTypes: ["Analytic Rule","Playbook"] },
