@@ -1395,6 +1395,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "DNS Essentials",
     entries: [
+      { version: "3.0.6", date: "09-09-2026", text: "Added DNSEssentialsCustomParser to parse and normalize the tables used in dependent Security Content.", contentTypes: [] },
       { version: "3.0.5", date: "02-09-2026", text: "Added a DNS summarization playbook that uses the Azure Monitor Logs Ingestion API and creates two new V1 summary tables: DNS_Summarized_Logs_ipV1_CL and DNS_Summarized_Logs_sourceInfoV1_CL, avoiding conflicts with existing tables", contentTypes: ["Playbook"] },
       { version: "3.0.4", date: "02-07-2025", text: "Updated new ThreatIntelIndicators table references using parser.", contentTypes: ["Parser"] },
       { version: "3.0.3", date: "28-11-2024", text: "Update Analytic Rule MultipleErrorsReportedForSameDNSQueryStaticThresholdBased.yaml to fix bug.", contentTypes: ["Analytic Rule"] },
@@ -2967,6 +2968,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.1.10", date: "09-09-2026", text: "Updated the Okta Data Connector to retrieve up to 1000 events per page, throttle initial and paginated requests, and handle HTTP 429 responses using rate-limit-aware retries.", contentTypes: ["Data Connector"] },
       { version: "3.1.9", date: "30-07-2026", text: "Update KQL queries of Okta Analytics rules", contentTypes: [] },
       { version: "3.1.9", date: "30-07-2026", text: "Updated Azure Gov button image link.", contentTypes: [] },
       { version: "3.1.8", date: "10-07-2026", text: "Update Analytic rule and Hunting Queries for Okta SSO.", contentTypes: ["Analytic Rule","Hunting Query"] },
