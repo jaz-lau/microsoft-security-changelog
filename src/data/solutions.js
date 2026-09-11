@@ -2545,6 +2545,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.17", date: "06-09-2026", text: "Added EndUserConsentMailboxOfflineAccess Analytic Rule to detect end-user OAuth consent to an app requesting delegated mailbox scopes (Mail.Read/Mail.ReadWrite/Mail.Send/MailboxSettings.ReadWrite) together with offline_access (T1528 - illicit consent grant).", contentTypes: ["Analytic Rule"] },
       { version: "3.3.16", date: "06-08-2026", text: "Removed locale-dependent ResultDescription filtering from the Attempts to sign in to disabled accounts Analytic Rule while retaining ResultType 50057 matching.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.15", date: "10-07-2026", text: "Updated SigninAttemptsByIPviaDisabledAccounts Analytic Rule to include the additional \"ResultDescription\" value: \"The user account is disabled.\"", contentTypes: ["Analytic Rule"] },
       { version: "3.3.14", date: "30-06-2026", text: "Updated BruteForceAgainstanEntraAuthenticatedWindowsDevice Analytic rule to add an explicit \"sort by TimeGenerated asc\" before building \"make_list\" arrays.", contentTypes: ["Analytic Rule"] },
@@ -3310,6 +3311,7 @@ export const RAW_SOLUTIONS = [
     name: "Qualys VM",
     alias: "QualysVM",
     entries: [
+      { version: "3.0.11", date: "10-09-2026", text: "Updated the Qualys Host Detection Parser to deduplicate repeated V3 snapshots using stable vulnerability content and lifecycle fields, preserve ingestion TimeGenerated, and expose the source timestamp as DetectionTime. Updated the CCP Data Connector to use explicit table references for Defender portal query compatibility.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.10", date: "22-06-2026", text: "Increased CCP Connector request timeout to 300s (platform max), reduced query window to 10 min, added a connectivity check using the /msp/about.php endpoint, and clarified Truncation Limit options to reduce timeouts on large environments.", contentTypes: [] },
       { version: "3.0.9", date: "29-05-2026", text: "Adding new query string parameter", contentTypes: [] },
       { version: "3.0.8", date: "14-05-2026", text: "Bumping API version", contentTypes: [] },
