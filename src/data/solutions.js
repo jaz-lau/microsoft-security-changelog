@@ -814,6 +814,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.3.2", date: "04-09-2026", text: "Updated the Cisco Umbrella template to allow an empty S3 bucket prefix or one with or without a trailing slash, allowing customer root directories to work.", contentTypes: [] },
       { version: "3.3.1", date: "26-08-2026", text: "Fixed Cisco Umbrella CCF connection resource naming to include the S3 bucket, region, and prefix, preventing connections for different account prefixes from overwriting each other.", contentTypes: [] },
       { version: "3.3.0", date: "14-08-2026", text: "Updated CCF Data Connector for Cisco Cloud Security log schema version 16: enabled Gzip decompression for all log streams, added DestinationSgtOriginId and FwBlockReason columns to CiscoUmbrellaCloudFirewall, added IsolationProfileId column to CiscoUmbrellaWebTraffic, and added connector instruction notes for optional headers and Cisco-managed/customer-managed Amazon S3 buckets.", contentTypes: ["Data Connector"] },
       { version: "3.2.2", date: "04-08-2026", text: "Fixed broken Deploy to Azure Gov button link in Data Connectors and Playbooks.", contentTypes: ["Data Connector","Playbook"] },
@@ -3365,6 +3366,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future",
     entries: [
+      { version: "3.2.22", date: "11-09-2026", text: "Implemented a modernized data connector architecture by introducing shared infrastructure templates for DCE, DCR, table, and connector deployment, enabling MSI-authenticated data ingestion through the Logs Ingestion API, and updating workbooks, analytics, and documentation to align with the new _V2_CL schema.", contentTypes: ["Data Connector","Workbook"] },
       { version: "3.2.21", date: "16-08-2026", text: "Hardened Enterprise Sandbox API key handling and protected sensitive Logic Apps action data.", contentTypes: [] },
       { version: "3.2.20", date: "04-05-2026", text: "Removed incident creation from affected playbooks, in preparation for Microsoft Defender migration. Added Analytic Rules that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.2.19", date: "13-04-2026", text: "Added functionality to choose Sandbox region, changed to optional Enterprise Sandbox API token. Updated Indicator Import, moving evidence details from \"labels\" to \"external_references\".", contentTypes: [] },
@@ -3918,6 +3920,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SpyCloud Enterprise Protection CCF",
     entries: [
+      { version: "3.0.1", date: "28-08-2026", text: "Reliability and deployment fixes across ingestion, analytics, and playbooks. Added severity-30 Identity Access Records analytic rule. Removed unnecessary Automation Rules and related configurations. Standardized solution naming and support details.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.0", date: "09-06-2026", text: "Initial CCF-based release. SpyCloud Watchlist and Breach Catalog CCF data connector (Compass daily feed included), two built-in analytic rules (AR_Breached_Users_20, AR_malware_25), two KQL parsers (get_Spycloud_enriched_data, get_spycloud_compass_data), MDE Automation playbook, and Conditional Access playbook.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Parser"] },
     ],
   },
