@@ -1703,6 +1703,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Fortinet FortiNDR Cloud",
     entries: [
+      { version: "3.1.1", date: "24-08-2026", text: "Adding Analytic Rule to comply with MISA requirements", contentTypes: ["Analytic Rule"] },
       { version: "3.1.0", date: "26-05-2026", text: "Updated to use LogIngestion instead of the deprecated HTTP Data Collector API", contentTypes: [] },
       { version: "3.0.3", date: "05-05-2025", text: "Use Flex Consumption plan to hold Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "30-09-2024", text: "Show mitre attack ids and link to detection rule page", contentTypes: [] },
