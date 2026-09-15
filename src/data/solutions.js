@@ -1460,8 +1460,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dynamics 365",
     entries: [
-      { version: "3.0.1 (Dynamics 365 CE Apps Solution)", date: "02-09-2024", text: "Fixed duplicate analytics rule query", contentTypes: [] },
-      { version: "3.0.0", date: "24-09-2024", text: "Fixed Data Connector Title", contentTypes: ["Data Connector"] },
+      { version: "3.0.0 (Dynamics 365 CE Apps Solution)", date: "02-09-2024", text: "Fixed duplicate analytics rule query and Fixed Data Connector Title", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -1587,6 +1586,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Feedly",
     entries: [
+      { version: "3.0.6", date: "10-09-2026", text: "Fix DCR transformKql (use replace/pack so Connect can create the data collection rule)", contentTypes: [] },
       { version: "3.0.5", date: "28-08-2026", text: "Ingest Feedly IoCs into native ThreatIntelIndicators (SourceSystem=Feedly)", contentTypes: [] },
       { version: "3.0.4", date: "16-02-2026", text: "Migrate to CCF connector", contentTypes: [] },
       { version: "3.0.3", date: "28-11-2023", text: "Added missing python packages to the Data Connector", contentTypes: ["Data Connector"] },
@@ -3313,6 +3313,7 @@ export const RAW_SOLUTIONS = [
     name: "Qualys VM",
     alias: "QualysVM",
     entries: [
+      { version: "3.1.0", date: "14-09-2026", text: "Updated the QualysHostDetection Parser to reliably parse both single-object and array detection responses from the CCF connector.", contentTypes: ["Parser"] },
       { version: "3.0.11", date: "10-09-2026", text: "Updated the Qualys Host Detection Parser to deduplicate repeated V3 snapshots using stable vulnerability content and lifecycle fields, preserve ingestion TimeGenerated, and expose the source timestamp as DetectionTime. Updated the CCP Data Connector to use explicit table references for Defender portal query compatibility.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.10", date: "22-06-2026", text: "Increased CCP Connector request timeout to 300s (platform max), reduced query window to 10 min, added a connectivity check using the /msp/about.php endpoint, and clarified Truncation Limit options to reduce timeouts on large environments.", contentTypes: [] },
       { version: "3.0.9", date: "29-05-2026", text: "Adding new query string parameter", contentTypes: [] },
@@ -3531,7 +3532,7 @@ export const RAW_SOLUTIONS = [
     name: "SailPoint IdentityNow",
     alias: "SailPointIdentityNow",
     entries: [
-      { version: "3.0.1", date: "11-05-2026", text: "Added CCF Data Connector support with one Parser for backward compatibility and new schema for SailPoint IdentityNow events; updated Analytic Rules to use the parser alias and new connector ID", contentTypes: ["Analytic Rule","Data Connector","Parser"] },
+      { version: "3.0.1", date: "14-09-2026", text: "Added CCF Data Connector support with one Parser for backward compatibility and new schema for SailPoint IdentityNow events; updated Analytic Rules to use the parser alias and new connector ID", contentTypes: ["Analytic Rule","Data Connector","Parser"] },
       { version: "3.0.0", date: "28-08-2024", text: "Data Connector instruction updated", contentTypes: ["Data Connector"] },
     ],
   },
@@ -4557,6 +4558,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Web Session Essentials",
     entries: [
+      { version: "3.0.5", date: "11-09-2026", text: "Added WebSessionEssentialsCustomParser to parse and normalize the tables used in dependent Security Content.", contentTypes: [] },
       { version: "3.0.4", date: "02-09-2026", text: "Added Summarize Web Session Data using Log Ingestion API Playbook", contentTypes: ["Playbook"] },
       { version: "3.0.3", date: "06-06-2024", text: "Updated Entity Mapping Analytic Rule CommandInURL.yaml", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
