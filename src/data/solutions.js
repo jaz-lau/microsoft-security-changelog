@@ -345,6 +345,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AWS EKS",
     entries: [
+      { version: "3.1.0", date: "15-09-2026", text: "Moved the AWS EKS Data Connector from preview to general availability.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "12-03-2026", text: "Initial Solution Release.", contentTypes: [] },
       { version: "3.0.0", date: "12-03-2026", text: "New CCF Data Connector 'AWS EKS'.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "12-03-2026", text: "Enables ingestion of Amazon Elastic Kubernetes Service audit logs into Microsoft Sentinel for comprehensive security monitoring and threat detection.", contentTypes: [] },
@@ -649,6 +650,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint Alerts",
     entries: [
+      { version: "3.1.4", date: "08-09-2026", text: "Fixed Check_Point_EM_Importer playbook creation failing with InvalidTemplate: Unable to parse language expression '': expected token 'Identifier' and actual 'EndOfData'. The empty Entities JSON array literal in the SecurityAlert ingestion body was interpreted by ARM as an empty template expression; it is now emitted via string(createArray()) in both the solution package and the standalone playbook template.", contentTypes: ["Playbook"] },
       { version: "3.1.3", date: "21-08-2026", text: "Fixed ARM template expression escaping in nested content templates (stray ] in dcrConfig and playbook expressions) that caused data connector Connect deployment to fail with a template language expression parse error.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.1.3", date: "21-08-2026", text: "Fixed alerts polling request body to send strict JSON (double-quoted): the Argos API now rejects single-quoted bodies with 422 Unprocessable Entity.", contentTypes: [] },
       { version: "3.1.3", date: "21-08-2026", text: "Fixed connection template parameter defaults: placeholder values (e.g. \"severity\") leaked into the API request body when optional connector fields were left empty, failing the connectivity check with 422 (invalid severity enum). Optional filters now default to empty and are omitted from the request.", contentTypes: [] },
@@ -3762,6 +3764,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Silent Push",
+    alias: "SilentPush",
+    entries: [
+      { version: "3.0.0", date: "20-08-2026", text: "Initial solution release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Silverfort",
     entries: [
       { version: "3.0.1", date: "02-06-2026", text: "Minor Doc Update", contentTypes: [] },
@@ -4265,6 +4274,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "TrendAI Vision One(CCF)",
     entries: [
+      { version: "3.0.1", date: "16-09-2026", text: "Updated connector version.", contentTypes: [] },
       { version: "3.0.0", date: "05-08-2026", text: "Initial release of TrendAI Vision One solution via Codeless Connector Framework (CCF). Includes Workbench Alerts and OAT Detections connectors with DCR-based ingestion-time transformations, dropdown selectors for API domain and third-party exclusion, TMV1-Filter pass-through support, KQL parsers, an analytic rule with MITRE ATT&CK mappings, and a workbook dashboard. Fixed ARM template bracket escaping, added token rotation warning, optimized workbook queries, and removed the null alertRuleTemplateName field.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
     ],
   },
@@ -4727,6 +4737,7 @@ export const RAW_SOLUTIONS = [
     name: "Zero Networks",
     alias: "ZeroNetworks",
     entries: [
+      { version: "3.0.4", date: "06-09-2026", text: "Updated audit Parser with the latest audit types and enforcement sources and exposed numeric AuditTypeId and EnforcementSourceId columns; corrected audit type and enforcement source labels to match the product; aligned Analytical Rules, Hunting Queries and Workbook with the current parser output; corrected RPC activity TrafficType type in the push Data Connector and fixed the parser reference link in the Workbook", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
       { version: "3.0.3", date: "29-01-2026", text: "Updated audit parser, created CCP Push & Pull connectors", contentTypes: ["Parser"] },
       { version: "3.0.2", date: "17-09-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "06-02-2025", text: "Added missing parameter URI to Solution.", contentTypes: [] },
