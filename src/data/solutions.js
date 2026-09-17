@@ -705,6 +705,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco ASA",
     alias: "CiscoASA",
     entries: [
+      { version: "3.0.9", date: "15-09-2026", text: "Updated the CiscoASA workbook and analytic rules to incorporate FTD logs alongside ASA logs.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.8", date: "22-08-2026", text: "Added new detection rule for Possible Data Exfilteration", contentTypes: [] },
       { version: "3.0.7", date: "01-09-2025", text: "Updates to the template_CiscoAsaAma.json file to reflect the general availability of the Cisco ASA/FTD via AMA connector", contentTypes: [] },
       { version: "3.0.6", date: "10-07-2025", text: "Preview tag removed from Connector title", contentTypes: [] },
@@ -1588,6 +1589,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Feedly",
     entries: [
+      { version: "3.0.7", date: "15-09-2026", text: "Fix DCR STIX Id: hash_sha256 is a string, do not wrap it in abs()", contentTypes: [] },
       { version: "3.0.6", date: "10-09-2026", text: "Fix DCR transformKql (use replace/pack so Connect can create the data collection rule)", contentTypes: [] },
       { version: "3.0.5", date: "28-08-2026", text: "Ingest Feedly IoCs into native ThreatIntelIndicators (SourceSystem=Feedly)", contentTypes: [] },
       { version: "3.0.4", date: "16-02-2026", text: "Migrate to CCF connector", contentTypes: [] },
@@ -1754,6 +1756,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.5.2", date: "15-09-2026", text: "Added new audit fields in the CCF and Azure Storage connectors while preserving existing output column names and types, providing shared documentation for the schema of V2 and V3 tables. Enabled system-assigned identity on new and existing Event Grid topics while preserving existing principals, tags, and attached user-assigned identities; Added Create/Use existing sender-permission choices.", contentTypes: [] },
       { version: "3.5.1", date: "13-08-2026", text: "Added source storage subscription and resource group details to the Azure Storage data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.5.0", date: "30-07-2026", text: "Promoted the GitHub Azure Storage Audit Logs data connector to GA, add multi-stream support, and updated its generated configuration with advanced Event Grid filters.", contentTypes: ["Data Connector"] },
       { version: "3.4.0", date: "25-06-2026", text: "Added all api.request fields and created V3 table for AzStorage connector", contentTypes: [] },
@@ -2889,6 +2892,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Network Session Essentials",
     entries: [
+      { version: "3.0.13", date: "16-09-2026", text: "Added NetworkSessionEssentialsCustomParser to parse and normalize the tables used in dependent Security Content. Updated Workbooks and Analytic rules to use parser.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
       { version: "3.0.12", date: "02-09-2026", text: "Added Summarize Data for Network Session Essentials using log ingestion API Playbook", contentTypes: ["Playbook"] },
       { version: "3.0.11", date: "24-03-2026", text: "Bump solution version and Updated links to remove review.learn.", contentTypes: [] },
       { version: "3.0.10", date: "14-02-2026", text: "Updated links to remove review.learn.", contentTypes: [] },
@@ -3333,6 +3337,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Qualys VM Knowledgebase",
     entries: [
+      { version: "3.1.4", date: "11-09-2026", text: "Updated the CCF Data Connector to use the QualysKnowledgeBase schema, explicit table queries, configurable discovery and patchability filters, current Qualys API documentation links, and simplified migration guidance; restored a meaningful All discovery-method key while omitting that optional API filter. Enhanced the QualysKB Parser to normalize all 22 fields and deduplicate record versions by QID and last modification time.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.1.3", date: "17-07-2026", text: "CCF connector - fix incomplete data ingestion.", contentTypes: [] },
       { version: "3.1.2", date: "29-04-2026", text: "Moving Connector to GA.", contentTypes: [] },
       { version: "3.1.1", date: "23-04-2026", text: "Moved endpoint to target Qualys KB API v4.0", contentTypes: [] },
