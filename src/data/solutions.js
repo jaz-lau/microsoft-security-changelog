@@ -769,6 +769,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco Meraki Events via REST API",
     entries: [
+      { version: "3.2.1", date: "15-09-2026", text: "Fixed Cisco Meraki connector regressions by correcting the Organizations/Organization Networks health check window, routing security events except File Scanned to ASIM Network Session logs, separating File Scanned events into a dedicated custom table, restoring query-string support for API request URLs, preserving additional configuration-change context, and restoring ASIM Network Session DvcAction mapping from the blocked field. Fixed DCR creation errors by replacing unsupported coalesce expressions and matching File Scanned EventCount to the destination string schema. Corrected Network Clients and Air Marshal nested polling to extract the network ID from each parent record without expanding its properties.", contentTypes: [] },
       { version: "3.2.0", date: "28-08-2026", text: "Promoted the updated Cisco Meraki CCF REST API data connector introduced in version 3.1.0 to General Availability (GA).", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "24-08-2026", text: "Standardized all CCF Connector data types to use checkpointed t0/t1 time windowing (UnixTimestamp), aligning the newer Organizations, Organization Networks, Network Clients, and Air Marshal Events data types with the existing ASIM log endpoints to prevent duplicate ingestion.", contentTypes: [] },
       { version: "3.1.1", date: "24-08-2026", text: "Updated the polling interval and t0/t1 time window configuration of the CCF Connector data types to fix duplicate ingestion.", contentTypes: [] },
@@ -3539,6 +3540,7 @@ export const RAW_SOLUTIONS = [
     name: "SailPoint IdentityNow",
     alias: "SailPointIdentityNow",
     entries: [
+      { version: "3.0.2", date: "16-09-2026", text: "Poller Config \"name\" updated", contentTypes: [] },
       { version: "3.0.1", date: "14-09-2026", text: "Added CCF Data Connector support with one Parser for backward compatibility and new schema for SailPoint IdentityNow events; updated Analytic Rules to use the parser alias and new connector ID", contentTypes: ["Analytic Rule","Data Connector","Parser"] },
       { version: "3.0.0", date: "28-08-2024", text: "Data Connector instruction updated", contentTypes: ["Data Connector"] },
     ],
