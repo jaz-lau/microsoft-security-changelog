@@ -1417,6 +1417,9 @@ export const RAW_SOLUTIONS = [
   {
     name: "DomainTools CCF",
     entries: [
+      { version: "3.0.1", date: "16-09-2026", text: "Added API Key, Feed Types, Session ID, Query Window, and optional Top.", contentTypes: [] },
+      { version: "3.0.1", date: "16-09-2026", text: "Switched to sessionID-based NDJSON (jsonl) polling and a 2 req/min rate limit.", contentTypes: [] },
+      { version: "3.0.1", date: "16-09-2026", text: "Hides internal after, before, and fromBeginning.", contentTypes: [] },
       { version: "3.0.0", date: "02-09-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
       { version: "3.0.0", date: "02-09-2026", text: "Updated publisherId to address an issue identified during Microsoft Marketplace submission.", contentTypes: [] },
     ],
@@ -3365,6 +3368,7 @@ export const RAW_SOLUTIONS = [
     name: "Rapid7Insight VM",
     alias: "Rapid7InsightVM",
     entries: [
+      { version: "3.3.1", date: "18-09-2026", text: "Updated Rapid7InsightVM CCP data connector definition to use adjustable QueryWindow.", contentTypes: ["Data Connector"] },
       { version: "3.3.0", date: "01-07-2026", text: "Updated Rapid7InsightVM CCP data connector definition generally available.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "05-03-2026", text: "Added new Rapid7InsightVM CCP data connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "05-02-2026", text: "Update Az Func packages related to InsightVMCloudData Connector", contentTypes: [] },
