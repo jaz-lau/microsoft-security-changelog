@@ -2958,6 +2958,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "NordPass",
     entries: [
+      { version: "3.0.2", date: "15-09-2026", text: "Added the missing DCR stream declaration, required by Azure Monitor validation for custom streams used with transformKql.", contentTypes: [] },
       { version: "3.0.1", date: "25-08-2025", text: "Added new Activity Logs", contentTypes: [] },
       { version: "3.0.0", date: "22-04-2025", text: "Initial Solution Release.", contentTypes: [] },
     ],
