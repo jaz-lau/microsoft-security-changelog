@@ -1617,6 +1617,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Fire Compass Risks",
+    alias: "FireCompassRisks",
+    entries: [
+      { version: "3.0.0", date: "05-08-2026", text: "Initial CCF pull connector for FireCompass risk findings", contentTypes: [] },
+    ],
+  },
+  {
     name: "FireEye Network Security",
     entries: [
       { version: "3.0.2", date: "21-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
