@@ -143,6 +143,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Amazon Web Services",
     entries: [
+      { version: "3.0.13", date: "03-09-2026", text: "Added new AWS GuardDuty Hunting Queries for high-severity findings, EKS privilege escalation and credential access, and S3 public exposure; repackaged the solution after incorporating the latest upstream changes.", contentTypes: ["Hunting Query"] },
       { version: "3.0.12", date: "26-08-2026", text: "Updated Analytic Rules AWS_LogTampering.yaml (successful log-tampering, High) and AWS_ClearStopChangeTrailLogs.yaml (failed log-tampering attempts, Low) with expanded event coverage and tiered severity; removed duplicate Analytic Rule AWS_ConfigServiceResourceDeletion.yaml; refreshed the Data Connectors section in the solution UI (createUiDefinition)", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.11", date: "11-08-2026", text: "Fixed the AWS WAF Data Connector last-data-received query by removing an invalid test filter.", contentTypes: ["Data Connector"] },
       { version: "3.0.10", date: "19-05-2026", text: "Added non-analytics tier queries to Amazon Web Services S3 Data Connector to support Basic/Auxiliary plan tables.", contentTypes: ["Data Connector"] },
@@ -3331,6 +3332,7 @@ export const RAW_SOLUTIONS = [
     name: "Qualys VM",
     alias: "QualysVM",
     entries: [
+      { version: "3.1.1", date: "22-09-2026", text: "Updated the Playbooks to fix the Azure deploy button issue for GOV and corrected the parameter value for Service Endpoint.", contentTypes: ["Playbook"] },
       { version: "3.1.0", date: "14-09-2026", text: "Updated the QualysHostDetection Parser to reliably parse both single-object and array detection responses from the CCF connector.", contentTypes: ["Parser"] },
       { version: "3.0.11", date: "10-09-2026", text: "Updated the Qualys Host Detection Parser to deduplicate repeated V3 snapshots using stable vulnerability content and lifecycle fields, preserve ingestion TimeGenerated, and expose the source timestamp as DetectionTime. Updated the CCP Data Connector to use explicit table references for Defender portal query compatibility.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.10", date: "22-06-2026", text: "Increased CCP Connector request timeout to 300s (platform max), reduced query window to 10 min, added a connectivity check using the /msp/about.php endpoint, and clarified Truncation Limit options to reduce timeouts on large environments.", contentTypes: [] },
