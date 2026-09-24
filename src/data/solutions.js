@@ -185,6 +185,7 @@ export const RAW_SOLUTIONS = [
     name: "Apache HTTP Server",
     alias: "ApacheHTTPServer",
     entries: [
+      { version: "3.0.3", date: "23-09-2026", text: "Updated the Workbook JSON and refreshed its description.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "23-07-2026", text: "Fixed Parser (ApacheHTTPServer) to correctly parse negative timezone offsets and honor the offset when setting EventStartTime", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "05-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "13-08-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
@@ -245,6 +246,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Confluence Audit",
     alias: "AtlassianConfluenceAudit",
     entries: [
+      { version: "3.0.8", date: "21-09-2026", text: "Updated the Atlassian Confluence Audit data connector with multi-site connection support and scoped API token guidance. Added the ConfluenceAuditLogs alias parser.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.7", date: "07-04-2026", text: "Updated Data Connector - *Atlassian Confluence Audit* to change DCR data flows.", contentTypes: ["Data Connector"] },
       { version: "3.0.6", date: "28-07-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "06-05-2025", text: "Launching CCP Data Connector - *Atlassian Confluence Audit* from Public Preview to Global Availability.", contentTypes: ["Data Connector"] },
@@ -274,6 +276,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Organization Audit",
     alias: "AtlassianOrganizationAudit",
     entries: [
+      { version: "3.0.3", date: "21-09-2026", text: "Updated the Atlassian Organization Audit data connector to enable multi-select connection management.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "13-08-2026", text: "Promoted the Atlassian Organization Audit data connector to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "12-08-2026", text: "Updated DCR transformKql to derive TimeGenerated from the event time with fallback to now(), and reduced poller timeout to 30 seconds.", contentTypes: [] },
       { version: "3.0.0", date: "06-07-2026", text: "First version of the Atlassian Organization Audit CCF Connector.", contentTypes: [] },
@@ -301,6 +304,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Auth0",
     entries: [
+      { version: "3.2.1", date: "23-09-2026", text: "Added OrganizationId, OrganizationName, and SecurityContext fields to the Auth0 Logs (via Codeless Connector Framework) Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "20-07-2026", text: "Auth0 Logs (via Codeless Connector Framework) Data Connector now supports collecting from multiple Auth0 hosts (multi-domain) and tags each record with the Auth0Domain column", contentTypes: ["Data Connector"] },
       { version: "3.1.5", date: "13-04-2026", text: "Deprecate Auth0 Logs (using Azure Function)", contentTypes: [] },
       { version: "3.1.4", date: "30-03-2026", text: "Fix space in name, Rename to Auth0 Logs (via Codeless Connector Framework)", contentTypes: [] },
@@ -651,6 +655,11 @@ export const RAW_SOLUTIONS = [
   {
     name: "Check Point Cyberint Alerts",
     entries: [
+      { version: "3.2.0", date: "18-09-2026", text: "• Two-way status sync between Argos and Microsoft Sentinel; the newest change wins. New Check_Point_EM_InboundStatusSync playbook, and Check_Point_EM_AutomationRules is now part of the package.", contentTypes: ["Playbook"] },
+      { version: "3.2.0", date: "18-09-2026", text: "• New analytic rule, Argos alerts to incidents, replaces the Check_Point_EM_Importer playbook, which could not ingest because the Logs Ingestion API does not support the SecurityAlert table.", contentTypes: ["Analytic Rule","Playbook"] },
+      { version: "3.2.0", date: "18-09-2026", text: "• Data connector polls on update_date and requests 100 alerts per page.", contentTypes: ["Data Connector"] },
+      { version: "3.2.0", date: "18-09-2026", text: "• Fixed Argos calls failing with HTTP 401, the status update endpoint, ref_id extraction, and the status and closure reason mapping.", contentTypes: [] },
+      { version: "3.2.0", date: "18-09-2026", text: "• Upgrading from 3.1.x requires reconnecting the data connector and recreating the sync playbooks; see the solution README.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.1.4", date: "08-09-2026", text: "Fixed Check_Point_EM_Importer playbook creation failing with InvalidTemplate: Unable to parse language expression '': expected token 'Identifier' and actual 'EndOfData'. The empty Entities JSON array literal in the SecurityAlert ingestion body was interpreted by ARM as an empty template expression; it is now emitted via string(createArray()) in both the solution package and the standalone playbook template.", contentTypes: ["Playbook"] },
       { version: "3.1.3", date: "21-08-2026", text: "Fixed ARM template expression escaping in nested content templates (stray ] in dcrConfig and playbook expressions) that caused data connector Connect deployment to fail with a template language expression parse error.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.1.3", date: "21-08-2026", text: "Fixed alerts polling request body to send strict JSON (double-quoted): the Argos API now rejects single-quoted bodies with 422 Unprocessable Entity.", contentTypes: [] },
