@@ -3787,6 +3787,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Shodan",
+    entries: [
+      { version: "3.0.0", date: "11-07-2023", text: "Initial Solution Package with Playbooks.", contentTypes: ["Playbook"] },
+    ],
+  },
+  {
     name: "SIGNL4",
     entries: [
       { version: "3.0.1", date: "24-07-2026", text: "Minor text changes.", contentTypes: [] },
