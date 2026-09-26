@@ -1069,6 +1069,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.4.2", date: "25-09-2026", text: "Added the CrowdStrike API parser to the solution package", contentTypes: ["Parser"] },
       { version: "3.4.1", date: "25-08-2026", text: "Fixed the broken Deploy to Azure Gov badge image across Data Connector and Playbook docs", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.4.0", date: "13-08-2026", text: "Updated Crowdstrike API connector by adding V2 tables and a new parser", contentTypes: ["Parser"] },
       { version: "3.3.9", date: "24-07-2026", text: "Updated titles for both CrowdStrike Falcon Data Replicator connectors", contentTypes: [] },
@@ -2890,6 +2891,7 @@ export const RAW_SOLUTIONS = [
     name: "Netskope v2",
     alias: "Netskopev2",
     entries: [
+      { version: "3.1.5", date: "22-09-2026", text: "Fixed Netskope Alerts and Events connector Connect failure ('Expected a value of type Array, but received a value of type String') and renamed it to Netskope Alerts and Events. Added Netskope Client Status and Netskope AI SecOps CCF data connectors with parsers, the Netskope Client Status Dashboard workbook and analytic rules Netskope Client - Private Access disabled by user, Netskope Client - Internet Security disabled by user and Netskope - High Severity DLP Alert. Added 12 DLP Incident fields to NetskopeEventsDLP_CL. Deprecated Netskope Web Transactions Data Connector (using Azure Function).", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.1.4", date: "30-03-2026", text: "Fix space in name. Rename to Netskope Alerts and Events (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.3", date: "20-03-2026", text: "Rename to Netskope Alerts and Events(via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.2", date: "31-10-2025", text: "Added Dropdown in CCF UI page for data ingestion", contentTypes: [] },
