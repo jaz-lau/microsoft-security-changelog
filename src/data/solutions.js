@@ -2028,6 +2028,7 @@ export const RAW_SOLUTIONS = [
     name: "GreyNoise Threat Intelligence",
     alias: "GreyNoiseThreatIntelligence",
     entries: [
+      { version: "3.1.2", date: "24-09-2026", text: "Moved the Analytic Rules and Workbook from the retired ThreatIntelligenceIndicator table to ThreatIntelIndicators. The Data Connector now runs on Python 3.12 with GreyNoise SDK 3.1.0, and waits out GreyNoise and Sentinel API rate limits instead of failing. Indicator tags now show GreyNoise tag names.", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
       { version: "3.1.1", date: "09-04-2026", text: "Fix packaging issues, updated Data Connector status query and workbook templates to reflect the new ThreatIntelIndicators table", contentTypes: ["Data Connector","Workbook"] },
       { version: "3.1.0", date: "12-03-2026", text: "Updated to use GreyNoise Python SDK v3.0.3, updated Data Connector instructions, Fixed python module mismatches, bumped Az Functions Runtime", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "17-07-2025", text: "Updated to use GreyNoise Python SDK v3.0.1, use new Threat Intel API, updated requirements.txt, updated Data Connector instructions", contentTypes: ["Data Connector"] },
@@ -4108,6 +4109,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Team Cymru Scout",
     entries: [
+      { version: "3.1.2", date: "16-09-2026", text: "Migrated TeamCymruScoutLiveInvestigation and TeamCymruScoutEnrichIncident playbooks from the retired HTTP Data Collector API to the Logs Ingestion API.", contentTypes: ["Playbook"] },
       { version: "3.1.1", date: "25-09-2025", text: "Fixed bug in TeamCymruScoutEnrichIncident playbook.", contentTypes: ["Playbook"] },
       { version: "3.1.0", date: "16-05-2025", text: "Updated Workbook, Parser, Data Connector and created new playbook.", contentTypes: ["Data Connector","Playbook","Workbook","Parser"] },
       { version: "3.0.0", date: "07-08-2024", text: "Added Solution for Team Cymru Scout.", contentTypes: [] },
@@ -4555,7 +4557,8 @@ export const RAW_SOLUTIONS = [
     name: "VMware ESXi",
     alias: "VMWareESXi",
     entries: [
-      { version: "3.0.6", date: "04-01-2026", text: "Remove broken VMware ESXi link", contentTypes: [] },
+      { version: "3.0.6", date: "25-09-2026", text: "Remove broken VMware ESXi link.", contentTypes: [] },
+      { version: "3.0.6", date: "25-09-2026", text: "Update outdated API versions.", contentTypes: [] },
       { version: "3.0.5", date: "03-11-2025", text: "Added new Analytic Rule (VMware ESXi - Root change password) and (VMware ESXi - Multiple Failed SSH Login)", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "09-10-2025", text: "Added new Analytic Rule (VMware ESXi - SSH Enable on ESXi Host)", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "02-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
@@ -4768,6 +4771,7 @@ export const RAW_SOLUTIONS = [
     name: "Zero Fox Alerts",
     alias: "ZeroFoxAlerts",
     entries: [
+      { version: "3.0.1", date: "08-09-2026", text: "Fixed the Data Connector transform that left nine alert fields empty, including severity, timestamp, and entity and asset group details. No table changes; the fix applies to newly collected alerts — existing rows are not backfilled.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "01-04-2026", text: "Added Data Connectors for ZeroFox's Alerts.", contentTypes: ["Data Connector"] },
     ],
   },
