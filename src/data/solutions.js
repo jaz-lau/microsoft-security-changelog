@@ -286,6 +286,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Attacker Tools Threat Protection Essentials",
     entries: [
+      { version: "3.0.5", date: "24-09-2026", text: "Updated Analytic Rule PowerShell Encoded Command Execution to support -e, decode Base64 payloads, and evaluate download-cradle indicators against decoded content.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "20-07-2026", text: "Added Analytic Rule PowerShell Encoded Command Execution", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "06-06-2024", text: "Added missing AMA Data Connector reference in Analytic rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
       { version: "3.0.2", date: "07-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
@@ -1034,6 +1035,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Corelight",
     entries: [
+      { version: "3.3.1", date: "24-09-2026", text: "Added new Parsers (ML results, network performance, YARA) and Watchlists, updated Data Connector DCE/DCR resources, and enhanced Corelight Data Insights Workbook with anomaly, ML and shadow AI (GenAI) insights", contentTypes: ["Data Connector","Workbook","Parser"] },
       { version: "3.3.0", date: "18-08-2026", text: "Updated Data Connector page for DCE/DCR based ingestion, added new Parsers, and updated Workbooks and Analytic Rules queries for the new table schema and field names", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.2.5", date: "04-06-2026", text: "Restructuring dashboards and adding asset classification tab in data explorer", contentTypes: [] },
       { version: "3.2.4", date: "19-03-2026", text: "Added 'Show Aggregation' filters in Corelight Data Explorer Workbook.", contentTypes: ["Workbook"] },
@@ -2575,6 +2577,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.18", date: "28-09-2026", text: "Updated the analytical rule configuration.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.17", date: "06-09-2026", text: "Added EndUserConsentMailboxOfflineAccess Analytic Rule to detect end-user OAuth consent to an app requesting delegated mailbox scopes (Mail.Read/Mail.ReadWrite/Mail.Send/MailboxSettings.ReadWrite) together with offline_access (T1528 - illicit consent grant).", contentTypes: ["Analytic Rule"] },
       { version: "3.3.16", date: "06-08-2026", text: "Removed locale-dependent ResultDescription filtering from the Attempts to sign in to disabled accounts Analytic Rule while retaining ResultType 50057 matching.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.15", date: "10-07-2026", text: "Updated SigninAttemptsByIPviaDisabledAccounts Analytic Rule to include the additional \"ResultDescription\" value: \"The user account is disabled.\"", contentTypes: ["Analytic Rule"] },
@@ -3806,6 +3809,7 @@ export const RAW_SOLUTIONS = [
     name: "Silent Push",
     alias: "SilentPush",
     entries: [
+      { version: "3.1.0", date: "16-09-2026", text: "Added SilentPush Feeds Data Connector (Codeless/CCP) to ingest Silent Push threat-intel feed exports into SLP_Feeds_CL.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "20-08-2026", text: "Initial solution release.", contentTypes: [] },
     ],
   },
@@ -4414,6 +4418,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Valence Security",
     entries: [
+      { version: "3.0.1", date: "16-09-2026", text: "Migrated the Data Connector to CCF Push (Codeless Connector Framework). Alerts now ingest into ValenceAlerts_CL (previously ValenceAlert_CL) and a new ValenceAuditLogs_CL table was added. The stream schema and DCR transformations match the payload sent by the Valence platform, and a sentinelSeverity column maps Valence's Critical severity into Microsoft Sentinel's supported range.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "27-11-2023", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
