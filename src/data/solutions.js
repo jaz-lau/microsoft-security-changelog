@@ -2,6 +2,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "1Password",
     entries: [
+      { version: "3.0.6", date: "29-09-2026", text: "Fixed CCP Data Connector deployment failure (\"Custom input stream must be defined in streamDeclarations\") by adding streamDeclarations to the DCR, and mapped API fields uuid and type to the uuid_s and action_type columns.", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "06-08-2026", text: "Reverted CCP Data Connector polling to time-window based (NextPageToken) requests to stop the duplicate ingestion introduced in 3.0.3, where each event was re-ingested on every poll for approximately one hour.", contentTypes: ["Data Connector"] },
       { version: "3.0.4", date: "23-07-2026", text: "Updated CCP Data Connector to use 1Password Events API v2 endpoints (signinattempts, auditevents, itemusages) and added v2 fields (account_uuid, actor_type, actor_account_uuid, user_type, user_account_uuid) to the OnePasswordEventLogs_CL table.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "06-07-2026", text: "Fixed CCP Data Connector to use cursor-based (PersistentToken) polling so late-synced item usage events (e.g. reveal, secure-copy) are no longer dropped.", contentTypes: ["Data Connector"] },
@@ -3005,6 +3006,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.1.11", date: "28-09-2026", text: "Removed the deprecated Okta Single Sign-On Azure Function data connector from the solution package", contentTypes: ["Data Connector"] },
       { version: "3.1.10", date: "09-09-2026", text: "Updated the Okta Data Connector to retrieve up to 1000 events per page, throttle initial and paginated requests, and handle HTTP 429 responses using rate-limit-aware retries.", contentTypes: ["Data Connector"] },
       { version: "3.1.9", date: "30-07-2026", text: "Update KQL queries of Okta Analytics rules", contentTypes: [] },
       { version: "3.1.9", date: "30-07-2026", text: "Updated Azure Gov button image link.", contentTypes: [] },
@@ -3747,6 +3749,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.1.4", date: "28-09-2026", text: "Removed the deprecated SentinelOne Azure Function Data Connector from the solution package", contentTypes: ["Data Connector"] },
       { version: "3.1.3", date: "25-08-2026", text: "Fixed the SentinelOne parser to restore ActivityType and CCF records while preserving SentinelOne V2 alerts", contentTypes: ["Parser"] },
       { version: "3.1.2", date: "17-08-2026", text: "Fix V2 parser type mismatch and fallback.", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "10-08-2026", text: "Advanced SentinelOne V2 (via Codeless Connector Framework) Data Connector from Public Preview to Global Availability and added the AlertDescription field to the alerts stream", contentTypes: ["Data Connector"] },
@@ -3856,6 +3859,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Snowflake",
     entries: [
+      { version: "3.2.0", date: "22-09-2026", text: "Added V3 Snowflake tables for nested ingestion.", contentTypes: [] },
       { version: "3.1.0", date: "04-08-2026", text: "Updated CCF Data Connector to fix pagination and migrate to V2 tables", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "03-02-2026", text: "Updated the analytic rule query.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.8", date: "22-12-2025", text: "Added a 120‑minute ingestion delay for the Snowflake connector and updated the parser KQL to surface accurate start/end timestamps.", contentTypes: ["Parser"] },
