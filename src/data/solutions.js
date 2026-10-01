@@ -99,6 +99,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Akamai DDOS Protection",
     entries: [
+      { version: "3.0.3", date: "28-09-2026", text: "Fixed Akamai CCF pagination by retaining time-window polling for initial requests and sending only offset parameters on subsequent pages, preventing skipped events without blocking connection initialization.", contentTypes: [] },
       { version: "3.0.2", date: "27-08-2026", text: "Updated the AkamaiSIEMEvent parser to decode rule and HTTP header values while preserving events with empty rule fields and retaining encoded source values in Raw-suffixed columns.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "20-07-2026", text: "Promoted Akamai DDOS CCF data connector from public preview to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "24-06-2026", text: "Created a Data Connector for Akamai DDOS Protection CCF Container with the WAF security events data stream.", contentTypes: ["Data Connector"] },
@@ -1579,6 +1580,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ExtraHop",
     entries: [
+      { version: "3.0.3", date: "28-09-2026", text: "Add support of flex consumption and private storage account in function app.", contentTypes: [] },
       { version: "3.0.2", date: "21-04-2026", text: "Add Log Ingestion API Support.", contentTypes: [] },
       { version: "3.0.1", date: "04-06-2025", text: "Updated Parser and Workbook to fix issue.", contentTypes: ["Workbook","Parser"] },
       { version: "3.0.0", date: "19-03-2025", text: "Initial Solution Release.", contentTypes: [] },
@@ -2009,6 +2011,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Workspace Reports",
     alias: "GoogleWorkspaceReports",
     entries: [
+      { version: "3.2.0", date: "28-09-2026", text: "Added alias-based multi-tenant connection management to the Google Workspace CCF connector across all 22 activity pollers, including Gmail.", contentTypes: [] },
       { version: "3.1.0", date: "04-09-2026", text: "Added Gmail activity log ingestion and updated the parser to support the standard GoogleWorkspaceReports table while retaining legacy custom tables", contentTypes: ["Parser"] },
       { version: "3.0.6", date: "29-07-2026", text: "Fixed Data Connector bug where product_bucket and scope_name fields in token authorize events only preserved the last scope_data entry. Added DCR transformKql to reconstruct all product buckets from the correctly ingested scope array.", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "29-06-2026", text: "Updated queryWindowDelayInMin for Google Workspace Connector", contentTypes: [] },
@@ -3628,6 +3631,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP BTP",
     entries: [
+      { version: "3.2.0", date: "28-09-2026", text: "Added SAP BTP AVL connector for SAP Application Vulnerability Report Service findings (SAPBTPAVL_CL). Added an analytic rule for critical vulnerability findings in custom apps, with incident grouping per app and subaccount. Added an \"Application Vulnerabilities\" workbook tab and a vulnerability posture KPI on the Overview tab.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.1.1", date: "22-07-2026", text: "New analytic rule: detect unaudited custom apps with login-only activity. Renamed analytic rules with SAP BTP prefix for improved discoverability.", contentTypes: ["Analytic Rule"] },
       { version: "3.1.0", date: "08-06-2026", text: "Reworked BTP Cloud Integration artifact deployment rule to use audit.configuration events with richer artifact, actor, and tenant context", contentTypes: [] },
       { version: "3.0.12", date: "29-12-2025", text: "Updated grid view UI with new subaccount onboarding properties", contentTypes: [] },
