@@ -3589,6 +3589,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Salesforce Service Cloud",
     entries: [
+      { version: "3.7.1", date: "01-10-2026", text: "Promoted the Salesforce Marketing Cloud connector to GA", contentTypes: [] },
       { version: "3.7.0", date: "01-09-2026", text: "Added the Salesforce Marketing Cloud CCF connector with audit and security event ingestion, custom tables, DCR transformations, and parser aliases.", contentTypes: ["Parser"] },
       { version: "3.6.1", date: "26-08-2026", text: "Corrected the Salesforce Service Cloud parser metadata version", contentTypes: ["Parser"] },
       { version: "3.6.0", date: "18-08-2026", text: "Added Salesforce Audit Logs parser and table definitions, and updated Salesforce connector configurations.", contentTypes: ["Parser"] },
