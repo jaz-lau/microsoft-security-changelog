@@ -2581,6 +2581,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.19", date: "05-10-2026", text: "Fixed OAuth scope parsing for Suspicious application consent for offline access Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.18", date: "28-09-2026", text: "Updated the analytical rule configuration.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.17", date: "06-09-2026", text: "Added EndUserConsentMailboxOfflineAccess Analytic Rule to detect end-user OAuth consent to an app requesting delegated mailbox scopes (Mail.Read/Mail.ReadWrite/Mail.Send/MailboxSettings.ReadWrite) together with offline_access (T1528 - illicit consent grant).", contentTypes: ["Analytic Rule"] },
       { version: "3.3.16", date: "06-08-2026", text: "Removed locale-dependent ResultDescription filtering from the Attempts to sign in to disabled accounts Analytic Rule while retaining ResultType 50057 matching.", contentTypes: ["Analytic Rule"] },
@@ -4168,7 +4169,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Theom",
     entries: [
-      { version: "3.0.0", date: "04-12-2023", text: "Updated all Analytical Rule with entity mappings", contentTypes: ["Analytic Rule"] },
+      { version: "3.1.0", date: "30-09-2026", text: "Added a new Theom Data Connector using the Codeless Connector Framework with DCR-based ingestion and an alias parser; corrected its public documentation and technology references, Analytical Rule branding, and package ARM parameter types", contentTypes: ["Analytic Rule","Data Connector","Parser"] },
+      { version: "3.0.0", date: "04-12-2023", text: "Updated all Analytical Rules with entity mappings", contentTypes: ["Analytic Rule"] },
     ],
   },
   {
