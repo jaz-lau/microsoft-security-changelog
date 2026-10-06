@@ -1384,6 +1384,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Delinea Platform",
+    entries: [
+      { version: "3.0.0", date: "29-09-2026", text: "Initial Solution Release with CCF data connector, ASIM parsers, analytic rules, hunting queries and workbooks.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
+    ],
+  },
+  {
     name: "Delinea Secret Server",
     entries: [
       { version: "3.0.1", date: "11-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
@@ -3951,7 +3957,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Sophos XG Firewall",
     entries: [
-      { version: "3.0.1", date: "09-12-2024", text: "Rmoved Deprecated Data Connector", contentTypes: ["Data Connector"] },
+      { version: "3.0.2", date: "05-10-2026", text: "Fixed an issue related to the API version", contentTypes: [] },
+      { version: "3.0.1", date: "09-12-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "01-08-2024", text: "Update Parser as part of Syslog migration Deprecating Data Connectors", contentTypes: ["Data Connector","Parser"] },
     ],
   },
