@@ -1073,6 +1073,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "CrowdStrike Falcon Endpoint Protection",
     entries: [
+      { version: "3.4.3", date: "06-10-2026", text: "Updated the CrowdStrike API connector DCR naming and configuration, and added upgrade guidance for V2 tables.", contentTypes: [] },
       { version: "3.4.2", date: "25-09-2026", text: "Added the CrowdStrike API parser to the solution package", contentTypes: ["Parser"] },
       { version: "3.4.1", date: "25-08-2026", text: "Fixed the broken Deploy to Azure Gov badge image across Data Connector and Playbook docs", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.4.0", date: "13-08-2026", text: "Updated Crowdstrike API connector by adding V2 tables and a new parser", contentTypes: ["Parser"] },
@@ -2017,6 +2018,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Workspace Reports",
     alias: "GoogleWorkspaceReports",
     entries: [
+      { version: "3.2.1", date: "02-10-2026", text: "Removed Google Workspace DCR EventParameters post-processing transform.", contentTypes: [] },
       { version: "3.2.0", date: "28-09-2026", text: "Added alias-based multi-tenant connection management to the Google Workspace CCF connector across all 22 activity pollers, including Gmail.", contentTypes: [] },
       { version: "3.1.0", date: "04-09-2026", text: "Added Gmail activity log ingestion and updated the parser to support the standard GoogleWorkspaceReports table while retaining legacy custom tables", contentTypes: ["Parser"] },
       { version: "3.0.6", date: "29-07-2026", text: "Fixed Data Connector bug where product_bucket and scope_name fields in token authorize events only preserved the last scope_data entry. Added DCR transformKql to reconstruct all product buckets from the correctly ingested scope array.", contentTypes: ["Data Connector"] },
@@ -2446,6 +2448,13 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "27-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-07-2024", text: "Deprecated Data connectors", contentTypes: ["Data Connector"] },
+    ],
+  },
+  {
+    name: "Menlo Security",
+    alias: "MenloSecurity",
+    entries: [
+      { version: "3.0.0", date: "21-08-2026", text: "Initial solution release. Adds the Menlo Security data connector, which ingests Audit, Bandwidth, and Web proxy logs into the MenloAudit_CL, MenloBandwidth_CL, and MenloWeb_CL custom Log Analytics tables via three timer-triggered Azure Functions and the Azure Monitor Logs Ingestion API (DCE/DCR).", contentTypes: ["Data Connector"] },
     ],
   },
   {
