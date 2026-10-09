@@ -2052,6 +2052,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Group-IB",
+    entries: [
+      { version: "3.0.0", date: "01-10-2026", text: "Initial solution package: 37 playbooks (26 scheduled Group-IB TI collectors, the indicator-processor playbook, 10 enrichment playbooks) using the Logs Ingestion API and the Microsoft Sentinel threat intelligence upload API.", contentTypes: ["Playbook"] },
+    ],
+  },
+  {
     name: "Halcyon",
     entries: [
       { version: "3.2.0", date: "10-06-2026", text: "New connector, new event and alert tables with OCSF schema, and parsers", contentTypes: ["Parser"] },
@@ -2835,6 +2841,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Morphisec",
     entries: [
+      { version: "3.2.0", date: "04-10-2026", text: "Added process, parent process, signature and user privilege columns to MorphisecAlerts_CL", contentTypes: [] },
       { version: "3.1.0", date: "10-09-2025", text: "Adding CCF connector", contentTypes: [] },
       { version: "3.0.1", date: "26-06-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "07-09-2023", text: "Addition of new Morphisec AMA Data Connector", contentTypes: ["Data Connector"] },
@@ -3202,6 +3209,7 @@ export const RAW_SOLUTIONS = [
     name: "Palo Alto Prisma Cloud",
     alias: "PaloAltoPrismaCloud",
     entries: [
+      { version: "3.0.5", date: "02-10-2026", text: "Fixed API versions for saved searches resource in mainTemplate", contentTypes: [] },
       { version: "3.0.4", date: "27-10-2025", text: "Add missing \"detailed\" flag to CCF Data Connector polling config", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "10-10-2025", text: "CCF Data Connector Moving to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "06-08-2025", text: "Change authentication type from Basic to JWT Token.", contentTypes: [] },
@@ -3800,6 +3808,7 @@ export const RAW_SOLUTIONS = [
     name: "Service Now CMDB",
     alias: "ServiceNowCMDB",
     entries: [
+      { version: "3.0.1", date: "08-10-2026", text: "Promoted the ServiceNow CMDB CCF Data Connector to general availability.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "03-08-2026", text: "Created a Data Connector for ServiceNow CMDB CCF Container with Asset Management, Configuration Items, Computer CIs, Server CIs, and CI Relationships data streams.", contentTypes: ["Data Connector"] },
     ],
   },
@@ -4765,6 +4774,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Workday",
     entries: [
+      { version: "3.2.0", date: "07-10-2026", text: "Added multi-instance support for the Workday Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "18-08-2026", text: "Added support for a configurable page size for the Workday data connector and aliases and grid management.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "23-12-2025", text: "Updated page size for the Workday Data connector and configure the query window + updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "02-04-2025", text: "Updated Data Connector guidelines.", contentTypes: ["Data Connector"] },
