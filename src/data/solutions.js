@@ -1060,6 +1060,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cortex XDR",
     entries: [
+      { version: "3.0.1", date: "29-11-2024", text: "Added new data connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "28-07-2023", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -1374,6 +1375,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Datawiza",
     entries: [
+      { version: "3.0.2", date: "12-10-2026", text: "Added Workbook for Datawiza Access Proxy monitoring.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "03-05-2026", text: "Added new analytics rules.", contentTypes: [] },
       { version: "3.0.0", date: "10-11-2025", text: "Initial Solution Release.", contentTypes: [] },
     ],
@@ -1998,6 +2000,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Threat Intelligence",
     entries: [
+      { version: "3.3.1", date: "07-10-2026", text: "- Added Playbook *GTI Session Assistant*.", contentTypes: ["Playbook"] },
+      { version: "3.3.1", date: "07-10-2026", text: "- Added x-tool: ms-sentinel-gti header to all GTI API calls.", contentTypes: [] },
       { version: "3.3.0", date: "23-07-2026", text: "- Added Data Connector *GTI Vulnerabilities* (Codeless Connector Framework, Log Ingestion API).", contentTypes: ["Data Connector"] },
       { version: "3.3.0", date: "23-07-2026", text: "- Added Parser *GTIVulnerabilities*, Analytics Rules, Playbooks and Workbook *Google Threat Intelligence*.", contentTypes: ["Playbook","Workbook","Parser"] },
       { version: "3.2.3", date: "04-06-2026", text: "- Added Data Connector *GTI Relevance System Alerts* (Azure Function App, Log Ingestion API).", contentTypes: ["Data Connector"] },
@@ -4281,6 +4285,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Tomcat",
     entries: [
+      { version: "3.0.2", date: "10-09-2026", text: "Fixed the API version issue", contentTypes: [] },
       { version: "3.0.1", date: "09-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "13-08-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
     ],
