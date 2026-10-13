@@ -2464,7 +2464,7 @@ export const RAW_SOLUTIONS = [
     name: "Menlo Security",
     alias: "MenloSecurity",
     entries: [
-      { version: "3.0.0", date: "21-08-2026", text: "Initial solution release. Adds the Menlo Security data connector, which ingests Audit, Bandwidth, and Web proxy logs into the MenloAudit_CL, MenloBandwidth_CL, and MenloWeb_CL custom Log Analytics tables via three timer-triggered Azure Functions and the Azure Monitor Logs Ingestion API (DCE/DCR).", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "13-10-2026", text: "Initial solution release. Adds the Menlo Security data connector, which ingests Audit, Bandwidth, and Web proxy logs into the MenloAudit_CL, MenloBandwidth_CL, and MenloWeb_CL custom Log Analytics tables via three timer-triggered Azure Functions and the Azure Monitor Logs Ingestion API (DCE/DCR).", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -3225,6 +3225,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Palo Alto Prisma Cloud CWPP",
     entries: [
+      { version: "3.0.4", date: "12-10-2026", text: "Repackaged the solution to address the API version issue for DCR and changed the data connector parameters to have securestring.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "03-01-2024", text: "Repackaged for _solutionVersion issue in resource", contentTypes: [] },
       { version: "3.0.2", date: "03-01-2024", text: "Updated package version and password as a securestring", contentTypes: [] },
       { version: "3.0.1", date: "30-11-2023", text: "Updated the data connector and its associated package", contentTypes: ["Data Connector"] },
@@ -3438,6 +3439,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future",
     entries: [
+      { version: "3.2.23", date: "14-09-2026", text: "Added OwnerOrganisationDetails/owner_organisation_details columns with ownership info for Classic and Playbook alerts. Action required: redeploy the Data Connectors template to add the new columns (see README).", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.2.22", date: "11-09-2026", text: "Implemented a modernized data connector architecture by introducing shared infrastructure templates for DCE, DCR, table, and connector deployment, enabling MSI-authenticated data ingestion through the Logs Ingestion API, and updating workbooks, analytics, and documentation to align with the new _V2_CL schema.", contentTypes: ["Data Connector","Workbook"] },
       { version: "3.2.21", date: "16-08-2026", text: "Hardened Enterprise Sandbox API key handling and protected sensitive Logic Apps action data.", contentTypes: [] },
       { version: "3.2.20", date: "04-05-2026", text: "Removed incident creation from affected playbooks, in preparation for Microsoft Defender migration. Added Analytic Rules that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
@@ -3853,6 +3855,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Silverfort",
     entries: [
+      { version: "3.1.0", date: "12-10-2026", text: "Added 16 Silverfort incident analytic rules and fixed Account entity mapping in four existing rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "02-06-2026", text: "Minor Doc Update", contentTypes: [] },
       { version: "3.0.0", date: "13-09-2024", text: "Initial Solution Release", contentTypes: [] },
     ],
@@ -4690,6 +4693,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.0", date: "13-07-2026", text: "Certification hardening ARM-TTK sanitizer wraps contentProductId alongside other id fields to satisfy IDs Should Be Derived From ResourceIDs. keyVaultSecretUri parameter standardized to securestring. Added workspaceResourceId as a top-level template output so ARM-TTK's Variables Must Be Referenced rule sees it.", contentTypes: [] },
       { version: "3.0.0", date: "13-07-2026", text: "Release pipeline release.yml sparse-checks-out Azure/Azure-Sentinel@master, runs createSolutionV3.ps1 -VersionMode catalog, then post-processor, then sanitizer, then version stamp (order is load-bearing). Frozen role_seed values in the pipeline table preserve guid()-derived role-assignment names across upgrades.", contentTypes: [] },
       { version: "3.0.0", date: "13-07-2026", text: "Certification feedback fixes (13-07-2026) Logo SVG gradient converted from a CSS class to inline fill attributes (the Azure portal sanitizer strips blocks, which broke rendering). Publisher ID aligned with Partner Center: whisper-security.azure-sentinel-solution-whisper. Support links updated to https://whisper.security/contact.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Whois Freaks",
+    alias: "WhoisFreaks",
+    entries: [
+      { version: "3.0.0", date: "09-10-2026", text: "Initial publication with the CCF threat and NRD feeds and four analytic-rule templates.", contentTypes: [] },
     ],
   },
   {
