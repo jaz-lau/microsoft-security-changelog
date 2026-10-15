@@ -108,6 +108,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Akamai Guardicore",
     entries: [
+      { version: "3.0.1", date: "12-10-2026", text: "Fixed the CCF data connector deployment: the four custom log tables (GuardicoreAgents_CL, GuardicoreAssets_CL, GuardicoreApplications_CL, GuardicorePolicyRules_CL) now use bare resource names so they are created correctly on Connect (previously an unresolved {{workspaceName}} placeholder caused a 404 and the tables were never created).", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "27-04-2026", text: "Initial release of the Akamai Guardicore solution as a Codeless Connector Framework (CCF/CCP) solution. Polls Agents, Assets, Applications, and Policy Rules from Guardicore Centra via DCR-based ingestion (no Azure Function App). Includes the Guardicore-ProcessIncidentEnrichment Microsoft Sentinel incident-creation playbook and the Guardicore-EnrichmentRunner recurrence-triggered companion playbook, both implemented natively in Logic Apps. They write to GuardicoreProcessedIncidents_CL and GuardicoreEnrichingConnections_CL via the Logs Ingestion API to a Data Collection Rule using system-assigned managed identity (no workspace shared key required). Two workbooks: Workload Protection Dashboard and Incident Analysis Dashboard.", contentTypes: ["Playbook","Workbook"] },
     ],
   },
@@ -1820,9 +1821,10 @@ export const RAW_SOLUTIONS = [
   {
     name: "GitLab",
     entries: [
+      { version: "3.0.3", date: "13-10-2026", text: "Corrected entity-mapped column names and updated the saved-searches API version", contentTypes: [] },
       { version: "3.0.2", date: "12-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "24-07-2023", text: "Deprecated data connectors", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "07-11-2023", text: "Modifying text as there is rebranding from Azure Active Directory to Microsoft Entra ID", contentTypes: [] },
+      { version: "3.0.0", date: "11-07-2023", text: "Modifying text as there is rebranding from Azure Active Directory to Microsoft Entra ID", contentTypes: [] },
     ],
   },
   {
@@ -2564,6 +2566,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender for Office 365",
     entries: [
+      { version: "3.2.0", date: "15-10-2026", text: "Added the investigation XDR Workbook and native Defender Detections and Insights XDR Workbook, preserving the existing Sentinel workbook, connector and playbooks.", contentTypes: ["Playbook","Workbook"] },
       { version: "3.0.3", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "24-04-2024", text: "Updated link for Custom Connector redirection in playbooks", contentTypes: ["Playbook"] },
       { version: "3.0.1", date: "29-09-2023", text: "1 new Playbook added to the solution", contentTypes: ["Playbook"] },
@@ -2581,6 +2584,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
+      { version: "3.2.1", date: "15-10-2026", text: "Added 3 XDR Workbooks alongside the existing Sentinel workbooks.", contentTypes: ["Workbook"] },
       { version: "3.0.18", date: "03-09-2026", text: "Added 57 new Hunting Queries for Microsoft Defender for Office 365 email and collaboration protection. Updated the Workbook Microsoft Defender for Office 365 Detections and Insights to version 4.0.0, adding Microsoft Teams collaboration and file malware coverage, and additional Advanced Hunting data types.", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.17", date: "12-08-2026", text: "Updated Analytic Rule AnomalousVoulmeOfFileDeletion.yaml to add AzureActiveDirectory connector with SigninLogs data type. Fixed deploy button URLs in Playbook AttackSimulatorTrainingNonReporters readme to include the correct 'master' branch path.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.16", date: "12-08-2026", text: "Updated KQL projection ordering in the Unusual Volume of file deletion by users analytic rules and hunting queries", contentTypes: ["Analytic Rule","Hunting Query"] },
@@ -2926,6 +2930,7 @@ export const RAW_SOLUTIONS = [
     name: "Netskope v2",
     alias: "Netskopev2",
     entries: [
+      { version: "3.1.6", date: "15-10-2026", text: "Restored the default Index value of the Netskope Alerts and Events connector (lost in 3.1.3) so a blank Index field keeps polling the original Netskope iterators (e.g. remediationIndex) instead of creating new ones and re-ingesting older data.", contentTypes: [] },
       { version: "3.1.5", date: "22-09-2026", text: "Fixed Netskope Alerts and Events connector Connect failure ('Expected a value of type Array, but received a value of type String') and renamed it to Netskope Alerts and Events. Added Netskope Client Status and Netskope AI SecOps CCF data connectors with parsers, the Netskope Client Status Dashboard workbook and analytic rules Netskope Client - Private Access disabled by user, Netskope Client - Internet Security disabled by user and Netskope - High Severity DLP Alert. Added 12 DLP Incident fields to NetskopeEventsDLP_CL. Deprecated Netskope Web Transactions Data Connector (using Azure Function).", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.1.4", date: "30-03-2026", text: "Fix space in name. Rename to Netskope Alerts and Events (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.1.3", date: "20-03-2026", text: "Rename to Netskope Alerts and Events(via Codeless Connector Framework)", contentTypes: [] },
@@ -3365,6 +3370,15 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "01-08-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "13-12-2023", text: "Updated broken link in Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "20-07-2023", text: "Corrected the links in the solution.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Pulumi Cloud Audit Logs",
+    alias: "PulumiCloudAuditLogs",
+    entries: [
+      { version: "3.0.0", date: "06-10-2026", text: "Initial release.", contentTypes: [] },
+      { version: "3.0.0", date: "06-10-2026", text: "Data Connector (CCF, Pulumi Cloud audit logs V2 API into PulumiAuditLogs_CL) \\|v 3.0.0", contentTypes: ["Data Connector"] },
+      { version: "3.0.0", date: "06-10-2026", text: "Analytic Rules (3) \\|v 1.0.0", contentTypes: ["Analytic Rule"] },
     ],
   },
   {
@@ -4810,6 +4824,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.1", date: "08-05-2026", text: "Updated XBOW API version to 2026-04-01. Populated AttackCredits and RecentEvents on assessment events.", contentTypes: [] },
       { version: "3.0.0", date: "17-03-2026", text: "Initial Solution Release. Added XBOW Function App Data Connector. Added Analytic Rules for Critical/High, Medium, Low findings, and Asset Discovery.", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.0", date: "17-03-2026", text: "Updated short link.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Xdr Log Raider",
+    alias: "XdrLogRaider",
+    entries: [
+      { version: "3.0.0", date: "13-07-2026", text: "Initial Solution release. Adds the XdrLogRaider Azure Function data connector for Microsoft Defender XDR portal-internal /apiproxy/* telemetry (per-Category Defender__CL tables).", contentTypes: ["Data Connector"] },
     ],
   },
   {
