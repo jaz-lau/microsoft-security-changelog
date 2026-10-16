@@ -393,6 +393,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Activity",
     entries: [
+      { version: "3.2.1", date: "14-10-2026", text: "Added 2 Defender XDR Workbooks (AzureActivity.json, AzureServiceHealthWorkbook.json) and updated 14 disabled Defender XDR Custom Detections to version 3.2.1 with reviewed migration dependencies and offline structural validation.", contentTypes: ["Workbook"] },
+      { version: "3.1.2", date: "12-10-2026", text: "Added 14 disabled Defender XDR Custom Detections with reviewed migration assumptions and offline structural validation. Runtime and alert parity validation were not performed.", contentTypes: [] },
       { version: "3.0.4", date: "25-02-2026", text: "Updated description_detailed for the Rare_Custom_Script_Extension Hunting Query.", contentTypes: ["Hunting Query"] },
       { version: "3.0.3", date: "19-02-2025", text: "Added new Workbook Azure Service Health to the Solution and added new Hunting query Machine_Learning_Creation.yaml.", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.3", date: "19-02-2025", text: "Added new Analytic Rule Machine_Learning_Creation.yaml", contentTypes: ["Analytic Rule"] },
@@ -719,6 +721,11 @@ export const RAW_SOLUTIONS = [
     name: "Cisco ASA",
     alias: "CiscoASA",
     entries: [
+      { version: "3.2.1", date: "14-10-2026", text: "Updated three disabled Defender XDR Custom Detections with preserved entity-mapping approvals and added one converted Defender Workbook (Cisco.json) bound to CommonSecurityLog (CiscoAsaAma). Offline content validation passed; runtime, alert parity, workbook UI, and provider acceptance remain unverified.", contentTypes: ["Workbook"] },
+      { version: "3.1.3", date: "13-10-2026", text: "Added workload, data-type, and connector prerequisite records to all three disabled XDR Custom Detections. Updated XDR content versions to 3.1.3 and V3.1 packaging to include resolved package/content provenance in installation and Content Hub registration records.", contentTypes: [] },
+      { version: "3.1.2", date: "12-10-2026", text: "Refreshed the V3.1 hybrid package for three disabled Defender XDR Custom Detections with reviewed Host mappings and source-rule provenance.", contentTypes: [] },
+      { version: "3.1.1", date: "11-10-2026", text: "Added a reviewed Host mapping to the threat-message Custom Detection and recorded accepted Host-mapping assumptions while preserving original host values in alert details.", contentTypes: [] },
+      { version: "3.1.0", date: "11-10-2026", text: "Added three disabled Defender XDR Custom Detections with source-rule provenance and V3.1 hybrid packaging support.", contentTypes: [] },
       { version: "3.0.9", date: "15-09-2026", text: "Updated the CiscoASA workbook and analytic rules to incorporate FTD logs alongside ASA logs.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.8", date: "22-08-2026", text: "Added new detection rule for Possible Data Exfilteration", contentTypes: [] },
       { version: "3.0.7", date: "01-09-2025", text: "Updates to the template_CiscoAsaAma.json file to reflect the general availability of the Cisco ASA/FTD via AMA connector", contentTypes: [] },
@@ -1543,6 +1550,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Endpoint Threat Protection Essentials",
     entries: [
+      { version: "3.2.1", date: "14-10-2026", text: "Updated solution and 15 disabled Defender XDR Custom Detections to V3.1 release version 3.2.1 with source-rule provenance, 26 reviewed decisions, and dependency mappings preserved.", contentTypes: [] },
+      { version: "3.1.2", date: "12-10-2026", text: "Added 15 disabled Defender XDR Custom Detections with source-rule provenance and reviewed mappings. Offline authoring validation completed; runtime validation and alert parity not run.", contentTypes: [] },
       { version: "3.0.7", date: "18-08-2026", text: "Updated version and mapping of connectorId to dataTypes for multiple Analytic Rules and Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.6", date: "20-07-2026", text: "Added Analytic Rule CertUtil Used for File Download.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.5", date: "18-11-2024", text: "Removed the broken URL in Analytic Rule and Hunting Query", contentTypes: ["Analytic Rule","Hunting Query"] },
@@ -1793,6 +1802,7 @@ export const RAW_SOLUTIONS = [
     name: "Git Hub",
     alias: "GitHub",
     entries: [
+      { version: "3.5.3", date: "15-10-2026", text: "Added CCF rate-limit and Azure Storage migration guidance, clarified the Azure Government Blob streaming limitation in both audit connectors, and updated Azure Storage setup guidance. Documented Webhooks V1's Azure Government limitation and migration to V2; added automatic Azure Government authentication selection, deployment guidance, and an updated Function package for GitHub Webhooks V2, with connector metadata version 1.0.2.", contentTypes: [] },
       { version: "3.5.2", date: "15-09-2026", text: "Added new audit fields in the CCF and Azure Storage connectors while preserving existing output column names and types, providing shared documentation for the schema of V2 and V3 tables. Enabled system-assigned identity on new and existing Event Grid topics while preserving existing principals, tags, and attached user-assigned identities; Added Create/Use existing sender-permission choices.", contentTypes: [] },
       { version: "3.5.1", date: "13-08-2026", text: "Added source storage subscription and resource group details to the Azure Storage data connector request for authorization validation.", contentTypes: ["Data Connector"] },
       { version: "3.5.0", date: "30-07-2026", text: "Promoted the GitHub Azure Storage Audit Logs data connector to GA, add multi-stream support, and updated its generated configuration with advanced Event Grid filters.", contentTypes: ["Data Connector"] },
@@ -2566,6 +2576,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender for Office 365",
     entries: [
+      { version: "3.2.1", date: "15-10-2026", text: "Fixed selection filters, queries and labels in XDR Workbooks.", contentTypes: ["Workbook"] },
       { version: "3.2.0", date: "15-10-2026", text: "Added the investigation XDR Workbook and native Defender Detections and Insights XDR Workbook, preserving the existing Sentinel workbook, connector and playbooks.", contentTypes: ["Playbook","Workbook"] },
       { version: "3.0.3", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "24-04-2024", text: "Updated link for Custom Connector redirection in playbooks", contentTypes: ["Playbook"] },
@@ -3769,6 +3780,7 @@ export const RAW_SOLUTIONS = [
     name: "Semperis Lightning",
     alias: "SemperisLightning",
     entries: [
+      { version: "3.1.1", date: "15-10-2026", text: "Moved the Codeless Connector Framework (CCF) data connector from Preview to General Availability.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "01-09-2026", text: "Added a Codeless Connector Framework (CCF) data connector alongside the existing Function App connector, letting customers use either or both to ingest Semperis Lightning data.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-03-2026", text: "Initial Solution Release. Added Semperis Lightning Connector", contentTypes: [] },
     ],
@@ -4115,6 +4127,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Syslog",
     entries: [
+      { version: "3.2.1", date: "14-10-2026", text: "Added seven disabled Defender XDR Custom Detections, including an hourly (PT1H) scheduled approximation of the source NRT mining-pool rule with unspecified engine-managed lookback, and two converted Defender Workbooks with mandatory workspace-function dependencies for the Syslog overview. Offline content validation passed; runtime, NRT parity, workbook UI and provider acceptance remain unverified.", contentTypes: ["Workbook"] },
+      { version: "3.1.2", date: "12-10-2026", text: "Added seven disabled Defender XDR Custom Detections converted from Syslog Analytic Rules, with source provenance. Offline structural validation passed; runtime validation was not performed.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.7", date: "04-11-2024", text: "Updated the Syslog Data Connector template to latest version", contentTypes: ["Data Connector"] },
       { version: "3.0.6", date: "01-08-2024", text: "Updated Analytic rules for entity mappings and parameter for parser function", contentTypes: ["Analytic Rule","Parser"] },
       { version: "3.0.5", date: "16-07-2024", text: "Added 2 new Workspace Function Parsers and a new Workbook", contentTypes: ["Workbook","Parser"] },
@@ -4735,6 +4749,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Windows Security Events",
     entries: [
+      { version: "3.2.1", date: "14-10-2026", text: "Added 2 Defender XDR Workbooks (EventAnalyzer.json and IdentityAndAccess.json) alongside the 21 disabled Defender XDR Custom Detections and existing Microsoft Sentinel content in hybrid V3.1 packaging.", contentTypes: ["Workbook"] },
+      { version: "3.1.2", date: "12-10-2026", text: "Added 21 disabled Defender XDR Custom Detections with reviewed entity mappings and hybrid V3.1 packaging alongside existing Microsoft Sentinel content. Validation was offline; runtime execution and alert parity were not run.", contentTypes: [] },
       { version: "3.0.13", date: "20-07-2026", text: "Added Analytic Rule WMI Spawning Suspicious Child Process", contentTypes: ["Analytic Rule"] },
       { version: "3.0.12", date: "18-02-2026", text: "Removed external blog reference text from \"Remote Scheduled Task Creation or Update using ATSVC Named Pipe\" and \" Scheduled Task Creation or Update from User Writable Directory\" hunting query description", contentTypes: ["Hunting Query"] },
       { version: "3.0.11", date: "28-01-2026", text: "Updated Analytic Rule to fix the link from the description & Update Analytic Rule NonDCActiveDirectoryReplication - to reduce false positive results", contentTypes: ["Analytic Rule"] },
