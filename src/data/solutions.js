@@ -839,6 +839,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.3.3", date: "15-10-2026", text: "Added 10 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (CiscoUmbrella.json) alongside the existing Sentinel content and updated the solution package to 3.3.3.", contentTypes: ["Workbook"] },
       { version: "3.3.2", date: "04-09-2026", text: "Updated the Cisco Umbrella template to allow an empty S3 bucket prefix or one with or without a trailing slash, allowing customer root directories to work.", contentTypes: [] },
       { version: "3.3.1", date: "26-08-2026", text: "Fixed Cisco Umbrella CCF connection resource naming to include the S3 bucket, region, and prefix, preventing connections for different account prefixes from overwriting each other.", contentTypes: [] },
       { version: "3.3.0", date: "14-08-2026", text: "Updated CCF Data Connector for Cisco Cloud Security log schema version 16: enabled Gzip decompression for all log streams, added DestinationSgtOriginId and FwBlockReason columns to CiscoUmbrellaCloudFirewall, added IsolationProfileId column to CiscoUmbrellaWebTraffic, and added connector instruction notes for optional headers and Cisco-managed/customer-managed Amazon S3 buckets.", contentTypes: ["Data Connector"] },
@@ -2540,6 +2541,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender for Cloud",
     entries: [
+      { version: "3.2.1", date: "15-10-2026", text: "Added 1 disabled Defender XDR Custom Detection (CoreBackupDeletionwithSecurityAlert.yaml) alongside the existing Sentinel Analytic Rule and updated the solution package to 3.2.1.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "06-12-2025", text: "Moved MicrosoftDefenderForCloudTenantBased's Data Connector from public preview to Global Availability", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "15-04-2024", text: "Updated Data Connector MicrosoftDefenderForCloudTenantBased's kind as GenericUI", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "03-04-2024", text: "Corrected the standard tier in Data Connector and Updated MicrosoftDefenderForCloudTenantBased.json to support FFX", contentTypes: ["Data Connector"] },
@@ -2556,6 +2558,7 @@ export const RAW_SOLUTIONS = [
     name: "Microsoft Defender for Endpoint",
     alias: "MicrosoftDefenderForEndpoint",
     entries: [
+      { version: "3.2.1", date: "15-10-2026", text: "Added 1 disabled Defender XDR Custom Detection (AquaBlizzardAVHits.yaml) alongside the existing Sentinel Analytic Rule and updated the solution package to 3.2.1.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.7", date: "29-07-2026", text: "Updated the AquaBlizzardAVHits analytic rule by correcting the HostName entity mapping from 'Name' to 'Host' and splitting the long KQL line for readability, removed redundant legacy extend statements from the MDE_Process-IOCs and MDE_Usage hunting queries. Fixed the Deploy to Azure Gov button URLs across playbook READMEs by changing the badge from deploytoazuregovbutton to deploytoazuregovernbutton.", contentTypes: ["Analytic Rule","Hunting Query","Playbook"] },
       { version: "3.0.6", date: "24-09-2025", text: "Updated MDE Playbooks Instructions to use Microsoft Graph SDK", contentTypes: ["Playbook"] },
       { version: "3.0.5", date: "06-08-2025", text: "Updated MDE Playbooks with newer logic", contentTypes: ["Playbook"] },
@@ -2576,6 +2579,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender for Office 365",
     entries: [
+      { version: "3.2.2", date: "16-10-2026", text: "Fixed the investigation XDR Workbook display name.", contentTypes: ["Workbook"] },
       { version: "3.2.1", date: "15-10-2026", text: "Fixed selection filters, queries and labels in XDR Workbooks.", contentTypes: ["Workbook"] },
       { version: "3.2.0", date: "15-10-2026", text: "Added the investigation XDR Workbook and native Defender Detections and Insights XDR Workbook, preserving the existing Sentinel workbook, connector and playbooks.", contentTypes: ["Playbook","Workbook"] },
       { version: "3.0.3", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
@@ -2595,6 +2599,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Defender XDR",
     entries: [
+      { version: "3.2.2", date: "15-10-2026", text: "Fixed queries, time filters and charts in XDR Workbooks.", contentTypes: ["Workbook"] },
       { version: "3.2.1", date: "15-10-2026", text: "Added 3 XDR Workbooks alongside the existing Sentinel workbooks.", contentTypes: ["Workbook"] },
       { version: "3.0.18", date: "03-09-2026", text: "Added 57 new Hunting Queries for Microsoft Defender for Office 365 email and collaboration protection. Updated the Workbook Microsoft Defender for Office 365 Detections and Insights to version 4.0.0, adding Microsoft Teams collaboration and file malware coverage, and additional Advanced Hunting data types.", contentTypes: ["Hunting Query","Workbook"] },
       { version: "3.0.17", date: "12-08-2026", text: "Updated Analytic Rule AnomalousVoulmeOfFileDeletion.yaml to add AzureActiveDirectory connector with SigninLogs data type. Fixed deploy button URLs in Playbook AttackSimulatorTrainingNonReporters readme to include the correct 'master' branch path.", contentTypes: ["Analytic Rule","Playbook"] },
@@ -2684,6 +2689,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID Protection",
     entries: [
+      { version: "3.2.1", date: "15-10-2026", text: "Added 1 disabled Defender XDR Custom Detection (CorrelateIPC_Unfamiliar-Atypical.yaml) alongside the existing Sentinel Analytic Rule and updated the solution package to 3.2.1.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "07-05-2026", text: "Updated the CorrelateIPC_Unfamiliar-Atypical Analytic Rule for better correlation accuracy and improved detection coverage.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "07-07-2025", text: "To enhance functionality, improve entity mappings, and update playbook configurations.", contentTypes: ["Playbook"] },
       { version: "3.0.2", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
@@ -3052,6 +3058,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.2.1", date: "15-10-2026", text: "Added 9 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (OktaSingleSignOn.json) alongside the existing Sentinel content, updated the reference link in azuredeploy_Okta_native_poller_connector_v2.json, and updated the solution package to 3.2.1.", contentTypes: ["Workbook"] },
       { version: "3.1.11", date: "28-09-2026", text: "Removed the deprecated Okta Single Sign-On Azure Function data connector from the solution package", contentTypes: ["Data Connector"] },
       { version: "3.1.10", date: "09-09-2026", text: "Updated the Okta Data Connector to retrieve up to 1000 events per page, throttle initial and paginated requests, and handle HTTP 429 responses using rate-limit-aware retries.", contentTypes: ["Data Connector"] },
       { version: "3.1.9", date: "30-07-2026", text: "Update KQL queries of Okta Analytics rules", contentTypes: [] },
