@@ -451,6 +451,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Azure kubernetes Service",
+    entries: [
+      { version: "3.2.2", date: "19-10-2026", text: "Added Defender XDR Workbook (AksSecurity.json) migrated to Advanced Hunting and preserved Azure Resource Graph queries.", contentTypes: ["Workbook"] },
+      { version: "2.0.2", date: "15-05-2024", text: "Initial Solution release with Workbook, Hunting Queries, and Data Connector for Azure Kubernetes Service.", contentTypes: ["Hunting Query","Data Connector","Workbook"] },
+    ],
+  },
+  {
     name: "Azure Resource Graph",
     entries: [
       { version: "3.0.3", date: "30-04-2026", text: "Added Preview tag for ARGRoleDefinitions table", contentTypes: [] },
@@ -648,6 +655,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Censys",
     entries: [
+      { version: "3.0.1", date: "05-10-2026", text: "Added Host Enrichment API support in Host Enrichment Playbooks and updated Add Incident Comment Playbook", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "06-04-2026", text: "Added Support for Related Infrastructure Playbook and Workbook", contentTypes: ["Playbook","Workbook"] },
       { version: "3.0.0", date: "05-03-2026", text: "Initial Solution for Censys with Playbooks and Workbook", contentTypes: ["Playbook","Workbook"] },
     ],
