@@ -185,6 +185,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "ANYRUN",
+    entries: [
+      { version: "3.0.0", date: "19-10-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "Apache HTTP Server",
     alias: "ApacheHTTPServer",
     entries: [
@@ -1495,6 +1501,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dragos",
     entries: [
+      { version: "3.0.1", date: "16-10-2026", text: "Added Workbook for Dragos notifications monitoring.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "10-01-2025", text: "Initial solution release.", contentTypes: [] },
     ],
   },
@@ -3553,6 +3560,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Recorded Future Identity",
     entries: [
+      { version: "3.2.1", date: "05-10-2026", text: "Changed boolean playbook parameters to \"true\"/\"false\" strings so they can be set when deploying from Content Hub.", contentTypes: ["Playbook"] },
       { version: "3.2.0", date: "21-07-2026", text: "Breaking change: updated data imports to use DCE/DCR instead of deprecated Data Collector API. See readme.md for migration instructions.", contentTypes: [] },
       { version: "3.1.3", date: "06-03-2026", text: "Deprecated RFI-Playbook-Alert-Importer-LAW-Sentinel in preparation for Microsoft Defender Portal. Added Analytic Rule that will handle incident creation.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.1.2", date: "29-04-2025", text: "Removed Get Risky User action from Playbooks due to Recorded Future can act as a authority on compromise.", contentTypes: ["Playbook"] },
@@ -4625,6 +4633,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMRay",
     entries: [
+      { version: "3.0.2", date: "13-08-2026", text: "Added whitelist domain feature to Submit-URL-VMRay-Analyzer playbook. Reworked VMRay-Sandbox_Outlook_Attachment playbook to write results to a Log Analytics custom table and create incidents via a scheduled analytics rule, so they surface in both Microsoft Sentinel and Microsoft Defender. Fixed data connector workbook/graph queries to use the ThreatIntelIndicators table instead of the deprecated ThreatIntelligenceIndicator table", contentTypes: ["Data Connector","Playbook","Workbook"] },
       { version: "3.0.1", date: "07-11-2025", text: "Fixed Premium ARM template", contentTypes: [] },
       { version: "3.0.0", date: "23-07-2025", text: "Initial Solution Release", contentTypes: [] },
     ],
