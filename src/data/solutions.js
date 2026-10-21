@@ -714,6 +714,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Checkpoint Email Security",
     entries: [
+      { version: "3.0.2", date: "08-10-2026", text: "Fixed CheckPointEmailSecurityEvents pagination by sending the scroll ID under requestData, reduced duplicate exception data with daily polling and deduplicating parsers, set API request timeouts to 30 seconds for connectivity-check compatibility, and added DCR dependencies on all custom tables to prevent first-deployment races.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "21-07-2026", text: "Promote CCF Data Connector to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "08-07-2026", text: "Initial release. Added Data Connector for Check Point Email Security (via Codeless Connector Framework) ingesting Security Events, Anti-Phishing Exceptions, Spam Exceptions, and Audit Logs data streams.", contentTypes: ["Data Connector"] },
     ],
@@ -1187,6 +1188,7 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk EPM",
     alias: "CyberArkEPM",
     entries: [
+      { version: "3.2.0", date: "23-09-2026", text: "Add CCF implementation data connector and rebrand to Idira", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "19-05-2026", text: "Update reporting mechanism to use DCR. Switch to Oauth login for EPM", contentTypes: [] },
       { version: "3.0.1", date: "28-04-2025", text: "Updated deployment instructions to use Python 3.10 version", contentTypes: [] },
       { version: "3.0.0", date: "27-07-2023", text: "Updated solution to fix deployment validations", contentTypes: [] },
@@ -2715,6 +2717,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Exchange Security - Exchange On-Premises",
     entries: [
+      { version: "3.4.0", date: "29-07-2026", text: "Migrate from Log Analytics API to Azure Monitor API", contentTypes: [] },
       { version: "3.3.2", date: "26-03-2025", text: "Update documentation link to new repository", contentTypes: [] },
       { version: "3.3.0", date: "26-08-2024", text: "Add Compare in Exchange Security Review. Create DataConnectors for Azure Monitor Agent. Correct bugs", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "09-04-2024", text: "Explode \"ExchangeAdminAuditLogEvents\" dataconnector to multiple simplier dataconnectors", contentTypes: ["Data Connector"] },
@@ -2731,6 +2734,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Exchange Security - Exchange Online",
     entries: [
+      { version: "3.2.0", date: "29-07-2026", text: "Migrate from Log Analytics API to Azure Monitor API", contentTypes: [] },
       { version: "3.1.7", date: "26-03-2025", text: "Update documentation link to new repository", contentTypes: [] },
       { version: "3.1.6", date: "30-08-2024", text: "Correct bug on LasdtReceivedData of DataConnector. and change parser", contentTypes: ["Data Connector","Parser"] },
       { version: "3.1.5", date: "15-05-2024", text: "Enhancement in existing Parser", contentTypes: ["Parser"] },
@@ -2948,6 +2952,13 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.2", date: "30-01-2025", text: "Updated Analytic Rules, Workbook columns due to change in Data Connector", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
       { version: "3.0.1", date: "27-07-2023", text: "Updated solution to remove unwanted spaces from variables.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Netcraft Integration Gateway",
+    alias: "NetcraftIntegrationGateway",
+    entries: [
+      { version: "3.0.0", date: "02-10-2026", text: "Initial release. CCF RestApiPoller connector for the Netcraft Integration Gateway, with parsers, workbooks, analytic rules, and hunting queries for Takedown, Domain Detection, Deep & Dark Web, Social, App, and Advert.", contentTypes: ["Analytic Rule","Hunting Query","Workbook","Parser"] },
     ],
   },
   {
@@ -4150,6 +4161,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Syslog",
     entries: [
+      { version: "3.2.2", date: "19-10-2026", text: "Restored DeployParser parameter and Parser resource deployment condition for the two workspace function Parsers alongside the seven disabled Defender XDR Custom Detections and two Defender Workbooks so Content Hub installation and multi-workspace deployment succeed.", contentTypes: ["Workbook","Parser"] },
       { version: "3.2.1", date: "14-10-2026", text: "Added seven disabled Defender XDR Custom Detections, including an hourly (PT1H) scheduled approximation of the source NRT mining-pool rule with unspecified engine-managed lookback, and two converted Defender Workbooks with mandatory workspace-function dependencies for the Syslog overview. Offline content validation passed; runtime, NRT parity, workbook UI and provider acceptance remain unverified.", contentTypes: ["Workbook"] },
       { version: "3.1.2", date: "12-10-2026", text: "Added seven disabled Defender XDR Custom Detections converted from Syslog Analytic Rules, with source provenance. Offline structural validation passed; runtime validation was not performed.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.7", date: "04-11-2024", text: "Updated the Syslog Data Connector template to latest version", contentTypes: ["Data Connector"] },
@@ -4917,6 +4929,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ZeroFox Threat Intelligence",
     entries: [
+      { version: "3.0.1", date: "29-09-2026", text: "Fixed the Physical Threats Data Connector, which left the location details and the dataset name empty, and the Indicators Data Connector, which left the event date and event threat type empty. No table changes; the fix applies to newly collected data — existing rows are not backfilled.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "01-04-2026", text: "Added Data Connectors for ZeroFox's Threat Intelligence.", contentTypes: ["Data Connector"] },
     ],
   },
