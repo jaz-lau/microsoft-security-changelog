@@ -422,6 +422,7 @@ export const RAW_SOLUTIONS = [
     name: "Azure DevOps Auditing",
     alias: "AzureDevOpsAuditing",
     entries: [
+      { version: "3.0.10", date: "07-10-2026", text: "Updated Data Connector to support connecting multiple Azure DevOps organizations, each as its own connection in a single workspace.", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "17-04-2026", text: "Updated Polling Config to fix parameter mismatch", contentTypes: [] },
       { version: "3.0.8", date: "26-01-2026", text: "Updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
       { version: "3.0.7", date: "22-01-2026", text: "Updated solution description by eliminating legacy streaming text", contentTypes: [] },
@@ -2116,6 +2117,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Honey Forge",
+    alias: "HoneyForge",
+    entries: [
+      { version: "3.0.0", date: "09-10-2026", text: "Initial release of HoneyForge Threat Detection solution", contentTypes: [] },
+    ],
+  },
+  {
     name: "Honey Labs",
     alias: "HoneyLabs",
     entries: [
@@ -3647,6 +3655,7 @@ export const RAW_SOLUTIONS = [
     name: "Rubrik Security Cloud",
     alias: "RubrikSecurityCloud",
     entries: [
+      { version: "3.5.4", date: "12-10-2026", text: "Updated Events Data table schema for CCF Connector.", contentTypes: [] },
       { version: "3.5.3", date: "03-09-2026", text: "Added RubrikCCFConnector to ingest Anomaly, Ransomware, ThreatHunt and other events data along with audit logs via webhook.", contentTypes: [] },
       { version: "3.5.2", date: "16-07-2026", text: "Added RubrikSecurityCloud CCF (Codeless Connector Framework) Data Connector for ingesting Rubrik Protection Status data into Microsoft Sentinel. Enables backup compliance monitoring, ransomware recovery assessment, and incident correlation with protection status for Azure VMs. Update python package version to resolve vulnerability", contentTypes: ["Data Connector"] },
       { version: "3.5.1", date: "05-11-2025", text: "Updated API Host Name default value in playbooks and custom connector", contentTypes: ["Playbook"] },
@@ -3721,6 +3730,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP BTP",
     entries: [
+      { version: "3.2.1", date: "21-10-2026", text: "Improved the AVL vulnerability rule to alert on name-matched interactive XSUAA logins to apps with high or critical findings; same-space audit activity is separate context only. Lowered severity to Medium, aggregated findings per app, extended the lookback to 14 days for weekly scans, added account and vulnerability context, and used ingestion time to break equal finding timestamps where available.", contentTypes: [] },
       { version: "3.2.0", date: "28-09-2026", text: "Added SAP BTP AVL connector for SAP Application Vulnerability Report Service findings (SAPBTPAVL_CL). Added an analytic rule for critical vulnerability findings in custom apps, with incident grouping per app and subaccount. Added an \"Application Vulnerabilities\" workbook tab and a vulnerability posture KPI on the Overview tab.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.1.1", date: "22-07-2026", text: "New analytic rule: detect unaudited custom apps with login-only activity. Renamed analytic rules with SAP BTP prefix for improved discoverability.", contentTypes: ["Analytic Rule"] },
       { version: "3.1.0", date: "08-06-2026", text: "Reworked BTP Cloud Integration artifact deployment rule to use audit.configuration events with richer artifact, actor, and tenant context", contentTypes: [] },
