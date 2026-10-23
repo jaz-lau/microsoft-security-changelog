@@ -2651,6 +2651,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.20", date: "14-10-2026", text: "Added new Analytic Rule for PIM activation without MFA from unusual location(T1078.004 & T1098.003).", contentTypes: ["Analytic Rule"] },
       { version: "3.3.19", date: "05-10-2026", text: "Fixed OAuth scope parsing for Suspicious application consent for offline access Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.18", date: "28-09-2026", text: "Updated the analytical rule configuration.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.17", date: "06-09-2026", text: "Added EndUserConsentMailboxOfflineAccess Analytic Rule to detect end-user OAuth consent to an app requesting delegated mailbox scopes (Mail.Read/Mail.ReadWrite/Mail.Send/MailboxSettings.ReadWrite) together with offline_access (T1528 - illicit consent grant).", contentTypes: ["Analytic Rule"] },
@@ -2856,6 +2857,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Miro",
     entries: [
+      { version: "3.1.0", date: "20-10-2026", text: "Added the AI Interaction Logs CCF connector (Beta) and the ai, ai_assisted and actor columns to Content Logs; the Content Logs and AI Interaction Logs pollers now throttle paged requests. Setup steps explain that the SIEM toggle creates one token with every log scope the organization is entitled to.", contentTypes: [] },
       { version: "3.0.0", date: "05-12-2025", text: "Initial release of the Miro solution with two CCF connectors (Audit Logs and Content Logs).", contentTypes: [] },
     ],
   },
@@ -3441,6 +3443,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.1", date: "03-05-2024", text: "Repackaged for Parser issue fix on reinstall", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "03-05-2024", text: "Added 2 new Analytic Rules and 3 new Playbooks", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.0", date: "05-02-2024", text: "Initial Solution Release - Parser Only", contentTypes: ["Parser"] },
+    ],
+  },
+  {
+    name: "Q Crypton PQC Scanner",
+    alias: "QCryptonPQCScanner",
+    entries: [
+      { version: "3.0.0", date: "17-09-2026", text: "Initial release of the QCrypton PQC Scanner solution. Includes: 1 data connector (Codeless Connector Framework — RestApiPoller, PQReadiness_CL); 6 scheduled analytic rules (Key Vault vulnerable keys, Entra ID quantum-vulnerable certificates, App Gateway/Front Door classical TLS certs, App Service legacy TLS, long-lived certs signed classically, new vulnerable resource detection); 1 workbook (PQ Readiness posture overview with black & white preview images); 1 playbook (Teams notification on incident). Fixed logo and solution path references; added workbook preview images, playbook README, and WorkbooksMetadata entry.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
     ],
   },
   {
@@ -4483,6 +4492,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Upwind",
     entries: [
+      { version: "3.0.4", date: "21-10-2026", text: "Added instructions for updating an existing deployment to the data connector page, and replaced the retired UpwindThreatLookbackMinutes parameter with UpwindCatalogSchedule. Connector code since 3.0.3: each run fetches only what changed in its time window and stays inside the Function App timeout, with a periodic full catalog sync, and vulnerability findings fill the exploitable, internet_exposure, fix, fix_available, image_name and status columns. To get it, redeploy the Function App with Deploy to Azure.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "28-07-2026", text: "Expanded ingestion from 1 to 6 Upwind API endpoints, fixed asset ingestion and deployment issues, enabled cross-resource-group Log Analytics support, and resolved custom-table schema conflicts by renaming reserved columns.", contentTypes: [] },
       { version: "3.0.2", date: "28-04-2026", text: "Fixed Function App deployment: restructured zip package to flat layout and removed separate App Service Plan for correct code deployment.", contentTypes: [] },
       { version: "3.0.1", date: "12-04-2026", text: "Updated SolutionMetadata publisherId to align the solution package metadata with publisher validation requirements.", contentTypes: [] },
