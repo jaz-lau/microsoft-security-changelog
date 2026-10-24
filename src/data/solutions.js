@@ -285,6 +285,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Organization Audit",
     alias: "AtlassianOrganizationAudit",
     entries: [
+      { version: "3.0.4", date: "30-09-2026", text: "Updated request and pagination parameters to reduce historical event polling and mitigate API rate limiting.", contentTypes: [] },
       { version: "3.0.3", date: "21-09-2026", text: "Updated the Atlassian Organization Audit data connector to enable multi-select connection management.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "13-08-2026", text: "Promoted the Atlassian Organization Audit data connector to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "12-08-2026", text: "Updated DCR transformKql to derive TimeGenerated from the event time with fallback to now(), and reduced poller timeout to 30 seconds.", contentTypes: [] },
@@ -4875,6 +4876,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Workday",
     entries: [
+      { version: "3.2.1", date: "22-10-2026", text: "Updated the Workday Data Connector to distinguish multi-instance logs using the source API endpoint in AdditionalFields.WorkdayDomain; added an environment summary query and upgrade guidance.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "07-10-2026", text: "Added multi-instance support for the Workday Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "18-08-2026", text: "Added support for a configurable page size for the Workday data connector and aliases and grid management.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "23-12-2025", text: "Updated page size for the Workday Data connector and configure the query window + updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
