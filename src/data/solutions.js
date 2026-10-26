@@ -400,6 +400,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Activity",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Rewrote let ... = dynamic([...]) and mv-apply in Defender XDR Custom Detection NRT_Creation_of_Expensive_Computes_in_Azure.yaml into streaming-compatible predicates so Continuous (PT0S) rule enablement succeeds in the Defender XDR NRT streaming engine.", contentTypes: [] },
       { version: "3.2.1", date: "14-10-2026", text: "Added 2 Defender XDR Workbooks (AzureActivity.json, AzureServiceHealthWorkbook.json) and updated 14 disabled Defender XDR Custom Detections to version 3.2.1 with reviewed migration dependencies and offline structural validation.", contentTypes: ["Workbook"] },
       { version: "3.1.2", date: "12-10-2026", text: "Added 14 disabled Defender XDR Custom Detections with reviewed migration assumptions and offline structural validation. Runtime and alert parity validation were not performed.", contentTypes: [] },
       { version: "3.0.4", date: "25-02-2026", text: "Updated description_detailed for the Rare_Custom_Script_Extension Hunting Query.", contentTypes: ["Hunting Query"] },
@@ -786,6 +787,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco ISE",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Microsoft Defender XDR Custom Detections and Workbook migration support.", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "20-05-2025", text: "Updated Parser to parse new fields", contentTypes: ["Parser"] },
       { version: "3.0.2", date: "04-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "23-07-2024", text: "Deprecated data connectors", contentTypes: ["Data Connector"] },
@@ -856,6 +858,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco Umbrella",
     alias: "CiscoUmbrella",
     entries: [
+      { version: "3.3.4", date: "25-10-2026", text: "Restored DeployParser parameter and Parser resource deployment condition for the Cisco_Umbrella Parser alongside the ten disabled Defender XDR Custom Detections and one Defender XDR Workbook so Content Hub installation and multi-workspace deployment succeed.", contentTypes: ["Workbook","Parser"] },
       { version: "3.3.3", date: "15-10-2026", text: "Added 10 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (CiscoUmbrella.json) alongside the existing Sentinel content and updated the solution package to 3.3.3.", contentTypes: ["Workbook"] },
       { version: "3.3.2", date: "04-09-2026", text: "Updated the Cisco Umbrella template to allow an empty S3 bucket prefix or one with or without a trailing slash, allowing customer root directories to work.", contentTypes: [] },
       { version: "3.3.1", date: "26-08-2026", text: "Fixed Cisco Umbrella CCF connection resource naming to include the S3 bucket, region, and prefix, preventing connections for different account prefixes from overwriting each other.", contentTypes: [] },
@@ -1784,6 +1787,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Fortinet FortiWeb Cloud WAF-as-a-Service connector for Microsoft Sentinel",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR Custom Detections and XDR Workbook for Fortinet FortiWeb Cloud WAF-as-a-Service.", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "10-12-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "30-04-2024", text: "Repackaged for parser issue fix on reinstall", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "26-02-2024", text: "Addition of new Fortinet FortiWeb Cloud WAF AMA Data Connector", contentTypes: ["Data Connector"] },
@@ -1806,6 +1810,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "GDPR Compliance & Data Security",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR XDR Workbook for GDPR Compliance & Data Security.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "15-12-2025", text: "Update the Workbook to include support for additional assets in the Watchlist.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "18-11-2025", text: "Fixing Issue with Defender Portal", contentTypes: [] },
       { version: "3.0.0", date: "08-10-2025", text: "Initial Solution Release", contentTypes: [] },
@@ -1984,6 +1989,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Cloud Platform Security Command Center",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR custom detections and V3.1 hybrid solution package.", contentTypes: [] },
       { version: "3.0.7", date: "11-11-2025", text: "Add New Analytic Rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.6", date: "12-11-2024", text: "Modified datatype query for Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "16-05-2024", text: "Modification in Data Connector", contentTypes: ["Data Connector"] },
@@ -2478,6 +2484,7 @@ export const RAW_SOLUTIONS = [
     name: "Maturity Model for Event Log Management (M-2131)",
     alias: "MaturityModelForEventLogManagementM2131",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR Custom Detections and Defender Workbook for Maturity Model for Event Log Management (M-21-31)", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "26-09-2025", text: "Updated the broken metrics in the workbook", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "09-11-2023", text: "Changes for rebranding from Azure Active Directory Identity Protection to Microsoft Entra ID Protection", contentTypes: [] },
@@ -3053,6 +3060,7 @@ export const RAW_SOLUTIONS = [
     name: "NIST SP 800-53",
     alias: "NISTSP80053",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR Custom Detection and Defender Workbook for NIST SP 800-53 R4", contentTypes: ["Workbook"] },
       { version: "3.0.4", date: "31-08-2026", text: "Fixed gov deploy to azure button and repackage", contentTypes: [] },
       { version: "3.0.3", date: "19-01-2026", text: "EOP rebrand (updated minor link and link title changes)", contentTypes: [] },
       { version: "3.0.2", date: "23-09-2025", text: "Updated the workbook with new links and fixed broken metrics.", contentTypes: ["Workbook"] },
@@ -3095,6 +3103,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Okta Single Sign-On",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Restored DeployParser parameter and Parser resource deployment condition for the OktaSSO Parser alongside the nine disabled Defender XDR Custom Detections and one Defender XDR Workbook so Content Hub installation and multi-workspace deployment succeed.", contentTypes: ["Workbook","Parser"] },
       { version: "3.2.1", date: "15-10-2026", text: "Added 9 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (OktaSingleSignOn.json) alongside the existing Sentinel content, updated the reference link in azuredeploy_Okta_native_poller_connector_v2.json, and updated the solution package to 3.2.1.", contentTypes: ["Workbook"] },
       { version: "3.1.11", date: "28-09-2026", text: "Removed the deprecated Okta Single Sign-On Azure Function data connector from the solution package", contentTypes: ["Data Connector"] },
       { version: "3.1.10", date: "09-09-2026", text: "Updated the Okta Data Connector to retrieve up to 1000 events per page, throttle initial and paginated requests, and handle HTTP 429 responses using rate-limit-aware retries.", contentTypes: ["Data Connector"] },
@@ -3174,6 +3183,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Oracle Cloud Infrastructure",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR custom detections and Defender XDR workbook support.", contentTypes: ["Workbook"] },
       { version: "3.0.11", date: "21-08-2026", text: "Prevent identity credential ingestion.", contentTypes: [] },
       { version: "3.0.10", date: "26-05-2026", text: "Updated OCI connector UI to include IAM permissions guidance and removed the \"Important -\" label.", contentTypes: [] },
       { version: "3.0.9", date: "10-02-2026", text: "Add support for group Cursor", contentTypes: [] },
@@ -4181,6 +4191,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Syslog",
     entries: [
+      { version: "3.2.3", date: "25-10-2026", text: "Inlined let DomainList = dynamic([...]) into where Domain has_any (...) in Defender XDR Custom Detection NRT_squid_events_for_mining_pools.yaml so Continuous (PT0S) rule enablement succeeds in the Defender XDR NRT streaming engine.", contentTypes: [] },
       { version: "3.2.2", date: "19-10-2026", text: "Restored DeployParser parameter and Parser resource deployment condition for the two workspace function Parsers alongside the seven disabled Defender XDR Custom Detections and two Defender Workbooks so Content Hub installation and multi-workspace deployment succeed.", contentTypes: ["Workbook","Parser"] },
       { version: "3.2.1", date: "14-10-2026", text: "Added seven disabled Defender XDR Custom Detections, including an hourly (PT1H) scheduled approximation of the source NRT mining-pool rule with unspecified engine-managed lookback, and two converted Defender Workbooks with mandatory workspace-function dependencies for the Syslog overview. Offline content validation passed; runtime, NRT parity, workbook UI and provider acceptance remain unverified.", contentTypes: ["Workbook"] },
       { version: "3.1.2", date: "12-10-2026", text: "Added seven disabled Defender XDR Custom Detections converted from Syslog Analytic Rules, with source provenance. Offline structural validation passed; runtime validation was not performed.", contentTypes: ["Analytic Rule"] },
@@ -4445,6 +4456,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "TrendAI Vision One(CCF)",
     entries: [
+      { version: "3.0.2", date: "07-10-2026", text: "Fixed Package template for portal deployment and corrected array-typed default values for the excludeThirdPartyOat and apiDomain connector parameters. Updated OAT Parser to deduplicate records by tenant-scoped xdrCustomerId_g and detail_uuid_g, and reworked the rt column handling to allow non-destructive upgrade from 3.0.1.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "16-09-2026", text: "Updated connector version.", contentTypes: [] },
       { version: "3.0.0", date: "05-08-2026", text: "Initial release of TrendAI Vision One solution via Codeless Connector Framework (CCF). Includes Workbench Alerts and OAT Detections connectors with DCR-based ingestion-time transformations, dropdown selectors for API domain and third-party exclusion, TMV1-Filter pass-through support, KQL parsers, an analytic rule with MITRE ATT&CK mappings, and a workbook dashboard. Fixed ARM template bracket escaping, added token rotation warning, optimized workbook queries, and removed the null alertRuleTemplateName field.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
     ],
@@ -4691,6 +4703,7 @@ export const RAW_SOLUTIONS = [
     name: "VMware ESXi",
     alias: "VMWareESXi",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Microsoft Defender XDR Custom Detections and Workbook migration support.", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "25-09-2026", text: "Remove broken VMware ESXi link.", contentTypes: [] },
       { version: "3.0.6", date: "25-09-2026", text: "Update outdated API versions.", contentTypes: [] },
       { version: "3.0.5", date: "03-11-2025", text: "Added new Analytic Rule (VMware ESXi - Root change password) and (VMware ESXi - Multiple Failed SSH Login)", contentTypes: ["Analytic Rule"] },
@@ -4710,6 +4723,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMware vCenter",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR Custom Detections and XDR Workbook for VMware vCenter.", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "13-06-2025", text: "Updating Parser to improve data parsing logic and adjusts entity mappings.", contentTypes: ["Parser"] },
       { version: "3.0.4", date: "03-12-2024", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "18-11-2024", text: "Modified Parser vCenter.yaml for better parsing.", contentTypes: ["Parser"] },
@@ -4784,6 +4798,8 @@ export const RAW_SOLUTIONS = [
     name: "Whois Freaks",
     alias: "WhoisFreaks",
     entries: [
+      { version: "3.0.2", date: "21-10-2026", text: "Fixed Data Connector feed selection, API key handling, duplicate fetches and table retention. Fixed Analytic Rules confidence threshold, NRD burst baseline, parked-domain flag and hourly re-alerting.", contentTypes: ["Analytic Rule","Data Connector"] },
+      { version: "3.0.1", date: "16-10-2026", text: "Deployment UI now filters workspaces by the exact resource group and lets the workspace region be reviewed before deployment.", contentTypes: [] },
       { version: "3.0.0", date: "09-10-2026", text: "Initial publication with the CCF threat and NRD feeds and four analytic-rule templates.", contentTypes: [] },
     ],
   },
@@ -4965,6 +4981,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Zinc Open Source",
     entries: [
+      { version: "3.2.2", date: "22-10-2026", text: "Migrated Analytic Rules to Microsoft Defender XDR Custom Detections (V3.1)", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "30-05-2024", text: "Added missing AMA Data Connector reference in Analytic rules", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.2", date: "27-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
       { version: "3.0.1", date: "19-12-2023", text: "Corrected typo mistake *Microsoft Windows DNS* to *Windows Server DNS*", contentTypes: [] },
