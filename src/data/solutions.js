@@ -272,6 +272,8 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Jira Audit",
     alias: "AtlassianJiraAudit",
     entries: [
+      { version: "3.2.3", date: "22-10-2026", text: "Fixed duplicate Custom Detection names and alert titles by correcting the site admin password-change rule name and description in both the Analytic Rule and Custom Detection.", contentTypes: ["Analytic Rule"] },
+      { version: "3.2.2", date: "20-10-2026", text: "Added 10 Defender XDR Custom Detections migrated from Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.6", date: "13-04-2026", text: "Deprecate Atlassian Jira Audit (using Azure Function)", contentTypes: [] },
       { version: "3.0.5", date: "18-03-2026", text: "Rename to Atlassian Jira Audit (via Codeless Connector Framework)", contentTypes: [] },
       { version: "3.0.4", date: "30-08-2024", text: "Updated parameters for CCP Data Connector", contentTypes: ["Data Connector"] },
@@ -421,9 +423,21 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Azure DDoS Protection",
+    entries: [
+      { version: "3.2.2", date: "19-10-2026", text: "Added Defender XDR Custom Detections (AttackSourcesPPSThreshold.yaml, AttackSourcesPercentThreshold.yaml) and Defender XDR Workbook (AzDDoSStandardWorkbook.json) migrated to Advanced Hunting with preserved Azure Resource Graph queries and cross-surface AzureDiagnostics field resolution.", contentTypes: ["Workbook"] },
+      { version: "2.0.4", date: "15-05-2024", text: "Updated Workbook (AzDDoSStandardWorkbook.json) and Solution package metadata.", contentTypes: ["Workbook"] },
+      { version: "2.0.3", date: "01-02-2024", text: "Updated Analytic Rules and Workbook queries for Azure DDoS Protection.", contentTypes: ["Analytic Rule","Workbook"] },
+      { version: "2.0.2", date: "10-10-2023", text: "Updated Data Connector and Workbook definitions.", contentTypes: ["Data Connector","Workbook"] },
+      { version: "2.0.1", date: "15-06-2023", text: "Minor updates to Analytic Rules and Workbook template.", contentTypes: ["Analytic Rule","Workbook"] },
+      { version: "2.0.0", date: "13-05-2022", text: "Initial Solution release for Azure DDoS Protection with Data Connector, Workbook, and Analytic Rules.", contentTypes: ["Analytic Rule","Data Connector","Workbook"] },
+    ],
+  },
+  {
     name: "Azure DevOps Auditing",
     alias: "AzureDevOpsAuditing",
     entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Added 18 XDR Detections and updated Analytical Rules for Defender XDR migration", contentTypes: ["Analytic Rule"] },
       { version: "3.0.10", date: "07-10-2026", text: "Updated Data Connector to support connecting multiple Azure DevOps organizations, each as its own connection in a single workspace.", contentTypes: ["Data Connector"] },
       { version: "3.0.9", date: "17-04-2026", text: "Updated Polling Config to fix parameter mismatch", contentTypes: [] },
       { version: "3.0.8", date: "26-01-2026", text: "Updated Data Connector to support dynamic Redirect URI", contentTypes: ["Data Connector"] },
@@ -479,6 +493,7 @@ export const RAW_SOLUTIONS = [
     name: "Azure Security Benchmark",
     alias: "AzureSecurityBenchmark",
     entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Added Defender XDR Custom Detection for Azure Security Benchmark Posture Changed and packaged with V3.1.", contentTypes: [] },
       { version: "3.0.5", date: "29-05-2026", text: "Updated Azure Security Benchmark workbook and Analytic Rules.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.4", date: "13-04-2026", text: "Updated Azure Security Benchmark label and queries.", contentTypes: [] },
       { version: "3.0.3", date: "10-09-2025", text: "Removed the network map from the workbook.", contentTypes: ["Workbook"] },
@@ -491,6 +506,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure SQL Database solution for sentinel",
     entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Added Defender XDR Custom Detections migrated from Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "11-06-2026", text: "Updated description of CreateUi", contentTypes: [] },
       { version: "3.0.0", date: "11-06-2026", text: "updates Azure SQL Hunting Queries and Analytic Rule", contentTypes: ["Analytic Rule","Hunting Query"] },
     ],
@@ -635,6 +651,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Business Email Compromise - Financial Fraud",
     entries: [
+      { version: "3.2.3", date: "22-10-2026", text: "Removed unsupported AWS S3 Custom Detection (SuspiciousAccessOfBECRelatedDocumentsInAWSS3Buckets.yaml).", contentTypes: [] },
+      { version: "3.2.2", date: "20-10-2026", text: "Migrated Analytic Rules to Microsoft Defender XDR Custom Detections", contentTypes: ["Analytic Rule"] },
       { version: "3.0.10", date: "10-11-2025", text: "Update in Analytical Rule alert description", contentTypes: ["Analytic Rule"] },
       { version: "3.0.9", date: "05-06-2024", text: "Analytical Rule description updated", contentTypes: ["Analytic Rule"] },
       { version: "3.0.8", date: "04-04-2024", text: "Updated Entity Mappings", contentTypes: [] },
@@ -1432,6 +1450,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dev 0270 Detection and Hunting",
     entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Added Defender XDR Custom Detections migrated from Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "07-06-2024", text: "Added missing AMA Data Connector reference in Analytic Rule", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.0", date: "12-04-2024", text: "Updated Entity Mappings of Analytic Rule", contentTypes: ["Analytic Rule"] },
     ],
@@ -1884,6 +1903,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Cloud Platform Audit Logs",
     entries: [
+      { version: "3.2.3", date: "22-10-2026", text: "Fixed Custom Detection deployment by retaining the DNS zone name in custom details instead of an incomplete DNS entity mapping.", contentTypes: [] },
+      { version: "3.2.2", date: "20-10-2026", text: "Migrated 7 Analytic Rules to Defender XDR Custom Detections (V3.1 hybrid package).", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "28-07-2026", text: "Added a new workbook for Google Cloud Platform Audit Logs.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "19-01-2026", text: "Added new GCP security Analytic Rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.1", date: "28-04-2025", text: "Updated Data Connector definition file and fixed overlapping collector issue.", contentTypes: ["Data Connector"] },
@@ -2060,6 +2081,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Workspace Reports",
     alias: "GoogleWorkspaceReports",
     entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Added Defender XDR Custom Detections migrated from Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.2.1", date: "02-10-2026", text: "Removed Google Workspace DCR EventParameters post-processing transform.", contentTypes: [] },
       { version: "3.2.0", date: "28-09-2026", text: "Added alias-based multi-tenant connection management to the Google Workspace CCF connector across all 22 activity pollers, including Gmail.", contentTypes: [] },
       { version: "3.1.0", date: "04-09-2026", text: "Added Gmail activity log ingestion and updated the parser to support the standard GoogleWorkspaceReports table while retaining legacy custom tables", contentTypes: ["Parser"] },
@@ -2659,7 +2681,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
-      { version: "3.3.20", date: "14-10-2026", text: "Added new Analytic Rule for PIM activation without MFA from unusual location(T1078.004 & T1098.003).", contentTypes: ["Analytic Rule"] },
+      { version: "3.3.20", date: "25-10-2026", text: "Added 74 Defender XDR Custom Detections and 2 Defender XDR Workbooks (AzureActiveDirectoryAuditLogs and AzureActiveDirectorySignins). Updated Analytic Rules metadata and Workbook (ConditionalAccessSISM, AzureActiveDirectoryAuditLogs, and AzureActiveDirectorySignins) parameters.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.3.19", date: "05-10-2026", text: "Fixed OAuth scope parsing for Suspicious application consent for offline access Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.18", date: "28-09-2026", text: "Updated the analytical rule configuration.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.17", date: "06-09-2026", text: "Added EndUserConsentMailboxOfflineAccess Analytic Rule to detect end-user OAuth consent to an app requesting delegated mailbox scopes (Mail.Read/Mail.ReadWrite/Mail.Send/MailboxSettings.ReadWrite) together with offline_access (T1528 - illicit consent grant).", contentTypes: ["Analytic Rule"] },
@@ -2765,6 +2787,15 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.2", date: "01-11-2023", text: "Added a Parser to verify if user is Microsoft Exchange Security VIP (Watchlist)", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "13-09-2023", text: "Readme file for parsers added and typo correction", contentTypes: ["Parser"] },
       { version: "3.0.0", date: "23-08-2023", text: "ExchangeEnvironmentList parser name corrected in Workbooks.", contentTypes: ["Workbook","Parser"] },
+    ],
+  },
+  {
+    name: "Microsoft PowerBI",
+    entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Added Defender XDR Workbook (MicrosoftPowerBIActivityWorkbook.json) migrated to Advanced Hunting for unified Defender portal deployment and updated the Microsoft PowerBI solution package to V3.1.", contentTypes: ["Workbook"] },
+      { version: "3.0.0", date: "04-09-2023", text: "Updated Data Connector and Workbook template metadata for Content Hub v3 packaging.", contentTypes: ["Data Connector","Workbook"] },
+      { version: "2.0.1", date: "21-03-2023", text: "Added Microsoft PowerBI Activity Workbook for monitoring user activities across dashboards, reports, and datasets.", contentTypes: ["Workbook"] },
+      { version: "2.0.0", date: "23-05-2022", text: "Initial Solution Release with Microsoft PowerBI Data Connector.", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -3628,6 +3659,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "RedRays SAP Security Findings",
+    entries: [
+      { version: "3.0.0", date: "27-10-2026", text: "Initial preview: Codeless Connector Framework (CCF) push connector for the Logs Ingestion API, eight table schemas, six assessment analytics templates with entity mappings, and a time-filtered workbook with export health. Includes descriptive rule filenames, SVG branding and light/dark previews; every rule carries MITRE ATT&CK tactics and techniques (password recovery maps to CredentialAccess / T1110), and operational heartbeat monitoring remains in the workbook.", contentTypes: ["Workbook"] },
+    ],
+  },
+  {
     name: "ReversingLabs",
     entries: [
       { version: "3.0.2", date: "08-08-2025", text: "Updated Reversing Labs workbook with new ThreatIntelIndicators Table", contentTypes: ["Workbook"] },
@@ -4024,6 +4061,7 @@ export const RAW_SOLUTIONS = [
     name: "SOC Process Framework",
     alias: "SOC-Process-Framework",
     entries: [
+      { version: "3.2.2", date: "20-10-2026", text: "Migrated 4 Workbooks to Microsoft Defender XDR and updated the solution package to V3.1.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "10-07-2025", text: "Updates to the playbook description, prerequisites, and post-deployment instructions, as well as adjustments to variable naming conventions for consistency .", contentTypes: ["Playbook"] },
       { version: "3.0.1", date: "24-07-2023", text: "Update Table markdown from \" : \" to \" - \" in SOCProcessFramework Workbook .", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "12-07-2023", text: "Correction of Logo in the solution.", contentTypes: [] },
