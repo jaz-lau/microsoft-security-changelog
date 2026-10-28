@@ -298,6 +298,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Attacker Tools Threat Protection Essentials",
     entries: [
+      { version: "3.2.2", date: "26-10-2026", text: "Added 5 Defender XDR Custom Detections (AdFind_Usage, CredentialDumpingServiceInstallation, CredentialDumpingToolsFileArtifacts, PowerShell-Abuse, and powershell_empire).", contentTypes: [] },
       { version: "3.0.5", date: "24-09-2026", text: "Updated Analytic Rule PowerShell Encoded Command Execution to support -e, decode Base64 payloads, and evaluate download-cradle indicators against decoded content.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "20-07-2026", text: "Added Analytic Rule PowerShell Encoded Command Execution", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "06-06-2024", text: "Added missing AMA Data Connector reference in Analytic rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query","Data Connector"] },
@@ -454,6 +455,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Firewall",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detections and XDR Workbooks for Sentinel to Defender XDR migration.", contentTypes: ["Workbook"] },
       { version: "3.0.7", date: "07-10-2026", text: "Fixed false positives in Abnormal Port to Protocol and SeveralDenyActionsRegistered rules when using AZFWNetworkRule table", contentTypes: [] },
       { version: "3.0.6", date: "06-05-2026", text: "Updated Analytical Rules and Hunting Queries to Quality improvements.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.5", date: "13-02-2026", text: "Updated Analytic Rule to cover missing TTPs. Extended detection for FQDN and Destination IP across multiple sources and added new Analytic Rule for improved TI destination coverage.", contentTypes: ["Analytic Rule"] },
@@ -628,6 +630,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Box",
     entries: [
+      { version: "3.1.7", date: "19-10-2026", text: "Updated rule to compare the new user's email domain with the corporate domain from SrcUserUpn, normalizing both to lowercase.", contentTypes: [] },
       { version: "3.1.6", date: "11-08-2026", text: "Added top-level action_by ingestion and exposed recorded_at through the parser.", contentTypes: ["Parser"] },
       { version: "3.1.5", date: "09-07-2026", text: "Updated Parser and CCF Data Connector DCR.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.1.4", date: "13-04-2026", text: "Deprecate Box Events (using Azure Function)", contentTypes: [] },
@@ -652,7 +655,6 @@ export const RAW_SOLUTIONS = [
     name: "Business Email Compromise - Financial Fraud",
     entries: [
       { version: "3.2.3", date: "22-10-2026", text: "Removed unsupported AWS S3 Custom Detection (SuspiciousAccessOfBECRelatedDocumentsInAWSS3Buckets.yaml).", contentTypes: [] },
-      { version: "3.2.2", date: "20-10-2026", text: "Migrated Analytic Rules to Microsoft Defender XDR Custom Detections", contentTypes: ["Analytic Rule"] },
       { version: "3.0.10", date: "10-11-2025", text: "Update in Analytical Rule alert description", contentTypes: ["Analytic Rule"] },
       { version: "3.0.9", date: "05-06-2024", text: "Analytical Rule description updated", contentTypes: ["Analytic Rule"] },
       { version: "3.0.8", date: "04-04-2024", text: "Updated Entity Mappings", contentTypes: [] },
@@ -1052,6 +1054,7 @@ export const RAW_SOLUTIONS = [
     name: "Continuous Diagnostics & Mitigation",
     alias: "ContinuousDiagnostics&Mitigation",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detection and Defender Workbook for Continuous Diagnostics & Mitigation (CDM)", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "29-09-2025", text: "Updated the broken metrics in the workbook", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "29-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "09-11-2023", text: "Changes for rebranding from Azure Active Directory Identity Protection to Microsoft Entra ID Protection", contentTypes: [] },
@@ -1437,6 +1440,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Delinea Platform",
     entries: [
+      { version: "3.0.1", date: "23-10-2026", text: "Fixed missing parameter in audit query.", contentTypes: [] },
       { version: "3.0.0", date: "29-09-2026", text: "Initial Solution Release with CCF data connector, ASIM parsers, analytic rules, hunting queries and workbooks.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
     ],
   },
@@ -1450,6 +1454,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Dev 0270 Detection and Hunting",
     entries: [
+      { version: "3.2.3", date: "28-10-2026", text: "Updated Analytic Rule and XDR Detection (Dev-0270NewUserSep2022.yaml) to resolve Partner Center CredScan false positive.", contentTypes: ["Analytic Rule"] },
       { version: "3.2.2", date: "20-10-2026", text: "Added Defender XDR Custom Detections migrated from Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "07-06-2024", text: "Added missing AMA Data Connector reference in Analytic Rule", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.0", date: "12-04-2024", text: "Updated Entity Mappings of Analytic Rule", contentTypes: ["Analytic Rule"] },
@@ -1884,6 +1889,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Global Secure Access",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detection Analytic Rules and migrated Workbooks to Defender XDR.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.4", date: "15-04-2026", text: "Updated workbooks to support the new Entra traffic type; Fixed regex in GSA - TI URL Entity analytic rule for correct URL indicator matching", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.3", date: "25-02-2026", text: "Modified the query period for the Analytic Rule: [GSA - Detect Abnormal Deny Rate for Source to Destination IP]", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "04-02-2026", text: "Added new Analytic Rules", contentTypes: ["Analytic Rule"] },
@@ -2307,6 +2313,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Intel471",
     entries: [
+      { version: "3.0.2", date: "23-10-2026", text: "Corrected the marketplace Offer ID in the solution package so the Microsoft Sentinel content hub recognises updates to the published Intel 471 offer. Updated Playbook 'Intel 471 Malware Intelligence to Sentinel' to v3.1: it now reports solution version 3.0.2 in the User-Agent header sent to the Intel 471 API. No functional change to hunting queries or playbook logic.", contentTypes: ["Hunting Query","Playbook"] },
       { version: "3.0.1", date: "28-08-2026", text: "Added 25 Hunting Queries.", contentTypes: ["Hunting Query"] },
       { version: "3.0.1", date: "28-08-2026", text: "Updated Playbook 'Intel 471 Malware Intelligence to Sentinel' to v3.0: Key Vault secret names can now be supplied at deployment, and Blob storage now authenticates with the logic app's managed identity - grant it the Storage Blob Data Contributor role or every run fails.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "02-12-2025", text: "Added the Verity 471 backend alongside Titan, and switched indicator ingestion to the Threat Intelligence Upload Indicators API.", contentTypes: [] },
@@ -2323,6 +2330,7 @@ export const RAW_SOLUTIONS = [
     name: "IoT/OT Threat Monitoring with Defender for IoT",
     alias: "IoTOTThreatMonitoringwithDefenderforIoT",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detections and XDR Workbooks for Sentinel to Defender XDR migration.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "29-01-2025", text: "Corrected Entity Mappings structure of Analytic Rules", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "10-01-2025", text: "Reverted Entity Mappings of Analytic Rules to earlier version", contentTypes: ["Analytic Rule"] },
       { version: "3.0.0", date: "30-11-2023", text: "Added new Entity Mapping to Analytic Rules", contentTypes: ["Analytic Rule"] },
@@ -2546,6 +2554,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft 365",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detections and XDR Workbooks for Sentinel to Defender XDR migration.", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "04-02-2025", text: "Updated Analytic Rule MailItemsAccessedTimeSeries.yaml", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "27-08-2024", text: "Updated Analytic Rule for Same names", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "12-06-2024", text: "Updated Analytic Rule for Bug Fixes ExternalUserAddedRemovedInTeams.yaml", contentTypes: ["Analytic Rule"] },
@@ -2576,6 +2585,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Business Applications",
     entries: [
+      { version: "3.2.4", date: "25-10-2026", text: "Migrated Analytic Rules to Defender XDR Custom Detection format and added XDR Workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.2.3", date: "23-02-2026", text: "Updated Dataverse - Activity after failed logons hunting query to use valid Enterprise technique", contentTypes: ["Hunting Query"] },
       { version: "3.2.2", date: "22-04-2025", text: "Updated solution description.", contentTypes: [] },
       { version: "3.2.1", date: "11-04-2025", text: "Move solution and content to GA.Minor analytic rule update.", contentTypes: ["Analytic Rule"] },
@@ -2814,6 +2824,7 @@ export const RAW_SOLUTIONS = [
     name: "Microsoft Purview Insider Risk Management",
     alias: "MicrosoftPurviewInsiderRiskManagement",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detection rules (XDR Detections/) and migrated Workbook (XDR Workbooks/) for Unified Security Operations Platform compatibility.", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "07-04-2025", text: "Updated ConnectivityCriteria Type in Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.5", date: "10-04-2024", text: "Updated Entity Mappings InsiderRiskyAccessByApplication.yaml", contentTypes: [] },
       { version: "3.0.4", date: "07-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
@@ -2896,6 +2907,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Miro",
     entries: [
+      { version: "3.1.1", date: "26-10-2026", text: "Renamed the AI Interaction Logs table from MiroAILogs_CL to MiroAIInteractionLogs_CL and every AI Interaction Logs connector resource to MiroAIInteractionLogs*; queries that read the old table name must use the new one.", contentTypes: [] },
       { version: "3.1.0", date: "20-10-2026", text: "Added the AI Interaction Logs CCF connector (Beta) and the ai, ai_assisted and actor columns to Content Logs; the Content Logs and AI Interaction Logs pollers now throttle paged requests. Setup steps explain that the SIEM toggle creates one token with every log scope the organization is entitled to.", contentTypes: [] },
       { version: "3.0.0", date: "05-12-2025", text: "Initial release of the Miro solution with two CCF connectors (Audit Logs and Content Logs).", contentTypes: [] },
     ],
@@ -2954,6 +2966,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Multi Cloud Attack Coverage Essentials - Resource Abuse",
     entries: [
+      { version: "3.2.3", date: "28-10-2026", text: "Added Defender XDR Custom Detections for V3.1 dual-surface package", contentTypes: [] },
       { version: "3.0.3", date: "07-06-2024", text: "Analytical Rule description updated", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "08-04-2024", text: "Added Account and FullName in entity mapping", contentTypes: [] },
       { version: "3.0.1", date: "23-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
@@ -4795,6 +4808,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Web Session Essentials",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detections and XDR Workbooks for Sentinel to Defender XDR migration.", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "11-09-2026", text: "Added WebSessionEssentialsCustomParser to parse and normalize the tables used in dependent Security Content.", contentTypes: [] },
       { version: "3.0.4", date: "02-09-2026", text: "Added Summarize Web Session Data using Log Ingestion API Playbook", contentTypes: ["Playbook"] },
       { version: "3.0.3", date: "06-06-2024", text: "Updated Entity Mapping Analytic Rule CommandInURL.yaml", contentTypes: ["Analytic Rule"] },
@@ -4996,6 +5010,7 @@ export const RAW_SOLUTIONS = [
     name: "Zero Trust (TIC 3.0)",
     alias: "ZeroTrust(TIC3.0)",
     entries: [
+      { version: "3.2.2", date: "25-10-2026", text: "Added Defender XDR Custom Detection and Defender Workbook for Zero Trust (TIC 3.0)", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "19-01-2026", text: "EOP rebrand (updated minor link and link title changes)", contentTypes: [] },
       { version: "3.0.2", date: "11-09-2025", text: "Removed the network map from the workbook.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "31-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
