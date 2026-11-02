@@ -188,6 +188,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ANYRUN",
     entries: [
+      { version: "3.0.1", date: "02-11-2026", text: "Fixed the location issue in Sentinel-FA/azuredeploy.json and updated logos and images in the respective playbook README.md files.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "19-10-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
@@ -1046,6 +1047,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Commvault Security IQ",
     entries: [
+      { version: "3.0.8", date: "05-10-2026", text: "Enhanced Commvault Security IQ (via Codeless Connector Framework) data connector with configurable Ingestion Mode options: Incremental (Time Window) and All Active Threat Indicator Anomalies (No Time Window), and transitioned connector to General Availability. Fixed the CCF poller to send fromTime and toTime as query string parameters in Incremental (Time Window) mode.", contentTypes: ["Data Connector"] },
       { version: "3.0.7", date: "27-08-2026", text: "Fixed the CCF poller's Unix timestamp formatting for the fromTime and toTime query parameters.", contentTypes: [] },
       { version: "3.0.6", date: "04-08-2026", text: "Updated the CCF connector and solution documentation.", contentTypes: [] },
       { version: "3.0.5", date: "27-07-2026", text: "Added Commvault Security IQ (via Codeless Connector Framework) data connector, introduced CommvaultAlertsCCF_CL custom table and Data Collection Rule (DCR), updated analytics rule to detect client anomalies using AnomalyType, enhanced connector UI with sample queries and configuration guidance, and updated solution documentation for CCF-based deployment.", contentTypes: ["Data Connector"] },
@@ -1237,6 +1239,7 @@ export const RAW_SOLUTIONS = [
     name: "Cybersecurity Maturity Model Certification(CMMC)2.0",
     alias: "CybersecurityMaturityModelCertification(CMMC)2.0",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added 2 Defender XDR Custom Detections and 1 Defender XDR Workbook (CybersecurityMaturityModelCertification_CMMCV2). Updated Analytic Rules metadata and entity mappings.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.1.1", date: "13-01-2026", text: "Updated non-functional links from Workbook.", contentTypes: ["Workbook"] },
       { version: "3.1.0", date: "09-09-2025", text: "Removed the network map from the Workbook", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "29-01-2024", text: "Updated the solution to fix Analytic Rules deployment issue", contentTypes: ["Analytic Rule"] },
@@ -2234,6 +2237,7 @@ export const RAW_SOLUTIONS = [
     name: "Illumio SaaS",
     alias: "IllumioSaaS",
     entries: [
+      { version: "3.4.2", date: "27-10-2026", text: "Upgraded aiobotocore to 2.26.0 to remediate urllib3 vulnerabilities (CVE-2026-97687, CVE-2026-97689).", contentTypes: [] },
       { version: "3.4.1", date: "13-03-2026", text: "Update function app to use Managed Identity.", contentTypes: [] },
       { version: "3.4.0", date: "03-02-2025", text: "Added 2 new Parser.", contentTypes: ["Parser"] },
       { version: "3.4.0", date: "03-02-2025", text: "Added new connectorid SyslogAma to Analytic Rules.", contentTypes: ["Analytic Rule"] },
@@ -3344,6 +3348,7 @@ export const RAW_SOLUTIONS = [
     name: "Palo Alto Prisma Cloud",
     alias: "PaloAltoPrismaCloud",
     entries: [
+      { version: "3.2.2", date: "29-10-2026", text: "Migrated 11 Analytic Rules to XDR Detections and 1 Workbook to XDR Workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.5", date: "02-10-2026", text: "Fixed API versions for saved searches resource in mainTemplate", contentTypes: [] },
       { version: "3.0.4", date: "27-10-2025", text: "Add missing \"detailed\" flag to CCF Data Connector polling config", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "10-10-2025", text: "CCF Data Connector Moving to GA.", contentTypes: ["Data Connector"] },
@@ -3872,6 +3877,7 @@ export const RAW_SOLUTIONS = [
     name: "Security Threat Essential Solution",
     alias: "SecurityThreatEssentialSolution",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added 7 Defender XDR Custom Detections (PossibleAiTMPhishingAttemptAgainstAAD, Threat_Essentials_Mail_redirect_via_ExO_transport_rule, Threat_Essentials_MultipleAdmin_membership_removals_from_NewAdmin, Threat_Essentials_NRT_UseraddedtoPrivilgedGroups, Threat_Essentials_TimeSeriesAnomaly-MultiVendor_DataExfiltration, Threat_Essentials_TimeSeriesAnomaly_Mass_Cloud_Resource_Deletions, and Threat_Essentials_UserAssignedPrivilegedRole).", contentTypes: [] },
       { version: "3.0.3", date: "05-06-2024", text: "Added missing AMA Data Connector reference in Analytic Rule", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.2", date: "18-03-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
       { version: "3.0.1", date: "10-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
@@ -4470,6 +4476,7 @@ export const RAW_SOLUTIONS = [
     name: "Transmit Security",
     alias: "TransmitSecurity",
     entries: [
+      { version: "3.0.3", date: "20-10-2026", text: "Added the StepInvocationId field (step_invocation_id) to the CCF data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "13-07-2026", text: "Update data connector from the deprecated Azure Function connector to CCF", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "03-09-2024", text: "Updated the python runtime version to 3.11", contentTypes: [] },
       { version: "3.0.0", date: "11-07-2024", text: "Initial Solution Release", contentTypes: [] },
@@ -4845,6 +4852,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Web Shells Threat Protection",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added 3 Defender XDR Custom Detections (MaliciousAlertLinkedWebRequests, PotentialMercury_Webshell, and Supernovawebshell).", contentTypes: [] },
       { version: "3.0.4", date: "10-06-2024", text: "Added missing AMA Data Connector reference in Analytic rules", contentTypes: ["Analytic Rule","Data Connector"] },
       { version: "3.0.3", date: "12-04-2024", text: "Updated Entity Mapping and Query of Analytic Rule Supernovawebshell.yaml and MaliciousAlertLinkedWebRequests.yaml", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "22-02-2024", text: "Tagged for dependent Solutions for deployment", contentTypes: [] },
