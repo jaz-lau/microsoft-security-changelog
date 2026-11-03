@@ -275,6 +275,7 @@ export const RAW_SOLUTIONS = [
     name: "Atlassian Jira Audit",
     alias: "AtlassianJiraAudit",
     entries: [
+      { version: "3.2.4", date: "26-10-2026", text: "Removed unused \"WEBSITE_NODE_DEFAULT_VERSION\": \"~10\" from the Sync-CommentsFunctionApp Playbook deployment configuration.", contentTypes: ["Playbook"] },
       { version: "3.2.3", date: "22-10-2026", text: "Fixed duplicate Custom Detection names and alert titles by correcting the site admin password-change rule name and description in both the Analytic Rule and Custom Detection.", contentTypes: ["Analytic Rule"] },
       { version: "3.2.2", date: "20-10-2026", text: "Added 10 Defender XDR Custom Detections migrated from Analytic Rules.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.6", date: "13-04-2026", text: "Deprecate Atlassian Jira Audit (using Azure Function)", contentTypes: [] },
@@ -321,6 +322,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Auth0",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Repackaged the Solution to V3.1 version 3.2.2 and updated Data Connector documentation link.", contentTypes: ["Data Connector"] },
       { version: "3.2.1", date: "23-09-2026", text: "Added OrganizationId, OrganizationName, and SecurityContext fields to the Auth0 Logs (via Codeless Connector Framework) Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "20-07-2026", text: "Auth0 Logs (via Codeless Connector Framework) Data Connector now supports collecting from multiple Auth0 hosts (multi-domain) and tags each record with the Auth0Domain column", contentTypes: ["Data Connector"] },
       { version: "3.1.5", date: "13-04-2026", text: "Deprecate Auth0 Logs (using Azure Function)", contentTypes: [] },
@@ -330,6 +332,7 @@ export const RAW_SOLUTIONS = [
       { version: "3.1.1", date: "22-01-2025", text: "Added Preview tag to CCP Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "13-12-2024", text: "Added new CCP Data Connector to the Solution", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "24-08-2024", text: "Updated the Data Connector Function app python runtime version to 3.11", contentTypes: ["Data Connector"] },
+      { version: "2.0.0", date: "11-12-2023", text: "Added new Parser (Auth0AM)", contentTypes: ["Parser"] },
     ],
   },
   {
@@ -342,6 +345,7 @@ export const RAW_SOLUTIONS = [
     name: "AWS Access Logs",
     alias: "AWS_AccessLogs",
     entries: [
+      { version: "3.2.2", date: "02-11-2026", text: "Migrated and repackaged AWS S3 Server Access Log Data Connector solution with V3.1 packaging.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "05-02-2026", text: "Resolved vulnerability reported in AWS Access log in CloudFoundation template file.", contentTypes: [] },
       { version: "3.0.1", date: "10-06-2025", text: "AWS S3 Server Access Log CCF Data Connector Moving to GA.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "08-08-2025", text: "Initial Solution Release.", contentTypes: [] },
@@ -360,6 +364,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AWS CloudFront",
     entries: [
+      { version: "3.2.2", date: "02-11-2026", text: "Packaged AWS CloudFront solution to V3.1 schema (3.2.2).", contentTypes: [] },
       { version: "3.0.0", date: "24-06-2025", text: "Initial Solution Release.", contentTypes: [] },
       { version: "3.0.0", date: "24-06-2025", text: "Added new CCF Data Connector 'AWSCloudFrontLog_CCF'", contentTypes: ["Data Connector"] },
     ],
@@ -911,6 +916,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco WSA",
     alias: "CiscoWSA",
     entries: [
+      { version: "3.2.3", date: "17-04-2026", text: "Added XDR Detections and XDR Workbooks and repackaged Solution for Defender XDR migration", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "19-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "24-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "16-08-2023", text: "Optimize the Parser by replacing the legacy code that uses regex with a more efficient algorithm to reduce the time taken to parse data.", contentTypes: ["Parser"] },
@@ -1578,6 +1584,14 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Eaton Foreseer",
+    alias: "EatonForeseer",
+    entries: [
+      { version: "3.2.3", date: "17-04-2026", text: "Added XDR Detections and repackaged Solution for Defender XDR migration", contentTypes: [] },
+      { version: "2.0.0", date: "01-01-2023", text: "Initial Solution release with Analytical Rule", contentTypes: ["Analytic Rule"] },
+    ],
+  },
+  {
     name: "Egress Defend",
     entries: [
       { version: "3.1.0", date: "01-09-2026", text: "Added a new Data Connector using the Logs Ingestion API (CCF RestApiPoller with DCR/DCE), replacing the retiring HTTP Data Collector API. Added a new Parser DefendAuditData_v4. Updated Analytic Rules, Workbook and Hunting Query to read from DefendAuditData_v4. The original connector, table and parser are unchanged, so existing installations keep working until the new connector is enabled.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook","Parser"] },
@@ -1796,6 +1810,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Fortinet FortiGate Next-Generation Firewall connector for Microsoft Sentinel",
     entries: [
+      { version: "3.0.10", date: "23-10-2026", text: "Removed unused \"WEBSITE_NODE_DEFAULT_VERSION\": \"~10\" from the FortinetFortigateFunctionApp Playbook deployment configuration.", contentTypes: ["Playbook"] },
       { version: "3.0.9", date: "21-05-2026", text: "Updated Fortinetfortigate Playbook Function app to fix authlevel", contentTypes: ["Playbook"] },
       { version: "3.0.8", date: "26-02-2025", text: "Playbook functionApp code change", contentTypes: ["Playbook"] },
       { version: "3.0.7", date: "11-11-2024", text: "Removed Deprecated data connectors", contentTypes: ["Data Connector"] },
@@ -2151,6 +2166,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "HIPAA Compliance",
     entries: [
+      { version: "3.2.2", date: "02-11-2026", text: "Added Defender XDR Workbook HIPAACompliance.json and repackaged to 3.2.2", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "22-10-2025", text: "Initial Solution release", contentTypes: [] },
     ],
   },
@@ -2461,6 +2477,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Legacy IOC based Threat Protection",
     entries: [
+      { version: "3.2.2", date: "02-11-2026", text: "Repackaged Legacy IOC based Threat Protection solution to version 3.2.2 via V3.1 packager.", contentTypes: [] },
       { version: "3.0.5", date: "03-06-2024", text: "Added missing AMA Data Connector reference in Hunting Query", contentTypes: ["Hunting Query","Data Connector"] },
       { version: "3.0.4", date: "22-02-2024", text: "Tagged for dependent solutions for deployment", contentTypes: [] },
       { version: "3.0.3", date: "19-12-2023", text: "Corrected typo mistake *Microsoft Windows DNS* to *Windows Server DNS*", contentTypes: [] },
@@ -2835,6 +2852,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Purview Information Protection",
     entries: [
+      { version: "3.0.1", date: "02-11-2026", text: "Moved connector from preview to GA", contentTypes: [] },
       { version: "3.0.0", date: "19-03-2024", text: "Adjust wording for Microsoft Purview Information Protection logs - log source isn't Azure Diagnostics for this one", contentTypes: [] },
     ],
   },
@@ -3267,6 +3285,7 @@ export const RAW_SOLUTIONS = [
     name: "Oracle Database Audit",
     alias: "OracleDatabaseAudit",
     entries: [
+      { version: "3.2.3", date: "17-04-2026", text: "Added XDR Detections and XDR Workbooks and repackaged Solution for Defender XDR migration", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "11-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "23-07-2024", text: "Deprecated data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "26-04-2024", text: "Repackaged for fix on parser in maintemplate to have old parsername and parentid", contentTypes: ["Parser"] },
@@ -3277,6 +3296,7 @@ export const RAW_SOLUTIONS = [
     name: "Oracle WebLogic Server",
     alias: "OracleWebLogicServer",
     entries: [
+      { version: "3.2.3", date: "17-04-2026", text: "Added XDR Detections and XDR Workbooks and repackaged Solution for Defender XDR migration", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "23-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "09-08-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "15-12-2023", text: "Updated the Parser field TreadId to ThreadId", contentTypes: ["Parser"] },
@@ -3402,6 +3422,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "PingFederate",
     entries: [
+      { version: "3.2.3", date: "17-04-2026", text: "Added XDR Detections and XDR Workbooks and repackaged Solution for Defender XDR migration", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "22-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "12-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "04-09-2023", text: "Addition of new PingFederate AMA Data Connector", contentTypes: ["Data Connector"] },
@@ -3818,6 +3839,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP",
     entries: [
+      { version: "3.5.11", date: "26-10-2026", text: "Updated \"WEBSITE_NODE_DEFAULT_VERSION\" from \"~12\" to \"~22\" in the Basic-SAPLockUser-STD and SAPCollectorRemediate-STD Playbooks deployment configurations.", contentTypes: ["Playbook"] },
       { version: "3.5.10", date: "30-06-2026", text: "Removal of Agent-based connector from solution. Zip file link redirected to SAP Business Accelerator Hub (moved from editable to configure-only release).", contentTypes: [] },
     ],
   },
@@ -3935,6 +3957,7 @@ export const RAW_SOLUTIONS = [
     name: "Sentinel SOAR Essentials",
     alias: "SentinelSOARessentials",
     entries: [
+      { version: "3.2.2", date: "29-10-2026", text: "Migrated 3 Workbooks (AutomationHealth, SecurityOperationsEfficiency, IncidentTasksWorkbook) to Microsoft Defender XDR and updated the solution package to V3.1.", contentTypes: ["Workbook"] },
       { version: "3.0.8", date: "05-03-2026", text: "Enhanced the *Incident-Trigger-Entity-Analyzer* Playbook with intelligent user identifier detection (objectGuid, aadUserId, UPN, and Name+UPNSuffix) for reliable user resolution, and added handling to skip and comment on incidents when no valid user identifier is present.", contentTypes: ["Playbook"] },
       { version: "3.0.7", date: "13-01-2026", text: "Removed the redundant *IncidentOverview* workbook from SentinelSOAREssentianls", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "24-12-2025", text: "Added new playbooks for the incident alerting.", contentTypes: ["Playbook"] },
@@ -3984,6 +4007,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Servicenow",
+    entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Repackaged the Solution to V3.1 version 3.2.2 and added Marketplace trackingId in SolutionMetadata.json.", contentTypes: [] },
+      { version: "3.0.0", date: "11-07-2023", text: "Initial Solution Package with Playbooks.", contentTypes: ["Playbook"] },
+    ],
+  },
+  {
     name: "ServiceNow TISC",
     entries: [
       { version: "3.0.0", date: "15-01-2025", text: "Initial Solution Release", contentTypes: [] },
@@ -3999,6 +4029,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Shodan",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Repackaged the Solution to V3.1 version 3.2.2 and added Marketplace trackingId in SolutionMetadata.json.", contentTypes: [] },
       { version: "3.0.0", date: "11-07-2023", text: "Initial Solution Package with Playbooks.", contentTypes: ["Playbook"] },
     ],
   },
@@ -4134,6 +4165,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Sophos Endpoint Protection",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Repackaged the Solution to V3.1 version 3.2.2 and updated Data Connector documentation links.", contentTypes: ["Data Connector"] },
       { version: "3.0.8", date: "14-04-2026", text: "Deprecate Sophos Endpoint Protection (using Azure Function)", contentTypes: [] },
       { version: "3.0.7", date: "24-03-2026", text: "Sophos Endpoint Protection (via Codeless Connector Platform)", contentTypes: [] },
       { version: "3.0.6", date: "23-10-2025", text: "Updated the solution to be compatible with tool changes for the connection name.", contentTypes: [] },
@@ -4389,6 +4421,7 @@ export const RAW_SOLUTIONS = [
     name: "Threat Analysis & Response",
     alias: "ThreatAnalysis&Response",
     entries: [
+      { version: "3.2.2", date: "29-10-2026", text: "Added 2 Defender XDR Workbooks (ThreatAnalysis&Response, DynamicThreatModeling&Response) and updated Workbooks visibility parameter scoping.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "01-09-2025", text: "Updated the Threat Analysis & Response workbook to view in graphical view.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "11-11-2023", text: "Modified text as there is rebranding from Azure Active Directory to Microsoft Entra ID.", contentTypes: [] },
     ],
@@ -4415,6 +4448,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Threat Intelligence (NEW)",
     entries: [
+      { version: "3.2.2", date: "26-10-2026", text: "Added 52 Defender XDR Custom Detections. Updated Analytic Rule (DomainEntity_PaloAlto.yaml) and Workbook (ThreatIntelligenceNew.json).", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.21", date: "29-07-2026", text: "Removed the Premium Microsoft Defender Threat Intelligence Data Connector from the Threat Intelligence (NEW) Solution.", contentTypes: ["Data Connector"] },
       { version: "3.0.20", date: "21-07-2026", text: "Updated the URLEntity AuditLogs analytic rule to 1.2.11 and refine its URL extraction and lowercase normalization so URL IoC matches in AuditLogs are more reliable.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.19", date: "21-06-2026", text: "Standardized naming and corrected the incorrect mapping for dataTypes: EmailEvents and dataTypes: EmailUrlInfo with connectorId: Office365 and connectorId: AzureActiveDirectory across multiple Analytic Rules.", contentTypes: ["Analytic Rule"] },
