@@ -571,6 +571,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Bitglass",
     entries: [
+      { version: "3.2.2", date: "01-11-2026", text: "Migrated Analytic Rules and Workbooks to Microsoft Defender XDR detections and workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.0", date: "21-10-2024", text: "Updated the python runtime version to 3.11 and updated functional URL", contentTypes: [] },
     ],
   },
@@ -940,6 +941,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Citrix DaaS",
     entries: [
+      { version: "3.1.1", date: "02-11-2026", text: "Fixed duplicate ingestion in the Citrix DaaS Audit & Sessions CCF Data Connector by switching Sessions and ConfigLog Operations polling from snapshot GET calls to time-windowed POST $search calls. Existing connections must be disconnected and reconnected to apply the fix.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "28-08-2026", text: "Promoted the Citrix DaaS Audit & Sessions CCF Data Connector to general availability.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "14-08-2026", text: "Updated authentication configuration for the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "23-07-2026", text: "Initial release of the Citrix DaaS solution with the Citrix DaaS Audit & Sessions CCF Data Connector.", contentTypes: ["Data Connector"] },
@@ -1479,6 +1481,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Digital Guardian Data Loss Prevention",
     entries: [
+      { version: "3.2.2", date: "01-11-2026", text: "Added Microsoft Defender XDR Custom Detections and Workbook migration support.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "26-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "25-07-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "09-10-2023", text: "Fixed KQL validation failure in Hunting Query (Digital Guardian - Users incidents)", contentTypes: ["Hunting Query"] },
@@ -1535,6 +1538,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "DPDP Compliance",
     entries: [
+      { version: "3.2.2", date: "01-11-2026", text: "Migrated 1 Workbook (DPDPCompliance.json) to Defender XDR (XDR Workbooks/DPDPCompliance.json) and repackaged solution to v3.2.2.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "26-01-2026", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -2314,6 +2318,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Infoblox NIOS",
     entries: [
+      { version: "3.2.2", date: "01-11-2026", text: "Added Microsoft Defender XDR Custom Detections and Workbook migration support.", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "07-10-2025", text: "Expanded exclusion lists in Infoblox_allotherdhcpdTypes and Infoblox_dhcpother parsers to filter additional log types.", contentTypes: ["Parser"] },
       { version: "3.0.4", date: "17-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "01-08-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
@@ -2516,6 +2521,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "MailGuard 365",
     entries: [
+      { version: "3.0.1", date: "14-09-2026", text: "Migrated data connector from the deprecated HTTP Data Collector API to the Azure Monitor Logs Ingestion API (Codeless Connector Framework Push pattern). Data now lands in the MG365ThreatData_CL table via a Data Collection Rule; the legacy MailGuard365_Threats_CL table is no longer written to. Updated workbook and hunting queries to the new schema.", contentTypes: ["Hunting Query","Data Connector","Workbook"] },
       { version: "3.0.0", date: "31-08-2023", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -4190,6 +4196,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SOX IT Compliance",
     entries: [
+      { version: "3.2.2", date: "01-11-2026", text: "Migrated 1 Workbook (SOXITCompliance.json) to Defender XDR (XDR Workbooks/SOXITCompliance.json) and repackaged solution to v3.2.2.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "11-12-2025", text: "Initial Solution Release", contentTypes: [] },
     ],
   },
@@ -4536,6 +4543,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trend Micro Cloud App Security",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Migrated Analytic Rules and Workbooks to Microsoft Defender XDR detections and workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.1.2", date: "23-07-2026", text: "Updated CCF Data Connector graph queries pattern.", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "17-07-2026", text: "Promoted CCF connector (TrendMicroCASConnector) to General Availability: set isPreview to false and removed Preview disclaimer from solution description.", contentTypes: [] },
       { version: "3.1.0", date: "02-07-2026", text: "Updated Underlying Microsoft Technologies list in the solution description to include Codeless Connector Framework (CCF), Log Ingestion API, and Data Collection Rules (DCR) for the CCF data connector.", contentTypes: ["Data Connector"] },
