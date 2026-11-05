@@ -196,6 +196,7 @@ export const RAW_SOLUTIONS = [
     name: "Apache HTTP Server",
     alias: "ApacheHTTPServer",
     entries: [
+      { version: "3.2.2", date: "03-11-2026", text: "Added Defender XDR Custom Detections and XDR Workbook for Apache HTTP Server migration, and repackaged the V3.1 solution.", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "23-09-2026", text: "Updated the Workbook JSON and refreshed its description.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "23-07-2026", text: "Fixed Parser (ApacheHTTPServer) to correctly parse negative timezone offsets and honor the offset when setting EventStartTime", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "05-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
@@ -388,6 +389,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "AWS Security Hub",
     entries: [
+      { version: "3.2.2", date: "03-11-2026", text: "Added Defender XDR Custom Detections for AWS Security Hub Analytic Rules and packaged V3.1 solution.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "11-06-2026", text: "Updated content ID and version for the AWS Security Hub solution.", contentTypes: [] },
       { version: "3.0.3", date: "27-05-2026", text: "Adding new Workbook for AWS Security Hub Compliance", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "27-08-2025", text: "AWS Security Hub added Analytical Rule and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
@@ -2462,6 +2464,27 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "KELA Brand Control",
+    alias: "KELABrandControl",
+    entries: [
+      { version: "3.0.0", date: "07-10-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "KELA Identity Guard",
+    alias: "KELAIdentityGuard",
+    entries: [
+      { version: "3.0.0", date: "07-10-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "KELA Monitor",
+    alias: "KELAMonitor",
+    entries: [
+      { version: "3.0.0", date: "07-10-2026", text: "Initial Solution Release.", contentTypes: [] },
+    ],
+  },
+  {
     name: "KnowBe4 Defend",
     entries: [
       { version: "3.0.0", date: "05-02-2026", text: "Initial Solution Release.", contentTypes: [] },
@@ -3140,6 +3163,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "NGINX HTTP Server",
     entries: [
+      { version: "3.2.2", date: "02-11-2026", text: "Added Defender XDR Custom Detections and XDR Workbook for NGINX HTTP Server migration, and repackaged the V3.1 solution.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "13-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "08-08-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
     ],
@@ -3356,6 +3380,7 @@ export const RAW_SOLUTIONS = [
     name: "Palo Alto PAN-OS",
     alias: "PaloAlto-PAN-OS",
     entries: [
+      { version: "3.2.2", date: "03-11-2026", text: "Added Defender XDR Custom Detections and XDR Workbooks for PaloAlto-PAN-OS migration, and repackaged the V3.1 solution.", contentTypes: ["Workbook"] },
       { version: "3.0.11", date: "13-01-2026", text: "Updated non-functional link from PaloAlto-NetworkBeaconing Analytic rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.10", date: "13-11-2025", text: "Adding New Detection Rule for Nmap Top 100 Port Scan", contentTypes: [] },
       { version: "3.0.9", date: "06-01-2025", text: "Removing Custom Entity mappings from Analytic Rule", contentTypes: ["Analytic Rule"] },
@@ -3775,6 +3800,7 @@ export const RAW_SOLUTIONS = [
     name: "Rubrik Security Cloud",
     alias: "RubrikSecurityCloud",
     entries: [
+      { version: "3.5.5", date: "26-10-2026", text: "Added support of DSPM & IR Violation events collection as part of Azure function app based dta connector, Added analytic rules and playbooks rleated DSPM & IR Violation and quarntine.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.5.4", date: "12-10-2026", text: "Updated Events Data table schema for CCF Connector.", contentTypes: [] },
       { version: "3.5.3", date: "03-09-2026", text: "Added RubrikCCFConnector to ingest Anomaly, Ransomware, ThreatHunt and other events data along with audit logs via webhook.", contentTypes: [] },
       { version: "3.5.2", date: "16-07-2026", text: "Added RubrikSecurityCloud CCF (Codeless Connector Framework) Data Connector for ingesting Rubrik Protection Status data into Microsoft Sentinel. Enables backup compliance monitoring, ransomware recovery assessment, and incident correlation with protection status for Azure VMs. Update python package version to resolve vulnerability", contentTypes: ["Data Connector"] },
@@ -3852,6 +3878,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SAP BTP",
     entries: [
+      { version: "3.2.2", date: "03-11-2026", text: "Added Microsoft Defender XDR Custom Detections and Defender XDR Workbook (SAPBTPActivity.json), and repackaged the solution using V3.1 tooling.", contentTypes: ["Workbook"] },
       { version: "3.2.1", date: "21-10-2026", text: "Improved the AVL vulnerability rule to alert on name-matched interactive XSUAA logins to apps with high or critical findings; same-space audit activity is separate context only. Lowered severity to Medium, aggregated findings per app, extended the lookback to 14 days for weekly scans, added account and vulnerability context, and used ingestion time to break equal finding timestamps where available.", contentTypes: [] },
       { version: "3.2.0", date: "28-09-2026", text: "Added SAP BTP AVL connector for SAP Application Vulnerability Report Service findings (SAPBTPAVL_CL). Added an analytic rule for critical vulnerability findings in custom apps, with incident grouping per app and subaccount. Added an \"Application Vulnerabilities\" workbook tab and a vulnerability posture KPI on the Overview tab.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.1.1", date: "22-07-2026", text: "New analytic rule: detect unaudited custom apps with login-only activity. Renamed analytic rules with SAP BTP prefix for improved discoverability.", contentTypes: ["Analytic Rule"] },
@@ -4072,6 +4099,7 @@ export const RAW_SOLUTIONS = [
     name: "Slack Audit",
     alias: "SlackAudit",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Migrated Analytic Rules and Workbooks to Defender XDR Custom Detections and Workbooks and packaged with V3.1.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.6", date: "29-05-2025", text: "Updated the Analytic Rules, Hunting Queries and Workbook", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
       { version: "3.0.5", date: "12-12-2025", text: "Updated the Parser yaml file.", contentTypes: ["Parser"] },
       { version: "3.0.4", date: "28-07-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
@@ -4116,6 +4144,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SOC Handbook",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Added Defender XDR Workbooks (*AnomaliesVisualization*, *AttackSurfaceReduction*, *AzureSentinelCost*, *AzureSentinelSecurityAlerts*, *IntsightsIOCWorkbook*, *MITREAttack*, and *SecurityOperationsEfficiency*) and repackaged Solution with V3.1.", contentTypes: ["Workbook"] },
       { version: "3.0.7", date: "21-07-2026", text: "Fixed bugs in *AnalyticsEfficiency* Workbook (typo fixes, added MITRE ATT&CK tactics, removed hardcoded timeContext overrides), rebranded 'Azure Sentinel' to 'Microsoft Sentinel' across *SentinelCentral*, *AzureSentinelSecurityAlerts*, and *AnalyticsEfficiency* Workbooks, fixed layout issues in *IntsightsIOCWorkbook*, and updated *MITREAttack* Workbook tactic mappings.", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "13-01-2026", text: "Updated *IncidentOverview* Workbook to correct the incident render issue by using ProviderIncidentId with IncidentNumber", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "24-09-2025", text: "Updated *SecurityOperationsEfficiency* to fix Mean time to triage", contentTypes: [] },
@@ -4811,6 +4840,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "VMware Carbon Black Cloud",
     entries: [
+      { version: "3.2.2", date: "29-10-2026", text: "Migrated 2 Analytic Rules (CriticalThreatDetected, KnownMalwareDetected) and 1 Workbook (VMwareCarbonBlack) to Microsoft Defender XDR and updated the solution package to V3.1.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.10", date: "03-08-2026", text: "Fixed broken Deploy to Azure Gov button link in Data Connector and Playbooks", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.0.9", date: "12-07-2026", text: "Fixed type mismatch in Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.8", date: "24-03-2026", text: "Deprecate to VMware Carbon Black Cloud (using Azure Function)", contentTypes: [] },
