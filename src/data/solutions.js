@@ -4077,6 +4077,7 @@ export const RAW_SOLUTIONS = [
     name: "Silent Push",
     alias: "SilentPush",
     entries: [
+      { version: "3.1.1", date: "04-11-2026", text: "Added custom connector \"deploy it first\" link. Fixed errors when creating the Full playbooks from templates.", contentTypes: ["Playbook"] },
       { version: "3.1.0", date: "16-09-2026", text: "Added SilentPush Feeds Data Connector (Codeless/CCP) to ingest Silent Push threat-intel feed exports into SLP_Feeds_CL.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "20-08-2026", text: "Initial solution release.", contentTypes: [] },
     ],
