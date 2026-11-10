@@ -864,6 +864,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cisco Secure Endpoint",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Migrated 11 Analytic Rules to XDR Detections and 1 Workbook to XDR Workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.2", date: "14-08-2025", text: "Cisco Secure Endpoint CCF Connector moving to GA.", contentTypes: [] },
       { version: "3.0.1", date: "23-06-2025", text: "Adding a new CCF Data Connector - *Cisco Secure Endpoint* and updated the Parser to handle the newly introduced table.", contentTypes: ["Data Connector","Parser"] },
       { version: "3.0.0", date: "28-08-2024", text: "Updated the python runtime version to 3.11.", contentTypes: [] },
@@ -873,6 +874,7 @@ export const RAW_SOLUTIONS = [
     name: "Cisco SEG",
     alias: "CiscoSEG",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Migrated 11 Analytic Rules to XDR Detections and 1 Workbook to XDR Workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.5", date: "02-12-2024", text: "Added Missed Column Parser", contentTypes: ["Parser"] },
       { version: "3.0.4", date: "14-11-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "08-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
@@ -960,6 +962,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Claroty",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR Custom Detection Analytic Rules and migrated Workbooks to Defender XDR.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.5", date: "05-05-2026", text: "Updated analytical rule and Hunting Queries.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.4", date: "03-04-2026", text: "Fixed typo error in analytical rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "18-11-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
@@ -1913,6 +1916,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "GitLab",
     entries: [
+      { version: "3.2.3", date: "08-11-2026", text: "Updated Defender XDR Custom Detections (GitLab_ExternalUser.yaml, GitLab_LocalAuthNoMFA.yaml, GitLab_PAT_Repo.yaml, GitLab_RepoVisibilityChange.yaml) to use GitLabAudit parser table identifier", contentTypes: ["Parser"] },
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR Custom Detections and updated Analytic Rules (GitLab_PAT_Repo.yaml, GitLab_Repo_Deletion.yaml, GitLab_SignInBurst.yaml, GitLab_Impersonation.yaml) and Parser (GitLabApp.yaml)", contentTypes: ["Analytic Rule","Parser"] },
       { version: "3.0.3", date: "13-10-2026", text: "Corrected entity-mapped column names and updated the saved-searches API version", contentTypes: [] },
       { version: "3.0.2", date: "12-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "24-07-2023", text: "Deprecated data connectors", contentTypes: ["Data Connector"] },
@@ -1985,6 +1990,7 @@ export const RAW_SOLUTIONS = [
     name: "Google Cloud Platform DNS",
     alias: "GoogleCloudPlatformDNS",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR analytics detections and workbooks for Google Cloud Platform DNS.", contentTypes: ["Workbook"] },
       { version: "3.0.5", date: "29-07-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.4", date: "26-06-2025", text: "Moving CCF Connector - *Google Cloud Platform DNS* from Public preview to GA.", contentTypes: [] },
       { version: "3.0.3", date: "09-05-2025", text: "Implemented Standard table Functionality to CCF Connector - *Google Cloud Platform DNS*.", contentTypes: [] },
@@ -2657,6 +2663,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Copilot",
     entries: [
+      { version: "3.2.2", date: "08-11-2026", text: "Added 4 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (MicrosoftCopilotActivityMonitoring.json) alongside the existing Analytic Rules and Workbook, updated the existing Sentinel Workbook (Workbooks/MicrosoftCopilotActivityMonitoring.json) with {TimeRange:start} .. {TimeRange:end}, selectAllValue: \"*\", and emptyValStatic: \"*\" parameter bindings, and updated the solution package to 3.2.2.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.2", date: "02-04-2026", text: "Update Solution and Connector Descriptions.", contentTypes: [] },
       { version: "3.0.2", date: "02-04-2026", text: "Added a Analytic rules, Hunting Queries and Workbook for Microsoft Copilot Activity Monitoring and detection.", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
       { version: "3.0.2", date: "02-04-2026", text: "Solution push to GA.", contentTypes: [] },
@@ -3125,6 +3132,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Network Session Essentials",
     entries: [
+      { version: "3.2.3", date: "09-11-2026", text: "Updated Parser NetworkSessionEssentialsCustomParser to include a fallback empty schema when optional custom summary tables are not present in the workspace.", contentTypes: ["Parser"] },
       { version: "3.2.2", date: "25-10-2026", text: "Added 6 Microsoft Defender XDR custom detections for ASIM Network Session analytics rules and packaged V3.1 solution.", contentTypes: [] },
       { version: "3.0.13", date: "16-09-2026", text: "Added NetworkSessionEssentialsCustomParser to parse and normalize the tables used in dependent Security Content. Updated Workbooks and Analytic rules to use parser.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
       { version: "3.0.12", date: "02-09-2026", text: "Added Summarize Data for Network Session Essentials using log ingestion API Playbook", contentTypes: ["Playbook"] },
@@ -3548,9 +3556,11 @@ export const RAW_SOLUTIONS = [
   {
     name: "Pulse Connect Secure",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR analytics detections and workbooks for Pulse Connect Secure.", contentTypes: ["Workbook"] },
       { version: "3.0.4", date: "07-01-2025", text: "Removed Custom Entity mappings from Analytic Rule", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "16-12-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "01-08-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
+      { version: "3.0.2", date: "01-08-2024", text: "Deprecating data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "13-12-2023", text: "Updated broken link in Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "20-07-2023", text: "Corrected the links in the solution.", contentTypes: [] },
     ],
@@ -4077,6 +4087,7 @@ export const RAW_SOLUTIONS = [
     name: "Silent Push",
     alias: "SilentPush",
     entries: [
+      { version: "3.1.2", date: "10-11-2026", text: "Feeds data connector now polls once every 24 hours. Fixed the Marketplace install error about an empty location. Export playbooks no longer use a fixed export: choose the export_category and file_name in the Export action before enabling.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.1.1", date: "04-11-2026", text: "Added custom connector \"deploy it first\" link. Fixed errors when creating the Full playbooks from templates.", contentTypes: ["Playbook"] },
       { version: "3.1.0", date: "16-09-2026", text: "Added SilentPush Feeds Data Connector (Codeless/CCP) to ingest Silent Push threat-intel feed exports into SLP_Feeds_CL.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "20-08-2026", text: "Initial solution release.", contentTypes: [] },
@@ -4301,6 +4312,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Symantec Endpoint Protection",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR Detections and XDR Workbooks and updated Analytical Rules", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.5", date: "13-01-2025", text: "Removed Custom Entity mappings from Analytic rules", contentTypes: ["Analytic Rule"] },
       { version: "3.0.4", date: "17-12-2024", text: "Removed Deprecated Data connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "01-08-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
@@ -4313,6 +4325,7 @@ export const RAW_SOLUTIONS = [
     name: "Symantec ProxySG",
     alias: "SymantecProxySG",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR custom detections and XDR Workbooks, and updated Analytic Rules connector schema", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.3", date: "20-01-2025", text: "Removed Custom Entity mappings from Analytic rules", contentTypes: ["Analytic Rule"] },
       { version: "3.0.2", date: "24-12-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "01-08-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
@@ -4322,9 +4335,10 @@ export const RAW_SOLUTIONS = [
   {
     name: "Symantec VIP",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Migrated Analytic Rules and Workbooks to Defender XDR and repackaged with V3.1.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.2", date: "20-01-2025", text: "Removed Custom Entity mappings from Analytic rules", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "31-12-2024", text: "Removed Deprecated Data connector", contentTypes: ["Data Connector"] },
-      { version: "3.0.0", date: "01-08-2024", text: "Update Parser as part of Syslog migration", contentTypes: ["Parser"] },
+      { version: "3.0.0", date: "01-08-2024", text: "Update Parser as part of Syslog migration and deprecate Data connectors", contentTypes: ["Data Connector","Parser"] },
     ],
   },
   {
@@ -4564,6 +4578,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trend Micro Apex One",
     entries: [
+      { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR analytics detections and workbooks for Trend Micro Apex One.", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "13-12-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "12-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "25-10-2023", text: "Hunting Query column corrected", contentTypes: ["Hunting Query"] },
