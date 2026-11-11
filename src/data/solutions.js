@@ -2646,6 +2646,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Active Directory Tier Model",
     entries: [
+      { version: "3.2.2", date: "09-11-2026", text: "Added 19 Defender XDR Custom Detections (*TM001*–*TM019*) and repackaged Solution with V3.1.", contentTypes: [] },
       { version: "3.0.0", date: "14-07-2026", text: "Initial solution release", contentTypes: [] },
     ],
   },
@@ -2663,7 +2664,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Copilot",
     entries: [
-      { version: "3.2.2", date: "08-11-2026", text: "Added 4 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (MicrosoftCopilotActivityMonitoring.json) alongside the existing Analytic Rules and Workbook, updated the existing Sentinel Workbook (Workbooks/MicrosoftCopilotActivityMonitoring.json) with {TimeRange:start} .. {TimeRange:end}, selectAllValue: \"*\", and emptyValStatic: \"*\" parameter bindings, and updated the solution package to 3.2.2.", contentTypes: ["Analytic Rule","Workbook"] },
+      { version: "3.2.2", date: "11-04-2026", text: "Added 4 disabled Defender XDR Custom Detections and 1 Defender XDR Workbook (MicrosoftCopilotActivityMonitoring.json) alongside the existing Analytic Rules and Workbook, updated the Sentinel and Defender XDR Workbooks (MicrosoftCopilotActivityMonitoring.json) with {TimeRange:start} .. {TimeRange:end}, empty-table resilient parameter fallbacks (datatable(Value:string, Label:string)[\"*\", \"All\"]), and dynamic([{Param}]) filter bindings, and updated the solution package to 3.2.2.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.2", date: "02-04-2026", text: "Update Solution and Connector Descriptions.", contentTypes: [] },
       { version: "3.0.2", date: "02-04-2026", text: "Added a Analytic rules, Hunting Queries and Workbook for Microsoft Copilot Activity Monitoring and detection.", contentTypes: ["Analytic Rule","Hunting Query","Workbook"] },
       { version: "3.0.2", date: "02-04-2026", text: "Solution push to GA.", contentTypes: [] },
@@ -3132,6 +3133,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Network Session Essentials",
     entries: [
+      { version: "3.2.4", date: "09-11-2026", text: "Consolidated conditional _Im_NetworkSession union branches in Analytic Rules (AnomalyFoundInNetworkSessionTraffic, DetectPortMisuseByAnomalyBasedDetection) and Hunting Query (DetectPortMisuseByAnomalyHunting) into a single _Im_NetworkSession lookup filtered by directLookback to resolve Kusto CRT0013 semantic pass visitor limit errors.", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.2.3", date: "09-11-2026", text: "Updated Parser NetworkSessionEssentialsCustomParser to include a fallback empty schema when optional custom summary tables are not present in the workspace.", contentTypes: ["Parser"] },
       { version: "3.2.2", date: "25-10-2026", text: "Added 6 Microsoft Defender XDR custom detections for ASIM Network Session analytics rules and packaged V3.1 solution.", contentTypes: [] },
       { version: "3.0.13", date: "16-09-2026", text: "Added NetworkSessionEssentialsCustomParser to parse and normalize the tables used in dependent Security Content. Updated Workbooks and Analytic rules to use parser.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
@@ -4419,6 +4421,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Teams",
     entries: [
+      { version: "3.2.2", date: "09-11-2026", text: "Added Defender XDR Workbook (*MicrosoftTeams*) and repackaged Solution with V3.1.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "07-08-2026", text: "Repackage solution for type in workbook, maintemplate, createUIDefinition, playbook old schema version.", contentTypes: ["Playbook","Workbook"] },
       { version: "3.0.1", date: "10-04-2025", text: "Not permitted to use SNOW or SN as abbreviation for ServiceNow.", contentTypes: [] },
       { version: "3.0.0", date: "19-07-2023", text: "Updated Workbook template to remove unused variables.", contentTypes: ["Workbook"] },
@@ -4448,6 +4451,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "TheHive",
     entries: [
+      { version: "3.0.3", date: "06-11-2026", text: "Adding multi-instance support", contentTypes: [] },
       { version: "3.0.2", date: "06-04-2026", text: "codeless Data Connector bases on Rest + api polling Moved to GA + small fix to avoid arm-ttk validation issue", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "05-03-2026", text: "codeless Data Connector bases on Rest api polling", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "05-09-2023", text: "Manual deployment instructions updated for Data Connector", contentTypes: ["Data Connector"] },
