@@ -1048,6 +1048,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Common Event Format",
     entries: [
+      { version: "3.2.2", date: "04-11-2026", text: "Added Defender XDR Workbook (CEFOverviewWorkbook.json).", contentTypes: ["Workbook"] },
       { version: "3.0.6", date: "20-08-2025", text: "The main template solution has been updated by changing arrays to fields for datatypes, graphqueries and samplequeries.", contentTypes: [] },
       { version: "3.0.5", date: "08-07-2025", text: "Modifying the availability status.", contentTypes: [] },
       { version: "3.0.4", date: "24-06-2025", text: "Updated Connector kind of Legacy CEF Data Connector so that the queries will be reflected.", contentTypes: ["Data Connector"] },
@@ -1537,6 +1538,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "DORA Compliance",
     entries: [
+      { version: "3.2.2", date: "04-11-2026", text: "Added Defender XDR Workbook (DORACompliance.json).", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "16-12-2025", text: "Initial Solution release", contentTypes: [] },
     ],
   },
@@ -1729,6 +1731,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Filewall for Microsoft 365",
     entries: [
+      { version: "3.1.0", date: "06-11-2026", text: "Analytic rules alert by Filewall verdict (malware High, suspicious Medium) with file hash, mailbox, message and account entities. New analytic rule and hunting query correlate blocked files with Defender for Endpoint DeviceFileEvents. New parser FilewallM365EmailAttachmentEvent. New columns direction, source_folder, internet_message_id and report_url.", contentTypes: ["Analytic Rule","Hunting Query","Parser"] },
       { version: "3.0.0", date: "20-01-2026", text: "Includes all CCF connector definitions and configurations.", contentTypes: [] },
     ],
   },
@@ -1819,6 +1822,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Fortinet FortiGate Next-Generation Firewall connector for Microsoft Sentinel",
     entries: [
+      { version: "3.2.2", date: "04-11-2026", text: "Added Defender XDR Workbook (Fortigate.json) and repackaged solution with V3.1 packaging.", contentTypes: ["Workbook"] },
       { version: "3.0.10", date: "23-10-2026", text: "Removed unused \"WEBSITE_NODE_DEFAULT_VERSION\": \"~10\" from the FortinetFortigateFunctionApp Playbook deployment configuration.", contentTypes: ["Playbook"] },
       { version: "3.0.9", date: "21-05-2026", text: "Updated Fortinetfortigate Playbook Function app to fix authlevel", contentTypes: ["Playbook"] },
       { version: "3.0.8", date: "26-02-2025", text: "Playbook functionApp code change", contentTypes: ["Playbook"] },
@@ -2653,6 +2657,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Business Applications",
     entries: [
+      { version: "3.2.5", date: "26-10-2026", text: "Restored Power Automate, Dataverse, and Power Platform Admin CCF Data Connectors and repackaged the solution.", contentTypes: ["Data Connector"] },
       { version: "3.2.4", date: "25-10-2026", text: "Migrated Analytic Rules to Defender XDR Custom Detection format and added XDR Workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.2.3", date: "23-02-2026", text: "Updated Dataverse - Activity after failed logons hunting query to use valid Enterprise technique", contentTypes: ["Hunting Query"] },
       { version: "3.2.2", date: "22-04-2025", text: "Updated solution description.", contentTypes: [] },
@@ -3361,6 +3366,8 @@ export const RAW_SOLUTIONS = [
     name: "Palo Alto CDL",
     alias: "PaloAltoCDL",
     entries: [
+      { version: "3.2.3", date: "11-11-2026", text: "Updated Analytic Rules, XDR Detections, and Parser and repackaged Solution", contentTypes: ["Analytic Rule","Parser"] },
+      { version: "3.2.2", date: "20-04-2026", text: "Migrated Analytic Rules and Workbooks to Defender XDR", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.0.3", date: "12-11-2024", text: "Removed Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "12-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "12-06-2024", text: "Optimized parser", contentTypes: ["Parser"] },
@@ -3451,6 +3458,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "PCI DSS Compliance",
     entries: [
+      { version: "3.2.2", date: "04-11-2026", text: "Added Defender XDR XDR Workbook and updated Workbook query", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "16-10-2024", text: "Updated solution to fix content issue and data type for Workbook issue", contentTypes: ["Workbook"] },
     ],
   },
@@ -4017,6 +4025,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "SentinelOne",
     entries: [
+      { version: "3.2.3", date: "11-11-2026", text: "Updated Analytic Rules, XDR Detections, and Parser and repackaged Solution", contentTypes: ["Analytic Rule","Parser"] },
+      { version: "3.2.2", date: "03-11-2026", text: "Added XDR Detections and XDR Workbooks and repackaged Solution for Defender XDR migration", contentTypes: ["Workbook"] },
       { version: "3.1.4", date: "28-09-2026", text: "Removed the deprecated SentinelOne Azure Function Data Connector from the solution package", contentTypes: ["Data Connector"] },
       { version: "3.1.3", date: "25-08-2026", text: "Fixed the SentinelOne parser to restore ActivityType and CCF records while preserving SentinelOne V2 alerts", contentTypes: ["Parser"] },
       { version: "3.1.2", date: "17-08-2026", text: "Fix V2 parser type mismatch and fallback.", contentTypes: ["Parser"] },
@@ -4983,6 +4993,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Windows Firewall",
     entries: [
+      { version: "3.2.2", date: "20-04-2026", text: "Added Defender XDR Workbook WindowsFirewall.json for Microsoft Defender portal support", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "16-07-2025", text: "Changed Data Connector template_WindowsFirewallAma.json to GA", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "07-06-2024", text: "Changed Data Connector description template_WindowsFirewallAma.json", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "27-10-2023", text: "New Data Connector added WindowsFirewallAma", contentTypes: ["Data Connector"] },
