@@ -4584,6 +4584,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trellix",
     entries: [
+      { version: "3.0.3", date: "11-11-2026", text: "Added multi-instance support to the Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "08-07-2026", text: "Remove unsupported template attributes from table definition", contentTypes: [] },
       { version: "3.0.1", date: "03-04-2026", text: "Move Trellix solution to GA, remove preview state.", contentTypes: [] },
       { version: "3.0.0", date: "26-02-2026", text: "Introduce the Trellix solution with a CCF Data Connector and parser", contentTypes: ["Data Connector","Parser"] },
