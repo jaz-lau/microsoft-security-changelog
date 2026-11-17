@@ -1214,6 +1214,7 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk Audit",
     alias: "CyberArkAudit",
     entries: [
+      { version: "3.2.2", date: "10-11-2026", text: "CCF connector: add Feature Adoption usage reporting with a *Disable usage reporting* opt-out; remove legacy x-cybr-telemetry header", contentTypes: [] },
       { version: "3.2.1", date: "02-09-2026", text: "Security Patch: Remove logResponseContent attribute from Polling Config", contentTypes: [] },
       { version: "3.2.0", date: "06-07-2026", text: "Rebrand to Idira and remove deprecated Azure Functions Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.1.1", date: "16-04-2026", text: "Update Azure Function based connector to Python 3.12", contentTypes: [] },
@@ -1237,6 +1238,7 @@ export const RAW_SOLUTIONS = [
     name: "CyberArk EPM",
     alias: "CyberArkEPM",
     entries: [
+      { version: "3.2.1", date: "10-11-2026", text: "CCF connector: add Feature Adoption usage reporting with a *Disable usage reporting* opt-out; remove legacy x-cybr-telemetry header", contentTypes: [] },
       { version: "3.2.0", date: "23-09-2026", text: "Add CCF implementation data connector and rebrand to Idira", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "19-05-2026", text: "Update reporting mechanism to use DCR. Switch to Oauth login for EPM", contentTypes: [] },
       { version: "3.0.1", date: "28-04-2025", text: "Updated deployment instructions to use Python 3.10 version", contentTypes: [] },
@@ -3972,6 +3974,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "SecurityScorecard Cybersecurity Ratings",
     entries: [
+      { version: "3.0.1", date: "03-11-2026", text: "Updated the X-SSC-Application-Version request header sent by the CCF Data Connectors from 1.0 to 3.0, so SecurityScorecard can identify traffic from the 3.0 integration.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "07-08-2026", text: "Migrated the Ratings, Factor, and Issue Data Connectors to the Codeless Connector Framework (CCF), removing the need for an Azure Function App deployment.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "07-08-2026", text: "Added multi-instance support: each connector uses a DataConnectorsGrid and ContextPane, so one independently-managed connection can be created per SecurityScorecard portfolio, scoped server-side by Portfolio ID.", contentTypes: [] },
       { version: "3.0.0", date: "07-08-2026", text: "Added an optional own-company \"My Scorecard\" domain to ingest your own organization's scores alongside portfolio companies.", contentTypes: [] },
@@ -4593,6 +4596,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Trend Micro Apex One",
     entries: [
+      { version: "3.2.3", date: "16-11-2026", text: "Updated Parser TMApexOneEvent to fix project-away column resolution error.", contentTypes: ["Parser"] },
       { version: "3.2.2", date: "28-10-2026", text: "Added Defender XDR analytics detections and workbooks for Trend Micro Apex One.", contentTypes: ["Workbook"] },
       { version: "3.0.3", date: "13-12-2024", text: "Removed Deprecated Data Connectors", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "12-07-2024", text: "Deprecated Data Connector", contentTypes: ["Data Connector"] },
