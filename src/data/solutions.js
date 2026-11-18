@@ -230,6 +230,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Armis",
     entries: [
+      { version: "3.3.0", date: "23-10-2026", text: "Added Armis Audit Logs data connector (via Codeless Connector Framework) (Preview).", contentTypes: ["Data Connector"] },
       { version: "3.2.0", date: "05-12-2025", text: "Log Ingestion Support.", contentTypes: [] },
       { version: "3.1.1", date: "19-05-2025", text: "Updated Armis AlertActivity and Armis Device Data connectors to add keyvault for storing Armis Access Token and Severity parameter in AlertActivity.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "11-09-2024", text: "Updated Armis Alerts Data connector to ingest Armis Activities associated with only Armis Alerts.", contentTypes: ["Data Connector"] },
@@ -5170,6 +5171,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Zimperium Mobile Threat Defense",
     entries: [
+      { version: "3.2.0", date: "22-10-2026", text: "Added new fields monitor_only & threat_linkto the ZimperiumThreatLogV2_CL and ZimperiumMitigationLogV2_CL table.", contentTypes: [] },
       { version: "3.1.0", date: "11-06-2026", text: "Added new tables ZimperiumIncidentLog_CL and ZimperiumIncidentMitigationLog_CL and corresponding data collection rules to ingest incident logs.", contentTypes: [] },
       { version: "3.0.0", date: "28-04-2026", text: "Added data ingestion support using CCF (Codeless Connector Framework) Push connector.", contentTypes: [] },
     ],
