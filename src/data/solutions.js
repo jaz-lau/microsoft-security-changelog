@@ -1274,6 +1274,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cyble Vision",
     entries: [
+      { version: "3.0.4.", date: "16-11-2026", text: "Added new CCF Data Connector- Cyble Vision IOC.", contentTypes: ["Data Connector"] },
+      { version: "3.0.4.", date: "16-11-2026", text: "Added new Analytic Rules for IOC to raise incidents.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.3", date: "12-01-2026", text: "Updated API endpoint for CCF Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "12-01-2026", text: "Minor descriptive changes to Analytic Rule and Playbook.Updated Playbook API Body.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.2", date: "14-12-2025", text: "Added new CCF data connector.", contentTypes: ["Data Connector"] },
@@ -2063,6 +2065,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Cloud Platform Security Command Center",
     entries: [
+      { version: "3.2.3", date: "19-11-2026", text: "Updated Data Connector UI type from static to generic.", contentTypes: ["Data Connector"] },
       { version: "3.2.2", date: "22-10-2026", text: "Added Defender XDR custom detections and V3.1 hybrid solution package.", contentTypes: [] },
       { version: "3.0.7", date: "11-11-2025", text: "Add New Analytic Rules and Hunting Queries", contentTypes: ["Analytic Rule","Hunting Query"] },
       { version: "3.0.6", date: "12-11-2024", text: "Modified datatype query for Data Connector", contentTypes: ["Data Connector"] },
@@ -2949,6 +2952,7 @@ export const RAW_SOLUTIONS = [
     name: "Mimecast Events-CCF",
     alias: "MimecastEvents-CCF",
     entries: [
+      { version: "3.0.1", date: "06-11-2026", text: "Added Workbook for Mimecast security events monitoring.", contentTypes: ["Workbook"] },
       { version: "3.0.0", date: "06-07-2026", text: "Initial release: Mimecast Event Push CCF (Push) data connector, 7 parsers.", contentTypes: ["Data Connector","Parser"] },
     ],
   },
@@ -3489,6 +3493,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Poly Swarm",
+    alias: "PolySwarm",
+    entries: [
+      { version: "3.0.0", date: "21-10-2026", text: "Initial solution release. Two codeless Data Connectors bring PolySwarm indicators into ThreatIntelIndicators: one from your PolySwarm hunt results, one from the PolySwarm curated feed. Enrichment Playbooks for file hash, URL, IP address and domain entities, each with incident- and entity-triggered variants. Sandbox detonation Playbooks for URLs and Azure Storage blobs, plus two in preview: Outlook attachments and files retrieved through Microsoft Defender for Endpoint. A check quota Playbook. The sandbox playbooks create their results table, Data Collection Endpoint and Data Collection Rule themselves when deployed. Three Analytic Rules, four Hunting Queries, and a status Workbook that shows what has arrived from each connector and rule, reading only your own workspace.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook"] },
+    ],
+  },
+  {
     name: "Postgre SQL",
     alias: "PostgreSQL",
     entries: [
@@ -3601,7 +3612,15 @@ export const RAW_SOLUTIONS = [
     name: "Q Crypton PQC Scanner",
     alias: "QCryptonPQCScanner",
     entries: [
-      { version: "3.0.0", date: "17-09-2026", text: "Initial release of the QCrypton PQC Scanner solution. Includes: 1 data connector (Codeless Connector Framework — RestApiPoller, PQReadiness_CL); 6 scheduled analytic rules (Key Vault vulnerable keys, Entra ID quantum-vulnerable certificates, App Gateway/Front Door classical TLS certs, App Service legacy TLS, long-lived certs signed classically, new vulnerable resource detection); 1 workbook (PQ Readiness posture overview with black & white preview images); 1 playbook (Teams notification on incident). Fixed logo and solution path references; added workbook preview images, playbook README, and WorkbooksMetadata entry.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
+      { version: "3.0.1", date: "13-11-2026", text: "Version bump and repackaging of the solution.", contentTypes: [] },
+      { version: "3.0.0", date: "04-11-2026", text: "Initial release of the QCrypton PQC Scanner solution. Includes: 1 Data Connector (Codeless Connector Framework — RestApiPoller, PQReadiness_CL); 6 scheduled Analytic Rules (Key Vault vulnerable keys, Entra ID quantum-vulnerable certificates, App Gateway/Front Door classical TLS certs, App Service legacy TLS, long-lived certs signed classically, new vulnerable resource detection); 1 Workbook (PQ Readiness posture overview); 1 Playbook (Teams notification on incident).", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
+    ],
+  },
+  {
+    name: "Q Crypton PQC Scanner Agent",
+    alias: "QCryptonPQCScannerAgent",
+    entries: [
+      { version: "3.0.0", date: "04-11-2026", text: "Initial release of the QCrypton PQC Scanner Agent solution. Includes: 1 Data Connector (Codeless Connector Framework — RestApiPoller, polling QCrypton API for internal network scan findings); 6 scheduled Analytic Rules (network appliance quantum-vulnerable certificate, internal endpoint weak TLS, new quantum-vulnerable appliance detection, PQC-ready appliance confirmation, high-risk internal endpoint, appliance certificate expiring with classical algorithm); 1 Workbook (Internal Network PQ Readiness dashboard with vendor breakdown, trend analysis, and certificate expiry tracking); 1 Playbook (Teams notification on Sentinel incidents).", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
     ],
   },
   {
