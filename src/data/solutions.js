@@ -2275,6 +2275,7 @@ export const RAW_SOLUTIONS = [
     name: "Illumio SaaS",
     alias: "IllumioSaaS",
     entries: [
+      { version: "3.4.3", date: "30-10-2026", text: "Upgraded Playbook Function App runtime to Node.js 22 and refreshed dependencies to remediate CVE-2026-111497.", contentTypes: ["Playbook"] },
       { version: "3.4.2", date: "27-10-2026", text: "Upgraded aiobotocore to 2.26.0 to remediate urllib3 vulnerabilities (CVE-2026-97687, CVE-2026-97689).", contentTypes: [] },
       { version: "3.4.1", date: "13-03-2026", text: "Update function app to use Managed Identity.", contentTypes: [] },
       { version: "3.4.0", date: "03-02-2025", text: "Added 2 new Parser.", contentTypes: ["Parser"] },
