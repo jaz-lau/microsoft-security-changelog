@@ -534,6 +534,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Azure Web Application Firewall (WAF)",
     entries: [
+      { version: "3.2.3", date: "19-04-2026", text: "Updated Analytic Rules and XDR Detections to correlate WAF detections with anomaly-score blocks.", contentTypes: ["Analytic Rule"] },
       { version: "3.2.2", date: "17-04-2026", text: "Added Defender XDR detections and workbooks for V3.1 packaging.", contentTypes: ["Workbook"] },
       { version: "3.0.2", date: "06-02-2025", text: "Extracting transactionId_g and hostname_s from the AdditionalFields column using parse_json and Removing the now unavailable details_message_s and details_data_s fields from Analytic Rules App Gateway WAF - SQLi Detection and App Gateway WAF - XSS Detection.", contentTypes: ["Analytic Rule"] },
       { version: "3.0.1", date: "10-06-2024", text: "Added new Analytic Rules [App Gateway WAF - SQLi Detection and App Gateway WAF - XSS Detection]", contentTypes: ["Analytic Rule"] },
@@ -1664,6 +1665,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "ESET Protect Platform",
     entries: [
+      { version: "3.3.1", date: "20-11-2026", text: "Corrected RestApiPoller delta-token property names and placement for incremental detection and incident ingestion. Transferred solution publisher and support ownership to Microsoft; the CCF connector is in public preview.", contentTypes: [] },
       { version: "3.3.0", date: "02-07-2026", text: "Created a new CCF Connector for all the products of ESET Protect Platform and updated the Parser to normalize data from both the legacy Azure Functions connector (IntegrationTable_CL) and the new CCF connector (IntegrationTableV2_CL)", contentTypes: ["Parser"] },
       { version: "3.1.1", date: "25-04-2025", text: "Add the location parameter to ARM template and update the email address.", contentTypes: [] },
       { version: "3.1.0", date: "06-02-2025", text: "Updated Data Connector FunctionApp code to work with old param and new", contentTypes: ["Data Connector"] },
@@ -2774,6 +2776,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.21", date: "18-11-2026", text: "Corrected the required data type of the Account Created and Deleted in Short Timeframe Analytic Rule and its XDR Detection copy from SigninLogs to AuditLogs. Corrected the XDR Detection schedule lookback property and MITRE subtechnique mappings.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.20", date: "25-10-2026", text: "Added 74 Defender XDR Custom Detections and 2 Defender XDR Workbooks (AzureActiveDirectoryAuditLogs and AzureActiveDirectorySignins). Updated Analytic Rules metadata and Workbook (ConditionalAccessSISM, AzureActiveDirectoryAuditLogs, and AzureActiveDirectorySignins) parameters.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.3.19", date: "05-10-2026", text: "Fixed OAuth scope parsing for Suspicious application consent for offline access Analytic Rule.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.18", date: "28-09-2026", text: "Updated the analytical rule configuration.", contentTypes: ["Analytic Rule"] },
@@ -3385,6 +3388,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Palo Alto Cortex XDR",
     entries: [
+      { version: "3.1.0", date: "08-11-2026", text: "Updated the Cortex XDR CCF connector with multi-instance connection management and connection-name tagging across all five feeds. Added endpoint-detail enrichment, including Last Origin IP, and updated polling, table schemas and API documentation links.", contentTypes: [] },
       { version: "3.0.5", date: "22-07-2026", text: "Adding parser & analytic rules from legacy Cortex XDR connector and removed 'CCP' from solution name", contentTypes: ["Analytic Rule","Parser"] },
       { version: "3.0.4", date: "12-06-2026", text: "Updating CCF Polling file to implement parameters", contentTypes: [] },
       { version: "3.0.3", date: "09-04-2025", text: "Updating CCF connector parameters", contentTypes: [] },
@@ -3622,6 +3626,13 @@ export const RAW_SOLUTIONS = [
     alias: "QCryptonPQCScannerAgent",
     entries: [
       { version: "3.0.0", date: "04-11-2026", text: "Initial release of the QCrypton PQC Scanner Agent solution. Includes: 1 Data Connector (Codeless Connector Framework — RestApiPoller, polling QCrypton API for internal network scan findings); 6 scheduled Analytic Rules (network appliance quantum-vulnerable certificate, internal endpoint weak TLS, new quantum-vulnerable appliance detection, PQC-ready appliance confirmation, high-risk internal endpoint, appliance certificate expiring with classical algorithm); 1 Workbook (Internal Network PQ Readiness dashboard with vendor breakdown, trend analysis, and certificate expiry tracking); 1 Playbook (Teams notification on Sentinel incidents).", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
+    ],
+  },
+  {
+    name: "Q Crypton PQCVPN Overlay",
+    alias: "QCryptonPQCVPNOverlay",
+    entries: [
+      { version: "3.0.0", date: "01-11-2026", text: "Initial release of the QCrypton PQC VPN Overlay solution. Includes 1 Data Connector (Codeless Connector Framework — RestApiPoller), 6 Analytic Rules, 1 Workbook, and 1 Playbook.", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
     ],
   },
   {
