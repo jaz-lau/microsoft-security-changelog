@@ -705,6 +705,12 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Censys Supplier Risk",
+    entries: [
+      { version: "3.0.0", date: "29-10-2026", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
     name: "Check Point CloudGuard CNAPP",
     entries: [
       { version: "3.0.0", date: "18-11-2024", text: "Initial Solution release", contentTypes: [] },
@@ -1277,6 +1283,7 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.4.", date: "16-11-2026", text: "Added new CCF Data Connector- Cyble Vision IOC.", contentTypes: ["Data Connector"] },
       { version: "3.0.4.", date: "16-11-2026", text: "Added new Analytic Rules for IOC to raise incidents.", contentTypes: ["Analytic Rule"] },
+      { version: "3.0.4.", date: "16-11-2026", text: "Added querywindow parameter.", contentTypes: [] },
       { version: "3.0.3", date: "12-01-2026", text: "Updated API endpoint for CCF Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.3", date: "12-01-2026", text: "Minor descriptive changes to Analytic Rule and Playbook.Updated Playbook API Body.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.2", date: "14-12-2025", text: "Added new CCF data connector.", contentTypes: ["Data Connector"] },
@@ -1361,6 +1368,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.0", date: "11-07-2023", text: "New analytic rules and workbook", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "2.0.0", date: "29-03-2023", text: "Initial Solution Release", contentTypes: [] },
+    ],
+  },
+  {
+    name: "Cyolo",
+    entries: [
+      { version: "3.0.0", date: "09-11-2026", text: "Initial release of the Cyolo CCF solution, with two CCF data connectors: Cyolo Activity (CyoloActivity_CL) and Cyolo Audit (CyoloAudit_CL). Each includes a connector definition, DCR, polling configuration, and custom table.", contentTypes: ["Data Connector"] },
     ],
   },
   {
@@ -2215,7 +2228,7 @@ export const RAW_SOLUTIONS = [
     name: "Honey Labs",
     alias: "HoneyLabs",
     entries: [
-      { version: "3.0.0", date: "14-08-2026", text: "Initial Solution Release. Includes the HoneyLabs Threat Intelligence workbook \\|v 1.0.0, four Analytic Rules matching HoneyLabs indicators against sign-in, CEF and normalised network logs \\|v 1.0.0, four Hunting Queries \\|v 1.0.0, and the HoneyLabs-EnrichIncident-IP playbook \\|v 1.0. Indicators are ingested with Microsoft Sentinel's built-in Threat Intelligence - TAXII data connector, so the solution does not ship a data connector of its own. Setup values are in the solution README and in the workbook.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Playbook","Workbook"] },
+      { version: "3.0.0", date: "12-11-2026", text: "Initial Solution Release.", contentTypes: [] },
     ],
   },
   {
@@ -3044,6 +3057,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mulesoft",
     entries: [
+      { version: "3.2.2", date: "23-11-2026", text: "Added CloudHub 1.0/2.0 selection with shared Connected App OAuth2 credentials and one MulesoftCloudhubAlerts_CL destination, distinguished by CloudHubVersion; preserved parser access to historical 2.0 data, removed Basic for new CCF connections and corrected ARM workspace resolution. Simplified the CCF configuration UI, documented snapshots and migration, and changed Alerts polling to every 24 hours with a 48-hour connectivity window to reduce repeated collection without claiming ingestion deduplication.", contentTypes: ["Parser"] },
       { version: "3.2.1", date: "17-08-2026", text: "Promoted MuleSoft CloudHub Alerts CCF connector from Public Preview to GA.", contentTypes: [] },
       { version: "3.2.0", date: "02-07-2026", text: "Fixed Data Connectors Count issue on UI.", contentTypes: ["Data Connector"] },
       { version: "3.1.0", date: "17-06-2026", text: "Added MuleSoft CloudHub Alerts CCF Connector & Logs CCF Push Connector for real-time log streaming via Log4j HTTP appender.", contentTypes: [] },
@@ -3288,6 +3302,7 @@ export const RAW_SOLUTIONS = [
     name: "OneLogin IAM",
     alias: "OneLoginIAM",
     entries: [
+      { version: "3.2.2", date: "23-11-2026", text: "Updated Parser fields and mappings", contentTypes: ["Parser"] },
       { version: "3.0.4", date: "16-10-2026", text: "Added missing OneLogin event fields", contentTypes: [] },
       { version: "3.0.3", date: "29-07-2025", text: "Removed Deprecated Data Connector.", contentTypes: ["Data Connector"] },
       { version: "3.0.2", date: "30-06-2025", text: "OneLoginIAM CCF Data Connector moving to GA.", contentTypes: ["Data Connector"] },
@@ -3614,6 +3629,13 @@ export const RAW_SOLUTIONS = [
     ],
   },
   {
+    name: "Q Crypton PQC Proxy",
+    alias: "QCryptonPQCProxy",
+    entries: [
+      { version: "3.2.2", date: "16-11-2026", text: "Initial release with 1 Data Connector (CCF), 6 Analytic Rules, 1 Workbook, and 1 Playbook; replaced T1499 with T1498 in TLSHandshakeFailureSpike and UpstreamConnectionFailures analytic rules; added WorkbooksMetadata entry with correct domain", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
+    ],
+  },
+  {
     name: "Q Crypton PQC Scanner",
     alias: "QCryptonPQCScanner",
     entries: [
@@ -3854,6 +3876,7 @@ export const RAW_SOLUTIONS = [
     name: "Rubrik Security Cloud",
     alias: "RubrikSecurityCloud",
     entries: [
+      { version: "3.5.6", date: "18-11-2026", text: "Removed the unreleased RubrikSecurityCloud CCF (Protection Status) data connector. Marked the Azure Function based Rubrik Security Cloud data connector as deprecated, with guidance to migrate to the Rubrik Security Cloud Security Events (Push) CCF data connector.", contentTypes: ["Data Connector"] },
       { version: "3.5.5", date: "26-10-2026", text: "Added support of DSPM & IR Violation events collection as part of Azure function app based dta connector, Added analytic rules and playbooks rleated DSPM & IR Violation and quarntine.", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.5.4", date: "12-10-2026", text: "Updated Events Data table schema for CCF Connector.", contentTypes: [] },
       { version: "3.5.3", date: "03-09-2026", text: "Added RubrikCCFConnector to ingest Anomaly, Ransomware, ThreatHunt and other events data along with audit logs via webhook.", contentTypes: [] },
@@ -4185,6 +4208,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Snowflake",
     entries: [
+      { version: "3.2.3", date: "20-11-2026", text: "Migrated to Snowflake OAuth", contentTypes: [] },
       { version: "3.2.2", date: "21-10-2026", text: "Migrated Analytic Rules to Microsoft Defender XDR Custom Detections (XDR Detections) and the Workbook to an XDR Workbook; fixed EventType field in 2 login-failure Analytic Rules (LoginEventType).", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.2.0", date: "22-09-2026", text: "Added V3 Snowflake tables for nested ingestion.", contentTypes: [] },
       { version: "3.1.0", date: "04-08-2026", text: "Updated CCF Data Connector to fix pagination and migrate to V2 tables", contentTypes: ["Data Connector"] },
@@ -4237,6 +4261,12 @@ export const RAW_SOLUTIONS = [
     entries: [
       { version: "3.0.1", date: "17-06-2026", text: "Version bump to align the published package with the catalog; no template or playbook logic changes.", contentTypes: ["Playbook"] },
       { version: "3.0.0", date: "26-02-2026", text: "Initial release.", contentTypes: [] },
+    ],
+  },
+  {
+    name: "SonicWall Cloud Secure Edge",
+    entries: [
+      { version: "3.0.0", date: "17-11-2026", text: "Initial solution release: CCF connector, CSEEvents parser, workbook, 7 analytic rules, and 6 hunting queries.", contentTypes: ["Analytic Rule","Hunting Query","Workbook","Parser"] },
     ],
   },
   {
