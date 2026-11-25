@@ -108,6 +108,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Akamai Guardicore",
     entries: [
+      { version: "3.0.2", date: "17-11-2026", text: "Fixed workbooks deployment and KQL usage. Fixed workbooks charts. Workload Protection Dashboard: agents count as protected using Centra's own rules; the trend chart shows Protected vs Not protected agents; introduced Agent Issues chart (number of agents per Centra agent status flag, by severity); Asset Coverage section shows powered-on assets with vs without a Guardicore agent over time and newly discovered assets; chart titles show the selected time range. Incident Analysis Dashboard: policy verdicts use Centra's wording and colors.", contentTypes: ["Workbook"] },
       { version: "3.0.1", date: "12-10-2026", text: "Fixed the CCF data connector deployment: the four custom log tables (GuardicoreAgents_CL, GuardicoreAssets_CL, GuardicoreApplications_CL, GuardicorePolicyRules_CL) now use bare resource names so they are created correctly on Connect (previously an unresolved {{workspaceName}} placeholder caused a 404 and the tables were never created).", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "27-04-2026", text: "Initial release of the Akamai Guardicore solution as a Codeless Connector Framework (CCF/CCP) solution. Polls Agents, Assets, Applications, and Policy Rules from Guardicore Centra via DCR-based ingestion (no Azure Function App). Includes the Guardicore-ProcessIncidentEnrichment Microsoft Sentinel incident-creation playbook and the Guardicore-EnrichmentRunner recurrence-triggered companion playbook, both implemented natively in Logic Apps. They write to GuardicoreProcessedIncidents_CL and GuardicoreEnrichingConnections_CL via the Logs Ingestion API to a Data Collection Rule using system-assigned managed identity (no workspace shared key required). Two workbooks: Workload Protection Dashboard and Incident Analysis Dashboard.", contentTypes: ["Playbook","Workbook"] },
     ],
@@ -2130,6 +2131,8 @@ export const RAW_SOLUTIONS = [
   {
     name: "Google Threat Intelligence",
     entries: [
+      { version: "3.3.2", date: "03-11-2026", text: "- Updated Playbook *GTI Threat List*: the hourly request now uses the threat list generated 2 hours before the current UTC time (T-2h) as required by the Threat List API, replacing the time zone based offset.", contentTypes: ["Playbook"] },
+      { version: "3.3.2", date: "03-11-2026", text: "- Added the WorkspaceName parameter to the Playbook *GTI Threat List* and passed the resolved workspace ID to the *Upload STIX Objects* action.", contentTypes: ["Playbook"] },
       { version: "3.3.1", date: "07-10-2026", text: "- Added Playbook *GTI Session Assistant*.", contentTypes: ["Playbook"] },
       { version: "3.3.1", date: "07-10-2026", text: "- Added x-tool: ms-sentinel-gti header to all GTI API calls.", contentTypes: [] },
       { version: "3.3.0", date: "23-07-2026", text: "- Added Data Connector *GTI Vulnerabilities* (Codeless Connector Framework, Log Ingestion API).", contentTypes: ["Data Connector"] },
@@ -3231,6 +3234,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "NordPass",
     entries: [
+      { version: "3.1.0", date: "11-11-2026", text: "Migrated the data connector to the NordPass Activities API v2. Added the NordPassActivities parser, which normalizes both v1 and v2 rows so existing data keeps working. Retargeted all 9 Analytic Rules to the parser. Extended the custom table and DCR to the v2 schema. Removed the Workbook.", contentTypes: ["Analytic Rule","Data Connector","Workbook","Parser"] },
       { version: "3.0.2", date: "15-09-2026", text: "Added the missing DCR stream declaration, required by Azure Monitor validation for custom streams used with transformKql.", contentTypes: [] },
       { version: "3.0.1", date: "25-08-2025", text: "Added new Activity Logs", contentTypes: [] },
       { version: "3.0.0", date: "22-04-2025", text: "Initial Solution Release.", contentTypes: [] },
@@ -3626,6 +3630,13 @@ export const RAW_SOLUTIONS = [
       { version: "3.0.1", date: "03-05-2024", text: "Repackaged for Parser issue fix on reinstall", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "03-05-2024", text: "Added 2 new Analytic Rules and 3 new Playbooks", contentTypes: ["Analytic Rule","Playbook"] },
       { version: "3.0.0", date: "05-02-2024", text: "Initial Solution Release - Parser Only", contentTypes: ["Parser"] },
+    ],
+  },
+  {
+    name: "Q Crypton PQC Engine",
+    alias: "QCryptonPQCEngine",
+    entries: [
+      { version: "3.0.0", date: "22-11-2026", text: "Initial release of the QCrypton PQC Engine solution. Includes 1 Data Connector (Codeless Connector Framework — RestApiPoller), 6 Analytic Rules, 1 Workbook, and 1 Playbook; added CredentialAccess tactic to VulnerableAlgorithmDetected and PQCDowngradeOnEngine analytic rules for MITRE ATT&CK T1040 mapping validation", contentTypes: ["Analytic Rule","Data Connector","Playbook","Workbook"] },
     ],
   },
   {
@@ -4704,6 +4715,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "TrendAI Vision One(CCF)",
     entries: [
+      { version: "3.0.3", date: "25-11-2026", text: "Added INT-US, STG-US, and STG-EU API domain options for both connectors and removed the MEA API domain option.", contentTypes: [] },
       { version: "3.0.2", date: "07-10-2026", text: "Fixed Package template for portal deployment and corrected array-typed default values for the excludeThirdPartyOat and apiDomain connector parameters. Updated OAT Parser to deduplicate records by tenant-scoped xdrCustomerId_g and detail_uuid_g, and reworked the rt column handling to allow non-destructive upgrade from 3.0.1.", contentTypes: ["Parser"] },
       { version: "3.0.1", date: "16-09-2026", text: "Updated connector version.", contentTypes: [] },
       { version: "3.0.0", date: "05-08-2026", text: "Initial release of TrendAI Vision One solution via Codeless Connector Framework (CCF). Includes Workbench Alerts and OAT Detections connectors with DCR-based ingestion-time transformations, dropdown selectors for API domain and third-party exclusion, TMV1-Filter pass-through support, KQL parsers, an analytic rule with MITRE ATT&CK mappings, and a workbook dashboard. Fixed ARM template bracket escaping, added token rotation warning, optimized workbook queries, and removed the null alertRuleTemplateName field.", contentTypes: ["Analytic Rule","Workbook","Parser"] },
