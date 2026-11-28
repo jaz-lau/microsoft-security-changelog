@@ -1258,6 +1258,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Cybereinforce",
     entries: [
+      { version: "3.1.0", date: "26-11-2026", text: "Added the Cybereinforce data connector (Codeless Connector Framework, RestApiPoller): Microsoft Sentinel collects events from all Cybereinforce products (Browser, Email Security, Host Enforcement, Brand Protection, platform audit) every 5 minutes with only a Cybereinforce MicrosoftToken. New Product column on CybereinforceCTE_CL. Replaces the scheduled Logic App connector (Logic Apps already deployed keep working).", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "14-08-2026", text: "Corrected solution package structure (content package registration), registered custom table schema for KQL validation, added MITRE ATT&CK tactics and techniques to the 11 attack-detection rules (the remaining 7 rules are operational/capacity alerts - license expiry, device/rule quota, enrollment on-hold - with no corresponding adversary technique, so left unmapped by design), added workbook preview images and logo.", contentTypes: ["Workbook"] },
     ],
   },
@@ -2683,6 +2684,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Business Applications",
     entries: [
+      { version: "3.2.6", date: "26-11-2026", text: "Improved Dataverse audit-disable detection to cover organization-level audit disable events", contentTypes: [] },
       { version: "3.2.5", date: "26-10-2026", text: "Restored Power Automate, Dataverse, and Power Platform Admin CCF Data Connectors and repackaged the solution.", contentTypes: ["Data Connector"] },
       { version: "3.2.4", date: "25-10-2026", text: "Migrated Analytic Rules to Defender XDR Custom Detection format and added XDR Workbooks.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.2.3", date: "23-02-2026", text: "Updated Dataverse - Activity after failed logons hunting query to use valid Enterprise technique", contentTypes: ["Hunting Query"] },
@@ -2793,6 +2795,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Microsoft Entra ID",
     entries: [
+      { version: "3.3.22", date: "26-11-2026", text: "Fixed case-sensitive guest matching in the External guest invitation followed by Microsoft Entra ID PowerShell signin Analytic Rule and its XDR Detection copy.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.21", date: "18-11-2026", text: "Corrected the required data type of the Account Created and Deleted in Short Timeframe Analytic Rule and its XDR Detection copy from SigninLogs to AuditLogs. Corrected the XDR Detection schedule lookback property and MITRE subtechnique mappings.", contentTypes: ["Analytic Rule"] },
       { version: "3.3.20", date: "25-10-2026", text: "Added 74 Defender XDR Custom Detections and 2 Defender XDR Workbooks (AzureActiveDirectoryAuditLogs and AzureActiveDirectorySignins). Updated Analytic Rules metadata and Workbook (ConditionalAccessSISM, AzureActiveDirectoryAuditLogs, and AzureActiveDirectorySignins) parameters.", contentTypes: ["Analytic Rule","Workbook"] },
       { version: "3.3.19", date: "05-10-2026", text: "Fixed OAuth scope parsing for Suspicious application consent for offline access Analytic Rule.", contentTypes: ["Analytic Rule"] },
@@ -2955,6 +2958,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Mimecast",
     entries: [
+      { version: "3.1.1", date: "23-10-2026", text: "Added Mimecast Human Risk Data Connector (CCF) with Parsers and Workbook.", contentTypes: ["Data Connector","Workbook","Parser"] },
       { version: "3.1.0", date: "29-10-2025", text: "Added Log Ingestion API support in Data Connectors. Added Government button for support.", contentTypes: ["Data Connector"] },
       { version: "3.0.1", date: "12-02-2025", text: "Updated default table for MimecastAudit to get the Connected label on Data Connector UI page.", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "09-09-2024", text: "Initial Solution Release", contentTypes: [] },
@@ -3568,6 +3572,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Proofpoint On demand(POD) Email Security",
     entries: [
+      { version: "3.1.5", date: "29-10-2026", text: "Update Analytic Rules, Hunting Queries and Workbook metadata to reference the CCF data connector (ProofpointCCPDefinition) and its tables.", contentTypes: ["Analytic Rule","Hunting Query","Data Connector","Workbook"] },
       { version: "3.1.4", date: "17-04-2026", text: "Update ProofpointPOD_PollingConfig.json to pass sinceTime parameter with firstWindowBackfillInMin configuration.", contentTypes: [] },
       { version: "3.1.3", date: "19-03-2026", text: "Update ProofpointPOD_PollingConfig.json to pass user-agent header with solution package version.", contentTypes: [] },
       { version: "3.1.2", date: "08-12-2025", text: "Update ProofpointPOD_PollingConfig.json to remove start and end time query params, it impacts time frames at server side and causes duplicate data ingestion.", contentTypes: [] },
@@ -3831,6 +3836,7 @@ export const RAW_SOLUTIONS = [
   {
     name: "Red Sift",
     entries: [
+      { version: "3.1.0", date: "24-11-2026", text: "Added Source Fail, API Activity and Saved View Alert event streams (Custom-RedSiftSourceFail, Custom-RedSiftApiActivity, Custom-RedSiftSavedViewAlert) and their tables (RedSiftSourceFail_CL, RedSiftApiActivity_CL, RedSiftSavedViewAlert_CL) to the CCF Data Connector", contentTypes: ["Data Connector"] },
       { version: "3.0.0", date: "10-04-2026", text: "Initial release with CCF Data Connector and 5 Analytic Rules", contentTypes: ["Analytic Rule","Data Connector"] },
     ],
   },
@@ -4170,6 +4176,7 @@ export const RAW_SOLUTIONS = [
     name: "Silent Push",
     alias: "SilentPush",
     entries: [
+      { version: "3.1.3", date: "23-11-2026", text: "Fixed the data connector error \"total retention 30 is smaller than the retention 90\" (the table now uses the workspace retention). Fixed \"Create playbook\" errors for the Full playbooks. SLP_Feeds_CL numeric, boolean and date columns now use proper types.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.1.2", date: "10-11-2026", text: "Feeds data connector now polls once every 24 hours. Fixed the Marketplace install error about an empty location. Export playbooks no longer use a fixed export: choose the export_category and file_name in the Export action before enabling.", contentTypes: ["Data Connector","Playbook"] },
       { version: "3.1.1", date: "04-11-2026", text: "Added custom connector \"deploy it first\" link. Fixed errors when creating the Full playbooks from templates.", contentTypes: ["Playbook"] },
       { version: "3.1.0", date: "16-09-2026", text: "Added SilentPush Feeds Data Connector (Codeless/CCP) to ingest Silent Push threat-intel feed exports into SLP_Feeds_CL.", contentTypes: ["Data Connector"] },
